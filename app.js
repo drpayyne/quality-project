@@ -45,7 +45,14 @@ app.use(session({
 
 //Import route files
 let forms = require('./routes/forms');
+let login = require('./routes/login');
 app.use('/form', forms);
+app.use('/login', login);
+
+//Home route GET
+app.get('/', function(req, res) {
+	res.redirect('/login');
+});
 
 //Start server
 app.listen(3000, function() {
