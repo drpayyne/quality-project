@@ -1,0 +1,3 @@
+mongod --dbpath /home/drpayyne/Desktop/quality_project/data/db --auth
+
+mongo -u gopinath -p password --authenticationDatabase admin
