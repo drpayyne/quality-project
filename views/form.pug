@@ -6,7 +6,7 @@ html(lang='en')
 		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css')
 		link(rel='stylesheet', href='css/form.css')
 	body
-		form(action='/form/submit', method='POST')
+		form(action='/form/submit/' + form.department, method='POST')
 			h1 Criterion – II
 			h2 #{form.department}
 			fieldset
@@ -161,19 +161,19 @@ html(lang='en')
 						th Pass%
 					tr
 						td
-							input(type='string', name='r11c1s1', value=form.pass_percent_dist.programme_title)
+							input(type='string', name='r11c1s1', value=form.pass_percent_dist[0].programme_title)
 						td
-							input(type='number', name='r11c2s1', value=form.pass_percent_dist.students_appeared)
+							input(type='number', name='r11c2s1', value=form.pass_percent_dist[0].students_appeared)
 						td
-							input(type='number', name='r11c3s1', value=form.pass_percent_dist.division.distinction_percent)
+							input(type='number', name='r11c3s1', value=form.pass_percent_dist[0].division.distinction_percent)
 						td
-							input(type='number', name='r11c4s1', value=form.pass_percent_dist.division.percent_one)
+							input(type='number', name='r11c4s1', value=form.pass_percent_dist[0].division.percent_one)
 						td
-							input(type='number', name='r11c5s1', value=form.pass_percent_dist.division.percent_two)
+							input(type='number', name='r11c5s1', value=form.pass_percent_dist[0].division.percent_two)
 						td
-							input(type='number', name='r11c6s1', value=form.pass_percent_dist.division.percent_three)
+							input(type='number', name='r11c6s1', value=form.pass_percent_dist[0].division.percent_three)
 						td
-							input(type='number', name='r11c7s1', value=form.pass_percent_dist.division.percent_pass)
+							input(type='number', name='r11c7s1', value=form.pass_percent_dist[0].division.percent_pass)
 				label
 					| 2.12 How does IQAC Contribute/Monitor/Evaluate the Teaching & Learning processes:
 				input(type='text', name='r12c1', value=form.iqac_contribution)

@@ -39,10 +39,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Form route GET
 app.get('/form', function(req, res) {
 
-	CriterionTwo.find({}, function(err, document) {
+	let dept = 'CSE';
+
+	CriterionTwo.findOne({department: dept}, function(err, document) {
 		if(err) {
 			console.log(err);
 		} else {
+			console.log(document);
 			res.render('form', {
 				form: document
 			});
@@ -50,12 +53,118 @@ app.get('/form', function(req, res) {
 	})
 });
 
-app.post('/form/submit', function(req, res) {
+//Form route POST
+app.post('/form/submit/:dept', function(req, res) {
 	console.log("Getting data...");
-	let form = new CriterionTwo();
+
+	let form = {
+		department: '',
+		permanent_faculty: {
+			asst_prof: 0,
+			asso_prof: 0,
+			prof: 0,
+			others: 0,
+			total: 0
+		},
+		permanent_faculty_phd: 0,
+		faculty_pos_recruited_vacant: {
+			asst_prof: {
+				recruited: 0,
+				vacant: 0
+			},
+			asso_prof: {
+				recruited: 0,
+				vacant: 0
+			},
+			prof: {
+				recruited: 0,
+				vacant: 0
+			},
+			others: {
+				recruited: 0,
+				vacant: 0
+			},
+			total: {
+				recruited: 0,
+				vacant: 0
+			}
+		},
+		guest_visit_temp_faculty: {
+			guest: 0,
+			visiting: 0,
+			temporary: 0
+		},
+		faculty_participation: {
+			international: {
+				seminar_workshop: 0,
+				paper_presented: 0,
+				resource_persons: 0
+			},
+			national: {
+				seminar_workshop: 0,
+				paper_presented: 0,
+				resource_persons: 0
+			},
+			state: {
+				seminar_workshop: 0,
+				paper_presented: 0,
+				resource_persons: 0
+			}
+		},
+		innovative_process_adopted: 0,
+		actual_teaching_days: 0,
+		exam_reforms_initiated: 0,
+		curriculum_incharge_faculty_members: {
+			curriculum_revision: 0,
+			member_board: 0,
+			faculty_dev_workshop: 0
+		},
+		avg_student_attendance: 0,
+		pass_percent_dist: [{
+			programme_title: '',
+			students_appeared: 0,
+			division: {
+				distinction_percent: 0,
+				percent_one: 0,
+				percent_two: 0,
+				percent_three: 0,
+				percent_pass: 0
+			}
+		}],
+		iqac_contribution: '',
+		faculty_dev_initiative: {
+			refresher_courses: 0,
+			ugc_fac_improvement_prog: 0,
+			hrd_programme:0,
+			orientation_programme: 0,
+			fac_exchange_programme: 0,
+			staff_training_univ: 0,
+			staff_training_other: 0,
+			summer_winter_workshops: 0,
+			others: 0
+		},
+		admin_tech_staff: {
+			permanent_employees: {
+				admin: 0,
+				technical: 0
+			},
+			vacant_positions: {
+				admin: 0,
+				technical: 0
+			},
+			permanent_positions_filled: {
+				admin: 0,
+				technical: 0
+			},
+			temporary_positions_filled: {
+				admin: 0,
+				technical: 0
+			}
+		}
+	};
 
 	form.department = 'CSE';
-
+	
 	form.permanent_faculty.asst_prof = req.body.r1c2;
 	form.permanent_faculty.asso_prof = req.body.r1c3;
 	form.permanent_faculty.prof = req.body.r1c4;
@@ -101,17 +210,17 @@ app.post('/form/submit', function(req, res) {
 
 	form.avg_student_attendance = req.body.r10c1;
 
-	form.pass_percent_dist.push({
-		programme_title: req.body.r11c1s1,
-		students_appeared: req.body.r11c2s1,
-		division: {
-			distinction_percent: req.body.r11c3s1,
-			percent_one: req.body.r11c4s1,
-			percent_two: req.body.r11c5s1,
-			percent_three: req.body.r11c6s1,
-			percent_pass: req.body.r11c7s1
-		}
-	});
+	let div = {
+		distinction_percent: req.body.r11c3s1,
+		percent_one: req.body.r11c4s1,
+		percent_two: req.body.r11c5s1,
+		percent_three: req.body.r11c6s1,
+		percent_pass: req.body.r11c7s1
+	}
+
+	form.pass_percent_dist[0].programme_title = req.body.r11c1s1;
+	form.pass_percent_dist[0].students_appeared = req.body.r11c2s1;
+	form.pass_percent_dist[0].division = div;
 
 	form.iqac_contribution = req.body.r12c1;
 
@@ -134,7 +243,11 @@ app.post('/form/submit', function(req, res) {
 	form.admin_tech_staff.temporary_positions_filled.admin = req.body.r14c7;
 	form.admin_tech_staff.temporary_positions_filled.technical = req.body.r14c8;
 
-	form.save(function(err) {
+	console.log(form);
+
+	query = {department: req.params.dept};
+
+	 CriterionTwo.update(query, form, function(err) {
 		if(err) {
 			console.log(err);
 		} else {
@@ -142,7 +255,6 @@ app.post('/form/submit', function(req, res) {
 		}
 	});
 });
-
 
 //Start server
 app.listen(3000, function() {
