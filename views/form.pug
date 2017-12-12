@@ -8,7 +8,7 @@ html(lang='en')
 	body
 		form(action='/form/submit', method='POST')
 			h1 Criterion – II
-			h2 #{department}
+			h2 #{form.department}
 			fieldset
 				legend
 					span.number 2.
@@ -23,17 +23,17 @@ html(lang='en')
 						th Total
 					tr
 						td
-							input(type='number', name='r1c2', value='form.permanent_faculty.asst_prof')
+							input(type='number', name='r1c2', value=form.permanent_faculty.asst_prof)
 						td
-							input(type='number', name='r1c3', value='form.permanent_faculty.asso_prof')
+							input(type='number', name='r1c3', value=form.permanent_faculty.asso_prof)
 						td
-							input(type='number', name='r1c4', value='form.permanent_faculty.prof')
+							input(type='number', name='r1c4', value=form.permanent_faculty.prof)
 						td
-							input(type='number', name='r1c5', value='form.permanent_faculty.others')
+							input(type='number', name='r1c5', value=form.permanent_faculty.others)
 						td
-							input(type='number', name='r1c6', value='form.permanent_faculty.total')
+							input(type='number', name='r1c6', value=form.permanent_faculty.total)
 				label 2.2 No. of permanent faculty with Ph.D.:
-				input(type='number', name='r2c1', value='form.permanent_faculty.total')
+				input(type='number', name='r2c1', value=form.permanent_faculty.total)
 				label 2.3 No. of Faculty Positions Recruited (R) and Vacant (V) during the year
 				table(style='width:100%')
 					tr
@@ -55,25 +55,25 @@ html(lang='en')
 						th V
 					tr
 						td
-							input(type='number', name='r3c1', value='form.faculty_pos_recruited_vacant.asst_prof.recruited')
+							input(type='number', name='r3c1', value=form.faculty_pos_recruited_vacant.asst_prof.recruited)
 						td
-							input(type='number', name='r3c2', value='form.faculty_pos_recruited_vacant.asst_prof.vacant')
+							input(type='number', name='r3c2', value=form.faculty_pos_recruited_vacant.asst_prof.vacant)
 						td
-							input(type='number', name='r3c3', value='form.faculty_pos_recruited_vacant.asso_prof.recruited')
+							input(type='number', name='r3c3', value=form.faculty_pos_recruited_vacant.asso_prof.recruited)
 						td
-							input(type='number', name='r3c4', value='form.faculty_pos_recruited_vacant.asso_prof.vacant')
+							input(type='number', name='r3c4', value=form.faculty_pos_recruited_vacant.asso_prof.vacant)
 						td
-							input(type='number', name='r3c5', value='form.faculty_pos_recruited_vacant.prof.recruited')
+							input(type='number', name='r3c5', value=form.faculty_pos_recruited_vacant.prof.recruited)
 						td
-							input(type='number', name='r3c6', value='form.faculty_pos_recruited_vacant.prof.vacant')
+							input(type='number', name='r3c6', value=form.faculty_pos_recruited_vacant.prof.vacant)
 						td
-							input(type='number', name='r3c7', value='form.faculty_pos_recruited_vacant.others.recruited')
+							input(type='number', name='r3c7', value=form.faculty_pos_recruited_vacant.others.recruited)
 						td
-							input(type='number', name='r3c8', value='form.faculty_pos_recruited_vacant.others.vacant')
+							input(type='number', name='r3c8', value=form.faculty_pos_recruited_vacant.others.vacant)
 						td
-							input(type='number', name='r3c9', value='form.faculty_pos_recruited_vacant.total.recruited')
+							input(type='number', name='r3c9', value=form.faculty_pos_recruited_vacant.total.recruited)
 						td
-							input(type='number', name='r3c10', value='form.faculty_pos_recruited_vacant.total.vacant')
+							input(type='number', name='r3c10', value=form.faculty_pos_recruited_vacant.total.vacant)
 				label 2.4 No. of Guest and Visiting faculty and Temporary faculty:
 				table(style='width:100%')
 					tr
@@ -82,11 +82,11 @@ html(lang='en')
 						th Temporary
 					tr
 						td
-							input(type='number', name='r4c1', value='form.guest_visit_temp_faculty.guest')
+							input(type='number', name='r4c1', value=form.guest_visit_temp_faculty.guest)
 						td
-							input(type='number', name='r4c2', value='form.guest_visit_temp_faculty.visiting')
+							input(type='number', name='r4c2', value=form.guest_visit_temp_faculty.visiting)
 						td
-							input(type='number', name='r4c3', value='form.guest_visit_temp_faculty.temporary')
+							input(type='number', name='r4c3', value=form.guest_visit_temp_faculty.temporary)
 				label 2.5 Faculty participation in conferences and symposia:
 				table(style='width:100%')
 					tr
@@ -105,32 +105,32 @@ html(lang='en')
 						th Resource Persons
 					tr
 						td
-							input(type='number', name='r5c1', value='form.faculty_participation.international.seminar_workshop')
+							input(type='number', name='r5c1', value=form.faculty_participation.international.seminar_workshop)
 						td
-							input(type='number', name='r5c2', value='form.faculty_participation.international.paper_presented')
+							input(type='number', name='r5c2', value=form.faculty_participation.international.paper_presented)
 						td
-							input(type='number', name='r5c3', value='form.faculty_participation.international.resource_persons')
+							input(type='number', name='r5c3', value=form.faculty_participation.international.resource_persons)
 						td
-							input(type='number', name='r5c4', value='form.faculty_participation.national.seminar_workshop')
+							input(type='number', name='r5c4', value=form.faculty_participation.national.seminar_workshop)
 						td
-							input(type='number', name='r5c5', value='form.faculty_participation.national.paper_presented')
+							input(type='number', name='r5c5', value=form.faculty_participation.national.paper_presented)
 						td
-							input(type='number', name='r5c6', value='form.faculty_participation.national.resource_persons')
+							input(type='number', name='r5c6', value=form.faculty_participation.national.resource_persons)
 						td
-							input(type='number', name='r5c7', value='form.faculty_participation.state.seminar_workshop')
+							input(type='number', name='r5c7', value=form.faculty_participation.state.seminar_workshop)
 						td
-							input(type='number', name='r5c8', value='form.faculty_participation.state.paper_presented')
+							input(type='number', name='r5c8', value=form.faculty_participation.state.paper_presented)
 						td
-							input(type='number', name='r5c9', value='form.faculty_participation.state.resource_persons')
+							input(type='number', name='r5c9', value=form.faculty_participation.state.resource_persons)
 				label 2.6 Innovative processes adopted by the institution in Teaching and Learning:
-				input(type='number', name='r6c1', value='form.innovative_process_adopted')
+				input(type='number', name='r6c1', value=form.innovative_process_adopted)
 				label 2.7 Total No. of actual teaching days during this academic year:
-				input(type='number', name='r7c1', value='form.actual_teaching_days')
+				input(type='number', name='r7c1', value=form.actual_teaching_days)
 				label
 					| 2.8 Examination/ Evaluation Reforms initiated by the Institution:
 					br
 					| (for example: Open Book Examination, Bar Coding,Double Valuation, Photocopy, Online Multiple Choice Questions)
-				input(type='number', name='r8c1', value='form.exam_reforms_initiated')
+				input(type='number', name='r8c1', value=form.exam_reforms_initiated)
 				label
 					| 2.9 No. of faculty members involved in curriculum, Restructuring/revision/syllabus development as member of Board of Study/Faculty/Curriculum Development workshop:
 				table(style='width:100%')
@@ -140,13 +140,13 @@ html(lang='en')
 						th Faculty development workshop
 					tr
 						td
-							input(type='number', name='r9c2', value='form.curriculum_incharge_faculty_members.curriculum_revision')
+							input(type='number', name='r9c2', value=form.curriculum_incharge_faculty_members.curriculum_revision)
 						td
-							input(type='number', name='r9c3', value='form.curriculum_incharge_faculty_members.member_board')
+							input(type='number', name='r9c3', value=form.curriculum_incharge_faculty_members.member_board)
 						td
-							input(type='number', name='r9c4', value='form.curriculum_incharge_faculty_members.faculty_dev_workshop')
+							input(type='number', name='r9c4', value=form.curriculum_incharge_faculty_members.faculty_dev_workshop)
 				label 2.10 Average percentage of attendance of students:
-				input(type='number', name='r10c1', value='form.avg_student_attendance')
+				input(type='number', name='r10c1', value=form.avg_student_attendance)
 				label 2.11 Course/Programme wise distribution of pass percentage:
 				table(style='width:100%')
 					tr
@@ -161,22 +161,22 @@ html(lang='en')
 						th Pass%
 					tr
 						td
-							input(type='string', name='r11c1s1', value='form.pass_percent_dist.programme_title')
+							input(type='string', name='r11c1s1', value=form.pass_percent_dist.programme_title)
 						td
-							input(type='number', name='r11c2s1', value='form.pass_percent_dist.students_appeared')
+							input(type='number', name='r11c2s1', value=form.pass_percent_dist.students_appeared)
 						td
-							input(type='number', name='r11c3s1', value='form.pass_percent_dist.division.distinction_percent')
+							input(type='number', name='r11c3s1', value=form.pass_percent_dist.division.distinction_percent)
 						td
-							input(type='number', name='r11c4s1', value='form.pass_percent_dist.division.percent_one')
+							input(type='number', name='r11c4s1', value=form.pass_percent_dist.division.percent_one)
 						td
-							input(type='number', name='r11c5s1', value='form.pass_percent_dist.division.percent_two')
+							input(type='number', name='r11c5s1', value=form.pass_percent_dist.division.percent_two)
 						td
-							input(type='number', name='r11c6s1', value='form.pass_percent_dist.division.percent_three')
+							input(type='number', name='r11c6s1', value=form.pass_percent_dist.division.percent_three)
 						td
-							input(type='number', name='r11c7s1', value='form.pass_percent_dist.division.percent_pass')
+							input(type='number', name='r11c7s1', value=form.pass_percent_dist.division.percent_pass)
 				label
 					| 2.12 How does IQAC Contribute/Monitor/Evaluate the Teaching & Learning processes:
-				input(type='text', name='r12c1', value='form.iqac_contribution')
+				input(type='text', name='r12c1', value=form.iqac_contribution)
 				label 2.13 Initiatives undertaken towards faculty development:
 				table(style='width:100%')
 					tr
@@ -186,39 +186,39 @@ html(lang='en')
 					tr
 						th Refresher courses
 						td
-							input(type='number', name='r13c1', value='form.faculty_dev_initiative.refresher_courses')
+							input(type='number', name='r13c1', value=form.faculty_dev_initiative.refresher_courses)
 					tr
 						th UGC – Faculty Improvement Programme
 						td
-							input(type='number', name='r13c2', value='form.faculty_dev_initiative.ugc_fac_improvement_prog')
+							input(type='number', name='r13c2', value=form.faculty_dev_initiative.ugc_fac_improvement_prog)
 					tr
 						th HRD programmes
 						td
-							input(type='number', name='r13c3', value='form.faculty_dev_initiative.hrd_programme')
+							input(type='number', name='r13c3', value=form.faculty_dev_initiative.hrd_programme)
 					tr
 						th Orientation programmes
 						td
-							input(type='number', name='r13c4', value='form.faculty_dev_initiative.orientation_programme')
+							input(type='number', name='r13c4', value=form.faculty_dev_initiative.orientation_programme)
 					tr
 						th Faculty exchange programme
 						td
-							input(type='number', name='r13c5', value='form.faculty_dev_initiative.fac_exchange_programme')
+							input(type='number', name='r13c5', value=form.faculty_dev_initiative.fac_exchange_programme)
 					tr
 						th Staff training conducted by the university
 						td
-							input(type='number', name='r13c6', value='form.faculty_dev_initiative.staff_training_univ')
+							input(type='number', name='r13c6', value=form.faculty_dev_initiative.staff_training_univ)
 					tr
 						th Staff training conducted by other institutions
 						td
-							input(type='number', name='r13c7', value='form.faculty_dev_initiative.staff_training_other')
+							input(type='number', name='r13c7', value=form.faculty_dev_initiative.staff_training_other)
 					tr
 						th Summer / Winter schools, Workshops, etc.
 						td
-							input(type='number', name='r13c8', value='form.faculty_dev_initiative.summer_winter_workshops')
+							input(type='number', name='r13c8', value=form.faculty_dev_initiative.summer_winter_workshops)
 					tr
 						th Others
 						td
-							input(type='number', name='r13c9', value='form.faculty_dev_initiative.others')
+							input(type='number', name='r13c9', value=form.faculty_dev_initiative.others)
 				label 2.14 Details of Administrative and Technical staff:
 				table(style='width:100%')
 					tr
@@ -237,19 +237,19 @@ html(lang='en')
 						th Technical Staff
 					tr
 						td
-							input(type='number', name='r14c1', value='form.admin_tech_staff.permanent_employees.admin')
+							input(type='number', name='r14c1', value=form.admin_tech_staff.permanent_employees.admin)
 						td
-							input(type='number', name='r14c2', value='form.admin_tech_staff.permanent_employees.technical')
+							input(type='number', name='r14c2', value=form.admin_tech_staff.permanent_employees.technical)
 						td
-							input(type='number', name='r14c3', value='form.admin_tech_staff.vacant_positions.admin')
+							input(type='number', name='r14c3', value=form.admin_tech_staff.vacant_positions.admin)
 						td
-							input(type='number', name='r14c4', value='form.admin_tech_staff.vacant_positions.technical')
+							input(type='number', name='r14c4', value=form.admin_tech_staff.vacant_positions.technical)
 						td
-							input(type='number', name='r14c5', value='form.admin_tech_staff.permanent_positions_filled.admin')
+							input(type='number', name='r14c5', value=form.admin_tech_staff.permanent_positions_filled.admin)
 						td
-							input(type='number', name='r14c6', value='form.admin_tech_staff.permanent_positions_filled.technical')
+							input(type='number', name='r14c6', value=form.admin_tech_staff.permanent_positions_filled.technical)
 						td
-							input(type='number', name='r14c7', value='form.admin_tech_staff.temporary_positions_filled.admin')
+							input(type='number', name='r14c7', value=form.admin_tech_staff.temporary_positions_filled.admin)
 						td
-							input(type='number', name='r14c8', value='form.admin_tech_staff.temporary_positions_filled.technical')
+							input(type='number', name='r14c8', value=form.admin_tech_staff.temporary_positions_filled.technical)
 			button(type='submit') SAVE

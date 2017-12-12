@@ -38,9 +38,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Form route GET
 app.get('/form', function(req, res) {
-	res.render('form', {
-		department: 'CSE'
-	});
+
+	CriterionTwo.find({}, function(err, document) {
+		if(err) {
+			console.log(err);
+		} else {
+			res.render('form', {
+				form: document
+			});
+		}
+	})
 });
 
 app.post('/form/submit', function(req, res) {
