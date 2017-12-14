@@ -213,6 +213,8 @@ router.post('/submit/:dept', function(req, res) {
 
     console.log(form);
 
+    console.log(req.body.row_val);
+
     query = {department: req.params.dept};
 
         CriterionTwo.update(query, form, function(err) {
