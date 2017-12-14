@@ -149,7 +149,7 @@ html(lang='en')
 				label 2.10 Average percentage of attendance of students:
 				input(type='number', name='r10c1', value=form.avg_student_attendance)
 				label 2.11 Course/Programme wise distribution of pass percentage:
-				table(style='width:100%')
+				table#table11(style='width:100%')
 					tr
 						th(rowspan='2') Title of the programme
 						th(rowspan='2') Total number of students appeared
@@ -174,7 +174,8 @@ html(lang='en')
 						td
 							input(type='number', name='r11c6s1', value=form.pass_percent_dist[0].division.percent_three)
 						td
-							input(type='number', name='r11c7s1', value=form.pass_percent_dist[0].division.percent_pass)
+							input(type='number', name='r11c7s1', value='form.pass_percent_dist.division.percent_pass')
+				button(type='button', onclick='addRow()') Add Row
 				label
 					| 2.12 How does IQAC Contribute/Monitor/Evaluate the Teaching & Learning processes:
 				input(type='text', name='r12c1', value=form.iqac_contribution)
