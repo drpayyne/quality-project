@@ -5,9 +5,11 @@ const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const passport = require('passport');
+const config = require('./config/database');
 
 //Mongoose init
-mongoose.connect('mongodb://gopinath:password@127.0.0.1/form?authSource=admin', {
+mongoose.connect(config.database, {
 	useMongoClient: true
 });
 let db = mongoose.connection;
@@ -36,12 +38,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Express session middleware
 app.use(session({
-	secret: 'secret1',
+	secret: 'secret',
 	resave: true,
 	saveUninitialized: true,
 	cookie: { secure: true }
   })
 );
+
+//Passport Config
+require('./config/passport')(passport);
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Import route files
 let forms = require('./routes/forms');
