@@ -4,21 +4,23 @@ const router = express.Router();
 //Import DB models
 let CriterionTwo = require('../models/criterion_two');
 
-let dept = 'CSE';
-
 //Form route GET
 router.get('/', function(req, res) {
-
-    CriterionTwo.findOne({department: dept}, function(err, document) {
-        if(err) {
-            console.log(err);
-        } else {
-            console.log(document);
-            res.render('form', {
-                form: document
-            });
-        }
-    })
+    console.log(req.cookies);
+    if(req.cookies.dept==='HOQ') {
+        res.redirect('/form/admin');
+    } else {
+        CriterionTwo.findOne({department: req.cookies.dept}, function(err, document) {
+            if(err) {
+                console.log(err);
+            } else {
+                console.log(document + '---');
+                res.render('form', {
+                    form: document
+                });
+            }
+        });
+    }
 });
     
 //Form route POST
@@ -131,7 +133,7 @@ router.post('/submit/:dept', function(req, res) {
         }
     };
 
-    form.department = dept;
+    form.department = req.cookies.dept;
     
     form.permanent_faculty.asst_prof = req.body.r1c2;
     form.permanent_faculty.asso_prof = req.body.r1c3;
@@ -224,6 +226,15 @@ router.post('/submit/:dept', function(req, res) {
             res.redirect('/form');
         }
     });
+});
+
+router.get('/admin', function(req, res) {
+    res.render('admin');
+});
+
+router.post('/admin', function(req, res) {
+    res.cookie('dept', req.body.username, {expires: 0});
+    res.redirect('/form');
 });
 
 module.exports = router;

@@ -7,9 +7,10 @@ html(lang='en')
 		link(rel='stylesheet', href='css/form.css')
 		script(src='js/form.js')
 	body
-		form(action='/form/submit/' + form.department, method='POST')
+		a(href='/login') Logout
+		form(action='/form/submit/' + cookies.dept, method='POST')
 			h1 Criterion – II
-			h2 #{form.department}
+			h2 #{cookies.dept}
 			fieldset
 				legend
 					span.number 2.
