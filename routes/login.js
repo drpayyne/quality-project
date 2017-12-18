@@ -7,6 +7,7 @@ router.get('/', function(req, res) {
     res.clearCookie('user');
     res.clearCookie('dept');
     res.render('login');
+    console.log(res.cookies);
 });
 
 router.post('/', function(req, res) {

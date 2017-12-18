@@ -4,16 +4,130 @@ const router = express.Router();
 //Import DB models
 let CriterionTwo = require('../models/criterion_two');
 
+let form = {
+    department: '',
+    permanent_faculty: {
+        asst_prof: 0,
+        asso_prof: 0,
+        prof: 0,
+        others: 0,
+        total: 0
+    },
+    permanent_faculty_phd: 0,
+    faculty_pos_recruited_vacant: {
+        asst_prof: {
+            recruited: 0,
+            vacant: 0
+        },
+        asso_prof: {
+            recruited: 0,
+            vacant: 0
+        },
+        prof: {
+            recruited: 0,
+            vacant: 0
+        },
+        others: {
+            recruited: 0,
+            vacant: 0
+        },
+        total: {
+            recruited: 0,
+            vacant: 0
+        }
+    },
+    guest_visit_temp_faculty: {
+        guest: 0,
+        visiting: 0,
+        temporary: 0
+    },
+    faculty_participation: {
+        international: {
+            seminar_workshop: 0,
+            paper_presented: 0,
+            resource_persons: 0
+        },
+        national: {
+            seminar_workshop: 0,
+            paper_presented: 0,
+            resource_persons: 0
+        },
+        state: {
+            seminar_workshop: 0,
+            paper_presented: 0,
+            resource_persons: 0
+        }
+    },
+    innovative_process_adopted: 0,
+    actual_teaching_days: 0,
+    exam_reforms_initiated: 0,
+    curriculum_incharge_faculty_members: {
+        curriculum_revision: 0,
+        member_board: 0,
+        faculty_dev_workshop: 0
+    },
+    avg_student_attendance: 0,
+    pass_percent_dist: [{
+        programme_title: '',
+        students_appeared: 0,
+        division: {
+            distinction_percent: 0,
+            percent_one: 0,
+            percent_two: 0,
+            percent_three: 0,
+            percent_pass: 0
+        }
+    }],
+    iqac_contribution: '',
+    faculty_dev_initiative: {
+        refresher_courses: 0,
+        ugc_fac_improvement_prog: 0,
+        hrd_programme:0,
+        orientation_programme: 0,
+        fac_exchange_programme: 0,
+        staff_training_univ: 0,
+        staff_training_other: 0,
+        summer_winter_workshops: 0,
+        others: 0
+    },
+    admin_tech_staff: {
+        permanent_employees: {
+            admin: 0,
+            technical: 0
+        },
+        vacant_positions: {
+            admin: 0,
+            technical: 0
+        },
+        permanent_positions_filled: {
+            admin: 0,
+            technical: 0
+        },
+        temporary_positions_filled: {
+            admin: 0,
+            technical: 0
+        }
+    }
+};
+
 //Form route GET
 router.get('/', function(req, res) {
-    console.log(req.cookies);
-    if(req.cookies.dept==='HOQ') {
+    console.log(req.cookies.user);
+    console.log('***');
+    if(!req.cookies.user) {
+        res.redirect('/login');
+    }        
+    else if(req.cookies.dept==='HOQ') {
         res.redirect('/form/admin');
     } else {
         CriterionTwo.findOne({department: req.cookies.dept}, function(err, document) {
             if(err) {
                 console.log(err);
             } else {
+                if(document==null) {
+                   document = form;
+                   console.log('New doc created.');
+                }
                 console.log(document + '---');
                 res.render('form', {
                     form: document
@@ -26,112 +140,6 @@ router.get('/', function(req, res) {
 //Form route POST
 router.post('/submit/:dept', function(req, res) {
     console.log("Getting data...");
-
-    let form = {
-        department: '',
-        permanent_faculty: {
-            asst_prof: 0,
-            asso_prof: 0,
-            prof: 0,
-            others: 0,
-            total: 0
-        },
-        permanent_faculty_phd: 0,
-        faculty_pos_recruited_vacant: {
-            asst_prof: {
-                recruited: 0,
-                vacant: 0
-            },
-            asso_prof: {
-                recruited: 0,
-                vacant: 0
-            },
-            prof: {
-                recruited: 0,
-                vacant: 0
-            },
-            others: {
-                recruited: 0,
-                vacant: 0
-            },
-            total: {
-                recruited: 0,
-                vacant: 0
-            }
-        },
-        guest_visit_temp_faculty: {
-            guest: 0,
-            visiting: 0,
-            temporary: 0
-        },
-        faculty_participation: {
-            international: {
-                seminar_workshop: 0,
-                paper_presented: 0,
-                resource_persons: 0
-            },
-            national: {
-                seminar_workshop: 0,
-                paper_presented: 0,
-                resource_persons: 0
-            },
-            state: {
-                seminar_workshop: 0,
-                paper_presented: 0,
-                resource_persons: 0
-            }
-        },
-        innovative_process_adopted: 0,
-        actual_teaching_days: 0,
-        exam_reforms_initiated: 0,
-        curriculum_incharge_faculty_members: {
-            curriculum_revision: 0,
-            member_board: 0,
-            faculty_dev_workshop: 0
-        },
-        avg_student_attendance: 0,
-        pass_percent_dist: [{
-            programme_title: '',
-            students_appeared: 0,
-            division: {
-                distinction_percent: 0,
-                percent_one: 0,
-                percent_two: 0,
-                percent_three: 0,
-                percent_pass: 0
-            }
-        }],
-        iqac_contribution: '',
-        faculty_dev_initiative: {
-            refresher_courses: 0,
-            ugc_fac_improvement_prog: 0,
-            hrd_programme:0,
-            orientation_programme: 0,
-            fac_exchange_programme: 0,
-            staff_training_univ: 0,
-            staff_training_other: 0,
-            summer_winter_workshops: 0,
-            others: 0
-        },
-        admin_tech_staff: {
-            permanent_employees: {
-                admin: 0,
-                technical: 0
-            },
-            vacant_positions: {
-                admin: 0,
-                technical: 0
-            },
-            permanent_positions_filled: {
-                admin: 0,
-                technical: 0
-            },
-            temporary_positions_filled: {
-                admin: 0,
-                technical: 0
-            }
-        }
-    };
 
     form.department = req.cookies.dept;
     
@@ -219,7 +227,7 @@ router.post('/submit/:dept', function(req, res) {
 
     query = {department: req.params.dept};
 
-        CriterionTwo.update(query, form, function(err) {
+        CriterionTwo.update(query, form, {upsert: true}, function(err) {
         if(err) {
             console.log(err);
         } else {
@@ -229,7 +237,12 @@ router.post('/submit/:dept', function(req, res) {
 });
 
 router.get('/admin', function(req, res) {
-    res.render('admin');
+    console.log(req.cookies);
+    if(req.cookies.dept!='HOQ') {
+        res.redirect('/login');
+    } else {
+        res.render('admin');
+    }
 });
 
 router.post('/admin', function(req, res) {
