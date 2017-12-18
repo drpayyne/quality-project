@@ -4,6 +4,8 @@ const router = express.Router();
 //Import DB models
 let CriterionTwo = require('../models/criterion_two');
 
+/* let deptPassPercentSchema = ; */
+
 let form = {
     department: '',
     permanent_faculty: {
@@ -67,17 +69,17 @@ let form = {
         faculty_dev_workshop: 0
     },
     avg_student_attendance: 0,
-    pass_percent_dist: [{
+    pass_percent_dist: [/* {
         programme_title: '',
-        students_appeared: 0,
+        students_appeared: null,
         division: {
-            distinction_percent: 0,
-            percent_one: 0,
-            percent_two: 0,
-            percent_three: 0,
-            percent_pass: 0
+            distinction_percent: null,
+            percent_one: null,
+            percent_two: null,
+            percent_three: null,
+            percent_pass: null
         }
-    }],
+    } */],
     iqac_contribution: '',
     faculty_dev_initiative: {
         refresher_courses: 0,
@@ -112,7 +114,7 @@ let form = {
 
 //Form route GET
 router.get('/', function(req, res) {
-    console.log(req.cookies.user);
+    console.log(req.cookies);
     console.log('***');
     if(!req.cookies.user) {
         res.redirect('/login');
@@ -128,9 +130,10 @@ router.get('/', function(req, res) {
                    document = form;
                    console.log('New doc created.');
                 }
-                console.log(document + '---');
+                console.log(document.pass_percent_dist.length + '---');
                 res.render('form', {
-                    form: document
+                    form: document,
+                    length: document.pass_percent_dist.length
                 });
             }
         });
@@ -140,6 +143,11 @@ router.get('/', function(req, res) {
 //Form route POST
 router.post('/submit/:dept', function(req, res) {
     console.log("Getting data...");
+
+    console.log(form);/* 
+    form = form.toObject();
+    console.log(form); */
+
 
     form.department = req.cookies.dept;
     
@@ -188,7 +196,7 @@ router.post('/submit/:dept', function(req, res) {
 
     form.avg_student_attendance = req.body.r10c1;
 
-    let div = {
+    /* let div = {
         distinction_percent: req.body.r11c3s1,
         percent_one: req.body.r11c4s1,
         percent_two: req.body.r11c5s1,
@@ -198,7 +206,32 @@ router.post('/submit/:dept', function(req, res) {
 
     form.pass_percent_dist[0].programme_title = req.body.r11c1s1;
     form.pass_percent_dist[0].students_appeared = req.body.r11c2s1;
-    form.pass_percent_dist[0].division = div;
+    form.pass_percent_dist[0].division = div; */
+
+    let divs = [];
+    let r11c1s = [req.body.r11c1s1, req.body.r11c1s2, req.body.r11c1s3, req.body.r11c1s4, req.body.r11c1s5];
+    let r11c2s = [req.body.r11c2s1, req.body.r11c2s2, req.body.r11c2s3, req.body.r11c2s4, req.body.r11c2s5];
+    let r11c3s = [req.body.r11c3s1, req.body.r11c3s2, req.body.r11c3s3, req.body.r11c3s4, req.body.r11c3s5];
+    let r11c4s = [req.body.r11c4s1, req.body.r11c4s2, req.body.r11c4s3, req.body.r11c4s4, req.body.r11c4s5];
+    let r11c5s = [req.body.r11c5s1, req.body.r11c5s2, req.body.r11c5s3, req.body.r11c5s4, req.body.r11c5s5];
+    let r11c6s = [req.body.r11c6s1, req.body.r11c6s2, req.body.r11c6s3, req.body.r11c6s4, req.body.r11c6s5];
+    let r11c7s = [req.body.r11c7s1, req.body.r11c7s2, req.body.r11c7s3, req.body.r11c7s4, req.body.r11c7s5];
+
+    for(var i=0; i<req.body.row_val; i++) {
+        let doc = {};
+        divs[i] = {
+            distinction_percent: r11c3s[i],
+            percent_one: r11c4s[i],
+            percent_two: r11c5s[i],
+            percent_three: r11c6s[i],
+            percent_pass: r11c7s[i]
+        }
+        doc.programme_title = r11c1s[i];
+        doc.students_appeared = r11c2s[i];
+        doc.division = divs[i];
+
+        form.pass_percent_dist.push(doc);
+    }
 
     form.iqac_contribution = req.body.r12c1;
 
@@ -221,13 +254,11 @@ router.post('/submit/:dept', function(req, res) {
     form.admin_tech_staff.temporary_positions_filled.admin = req.body.r14c7;
     form.admin_tech_staff.temporary_positions_filled.technical = req.body.r14c8;
 
-    console.log(form);
-
     console.log(req.body.row_val);
 
     query = {department: req.params.dept};
 
-        CriterionTwo.update(query, form, {upsert: true}, function(err) {
+    CriterionTwo.update(query, form, {upsert: true}, function(err) {
         if(err) {
             console.log(err);
         } else {

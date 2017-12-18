@@ -35,7 +35,7 @@ html(lang='en')
 						td
 							input(type='number', name='r1c6', value=form.permanent_faculty.total)
 				label 2.2 No. of permanent faculty with Ph.D.:
-				input(type='number', name='r2c1', value=form.permanent_faculty.total)
+				input(type='number', name='r2c1', value=form.permanent_faculty_phd)
 				label 2.3 No. of Faculty Positions Recruited (R) and Vacant (V) during the year
 				table(style='width:100%')
 					tr
@@ -175,7 +175,7 @@ html(lang='en')
 						td
 							input(type='number', name='r11c6s1', value=form.pass_percent_dist[0].division.percent_three)
 						td
-							input(type='number', name='r11c7s1', value='form.pass_percent_dist.division.percent_pass')
+							input(type='number', name='r11c7s1', value=form.pass_percent_dist[0].division.percent_pass)
 				button(type='button', onclick='addRow()') Add Row
 				label
 					| 2.12 How does IQAC Contribute/Monitor/Evaluate the Teaching & Learning processes:
