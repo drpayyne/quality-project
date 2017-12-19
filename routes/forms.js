@@ -4,71 +4,69 @@ const router = express.Router();
 //Import DB models
 let CriterionTwo = require('../models/criterion_two');
 
-/* let deptPassPercentSchema = ; */
-
 let form = {
     department: '',
     permanent_faculty: {
-        asst_prof: 0,
-        asso_prof: 0,
-        prof: 0,
-        others: 0,
-        total: 0
+        asst_prof: null,
+        asso_prof: null,
+        prof: null,
+        others: null,
+        total: null
     },
-    permanent_faculty_phd: 0,
+    permanent_faculty_phd: null,
     faculty_pos_recruited_vacant: {
         asst_prof: {
-            recruited: 0,
-            vacant: 0
+            recruited: null,
+            vacant: null
         },
         asso_prof: {
-            recruited: 0,
-            vacant: 0
+            recruited: null,
+            vacant: null
         },
         prof: {
-            recruited: 0,
-            vacant: 0
+            recruited: null,
+            vacant: null
         },
         others: {
-            recruited: 0,
-            vacant: 0
+            recruited: null,
+            vacant: null
         },
         total: {
-            recruited: 0,
-            vacant: 0
+            recruited: null,
+            vacant: null
         }
     },
     guest_visit_temp_faculty: {
-        guest: 0,
-        visiting: 0,
-        temporary: 0
+        guest: null,
+        visiting: null,
+        temporary: null
     },
     faculty_participation: {
         international: {
-            seminar_workshop: 0,
-            paper_presented: 0,
-            resource_persons: 0
+            seminar_workshop: null,
+            paper_presented: null,
+            resource_persons: null
         },
         national: {
-            seminar_workshop: 0,
-            paper_presented: 0,
-            resource_persons: 0
+            seminar_workshop: null,
+            paper_presented: null,
+            resource_persons: null
         },
         state: {
-            seminar_workshop: 0,
-            paper_presented: 0,
-            resource_persons: 0
+            seminar_workshop: null,
+            paper_presented: null,
+            resource_persons: null
         }
     },
-    innovative_process_adopted: 0,
-    actual_teaching_days: 0,
-    exam_reforms_initiated: 0,
+    innovative_process_adopted: '',
+    actual_teaching_days: null,
+    exam_reforms_initiated: null,
     curriculum_incharge_faculty_members: {
-        curriculum_revision: 0,
-        member_board: 0,
-        faculty_dev_workshop: 0
+        curriculum_revision: null,
+        member_board: null,
+        faculty_dev_workshop: null
     },
-    avg_student_attendance: 0,
+    avg_student_attendance: null,
     pass_percent_dist: [/* {
         programme_title: '',
         students_appeared: null,
@@ -82,40 +80,40 @@ let form = {
     } */],
     iqac_contribution: '',
     faculty_dev_initiative: {
-        refresher_courses: 0,
-        ugc_fac_improvement_prog: 0,
-        hrd_programme:0,
-        orientation_programme: 0,
-        fac_exchange_programme: 0,
-        staff_training_univ: 0,
-        staff_training_other: 0,
-        summer_winter_workshops: 0,
-        others: 0
+        refresher_courses: null,
+        ugc_fac_improvement_prog: null,
+        hrd_programme:null,
+        orientation_programme: null,
+        fac_exchange_programme: null,
+        staff_training_univ: null,
+        staff_training_other: null,
+        summer_winter_workshops: null,
+        others: null
     },
     admin_tech_staff: {
         permanent_employees: {
-            admin: 0,
-            technical: 0
+            admin: null,
+            technical: null
         },
         vacant_positions: {
-            admin: 0,
-            technical: 0
+            admin: null,
+            technical: null
         },
         permanent_positions_filled: {
-            admin: 0,
-            technical: 0
+            admin: null,
+            technical: null
         },
         temporary_positions_filled: {
-            admin: 0,
-            technical: 0
+            admin: null,
+            technical: null
         }
     }
 };
 
 //Form route GET
 router.get('/', function(req, res) {
+    console.log('Cookies got...');
     console.log(req.cookies);
-    console.log('***');
     if(!req.cookies.user) {
         res.redirect('/login');
     }        
@@ -127,10 +125,21 @@ router.get('/', function(req, res) {
                 console.log(err);
             } else {
                 if(document==null) {
-                   document = form;
+                    document = form;
+                    document.pass_percent_dist[0] = {
+                        programme_title: '',
+                        students_appeared: null,
+                        division: {
+                            distinction_percent: null,
+                            percent_one: null,
+                            percent_two: null,
+                            percent_three: null,
+                            percent_pass: null
+                        }
+                    };
                    console.log('New doc created.');
                 }
-                console.log(document.pass_percent_dist.length + '---');
+                console.log('Array length = ' + document.pass_percent_dist.length);
                 res.render('form', {
                     form: document,
                     length: document.pass_percent_dist.length
@@ -143,11 +152,10 @@ router.get('/', function(req, res) {
 //Form route POST
 router.post('/submit/:dept', function(req, res) {
     console.log("Getting data...");
-
-    console.log(form);/* 
-    form = form.toObject();
-    console.log(form); */
-
+    console.log('Cookies got...');
+    console.log(req.cookies);
+    console.log(form);
+    console.log('Array length = ' + req.body.row_val);
 
     form.department = req.cookies.dept;
     
@@ -254,8 +262,6 @@ router.post('/submit/:dept', function(req, res) {
     form.admin_tech_staff.temporary_positions_filled.admin = req.body.r14c7;
     form.admin_tech_staff.temporary_positions_filled.technical = req.body.r14c8;
 
-    console.log(req.body.row_val);
-
     query = {department: req.params.dept};
 
     CriterionTwo.update(query, form, {upsert: true}, function(err) {
@@ -268,6 +274,7 @@ router.post('/submit/:dept', function(req, res) {
 });
 
 router.get('/admin', function(req, res) {
+    console.log('Cookies got...');
     console.log(req.cookies);
     if(req.cookies.dept!='HOQ') {
         res.redirect('/login');

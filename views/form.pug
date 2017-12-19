@@ -4,8 +4,7 @@ html(lang='en')
 		meta(charset='UTF-8')
 		title IQAC Form
 		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css')
-		link(rel='stylesheet', href='css/form.css')
-		script(src='js/form.js')
+		link(rel='stylesheet', href='/css/form.css')
 	body
 		a(href='/login') Logout
 		form(action='/form/submit/' + cookies.dept, method='POST')
@@ -125,7 +124,7 @@ html(lang='en')
 						td
 							input(type='number', name='r5c9', value=form.faculty_participation.state.resource_persons)
 				label 2.6 Innovative processes adopted by the institution in Teaching and Learning:
-				input(type='number', name='r6c1', value=form.innovative_process_adopted)
+				input(type='text', name='r6c1', value=form.innovative_process_adopted)
 				label 2.7 Total No. of actual teaching days during this academic year:
 				input(type='number', name='r7c1', value=form.actual_teaching_days)
 				label
@@ -161,9 +160,9 @@ html(lang='en')
 						th II%
 						th III%
 						th Pass%
-					tr
+					//-tr
 						td
-							input(type='string', name='r11c1s1', value=form.pass_percent_dist[0].programme_title)
+							input(type='text', name='r11c1s1', value=form.pass_percent_dist[0].programme_title)
 						td
 							input(type='number', name='r11c2s1', value=form.pass_percent_dist[0].students_appeared)
 						td
@@ -176,7 +175,7 @@ html(lang='en')
 							input(type='number', name='r11c6s1', value=form.pass_percent_dist[0].division.percent_three)
 						td
 							input(type='number', name='r11c7s1', value=form.pass_percent_dist[0].division.percent_pass)
-				button(type='button', onclick='addRow()') Add Row
+				button(type='button', onclick='addNewRow()') Add Row
 				label
 					| 2.12 How does IQAC Contribute/Monitor/Evaluate the Teaching & Learning processes:
 				input(type='text', name='r12c1', value=form.iqac_contribution)
@@ -255,5 +254,6 @@ html(lang='en')
 							input(type='number', name='r14c7', value=form.admin_tech_staff.temporary_positions_filled.admin)
 						td
 							input(type='number', name='r14c8', value=form.admin_tech_staff.temporary_positions_filled.technical)
-				input(type='hidden', name='row_val', value=1)
+				input(type='hidden', name='row_val', value=length)
 			button(type='submit') SAVE
+		script(src='/js/form.js')

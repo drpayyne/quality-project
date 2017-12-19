@@ -17,7 +17,6 @@ let db = mongoose.connection;
 db.once('open', function(){
 	console.log("Connected to MongoDB");
 });
-
 db.on('error', function(err) {
 	console.log(err);
 });
@@ -33,7 +32,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 //Set public folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 //Express session middleware
 app.use(session({
@@ -41,6 +40,7 @@ app.use(session({
 	resave: true,
 	saveUninitialized: false,
 }));
+
 app.use(cookieParser());
 
 app.use(function(req,res,next){

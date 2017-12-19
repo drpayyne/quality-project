@@ -67,7 +67,7 @@ var criterionTwoSchema = mongoose.Schema({
 			resource_persons: Number
 		}
 	},
-	innovative_process_adopted: Number,
+	innovative_process_adopted: String,
 	actual_teaching_days: Number,
 	exam_reforms_initiated: Number,
 	curriculum_incharge_faculty_members: {
