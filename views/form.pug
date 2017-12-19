@@ -160,7 +160,7 @@ html(lang='en')
 						th II%
 						th III%
 						th Pass%
-					//-tr
+					tr
 						td
 							input(type='text', name='r11c1s1', value=form.pass_percent_dist[0].programme_title)
 						td
@@ -175,7 +175,37 @@ html(lang='en')
 							input(type='number', name='r11c6s1', value=form.pass_percent_dist[0].division.percent_three)
 						td
 							input(type='number', name='r11c7s1', value=form.pass_percent_dist[0].division.percent_pass)
-				button(type='button', onclick='addNewRow()') Add Row
+					tr
+						td
+							input(type='text', name='r11c1s2', value=form.pass_percent_dist[1].programme_title)
+						td
+							input(type='number', name='r11c2s2', value=form.pass_percent_dist[1].students_appeared)
+						td
+							input(type='number', name='r11c3s2', value=form.pass_percent_dist[1].division.distinction_percent)
+						td
+							input(type='number', name='r11c4s2', value=form.pass_percent_dist[1].division.percent_one)
+						td
+							input(type='number', name='r11c5s2', value=form.pass_percent_dist[1].division.percent_two)
+						td
+							input(type='number', name='r11c6s2', value=form.pass_percent_dist[1].division.percent_three)
+						td
+							input(type='number', name='r11c7s2', value=form.pass_percent_dist[1].division.percent_pass)
+					tr
+						td
+							input(type='text', name='r11c1s3', value=form.pass_percent_dist[2].programme_title)
+						td
+							input(type='number', name='r11c2s3', value=form.pass_percent_dist[2].students_appeared)
+						td
+							input(type='number', name='r11c3s3', value=form.pass_percent_dist[2].division.distinction_percent)
+						td
+							input(type='number', name='r11c4s3', value=form.pass_percent_dist[2].division.percent_one)
+						td
+							input(type='number', name='r11c5s3', value=form.pass_percent_dist[2].division.percent_two)
+						td
+							input(type='number', name='r11c6s3', value=form.pass_percent_dist[2].division.percent_three)
+						td
+							input(type='number', name='r11c7s3', value=form.pass_percent_dist[2].division.percent_pass)
+				//-button(type='button', onclick='addNewRow()') Add Row
 				label
 					| 2.12 How does IQAC Contribute/Monitor/Evaluate the Teaching & Learning processes:
 				input(type='text', name='r12c1', value=form.iqac_contribution)
@@ -256,4 +286,4 @@ html(lang='en')
 							input(type='number', name='r14c8', value=form.admin_tech_staff.temporary_positions_filled.technical)
 				input(type='hidden', name='row_val', value=length)
 			button(type='submit') SAVE
-		script(src='/js/form.js')
+		//-script(src='/js/form.js')

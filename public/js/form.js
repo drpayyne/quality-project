@@ -1,10 +1,10 @@
-var array_length = document.getElementsByName("row_val")[0].value;
+/* var array_length = document.getElementsByName("row_val")[0].value;
 console.log(array_length);
 var i = array_length;
 console.log('Array length : ' + i);
-var table = document.all("table11");
+var table = document.all("table11"); */
 
-function addNewRow() {
+/* function addNewRow() {
     if(i==5) {
         alert(1);
     } else {
@@ -26,8 +26,8 @@ function addNewRow() {
         oCell.innerHTML = "<input type='number' name='r11c7s"+i+"'>";				
         document.getElementsByName("row_val")[0].value = i;
     }
-}
-function fillRows() {
+} */
+/* function fillRows() {
     console.log('Filling ' + i + ' rows');
     var j;
     console.log(table);
@@ -36,8 +36,8 @@ function fillRows() {
         var oCell = newRow.insertCell();
         var k = j + 1;
         oCell.innerHTML = "<input type='text' value=form.pass_percent_dist[" + j + "].programme_title name='r11c1s"+k+"'>";
-        /* var str = "form.pass_percent_dist[0].programme_title";
-        oCell.value = str; */
+        var str = "form.pass_percent_dist[0].programme_title";
+        oCell.value = str;
         oCell = newRow.insertCell();
         oCell.innerHTML = "<input type='number' value=form.pass_percent_dist[" + j + "].students_appeared name='r11c2s"+k+"'>";
         oCell = newRow.insertCell();
@@ -54,4 +54,4 @@ function fillRows() {
     document.getElementsByName("row_val")[0].value = i;
 }
 
-fillRows();
+fillRows(); */

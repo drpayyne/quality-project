@@ -77,6 +77,26 @@ let form = {
             percent_three: null,
             percent_pass: null
         }
+    }, {
+        programme_title: '',
+        students_appeared: null,
+        division: {
+            distinction_percent: null,
+            percent_one: null,
+            percent_two: null,
+            percent_three: null,
+            percent_pass: null
+        }
+    }, {
+        programme_title: '',
+        students_appeared: null,
+        division: {
+            distinction_percent: null,
+            percent_one: null,
+            percent_two: null,
+            percent_three: null,
+            percent_pass: null
+        }
     } */],
     iqac_contribution: '',
     faculty_dev_initiative: {
@@ -137,9 +157,31 @@ router.get('/', function(req, res) {
                             percent_pass: null
                         }
                     };
+                    document.pass_percent_dist[1] = {
+                        programme_title: '',
+                        students_appeared: null,
+                        division: {
+                            distinction_percent: null,
+                            percent_one: null,
+                            percent_two: null,
+                            percent_three: null,
+                            percent_pass: null
+                        }
+                    };
+                    document.pass_percent_dist[2] = {
+                        programme_title: '',
+                        students_appeared: null,
+                        division: {
+                            distinction_percent: null,
+                            percent_one: null,
+                            percent_two: null,
+                            percent_three: null,
+                            percent_pass: null  
+                        }
+                    };
                    console.log('New doc created.');
                 }
-                console.log('Array length = ' + document.pass_percent_dist.length);
+                console.log(document);
                 res.render('form', {
                     form: document,
                     length: document.pass_percent_dist.length
@@ -225,7 +267,7 @@ router.post('/submit/:dept', function(req, res) {
     let r11c6s = [req.body.r11c6s1, req.body.r11c6s2, req.body.r11c6s3, req.body.r11c6s4, req.body.r11c6s5];
     let r11c7s = [req.body.r11c7s1, req.body.r11c7s2, req.body.r11c7s3, req.body.r11c7s4, req.body.r11c7s5];
 
-    for(var i=0; i<req.body.row_val; i++) {
+    for(var i=0; i<3; i++) {
         let doc = {};
         divs[i] = {
             distinction_percent: r11c3s[i],
@@ -261,6 +303,8 @@ router.post('/submit/:dept', function(req, res) {
     form.admin_tech_staff.permanent_positions_filled.technical = req.body.r14c6;
     form.admin_tech_staff.temporary_positions_filled.admin = req.body.r14c7;
     form.admin_tech_staff.temporary_positions_filled.technical = req.body.r14c8;
+
+    console.log(form);
 
     query = {department: req.params.dept};
 
