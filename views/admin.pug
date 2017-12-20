@@ -1,19 +1,19 @@
 doctype html
 html(lang='en')
-  head
-    meta(charset='UTF-8')
-    title Login In
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css')
-    link(rel='stylesheet', href='css/login.css')
-  body
-    form(action='/form/admin', method='post')
-      h1 Admin
-      fieldset
-        label Department
-        select(name='username')
-          option(value='CSE') CSE
-          option(value='ECE') ECE
-          option(value='CHE') CHE
-          option(value='BTC') BTC
-          option(value='MEC') MEC
-      button(type='submit') View
+	head
+		meta(charset='UTF-8')
+		title Login In
+		link(rel='stylesheet', href='/css/normalize.min.css')
+		link(rel='stylesheet', href='/css/login.css')
+	body
+		form(action='/form/admin', method='post')
+			h1 Admin
+			fieldset
+				label Department
+				select(name='username')
+					option(value='CSE') CSE
+					option(value='ECE') ECE
+					option(value='CHE') CHE
+					option(value='BTC') BTC
+					option(value='MEC') MEC
+			button(type='submit') View

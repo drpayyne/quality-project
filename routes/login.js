@@ -18,9 +18,17 @@ router.post('/', function(req, res) {
 
     query = {username: username};
     User.findOne(query, function(err, user) {
-        if(err) return console.log(err);
-        if(!user) return console.log('User not found');
-        if(user.password!=password) return console.log('Incorrect password');
+        if(err) {
+            return console.log(err);
+        }
+        if(!user) {
+            res.redirect('/login');
+            return console.log('User not found');
+        }
+        if(user.password!=password) {
+            res.redirect('/login');
+            return console.log('Incorrect password');
+        }
         res.cookie('user', user, {expires: 0});
         res.cookie('dept', user.username, {expires: 0});
         console.log('Cookies set...');
