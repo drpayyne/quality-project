@@ -16,4 +16,10 @@ html(lang='en')
 					option(value='CHE') CHE
 					option(value='BTC') BTC
 					option(value='MEC') MEC
-			button(type='submit') View
+				hr
+				input(type='radio', name='action', value='view') 
+				| View
+				br
+				input(type='radio', name='action', value='gen')
+				| Export as PDF
+			button(type='submit') Go

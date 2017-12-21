@@ -4,6 +4,8 @@ const router = express.Router();
 //Import DB models
 let CriterionTwo = require('../models/criterion_two');
 
+let PDF = require('../gen/pdf');
+
 let form = {
 	department: null,
 	permanent_faculty: {
@@ -330,7 +332,17 @@ router.get('/admin', function(req, res) {
 
 router.post('/admin', function(req, res) {
 	res.cookie('dept', req.body.username, {expires: 0});
-	res.redirect('/form');
+	console.log(req.body.action);
+	if(req.body.action=='view') {
+		res.redirect('/form');
+	} else if(req.body.action=='gen') {
+		PDF.print(req.body.username);
+	}
+});
+
+router.get('/gen/', function(req, res) {
+	console.log(req.cookies);
+	res.send('gentool');
 });
 
 module.exports = router;
