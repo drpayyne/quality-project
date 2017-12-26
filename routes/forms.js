@@ -6,134 +6,147 @@ let CriterionTwo = require('../models/criterion_two');
 
 let PDF = require('../gen/pdf');
 
-let form = {
-	department: null,
-	permanent_faculty: {
-		asst_prof: null,
-		asso_prof: null,
-		prof: null,
-		others: null,
-		total: null
-	},
-	permanent_faculty_phd: null,
-	faculty_pos_recruited_vacant: {
-		asst_prof: {
-			recruited: null,
-			vacant: null
-		},
-		asso_prof: {
-			recruited: null,
-			vacant: null
-		},
-		prof: {
-			recruited: null,
-			vacant: null
-		},
-		others: {
-			recruited: null,
-			vacant: null
-		},
-		total: {
-			recruited: null,
-			vacant: null
-		}
-	},
-	guest_visit_temp_faculty: {
-		guest: null,
-		visiting: null,
-		temporary: null
-	},
-	faculty_participation: {
-		international: {
-			seminar_workshop: null,
-			paper_presented: null,
-			resource_persons: null
-		},
-		national: {
-			seminar_workshop: null,
-			paper_presented: null,
-			resource_persons: null
-		},
-		state: {
-			seminar_workshop: null,
-			paper_presented: null,
-			resource_persons: null
-		}
-	},
-	innovative_process_adopted: '',
-	actual_teaching_days: null,
-	exam_reforms_initiated: null,
-	curriculum_incharge_faculty_members: {
-		curriculum_revision: null,
-		member_board: null,
-		faculty_dev_workshop: null
-	},
-	avg_student_attendance: null,
-	pass_percent_dist: [/* {
-		programme_title: '',
-		students_appeared: null,
-		division: {
-			distinction_percent: null,
-			percent_one: null,
-			percent_two: null,
-			percent_three: null,
-			percent_pass: null
-		}
-	}, {
-		programme_title: '',
-		students_appeared: null,
-		division: {
-			distinction_percent: null,
-			percent_one: null,
-			percent_two: null,
-			percent_three: null,
-			percent_pass: null
-		}
-	}, {
-		programme_title: '',
-		students_appeared: null,
-		division: {
-			distinction_percent: null,
-			percent_one: null,
-			percent_two: null,
-			percent_three: null,
-			percent_pass: null
-		}
-	} */],
-	iqac_contribution: null,
-	faculty_dev_initiative: {
-		refresher_courses: null,
-		ugc_fac_improvement_prog: null,
-		hrd_programme:null,
-		orientation_programme: null,
-		fac_exchange_programme: null,
-		staff_training_univ: null,
-		staff_training_other: null,
-		summer_winter_workshops: null,
-		others: null
-	},
-	admin_tech_staff: {
-		permanent_employees: {
-			admin: null,
-			technical: null
-		},
-		vacant_positions: {
-			admin: null,
-			technical: null
-		},
-		permanent_positions_filled: {
-			admin: null,
-			technical: null
-		},
-		temporary_positions_filled: {
-			admin: null,
-			technical: null
-		}
+let form = {}, def_pass = {
+	programme_title: null,
+	students_appeared: null,
+	division: {
+		distinction_percent: null,
+		percent_one: null,
+		percent_two: null,
+		percent_three: null,
+		percent_pass: null
 	}
 };
 
 //Form route GET
 router.get('/', function(req, res) {
+
+	form = {
+		department: null,
+		permanent_faculty: {
+			asst_prof: null,
+			asso_prof: null,
+			prof: null,
+			others: null,
+			total: null
+		},
+		permanent_faculty_phd: null,
+		faculty_pos_recruited_vacant: {
+			asst_prof: {
+				recruited: null,
+				vacant: null
+			},
+			asso_prof: {
+				recruited: null,
+				vacant: null
+			},
+			prof: {
+				recruited: null,
+				vacant: null
+			},
+			others: {
+				recruited: null,
+				vacant: null
+			},
+			total: {
+				recruited: null,
+				vacant: null
+			}
+		},
+		guest_visit_temp_faculty: {
+			guest: null,
+			visiting: null,
+			temporary: null
+		},
+		faculty_participation: {
+			international: {
+				seminar_workshop: null,
+				paper_presented: null,
+				resource_persons: null
+			},
+			national: {
+				seminar_workshop: null,
+				paper_presented: null,
+				resource_persons: null
+			},
+			state: {
+				seminar_workshop: null,
+				paper_presented: null,
+				resource_persons: null
+			}
+		},
+		innovative_process_adopted: '',
+		actual_teaching_days: null,
+		exam_reforms_initiated: null,
+		curriculum_incharge_faculty_members: {
+			curriculum_revision: null,
+			member_board: null,
+			faculty_dev_workshop: null
+		},
+		avg_student_attendance: null,
+		pass_percent_dist: [/* {
+			programme_title: '',
+			students_appeared: null,
+			division: {
+				distinction_percent: null,
+				percent_one: null,
+				percent_two: null,
+				percent_three: null,
+				percent_pass: null
+			}
+		}, {
+			programme_title: '',
+			students_appeared: null,
+			division: {
+				distinction_percent: null,
+				percent_one: null,
+				percent_two: null,
+				percent_three: null,
+				percent_pass: null
+			}
+		}, {
+			programme_title: '',
+			students_appeared: null,
+			division: {
+				distinction_percent: null,
+				percent_one: null,
+				percent_two: null,
+				percent_three: null,
+				percent_pass: null
+			}
+		} */],
+		iqac_contribution: null,
+		faculty_dev_initiative: {
+			refresher_courses: null,
+			ugc_fac_improvement_prog: null,
+			hrd_programme:null,
+			orientation_programme: null,
+			fac_exchange_programme: null,
+			staff_training_univ: null,
+			staff_training_other: null,
+			summer_winter_workshops: null,
+			others: null
+		},
+		admin_tech_staff: {
+			permanent_employees: {
+				admin: null,
+				technical: null
+			},
+			vacant_positions: {
+				admin: null,
+				technical: null
+			},
+			permanent_positions_filled: {
+				admin: null,
+				technical: null
+			},
+			temporary_positions_filled: {
+				admin: null,
+				technical: null
+			}
+		}
+	};
+
 	console.log('Cookies got...');
 	console.log(req.cookies);
 	if(!req.cookies.user) {
@@ -146,6 +159,7 @@ router.get('/', function(req, res) {
 			if(err) {
 				console.log(err);
 			} else {
+				console.log(document);
 				if(document==null) {
 					document = form;
 					document.pass_percent_dist[0] = {
@@ -336,13 +350,9 @@ router.post('/admin', function(req, res) {
 	if(req.body.action=='view') {
 		res.redirect('/form');
 	} else if(req.body.action=='gen') {
-		PDF.print(req.body.username);
+		PDF.print();
+		res.redirect('/');
 	}
-});
-
-router.get('/gen/', function(req, res) {
-	console.log(req.cookies);
-	res.send('gentool');
 });
 
 module.exports = router;
