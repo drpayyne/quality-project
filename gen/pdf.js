@@ -346,7 +346,7 @@ function print() {
                                                         table: {
                                                             headerRows: 1,
                                                             body: [
-                                                                [{text: 'Total', style: 'tableHeader'}, {text: 'Asst. Professors', style: 'tableHeader'}, {text: 'Associate Professors', style: 'tableHeader'}, {text: 'Professors', style: 'tableHeader'}, {text: 'Others', style: 'tableHeader'}],
+                                                                [{text: 'Asst. Professors', style: 'tableHeader'}, {text: 'Associate Professors', style: 'tableHeader'}, {text: 'Professors', style: 'tableHeader'}, {text: 'Others', style: 'tableHeader'}, {text: 'Total', style: 'tableHeader'}],
                                                                 [data['permanent_faculty']['asst_prof'], data['permanent_faculty']['asso_prof'], data['permanent_faculty']['prof'], data['permanent_faculty']['others'], data['permanent_faculty']['total']]
                                                             ]
                                                         }
