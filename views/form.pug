@@ -7,6 +7,9 @@ html(lang='en')
 		link(rel='stylesheet', href='/css/form.css')
 	body
 		a(href='/login') Logout
+		if (cookies.user.username == 'HOQ')
+			br
+			a(href='/form/admin') Back
 		form(action='/form/submit/' + cookies.dept, method='POST')
 			h1 Criterion – II
 			h2 #{cookies.dept}
@@ -122,8 +125,6 @@ html(lang='en')
 							input(type='number', name='r5c8', value=form.faculty_participation.state.paper_presented)
 						td
 							input(type='number', name='r5c9', value=form.faculty_participation.state.resource_persons)
-				label 2.6 Innovative processes adopted by the institution in Teaching and Learning:
-				input(type='text', name='r6c1', value=form.innovative_process_adopted)
 				label 2.7 Total No. of actual teaching days during this academic year:
 				input(type='number', name='r7c1', value=form.actual_teaching_days)
 				label
@@ -175,9 +176,6 @@ html(lang='en')
 						//-td
 							input(type='number', name='r11c7s1', value=form.pass_percent_dist[0].division.percent_pass)
 				//-button(type='button', onclick='addNewRow()') Add Row
-				label
-					| 2.12 How does IQAC Contribute/Monitor/Evaluate the Teaching & Learning processes:
-				input(type='text', name='r12c1', value=form.iqac_contribution)
 				label 2.13 Initiatives undertaken towards faculty development:
 				table(style='width:100%')
 					tr

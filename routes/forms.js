@@ -3,6 +3,7 @@ const router = express.Router();
 
 //Import DB models
 let CriterionTwo = require('../models/criterion_two');
+let CriterionTwoHform = require('../models/criterion_two_hoq');
 
 let PDF = require('../gen/pdf');
 
@@ -70,7 +71,6 @@ router.get('/', function(req, res) {
 				resource_persons: null
 			}
 		},
-		innovative_process_adopted: '',
 		actual_teaching_days: null,
 		exam_reforms_initiated: null,
 		curriculum_incharge_faculty_members: {
@@ -110,7 +110,6 @@ router.get('/', function(req, res) {
 				percent_pass: null
 			}
 		} */],
-		iqac_contribution: null,
 		faculty_dev_initiative: {
 			refresher_courses: null,
 			ugc_fac_improvement_prog: null,
@@ -223,8 +222,6 @@ router.post('/submit/:dept', function(req, res) {
 	form.faculty_participation.state.paper_presented = req.body.r5c8;
 	form.faculty_participation.state.resource_persons = req.body.r5c9;
 
-	form.innovative_process_adopted = req.body.r6c1;
-
 	form.actual_teaching_days = req.body.r7c1;
 
 	form.exam_reforms_initiated = req.body.r8c1;
@@ -272,8 +269,6 @@ router.post('/submit/:dept', function(req, res) {
 		form.pass_percent_dist[i] = doc;
 	}
 
-	form.iqac_contribution = req.body.r12c1;
-
 	form.faculty_dev_initiative.refresher_courses = req.body.r13c1;
 	form.faculty_dev_initiative.ugc_fac_improvement_prog = req.body.r13c2;
 	form.faculty_dev_initiative.hrd_programme = req.body.r13c3;
@@ -310,7 +305,9 @@ router.post('/submit/:dept', function(req, res) {
 router.get('/admin', function(req, res) {
 	console.log('Cookies got...');
 	console.log(req.cookies);
-	if(req.cookies.dept!='HOQ') {
+	if(!req.cookies.user) {
+		res.redirect('/login');
+	} else if(req.cookies.user.username!='HOQ') {
 		res.redirect('/login');
 	} else {
 		res.render('admin');
@@ -322,10 +319,50 @@ router.post('/admin', function(req, res) {
 	console.log(req.body.action);
 	if(req.body.action=='view') {
 		res.redirect('/form');
+	} else if(req.body.action=='hoq') {
+		res.redirect('/form/admin/hform')
 	} else if(req.body.action=='gen') {
 		PDF.print();
 		res.redirect('/');
-	}
+	} 
+});
+
+router.get('/admin/hform', function(req, res) {
+	CriterionTwoHform.findOne({}, function(err, document) {
+		if(err) {
+			console.log(err);
+		} else {
+			if(document == null) {
+				document = {
+					innovative_process_adopted: '',
+					iqac_contribution: ''
+				};
+			}
+			console.log(document);
+			res.render('hform', {
+				form: document
+			});
+		}
+	});
+});
+
+router.post('/admin/hform', function(req, res) {
+	var doc = {
+		innovative_process_adopted: '',
+		iqac_contribution: ''
+	};
+
+	doc.innovative_process_adopted = req.body.r6c1;
+	doc.iqac_contribution = req.body.r12c1;
+
+	CriterionTwoHform.update({}, doc, {upsert: true}, function(err) {
+		if(err) {
+			console.log(err);
+		} else {
+			res.redirect('/form/admin/hform');
+		}
+	});
+
 });
 
 module.exports = router;

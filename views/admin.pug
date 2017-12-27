@@ -6,6 +6,7 @@ html(lang='en')
 		link(rel='stylesheet', href='/css/normalize.min.css')
 		link(rel='stylesheet', href='/css/login.css')
 	body
+		a(href='/login') Logout
 		form(action='/form/admin', method='post')
 			h1 Admin
 			fieldset
@@ -19,6 +20,9 @@ html(lang='en')
 				br
 				input(type='radio', name='action', value='view') 
 				| View
+				hr
+				input(type='radio', name='action', value='hoq') 
+				| Enter HOQ details
 				hr
 				input(type='radio', name='action', value='gen')
 				| Generate report as PDF

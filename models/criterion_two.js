@@ -67,7 +67,6 @@ var criterionTwoSchema = mongoose.Schema({
 			resource_persons: Number
 		}
 	},
-	innovative_process_adopted: String,
 	actual_teaching_days: Number,
 	exam_reforms_initiated: Number,
 	curriculum_incharge_faculty_members: {
@@ -77,7 +76,6 @@ var criterionTwoSchema = mongoose.Schema({
 	},
 	avg_student_attendance: Number,
 	pass_percent_dist: [deptPassPercentSchema],
-	iqac_contribution: String,
 	faculty_dev_initiative: {
 		refresher_courses: Number,
 		ugc_fac_improvement_prog: Number,
