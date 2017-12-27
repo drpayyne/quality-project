@@ -21,7 +21,6 @@ html(lang='en')
 						th Associate Professors
 						th Professors
 						th Others
-						th Total
 					tr
 						td
 							input(type='number', name='r1c2', value=form.permanent_faculty.asst_prof)
@@ -31,7 +30,7 @@ html(lang='en')
 							input(type='number', name='r1c4', value=form.permanent_faculty.prof)
 						td
 							input(type='number', name='r1c5', value=form.permanent_faculty.others)
-						td
+						//-td
 							input(type='number', name='r1c6', value=form.permanent_faculty.total)
 				label 2.2 No. of permanent faculty with Ph.D.:
 				input(type='number', name='r2c1', value=form.permanent_faculty_phd)
@@ -42,7 +41,7 @@ html(lang='en')
 						th(colspan='2') Associate Professors
 						th(colspan='2') Professors
 						th(colspan='2') Others
-						th(colspan='2') Total
+						//-th(colspan='2') Total
 					tr
 						th R
 						th V
@@ -52,8 +51,8 @@ html(lang='en')
 						th V
 						th R
 						th V
-						th R
-						th V
+						//-th R
+						//-th V
 					tr
 						td
 							input(type='number', name='r3c1', value=form.faculty_pos_recruited_vacant.asst_prof.recruited)
@@ -71,9 +70,9 @@ html(lang='en')
 							input(type='number', name='r3c7', value=form.faculty_pos_recruited_vacant.others.recruited)
 						td
 							input(type='number', name='r3c8', value=form.faculty_pos_recruited_vacant.others.vacant)
-						td
+						//-td
 							input(type='number', name='r3c9', value=form.faculty_pos_recruited_vacant.total.recruited)
-						td
+						//-td
 							input(type='number', name='r3c10', value=form.faculty_pos_recruited_vacant.total.vacant)
 				label 2.4 No. of Guest and Visiting faculty and Temporary faculty:
 				table(style='width:100%')
@@ -153,13 +152,13 @@ html(lang='en')
 					tr
 						th(rowspan='2') Title of the programme
 						th(rowspan='2') Total number of students appeared
-						th(colspan='5') Division
+						th(colspan='4') Division
 					tr
 						th Distinction%
 						th I%
 						th II%
 						th III%
-						th Pass%
+						//-th Pass%
 					tr
 						td
 							input(type='text', name='r11c1s1', value=form.pass_percent_dist[0].programme_title)
@@ -173,38 +172,8 @@ html(lang='en')
 							input(type='number', name='r11c5s1', value=form.pass_percent_dist[0].division.percent_two)
 						td
 							input(type='number', name='r11c6s1', value=form.pass_percent_dist[0].division.percent_three)
-						td
+						//-td
 							input(type='number', name='r11c7s1', value=form.pass_percent_dist[0].division.percent_pass)
-					tr
-						td
-							input(type='text', name='r11c1s2', value=form.pass_percent_dist[1].programme_title)
-						td
-							input(type='number', name='r11c2s2', value=form.pass_percent_dist[1].students_appeared)
-						td
-							input(type='number', name='r11c3s2', value=form.pass_percent_dist[1].division.distinction_percent)
-						td
-							input(type='number', name='r11c4s2', value=form.pass_percent_dist[1].division.percent_one)
-						td
-							input(type='number', name='r11c5s2', value=form.pass_percent_dist[1].division.percent_two)
-						td
-							input(type='number', name='r11c6s2', value=form.pass_percent_dist[1].division.percent_three)
-						td
-							input(type='number', name='r11c7s2', value=form.pass_percent_dist[1].division.percent_pass)
-					tr
-						td
-							input(type='text', name='r11c1s3', value=form.pass_percent_dist[2].programme_title)
-						td
-							input(type='number', name='r11c2s3', value=form.pass_percent_dist[2].students_appeared)
-						td
-							input(type='number', name='r11c3s3', value=form.pass_percent_dist[2].division.distinction_percent)
-						td
-							input(type='number', name='r11c4s3', value=form.pass_percent_dist[2].division.percent_one)
-						td
-							input(type='number', name='r11c5s3', value=form.pass_percent_dist[2].division.percent_two)
-						td
-							input(type='number', name='r11c6s3', value=form.pass_percent_dist[2].division.percent_three)
-						td
-							input(type='number', name='r11c7s3', value=form.pass_percent_dist[2].division.percent_pass)
 				//-button(type='button', onclick='addNewRow()') Add Row
 				label
 					| 2.12 How does IQAC Contribute/Monitor/Evaluate the Teaching & Learning processes:

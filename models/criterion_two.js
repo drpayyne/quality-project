@@ -7,8 +7,8 @@ let deptPassPercentSchema = ({
 		distinction_percent: Number,
 		percent_one: Number,
 		percent_two: Number,
-		percent_three: Number,
-		percent_pass: Number
+		percent_three: Number/* ,
+		percent_pass: Number */
 	}
 });
 
@@ -19,8 +19,8 @@ var criterionTwoSchema = mongoose.Schema({
 		asst_prof: Number,
 		asso_prof: Number,
 		prof: Number,
-		others: Number,
-		total: Number
+		others: Number/* ,
+		total: Number */
 	},
 	permanent_faculty_phd: Number,
 	faculty_pos_recruited_vacant: {
@@ -39,11 +39,11 @@ var criterionTwoSchema = mongoose.Schema({
 		others: {
 			recruited: Number,
 			vacant: Number
-		},
+		}/* ,
 		total: {
 			recruited: Number,
 			vacant: Number
-		}
+		} */
 	},
 	guest_visit_temp_faculty: {
 		guest: Number,

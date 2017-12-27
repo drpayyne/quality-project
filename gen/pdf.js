@@ -130,9 +130,21 @@ var base = {
 
 function total(form) {
     form.permanent_faculty.total = form.permanent_faculty.asso_prof + form.permanent_faculty.asst_prof + form.permanent_faculty.prof + form.permanent_faculty.others;
+    
+    form.faculty_pos_recruited_vacant.total = {};
     form.faculty_pos_recruited_vacant.total.recruited = form.faculty_pos_recruited_vacant.asso_prof.recruited + form.faculty_pos_recruited_vacant.asst_prof.recruited + form.faculty_pos_recruited_vacant.prof.recruited + form.faculty_pos_recruited_vacant.others.recruited;
     form.faculty_pos_recruited_vacant.total.vacant = form.faculty_pos_recruited_vacant.asso_prof.vacant + form.faculty_pos_recruited_vacant.asst_prof.vacant + form.faculty_pos_recruited_vacant.prof.vacant + form.faculty_pos_recruited_vacant.others.vacant;
-    
+
+    console.log(form.pass_percent_dist.length + "*******");
+
+    for(var i = 0; i < form.pass_percent_dist.length; i++) {
+        console.log(form.pass_percent_dist[i]);
+        form.pass_percent_dist[i].division.percent_pass = form.pass_percent_dist[i].division.distinction_percent + form.pass_percent_dist[i].division.percent_one + form.pass_percent_dist[i].division.percent_two + form.pass_percent_dist[i].division.percent_three;
+        console.log(form.pass_percent_dist[i].percent_pass);
+    }
+
+    console.log(form.pass_percent_dist);
+
     return form;
 }
 

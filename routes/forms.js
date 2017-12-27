@@ -13,8 +13,8 @@ let form = {}, def_pass = {
 		distinction_percent: null,
 		percent_one: null,
 		percent_two: null,
-		percent_three: null,
-		percent_pass: null
+		percent_three: null/* ,
+		percent_pass: null */
 	}
 };
 
@@ -27,8 +27,7 @@ router.get('/', function(req, res) {
 			asst_prof: null,
 			asso_prof: null,
 			prof: null,
-			others: null,
-			total: null
+			others: null
 		},
 		permanent_faculty_phd: null,
 		faculty_pos_recruited_vacant: {
@@ -45,10 +44,6 @@ router.get('/', function(req, res) {
 				vacant: null
 			},
 			others: {
-				recruited: null,
-				vacant: null
-			},
-			total: {
 				recruited: null,
 				vacant: null
 			}
@@ -169,30 +164,8 @@ router.get('/', function(req, res) {
 							distinction_percent: null,
 							percent_one: null,
 							percent_two: null,
-							percent_three: null,
-							percent_pass: null
-						}
-					};
-					document.pass_percent_dist[1] = {
-						programme_title: null,
-						students_appeared: null,
-						division: {
-							distinction_percent: null,
-							percent_one: null,
-							percent_two: null,
-							percent_three: null,
-							percent_pass: null
-						}
-					};
-					document.pass_percent_dist[2] = {
-						programme_title: null,
-						students_appeared: null,
-						division: {
-							distinction_percent: null,
-							percent_one: null,
-							percent_two: null,
-							percent_three: null,
-							percent_pass: null  
+							percent_three: null/* ,
+							percent_pass: null */
 						}
 					};
 				   console.log('New doc created.');
@@ -221,7 +194,7 @@ router.post('/submit/:dept', function(req, res) {
 	form.permanent_faculty.asso_prof = req.body.r1c3;
 	form.permanent_faculty.prof = req.body.r1c4;
 	form.permanent_faculty.others = req.body.r1c5;
-	form.permanent_faculty.total = req.body.r1c6;
+	/* form.permanent_faculty.total = req.body.r1c6; */
 
 	form.permanent_faculty_phd = req.body.r2c1;
 
@@ -233,8 +206,8 @@ router.post('/submit/:dept', function(req, res) {
 	form.faculty_pos_recruited_vacant.prof.vacant = req.body.r3c6;
 	form.faculty_pos_recruited_vacant.others.recruited = req.body.r3c7;
 	form.faculty_pos_recruited_vacant.others.vacant = req.body.r3c8;
-	form.faculty_pos_recruited_vacant.total.recruited = req.body.r3c9;
-	form.faculty_pos_recruited_vacant.total.vacant = req.body.r3c10;
+	/* form.faculty_pos_recruited_vacant.total.recruited = req.body.r3c9;
+	form.faculty_pos_recruited_vacant.total.vacant = req.body.r3c10; */
 
 	form.guest_visit_temp_faculty.guest = req.body.r4c1;
 	form.guest_visit_temp_faculty.visiting = req.body.r4c2;
@@ -281,16 +254,16 @@ router.post('/submit/:dept', function(req, res) {
 	let r11c4s = [req.body.r11c4s1, req.body.r11c4s2, req.body.r11c4s3, req.body.r11c4s4, req.body.r11c4s5];
 	let r11c5s = [req.body.r11c5s1, req.body.r11c5s2, req.body.r11c5s3, req.body.r11c5s4, req.body.r11c5s5];
 	let r11c6s = [req.body.r11c6s1, req.body.r11c6s2, req.body.r11c6s3, req.body.r11c6s4, req.body.r11c6s5];
-	let r11c7s = [req.body.r11c7s1, req.body.r11c7s2, req.body.r11c7s3, req.body.r11c7s4, req.body.r11c7s5];
+	/* let r11c7s = [req.body.r11c7s1, req.body.r11c7s2, req.body.r11c7s3, req.body.r11c7s4, req.body.r11c7s5]; */
 
-	for(var i=0; i<3; i++) {
+	for(var i=0; i<1; i++) {
 		let doc = {};
 		divs[i] = {
 			distinction_percent: r11c3s[i],
 			percent_one: r11c4s[i],
 			percent_two: r11c5s[i],
-			percent_three: r11c6s[i],
-			percent_pass: r11c7s[i]
+			percent_three: r11c6s[i]/* ,
+			percent_pass: r11c7s[i] */
 		}
 		doc.programme_title = r11c1s[i];
 		doc.students_appeared = r11c2s[i];
