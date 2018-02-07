@@ -52,12 +52,28 @@ select {
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
 }
 
+input[type="string"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 50%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+}
+
 input[type="password"],
 input[type="date"],
 input[type="datetime"],
 input[type="email"],
-input[type="number"],
 input[type="search"],
+input[type="number"],
 input[type="tel"],
 input[type="time"],
 input[type="url"],
@@ -95,7 +111,6 @@ button {
   text-align: center;
   font-style: normal;
   border-radius: 5px;
-  width: 100%;
   border: 1px solid #3ac162;
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
@@ -113,6 +128,13 @@ legend {
 }
 
 label {
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+label2 {
   display: block;
   margin-bottom: 8px;
   margin-top: 8px;
