@@ -157,11 +157,11 @@ var criterionThreeSchema = mongoose.schema({
         college1 : Number
       },
       sponsoring_agencies : {
-        international2: String,
-        national2 : String,
-        state2: String,
-        university2 : String,
-        college2 : String
+        international1: String,
+        national1 : String,
+        state1: String,
+        university1 : String,
+        college1 : String
       }
     },
 
@@ -255,6 +255,8 @@ var criterionThreeSchema = mongoose.schema({
       nss : Number,
       any_other1 : Number
     }
+                                           
+    major_activities : String
   }
   retainKeyOrder : true
 });
