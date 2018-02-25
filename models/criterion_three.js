@@ -254,9 +254,9 @@ var criterionThreeSchema = mongoose.schema({
       ncc : Number,
       nss : Number,
       any_other1 : Number
-    }
+    },
                                            
-    major_activities : String
+    major_activities : String                             // 3.26
   }
   retainKeyOrder : true
 });
