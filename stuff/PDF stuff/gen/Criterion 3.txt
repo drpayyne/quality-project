@@ -1,0 +1,651 @@
+{
+	text: 'Criterion - III', 
+	style: 'header', 
+	alignment: 'left'
+},
+{
+	text: '3. Research, Consultancy and Extension', 
+	style: 'subheader', 
+	alignment: 'left'
+},
+{
+	text: '3.1. Initiatives of the IQAC in Sensitizing/Promoting Research Climate in the institution:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: data[' '], alignment: 'justify'}
+			]
+		]
+	}
+},
+{
+	text: '3.2. Details regarding Major Projects:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[
+				{text: '	', style: 'tableHeader'},
+				{text: 'Number', style: 'tableHeader'},
+				{text: 'Outlay in Rs. Lakhs', style: 'tableHeader'},
+			],
+			[
+				{text: 'Completed', style: 'tableHeader'},
+				data[''][''][''], 
+				data[''][''][''],
+			],
+			[
+				{text: 'Ongoing', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'Sanctioned', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'Submitted', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+			],
+		]
+	}
+},
+{
+	text: '3.3. Details regarding Minor Projects:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[
+				{text: '	', style: 'tableHeader'},
+				{text: 'Number', style: 'tableHeader'},
+				{text: 'Outlay in Rs. Lakhs', style: 'tableHeader'},
+			],
+			[
+				{text: 'Completed', style: 'tableHeader'},
+				data[''][''][''], 
+				data[''][''][''],
+			],
+			[
+				{text: 'Ongoing', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'Sanctioned', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'Submitted', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+			],
+		]
+	}
+},
+{
+	text: '3.4. Details on Research Publications:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[
+				{text: '	', style: 'tableHeader'},
+				{text: 'Peer Review Journals', style: 'tableHeader'},
+				{text: 'Non-Peer Review Journals', style: 'tableHeader'},
+				{text: 'e-Journals', style: 'tableHeader'},
+				{text: 'Conference Proceedings', style: 'tableHeader'},
+			],
+			[
+				{text: 'International', style: 'tableHeader'},
+				data[''][''][''], 
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'National', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'Others', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+			],
+		]
+	}
+},
+{
+	text: '3.5. Details on Impact Factor of Publications:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'Range', style: 'tableHeader'},
+				{text: 'Average', style: 'tableHeader'},
+				{text: 'h-index', style: 'tableHeader'},
+				{text: 'Nos. in SCOPUS', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+				data['']['']
+			]
+		]
+	}
+},
+{
+	text: '3.4. Details on Research Publications:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[
+				{text: 'Nature of the Project', style: 'tableHeader'},
+				{text: 'Major Projects', style: 'tableHeader'},
+				{text: 'Minor Projects', style: 'tableHeader'},
+				{text: 'Interdisciplinary Projects', style: 'tableHeader'},
+				{text: 'Industry Sponsored', style: 'tableHeader'},
+				{text: 'Projects Sponsored by University/College', style: 'tableHeader'},
+				{text: 'Students Research Projects (other than compulsory by University)', style: 'tableHeader'},
+				{text: 'Any Other (Specify)', style: 'tableHeader'},
+				{text: 'Total', style: 'tableHeader'},
+			],
+			[
+				{text: 'Duration Year', style: 'tableHeader'},
+				data[''][''][''], 
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'Name of Funding Agency', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'Total Grant Sanctioned', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+			],
+
+				{text: 'Received', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+			],
+		]
+	}
+},
+{
+	text: '3.7. No. of Books Published:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'With ISBN No.', style: 'tableHeader'},
+				{text: 'Without ISBN No.', style: 'tableHeader'},
+				{text: 'Chapters in Edited Books', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+			]
+		]
+	}
+},
+{
+	text: '3.8. No. of University Departments receiving Funds from:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'UGC-SAP', style: 'tableHeader'},
+				{text: 'DPE', style: 'tableHeader'},
+				{text: 'CAS', style: 'tableHeader'},
+				{text: 'DST-FIST', style: 'tableHeader'},
+				{text: 'DBT Scheme/Funds', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''],
+				data[''][''], 
+				data['']['']
+			]
+		]
+	}
+},
+{
+	text: '3.9. For Colleges:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'Autonomy', style: 'tableHeader'},
+				{text: 'INSPIRE', style: 'tableHeader'},
+				{text: 'CPE', style: 'tableHeader'},
+				{text: 'CE', style: 'tableHeader'},
+				{text: 'DBT Star Scheme', style: 'tableHeader'},
+				{text: 'Any Other (Specify)', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''],
+				data[''][''],
+				data[''][''], 
+				data['']['']
+			]
+		]
+	}
+},
+{
+	text: '3.10. Revenue Generated through Consultancy:', 
+	alignment: 'left'
+},
+{
+    style: 'tableExample',
+    table: {
+        widths: [50],
+        body: [
+            [data['']]
+		]
+	}
+},
+{
+	text: '3.11. No. of Conferences Organized by the Institution:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[
+				{text: 'Level', style: 'tableHeader'},
+				{text: 'Number', style: 'tableHeader'},
+				{text: 'Sponsoring Agencies', style: 'tableHeader'},
+			],
+			[
+				{text: 'International', style: 'tableHeader'},
+				data[''][''][''], 
+				data[''][''][''],
+			],
+			[
+				{text: 'National', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'State', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'University', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'College', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+			],
+		]
+	}
+},
+{
+	text: '3.12. No. of Faculty served as Experts, Chairpersons or Resource Persons:', 
+	alignment: 'left'
+},
+{
+    style: 'tableExample',
+    table: {
+        widths: [50],
+        body: [
+            [data['']]
+		]
+},
+{
+	text: '3.13. No. of Collaborations:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'International', style: 'tableHeader'},
+				{text: 'National', style: 'tableHeader'},
+				{text: 'Any other', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+			]
+		]
+	}
+},
+{
+	text: '3.14. No. of Linkages created during this Year:', 
+	alignment: 'left'
+},
+{
+    style: 'tableExample',
+    table: {
+        widths: [50],
+        body: [
+            [data['']]
+		]
+}
+{
+	text: '3.15. Total Budget for Research for Current Year in Lakhs:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'From Funding Agency', style: 'tableHeader'},
+				{text: 'From Management of University/College', style: 'tableHeader'},
+				{text: 'Total', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+			]
+		]
+	}
+},
+{
+	text: '3.16 No. of Patents received this Year:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[
+				{text: 'National', style: 'tableHeader', colSpan: 2},
+				{},
+				{text: 'International', style: 'tableHeader', colSpan: 2},
+				{}, 
+				{text: 'Commercialised', style: 'tableHeader', colSpan: 2}, 
+				{}, 	
+			],
+			[
+				{text: 'Applied'}, 
+				{text:'Granted'}, 
+				{text: 'Applied'}, 
+				{text:'Granted'}, 
+				{text: 'Applied'}, 
+				{text:'Granted'}, 
+			],
+			[
+				data[]
+			]
+        ]
+    }
+},
+{
+	text: '3.17 No. of Research Awards/Recognitions received by Faculty and Research Fellows of the Institute in the Year',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'Total', style: 'tableHeader'},
+				{text: 'International', style: 'tableHeader'},
+				{text: 'National', style: 'tableHeader'},
+				{text: 'State', style: 'tableHeader'},
+				{text: 'University', style: 'tableHeader'},
+				{text: 'Dist', style: 'tableHeader'},
+				{text: 'College', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''],
+				data[''][''],
+				data[''][''],
+				data[''][''], 
+				data['']['']
+			]
+		]
+	}
+},
+{
+	text: '3.18 No. of :',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'Faculty from the Institution who are Ph.D. Guides', style: 'tableHeader'},
+				{text: 'Students registered under Them', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+			]
+		]
+	}
+},
+{
+	text: '3.19. No. of Ph.D Awarded by Faculty from the Institution:', 
+	alignment: 'left'
+},
+{
+    style: 'tableExample',
+    table: {
+        widths: [50],
+        body: [
+            [data['']]
+		]
+},
+{
+	text: '3.20. No. of Research Scholars receiving the Fellowships (Newly Enrolled + Existing Ones):',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'JRF', style: 'tableHeader'},
+				{text: 'SRF', style: 'tableHeader'},
+				{text: 'Project Fellows', style: 'tableHeader'},
+				{text: 'Any Other', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+				data['']['']
+			]
+		]
+	}
+},
+{
+	text: '3.21. No. of Students Participated in NSS Events:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'University Level', style: 'tableHeader'},
+				{text: 'National Level', style: 'tableHeader'},
+				{text: 'State Level', style: 'tableHeader'},
+				{text: 'International Level', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+				data['']['']
+			]
+		]
+	}
+},
+{
+	text: '3.22. No. of Students Participated in NCC Events:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'University Level', style: 'tableHeader'},
+				{text: 'National Level', style: 'tableHeader'},
+				{text: 'State Level', style: 'tableHeader'},
+				{text: 'International Level', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+				data['']['']
+			]
+		]
+	}
+},
+{
+	text: '3.23. No. of Awards won in NSS:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'University Level', style: 'tableHeader'},
+				{text: 'National Level', style: 'tableHeader'},
+				{text: 'State Level', style: 'tableHeader'},
+				{text: 'International Level', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+				data['']['']
+			]
+		]
+	}
+},
+{
+	text: '3.24. No. of Awards won in NCC:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'University Level', style: 'tableHeader'},
+				{text: 'National Level', style: 'tableHeader'},
+				{text: 'State Level', style: 'tableHeader'},
+				{text: 'International Level', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+				data['']['']
+			]
+		]
+	}
+},
+{
+	text: '3.25. No. of Extension Activities Organized:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'University Forum', style: 'tableHeader'},
+				{text: 'College Forum', style: 'tableHeader'},
+				{text: 'NCC', style: 'tableHeader'},
+				{text: 'NSS', style: 'tableHeader'},
+				{text: 'Any Other', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''],
+				data[''][''], 
+				data['']['']
+			]
+		]
+	}
+},
+{
+	text: '3.26. Major Activities during the Year in the Sphere of Extension Activities and Institutional Social Responsibility:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: data[''], alignment: 'justify'}
+			]
+		]
+	}
+},
