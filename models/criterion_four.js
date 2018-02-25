@@ -3,8 +3,13 @@ let mongoose = require('mongoose');
 
 // Criterion Four schema
 var criterionFourSchema = mongoose.Schema({
-  infrastructure_and_learning_resources : {
     increase_in_infrastructure_details : {
+      facilities : {
+        existing : String,
+        newly_created : String,
+        source_of_fund : String,
+        total1 : String
+      },
       campus_area : {
         existing : String,
         newly_created : String,
@@ -174,10 +179,7 @@ var criterionFourSchema = mongoose.Schema({
       equipment : Number,
       other_maintenance : Number,
       total3 : Number
-    },
-
-
-  }
+    }
   retainKeyOrder : true
 });
 
