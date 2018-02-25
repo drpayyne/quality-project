@@ -160,7 +160,7 @@
 	}
 },
 {
-	text: '3.4. Details on Research Publications:',
+	text: '3.6. Research Funds Sanctioned and Received from Various Funding Agencies, Industry and other Organisations:',
 	alignment: 'left'
 },
 {

@@ -1,0 +1,237 @@
+{
+	text: 'Criterion - IV', 
+	style: 'header', 
+	alignment: 'left'
+},
+{
+	text: '4.1. Details of Increase in Infrastructure Facilities:', 
+	style: 'subheader', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[
+				{text: 'Facilities', style: 'tableHeader'},
+				{text: 'Campus Area', style: 'tableHeader'},
+				{text: 'Class Rooms', style: 'tableHeader'},
+				{text: 'Laboratories', style: 'tableHeader'},
+				{text: 'Seminar Halls', style: 'tableHeader'},
+				{text: 'No. of Important Equipments Purchased (>= 1-0 Lakh) during the Current Year', style: 'tableHeader'},
+				{text: 'Value of the Equipment Purchased during the Year (Rs. in Lakhs)', style: 'tableHeader'},
+				{text: 'Others', style: 'tableHeader'},
+			],
+			[
+				{text: 'Existing', style: 'tableHeader'},
+				data[''][''][''], 
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'Newly Created', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'Source of Fund', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+			],
+
+				{text: 'Total', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+			],
+		]
+	}
+},
+{
+	text: '4.2. Computerization of Administration and Library:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: data[' '], alignment: 'justify'}
+			]
+		]
+	}
+},
+{
+	text: '4.3. Library Services:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[	{text: '	', style: 'tableHeader', colSpan: 2},
+				{}, 
+				{text: 'Existing', style: 'tableHeader', colSpan: 2},
+				{}, 
+				{text: 'Newly Added', style: 'tableHeader', colSpan: 2},
+				{},
+				{text: 'Total', style: 'tableHeader', colSpan: 2},
+				{}, 
+			],
+			[
+				{text: 'No.'}, 
+				{text:'Value'}, 
+				{text: 'No.'}, 
+				{text:'Value'}, 
+				{text: 'No.'}, 
+				{text:'Value'}, 
+			],
+			[
+				{text: 'Text Books', style: 'tableHeader'},
+				data[''][''][''], 
+				data[''][''][''],
+				data['']['']['']	
+			],
+			[
+				{text: 'Reference Books', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+				data['']['']['']
+			],
+			[
+				{text: 'e-Books', style: 'tableHeader'}, 
+				data[''][''][''],
+				data[''][''][''],
+				data['']['']['']
+			]
+			[
+				{text: 'Journals', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+				data['']['']['']
+			],
+			[
+				{text: 'e-Journals', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+				data['']['']['']
+			],
+			[
+				{text: 'Digital Database', style: 'tableHeader'}, 
+				data[''][''][''],
+				data[''][''][''],
+				data['']['']['']
+			]
+			[
+				{text: 'CD & Video', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+				data['']['']['']
+			],
+			[
+				{text: 'Others (Specify)', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+				data['']['']['']
+			],
+        ]
+    }
+},
+{
+	text: '4.4. Technology Up Graduation (Overall):',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[
+				{text: '', style: 'tableHeader'},
+				{text: 'Existing', style: 'tableHeader'},
+				{text: 'Added', style: 'tableHeader'},
+				{text: 'Total', style: 'tableHeader'},
+			],
+			[
+				{text: 'Total Computers', style: 'tableHeader'},
+				data[''][''][''], 
+				data[''][''][''],
+			],
+			[
+				{text: 'Computer Labs', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'Internet', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'Browsing Centres', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'Office', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'Departments', style: 'tableHeader'},
+				data[''][''][''], 
+				data[''][''][''],
+			],
+			[
+				{text: 'Others', style: 'tableHeader'},
+				data[''][''][''], 
+				data[''][''][''],
+			],
+		]
+	}
+},	
+{
+	text: '4.5. Computer, Internet Access, Training to Teachers and Students and any other Programme for Technology Upgradation (Networking, e-Governance etc.):', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: data[' '], alignment: 'justify'}
+			]
+		]
+	}
+},
+{
+	text: '4.6. Amount Spent on Maintenance in Lakhs:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'ICT', style: 'tableHeader'},
+				{text: 'Campus Infrastucture and Facilities', style: 'tableHeader'},
+				{text: 'Equipments', style: 'tableHeader'},
+				{text: 'Others', style: 'tableHeader'},
+				{text: 'Total', style: 'tableHeader'},	
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+			]
+		]
+	}
+},
