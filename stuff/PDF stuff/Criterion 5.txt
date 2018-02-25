@@ -1,0 +1,376 @@
+{
+	text: 'Criterion - V', 
+	style: 'header', 
+	alignment: 'left'
+},
+{
+	text: '5. Student Support and Progression', 
+	style: 'subheader', 
+	alignment: 'left'
+},
+{
+	text: '5.1. Contribution of IQAC in Enhancing Awareness about Student Support Services:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data['']
+			]
+		]
+	}
+},
+{
+	text: '5.2. Effort made by the Institution for Tracking the Progression:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data['']
+			]
+		]
+	}
+},
+{
+	text: '5.4. Details of Student Support Mechanism for Coaching for Competitive Examinations (If any):', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data['']
+			]
+		]
+	}
+},
+{
+	text: 'No. of Students Beneficiaries:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data['']
+			]
+		]
+	}
+},
+{
+	text: '5.5. For Colleges:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'NET', style: 'tableHeader'},
+				{text: 'IAS/IPS etc', style: 'tableHeader'},
+				{text: 'SET/SLET', style: 'tableHeader'},
+				{text: 'State PSC', style: 'tableHeader'},
+				{text: 'GATE', style: 'tableHeader'},
+				{text: 'UPSC', style: 'tableHeader'},	
+				{text: 'CAT', style: 'tableHeader'},	
+				{text: 'Others', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''],
+				data[''][''],
+				data[''][''], 
+				data['']['']
+			]
+		]
+	}
+},
+{
+	text: '5.6. Details of Student Counselling and Career Guidance:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data['']
+			]
+		]
+	}
+},
+{
+	text: 'No. of Students Benefitted:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data['']
+			]
+		]
+	}
+},
+{
+	text: '5.7. Details of Campus Placement:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[
+				{text: 'On Campus', style: 'tableHeader', colSpan: 3},
+				{},
+				{} 
+				{text: 'Off Campus', style: 'tableHeader', colSpan: 2},
+				{}, 
+			],
+			[
+				{text: 'No. of Organizations Visited'}, 
+				{text:'No. of Students Participated'}, 
+				{text: 'No. of Students Placed'}, 
+				{text:'No. of Students Placed'}, 
+			],
+			[
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+			]	
+        ]
+    }
+},
+{
+	text: '5.8. Details of Gender Sensitization Programmes:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data['']
+			]
+		]
+	}
+},
+{
+	text: '5.9. Students Activities:', 
+	alignment: 'left'
+},
+{
+	text: '5.9.1 No. of Students Participated in Sports, Games and Other Events:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'State/University Level', style: 'tableHeader'},
+				{text: 'National Level', style: 'tableHeader'},
+				{text: 'International Level', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+			]
+		]
+	}
+},
+{
+	text: 'No. of Students Participated in Cultural Events:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'State/University Level', style: 'tableHeader'},
+				{text: 'National Level', style: 'tableHeader'},
+				{text: 'International Level', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+			]
+		]
+	}
+},
+{
+	text: '5.9.2 No. of Medals/Awards Won by Students in Sports, Games and Other Events:', 
+	alignment: 'left'
+},
+{
+	text: 'Sports:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'State/University Level', style: 'tableHeader'},
+				{text: 'National Level', style: 'tableHeader'},
+				{text: 'International Level', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+			]
+		]
+	}
+},
+{
+	text: 'Cultural:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'State/University Level', style: 'tableHeader'},
+				{text: 'National Level', style: 'tableHeader'},
+				{text: 'International Level', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+			]
+		]
+	}
+},
+{
+	text: '5.10. Scholarship and Financial Support:',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[
+				{text: '	', style: 'tableHeader'},
+				{text: 'Financial Support from Institution', style: 'tableHeader'},
+				{text: 'Financial Support from Government', style: 'tableHeader'},
+				{text: 'Financial Support from Other Sources', style: 'tableHeader'},
+				{text: 'Number of Students who received International/National Recognitions', style: 'tableHeader'},
+			],
+			[
+				{text: 'Number of Students', style: 'tableHeader'},
+				data[''][''][''], 
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+			],
+			[
+				{text: 'Amount', style: 'tableHeader'},
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+				data[''][''][''],
+			],
+		]
+	}
+},
+{
+	text: '5.11 Students Organised/Initiatives:', 
+	alignment: 'left'
+},
+{
+	text: 'Fairs:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'State/University Level', style: 'tableHeader'},
+				{text: 'National Level', style: 'tableHeader'},
+				{text: 'International Level', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+			]
+		]
+	}
+},
+{
+	text: 'Exhibition:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		body: [
+			[
+				{text: 'State/University Level', style: 'tableHeader'},
+				{text: 'National Level', style: 'tableHeader'},
+				{text: 'International Level', style: 'tableHeader'},
+			],
+			[
+				data[''][''], 
+				data[''][''],
+				data[''][''], 
+			]
+		]
+	}
+},
+{
+	text: '5.12. No. of Social Initiatives Undertaken by the Students:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data['']
+			]
+		]
+	}
+},
+{
+	text: '5.13. Major Grievances of Students (if any) Redressed:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data['']
+			]
+		]
+	}
+},
