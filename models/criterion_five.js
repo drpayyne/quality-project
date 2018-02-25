@@ -77,24 +77,24 @@ var criterionFiveSchema = mongoose.Schema({
     students_activities : {
       participation_sports_games_other_events : {
         state_uni_level : Number,
-        international_level4 : Number,
-        national_level4 : Number
+        international_level : Number,
+        national_level : Number
       },
       participation_cultural_events : {
-        state_uni_level1 : Number,
-        international_level5 : Number,
-        national_level5 : Number
+        state_uni_level : Number,
+        international_level : Number,
+        national_level : Number
       },
       no_of_medals_awards : {
         sports_games : {
-          state_uni_level2 : Number,
-          international_level6 : Number,
-          national_level6 : Number
+          state_uni_level : Number,
+          international_level : Number,
+          national_level : Number
         },
         culturals : {
-          state_uni_level3 : Number,
-          international_level7 : Number,
-          national_level7 : Number
+          state_uni_level : Number,
+          international_level : Number,
+          national_level : Number
         }
       }
     },
@@ -120,14 +120,14 @@ var criterionFiveSchema = mongoose.Schema({
 
     student_organized_initiatives : {
       fairs : {
-        state_uni_level4 : Number,
-        international_level8 : Number,
-        national_level8 : Number
+        state_uni_level : Number,
+        international_level : Number,
+        national_level : Number
       },
       exhibition : {
-        state_uni_level5 : Number,
-        international_level9 : Number,
-        national_level9 : Number
+        state_uni_level : Number,
+        international_level : Number,
+        national_level : Number
       }
     },
 
