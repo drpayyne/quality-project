@@ -17,7 +17,7 @@
 	table: {
 		body: [
 			[
-				{text: data[' '], alignment: 'justify'}
+				{text: data['iqac_initiatives_promoting_research'], alignment: 'justify'}
 			]
 		]
 	}
@@ -38,23 +38,23 @@
 			],
 			[
 				{text: 'Completed', style: 'tableHeader'},
-				data[''][''][''], 
-				data[''][''][''],
+				data['major_project_details']['completed']['number'], 
+				data['major_project_details']['completed']['outlay_in_lakhs'],
 			],
 			[
 				{text: 'Ongoing', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
+				data['major_project_details']['ongoing']['number'],
+				data['major_project_details']['ongoing']['outlay_in_lakhs'],
 			],
 			[
 				{text: 'Sanctioned', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
+				data['major_project_details']['sanctioned']['number'],
+				data['major_project_details']['sanctioned']['outlay_in_lakhs'],
 			],
 			[
 				{text: 'Submitted', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
+				data['major_project_details']['submitted']['number'],
+				data['major_project_details']['submitted']['outlay_in_lakhs'],
 			],
 		]
 	}
@@ -75,23 +75,23 @@
 			],
 			[
 				{text: 'Completed', style: 'tableHeader'},
-				data[''][''][''], 
-				data[''][''][''],
+				data['minor_project_details']['completed1']['number1'], 
+				data['minor_project_details']['completed1']['outlay_in_lakhs1'],
 			],
 			[
 				{text: 'Ongoing', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
+				data['minor_project_details']['ongoing1']['number1'],
+				data['minor_project_details']['ongoing1']['outlay_in_lakhs1'],
 			],
 			[
 				{text: 'Sanctioned', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
+				data['minor_project_details']['sanctioned1']['number1'],
+				data['minor_project_details']['sanctioned1']['outlay_in_lakhs1'],
 			],
 			[
 				{text: 'Submitted', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
+				data['minor_project_details']['submitted1']['number1'],
+				data['minor_project_details']['submitted1']['outlay_in_lakhs1'],
 			],
 		]
 	}
@@ -114,24 +114,24 @@
 			],
 			[
 				{text: 'International', style: 'tableHeader'},
-				data[''][''][''], 
-				data[''][''][''],
-				data[''][''][''],
-				data[''][''][''],
+				data['research_publication_details']['international']['peer_review_journals'], 
+				data['research_publication_details']['international']['non_peer_review_journals'],
+				data['research_publication_details']['international']['e_journals'],
+				data['research_publication_details']['international'][''],
 			],
 			[
 				{text: 'National', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
-				data[''][''][''],
-				data[''][''][''],
+				data['research_publication_details']['national']['peer_review_journals'],
+				data['research_publication_details']['national']['non_peer_review_journals'],
+				data['research_publication_details']['national']['e_journals'],
+				data['research_publication_details']['national']['conference_proceedings'],
 			],
 			[
 				{text: 'Others', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
-				data[''][''][''],
-				data[''][''][''],
+				data['research_publication_details']['others']['peer_review_journals'],
+				data['research_publication_details']['others']['non_peer_review_journals'],
+				data['research_publication_details']['others']['e_journals'],
+				data['research_publication_details']['others']['conference_proceedings'],
 			],
 		]
 	}
@@ -151,16 +151,16 @@
 				{text: 'Nos. in SCOPUS', style: 'tableHeader'},
 			],
 			[
-				data[''][''], 
-				data[''][''],
-				data[''][''], 
-				data['']['']
+				data['impact_factor_publication_details']['range'], 
+				data['impact_factor_publication_details']['average'],
+				data['impact_factor_publication_details']['index'], 
+				data['impact_factor_publication_details']['nos_of_scopus']
 			]
 		]
 	}
 },
 {
-	text: '3.6. Research Funds Sanctioned and Received from Various Funding Agencies, Industry and other Organisations:',
+	text: '3.4. Details on Research Publications:',
 	alignment: 'left'
 },
 {
@@ -181,31 +181,47 @@
 			],
 			[
 				{text: 'Duration Year', style: 'tableHeader'},
-				data[''][''][''], 
-				data[''][''][''],
-				data[''][''][''],
-				data[''][''][''],
+				data['research_funds_sanctioned']['major_project']['duration_year'], 
+				data['research_funds_sanctioned']['minor_project']['duration_year'],
+				data['research_funds_sanctioned']['interdisciplinary_project']['duration_year'],
+				data['research_funds_sanctioned']['industry_sponsored']['duration_year'],
+				data['research_funds_sanctioned']['uni_sponsored_project']['duration_year'],
+				data['research_funds_sanctioned']['other_student_research_project']['duration_year'],
+				data['research_funds_sanctioned']['any_other_specify']['duration_year'],
+				data['research_funds_sanctioned']['total']['duration_year'],
 			],
 			[
 				{text: 'Name of Funding Agency', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
-				data[''][''][''],
-				data[''][''][''],
+				data['research_funds_sanctioned']['major_project']['funding_agency_name'],
+				data['research_funds_sanctioned']['minor_project']['funding_agency_name'],
+				data['research_funds_sanctioned']['interdisciplinary_project']['funding_agency_name'],
+				data['research_funds_sanctioned']['industry_sponsored']['funding_agency_name'],
+				data['research_funds_sanctioned']['uni_sponsored_project']['funding_agency_name'],
+				data['research_funds_sanctioned']['other_student_research_project']['funding_agency_name'],
+				data['research_funds_sanctioned']['any_other_specify']['funding_agency_name'],
+				data['research_funds_sanctioned']['total']['funding_agency_name'],
 			],
 			[
 				{text: 'Total Grant Sanctioned', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
-				data[''][''][''],
-				data[''][''][''],
+				data['research_funds_sanctioned']['major_project']['total_grant_sanctioned'],
+				data['research_funds_sanctioned']['minor_project']['total_grant_sanctioned'],
+				data['research_funds_sanctioned']['interdisciplinary_project']['total_grant_sanctioned'],
+				data['research_funds_sanctioned']['industry_sponsored']['total_grant_sanctioned'],
+				data['research_funds_sanctioned']['uni_sponsored_project']['total_grant_sanctioned'],
+				data['research_funds_sanctioned']['other_student_research_project']['total_grant_sanctioned'],
+				data['research_funds_sanctioned']['any_other_specify']['total_grant_sanctioned'],
+				data['research_funds_sanctioned']['total']['total_grant_sanctioned'],
 			],
 
 				{text: 'Received', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
-				data[''][''][''],
-				data[''][''][''],
+				data['research_funds_sanctioned']['major_project']['received'],
+				data['research_funds_sanctioned']['minor_project']['received'],
+				data['research_funds_sanctioned']['interdisciplinary_project']['received'],
+				data['research_funds_sanctioned']['industry_sponsored']['received'],
+				data['research_funds_sanctioned']['uni_sponsored_project']['received'],
+				data['research_funds_sanctioned']['other_student_research_project']['received'],
+				data['research_funds_sanctioned']['any_other_specify']['received'],
+				data['research_funds_sanctioned']['total']['received'],
 			],
 		]
 	}
@@ -224,9 +240,9 @@
 				{text: 'Chapters in Edited Books', style: 'tableHeader'},
 			],
 			[
-				data[''][''], 
-				data[''][''],
-				data[''][''], 
+				data['no_of_books_published']['with_isbn_no'], 
+				data['no_of_books_published']['without_isbn_no'],
+				data['no_of_books_published']['chapters_in_edited_books'], 
 			]
 		]
 	}
@@ -247,11 +263,11 @@
 				{text: 'DBT Scheme/Funds', style: 'tableHeader'},
 			],
 			[
-				data[''][''], 
-				data[''][''],
-				data[''][''],
-				data[''][''], 
-				data['']['']
+				data['no_of_uni_depts_receiving_funds']['ugc_sap'], 
+				data['no_of_uni_depts_receiving_funds']['cas'],
+				data['no_of_uni_depts_receiving_funds']['dst_fist'],
+				data['no_of_uni_depts_receiving_funds']['dpe'], 
+				data['no_of_uni_depts_receiving_funds']['dbt_scheme_funds']
 			]
 		]
 	}
@@ -273,12 +289,12 @@
 				{text: 'Any Other (Specify)', style: 'tableHeader'},
 			],
 			[
-				data[''][''], 
-				data[''][''],
-				data[''][''],
-				data[''][''],
-				data[''][''], 
-				data['']['']
+				data['for_colleges']['autonomy'], 
+				data['for_colleges']['inspire'],
+				data['for_colleges']['cpe'],
+				data['for_colleges']['ce'],
+				data['for_colleges']['dbt_star_scheme'], 
+				data['for_colleges']['any_other_specify2']
 			]
 		]
 	}
@@ -292,7 +308,7 @@
     table: {
         widths: [50],
         body: [
-            [data['']]
+            [data['revenue_generated_through_consultancy']]
 		]
 	}
 },
@@ -312,28 +328,28 @@
 			],
 			[
 				{text: 'International', style: 'tableHeader'},
-				data[''][''][''], 
-				data[''][''][''],
+				data['conferences_organized_by_institution']['number']['international1'], 
+				data['conferences_organized_by_institution']['sponsoring_agencies']['international1'],
 			],
 			[
 				{text: 'National', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
+				data['conferences_organized_by_institution']['number']['national1'],
+				data['conferences_organized_by_institution']['sponsoring_agencies']['national1'],
 			],
 			[
 				{text: 'State', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
+				data['conferences_organized_by_institution']['number']['state1'],
+				data['conferences_organized_by_institution']['sponsoring_agencies']['state1'],
 			],
 			[
 				{text: 'University', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
+				data['conferences_organized_by_institution']['number']['university1'],
+				data['conferences_organized_by_institution']['sponsoring_agencies']['university1'],
 			],
 			[
 				{text: 'College', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
+				data['conferences_organized_by_institution']['number']['college1'],
+				data['conferences_organized_by_institution']['sponsoring_agencies']['college1'],
 			],
 		]
 	}
@@ -347,7 +363,7 @@
     table: {
         widths: [50],
         body: [
-            [data['']]
+            [data['no_of_faculty_served_chairperson_resource_expert']]
 		]
 },
 {
@@ -364,9 +380,9 @@
 				{text: 'Any other', style: 'tableHeader'},
 			],
 			[
-				data[''][''], 
-				data[''][''],
-				data[''][''], 
+				data['no_of_collaborations']['international3'], 
+				data['no_of_collaborations']['national3'],
+				data['no_of_collaborations']['any_other'], 
 			]
 		]
 	}
@@ -380,7 +396,7 @@
     table: {
         widths: [50],
         body: [
-            [data['']]
+            [data['no_of_linkages_created_during_the_year']]
 		]
 }
 {
@@ -397,9 +413,9 @@
 				{text: 'Total', style: 'tableHeader'},
 			],
 			[
-				data[''][''], 
-				data[''][''],
-				data[''][''], 
+				data['current_year_research_budget_in_lakhs']['from_funding_agency'], 
+				data['current_year_research_budget_in_lakhs']['from_uni_college'],
+				data['current_year_research_budget_in_lakhs']['total'], 
 			]
 		]
 	}
@@ -430,7 +446,12 @@
 				{text:'Granted'}, 
 			],
 			[
-				data[]
+				data['no_of_patents']['applied']['national4'],
+				data['no_of_patents']['granted']['national4'],
+				data['no_of_patents']['applied']['international4'],
+				data['no_of_patents']['granted']['international4'],
+				data['no_of_patents']['applied']['commercialized'],
+				data['no_of_patents']['granted']['commercialized'],
 			]
         ]
     }
@@ -453,13 +474,13 @@
 				{text: 'College', style: 'tableHeader'},
 			],
 			[
-				data[''][''], 
-				data[''][''],
-				data[''][''],
-				data[''][''],
-				data[''][''],
-				data[''][''], 
-				data['']['']
+				data['no_of_awards_recognition_faculty_research_fellows']['total'], 
+				data['no_of_awards_recognition_faculty_research_fellows']['international5'],
+				data['no_of_awards_recognition_faculty_research_fellows']['national5'],
+				data['no_of_awards_recognition_faculty_research_fellows']['state5'],
+				data['no_of_awards_recognition_faculty_research_fellows']['university5'],
+				data['no_of_awards_recognition_faculty_research_fellows']['district5'], 
+				data['no_of_awards_recognition_faculty_research_fellows']['college5']
 			]
 		]
 	}
@@ -477,8 +498,8 @@
 				{text: 'Students registered under Them', style: 'tableHeader'},
 			],
 			[
-				data[''][''], 
-				data[''][''],
+				data['faculty_count']['phd_guides'], 
+				data['faculty_count']['students_registered_under_them'],
 			]
 		]
 	}
@@ -492,7 +513,7 @@
     table: {
         widths: [50],
         body: [
-            [data['']]
+            [data['no_of_phd_awarded_institution_faculty']]
 		]
 },
 {
@@ -510,10 +531,10 @@
 				{text: 'Any Other', style: 'tableHeader'},
 			],
 			[
-				data[''][''], 
-				data[''][''],
-				data[''][''], 
-				data['']['']
+				data['no_of_research_scholars_receiving_fellowships']['jrf'], 
+				data['no_of_research_scholars_receiving_fellowships']['srf'],
+				data['no_of_research_scholars_receiving_fellowships']['project_fellows'], 
+				data['no_of_research_scholars_receiving_fellowships']['any_other']
 			]
 		]
 	}
@@ -533,10 +554,10 @@
 				{text: 'International Level', style: 'tableHeader'},
 			],
 			[
-				data[''][''], 
-				data[''][''],
-				data[''][''], 
-				data['']['']
+				data['nss_student_participants']['university_level'], 
+				data['nss_student_participants']['national_level'],
+				data['nss_student_participants']['state_level'], 
+				data['nss_student_participants']['international_level']
 			]
 		]
 	}
@@ -556,10 +577,10 @@
 				{text: 'International Level', style: 'tableHeader'},
 			],
 			[
-				data[''][''], 
-				data[''][''],
-				data[''][''], 
-				data['']['']
+				data['ncc_student_participation']['university_level1'], 
+				data['ncc_student_participation']['national_level1'],
+				data['ncc_student_participation']['state_level1'], 
+				data['ncc_student_participation']['international1']
 			]
 		]
 	}
@@ -579,10 +600,10 @@
 				{text: 'International Level', style: 'tableHeader'},
 			],
 			[
-				data[''][''], 
-				data[''][''],
-				data[''][''], 
-				data['']['']
+				data['no_of_awards_in_nss']['university_level2'], 
+				data['no_of_awards_in_nss']['national_level2'],
+				data['no_of_awards_in_nss']['state_level2'], 
+				data['no_of_awards_in_nss']['international_level2']
 			]
 		]
 	}
@@ -602,10 +623,10 @@
 				{text: 'International Level', style: 'tableHeader'},
 			],
 			[
-				data[''][''], 
-				data[''][''],
-				data[''][''], 
-				data['']['']
+				data['no_of_awards_in_ncc']['university_level3'], 
+				data['no_of_awards_in_ncc']['national_level3'],
+				data['no_of_awards_in_ncc']['state_level3'], 
+				data['no_of_awards_in_ncc']['international_level3']
 			]
 		]
 	}
@@ -626,11 +647,11 @@
 				{text: 'Any Other', style: 'tableHeader'},
 			],
 			[
-				data[''][''], 
-				data[''][''],
-				data[''][''],
-				data[''][''], 
-				data['']['']
+				data['no_of_extension_activities_organized']['university_forum'], 
+				data['no_of_extension_activities_organized']['college_forum'],
+				data['no_of_extension_activities_organized']['ncc'],
+				data['no_of_extension_activities_organized']['nss'], 
+				data['no_of_extension_activities_organized']['any_other1']
 			]
 		]
 	}
@@ -644,7 +665,7 @@
 	table: {
 		body: [
 			[
-				{text: data[''], alignment: 'justify'}
+				{text: data['major_activities'], alignment: 'justify'}
 			]
 		]
 	}
