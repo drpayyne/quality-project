@@ -79,7 +79,7 @@
 	table: {
 		body: [
 			[
-				{text: data[' '], alignment: 'justify'}
+				{text: data['computerization_of_administration_and_library'], alignment: 'justify'}
 			]
 		]
 	}
@@ -112,51 +112,75 @@
 			],
 			[
 				{text: 'Text Books', style: 'tableHeader'},
-				data[''][''][''], 
-				data[''][''][''],
-				data['']['']['']	
+				data['library_services']['text_books']['existing']['num'], 
+				data['library_services']['text_books']['existing']['val'],
+				data['library_services']['text_books']['newly_added']['num'],
+				data['library_services']['text_books']['newly_added']['val'],
+				data['library_services']['text_books']['total']['num'],
+				data['library_services']['text_books']['total']['val']
 			],
 			[
 				{text: 'Reference Books', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
-				data['']['']['']
+				data['library_services']['reference_books']['existing']['num'],
+				data['library_services']['reference_books']['existing']['val'],
+				data['library_services']['reference_books']['newly_added']['num'],
+				data['library_services']['reference_books']['newly_added']['val'],
+				data['library_services']['reference_books']['total']['num'],
+				data['library_services']['reference_books']['total']['val']
 			],
 			[
 				{text: 'e-Books', style: 'tableHeader'}, 
-				data[''][''][''],
-				data[''][''][''],
-				data['']['']['']
+				data['library_services']['e_books']['existing']['num'],
+				data['library_services']['e_books']['existing']['val'],
+				data['library_services']['e_books']['newly_added']['num'],
+				data['library_services']['e_books']['newly_added']['val'],
+				data['library_services']['e_books']['total']['num'],
+				data['library_services']['e_books']['total']['val']
 			]
 			[
 				{text: 'Journals', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
-				data['']['']['']
+				data['library_services']['journals']['existing']['num'],
+				data['library_services']['journals']['existing']['val'],
+				data['library_services']['journals']['newly_added']['num'],
+				data['library_services']['journals']['newly_added']['val'],
+				data['library_services']['journals']['total']['num'],
+				data['library_services']['journals']['total']['val']
 			],
 			[
 				{text: 'e-Journals', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
-				data['']['']['']
+				data['library_services']['ejournals']['existing']['num'],
+				data['library_services']['ejournals']['existing']['val'],
+				data['library_services']['ejournals']['newly_added']['num'],
+				data['library_services']['ejournals']['newly_added']['val'],
+				data['library_services']['ejournals']['total']['num'],
+				data['library_services']['ejournals']['total']['val']
 			],
 			[
 				{text: 'Digital Database', style: 'tableHeader'}, 
-				data[''][''][''],
-				data[''][''][''],
-				data['']['']['']
+				data['library_services']['digital_database']['existing']['num'],
+				data['library_services']['digital_database']['existing']['val'],
+				data['library_services']['digital_database']['newly_added']['num'],
+				data['library_services']['digital_database']['newly_added']['val'],
+				data['library_services']['digital_database']['total']['num'],
+				data['library_services']['digital_database']['total']['val']
 			]
 			[
 				{text: 'CD & Video', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
-				data['']['']['']
+				data['library_services']['cd_video']['existing']['num'],
+				data['library_services']['cd_video']['existing']['val'],
+				data['library_services']['cd_video']['newly_added']['num'],
+				data['library_services']['cd_video']['newly_added']['val'],
+				data['library_services']['cd_video']['total']['num'],
+				data['library_services']['cd_video']['total']['val']
 			],
 			[
 				{text: 'Others (Specify)', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
-				data['']['']['']
+				data['library_services']['other']['exisitng']['num'],
+				data['library_services']['other']['exisitng']['val'],
+				data['library_services']['other']['newly_added']['num'],
+				data['library_services']['other']['newly_added']['val'],
+				data['library_services']['other']['total']['num'],
+				data['library_services']['other']['total']['val']
 			],
         ]
     }
@@ -178,38 +202,45 @@
 			],
 			[
 				{text: 'Total Computers', style: 'tableHeader'},
-				data[''][''][''], 
-				data[''][''][''],
+				data['tech_upgrade']['total_computers']['existing'], 
+				data['tech_upgrade']['total_computers']['added'],
+				data['tech_upgrade']['total_computers']['total'],
 			],
 			[
 				{text: 'Computer Labs', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
+				data['tech_upgrade']['computer_labs']['existing'],
+				data['tech_upgrade']['computer_labs']['added'],
+				data['tech_upgrade']['computer_labs']['total'],
 			],
 			[
 				{text: 'Internet', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
+				data['tech_upgrade']['internet']['existing'],
+				data['tech_upgrade']['internet']['added'],
+				data['tech_upgrade']['internet']['total'],
 			],
 			[
 				{text: 'Browsing Centres', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
+				data['tech_upgrade']['browsing_centres']['existing'],
+				data['tech_upgrade']['browsing_centres']['added'],
+				data['tech_upgrade']['browsing_centres']['total'],
 			],
 			[
 				{text: 'Office', style: 'tableHeader'},
-				data[''][''][''],
-				data[''][''][''],
+				data['tech_upgrade']['office']['existing'],
+				data['tech_upgrade']['office']['added'],
+				data['tech_upgrade']['office']['total'],
 			],
 			[
 				{text: 'Departments', style: 'tableHeader'},
-				data[''][''][''], 
-				data[''][''][''],
+				data['tech_upgrade']['departments']['existing'],
+				data['tech_upgrade']['departments']['added'],
+				data['tech_upgrade']['departments']['total'],
 			],
 			[
 				{text: 'Others', style: 'tableHeader'},
-				data[''][''][''], 
-				data[''][''][''],
+				data['tech_upgrade']['others']['existing'],
+				data['tech_upgrade']['others']['added'],
+				data['tech_upgrade']['others']['total'],
 			],
 		]
 	}
@@ -223,7 +254,7 @@
 	table: {
 		body: [
 			[
-				{text: data[' '], alignment: 'justify'}
+				{text: data['computer_internet_access_training'], alignment: 'justify'}
 			]
 		]
 	}
@@ -244,9 +275,11 @@
 				{text: 'Total', style: 'tableHeader'},	
 			],
 			[
-				data[''][''], 
-				data[''][''],
-				data[''][''], 
+				data['maintenance_amount_in_lakhs']['ict'], 
+				data['maintenance_amount_in_lakhs']['campus_infrastructure_facilities : Number,'],
+				data['maintenance_amount_in_lakhs']['equipment'],
+				data['maintenance_amount_in_lakhs']['other_maintenance'], 
+				data['maintenance_amount_in_lakhs']['total'], 
 			]
 		]
 	}
