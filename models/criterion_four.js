@@ -58,119 +58,152 @@ var criterionFourSchema = mongoose.Schema({
 
     library_services : {
       text_books : {
-        existing1 : {
+        existing : {
           num : Number,
           val : Number
         },
         newly_added : {
-          num1 : Number,
-          val1 : Number,
+          num : Number,
+          val : Number,
         },
-        total2 : {
-          num2 : Number,
-          val2 : Number
+        total : {
+          num : Number,
+          val : Number
         }
       },
       reference_books : {
-        existing1 : {
+        existing : {
           num : Number,
           val : Number
         },
         newly_added : {
-          num1 : Number,
-          val1 : Number
+          num : Number,
+          val : Number
         },
-        total2 : {
-          num2 : Number,
-          val2 : Number
+        total : {
+          num : Number,
+          val : Number
         }
       },
       e_books : {
-        existing1 : {
+        existing : {
           num : Number,
           val : Number
         },
         newly_added : {
-          num1 : Number,
-          val1 : Number
+          num : Number,
+          val : Number
         },
-        total2 : {
-          num2 : Number,
-          val2 : Number
+        total : {
+          num : Number,
+          val : Number
         }
       },
       journals : {
-        existing1 : {
+        existing : {
           num : Number,
           val : Number
         },
         newly_added : {
-          num1 : Number,
-          val1 : Number
+          num : Number,
+          val : Number
         },
-        total2 : {
-          num2 : Number,
-          val2 : Number
+        total : {
+          num : Number,
+          val : Number
         }
       },
       ejournals : {
-        existing1 : {
+        existing : {
           num : Number,
           val : Number
         },
         newly_added : {
-          num1 : Number,
-          val1 : Number
+          num : Number,
+          val : Number
         },
-        total2 : {
-          num2 : Number,
-          val2 : Number
+        total : {
+          num : Number,
+          val : Number
         }
       },
       digital_database : {
-        existing1 : {
+        existing : {
           num : Number,
           val : Number
         },
         newly_added : {
-          num1 : Number,
-          val1 : Number
+          num : Number,
+          val : Number
         },
-        total2 : {
-          num2 : Number,
-          val2 : Number
+        total : {
+          num : Number,
+          val : Number
         }
       },
       cd_video : {
-        existing1 : {
+        existing : {
           num : Number,
           val : Number
         },
         newly_added : {
-          num1 : Number,
-          val1 : Number
+          num : Number,
+          val : Number
         },
-        total2 : {
-          num2 : Number,
-          val2 : Number
+        total : {
+          num : Number,
+          val : Number
         }
       },
       other : {
-        existing1 : {
+        existing : {
           num : Number,
-          value : String
+          val : String
         },
         newly_added : {
-          num1 : Number,
-          value1 : String
+          num : Number,
+          val : String
         },
-        total2 : {
-          num2 : Number,
-          value2 : String
+        total : {
+          num : Number,
+          val : String
         }
       }
     },
-
+ 
+    tech_upgrade : {
+        total_computers : {
+            existing : Number,
+            added : Number,
+            total : Number
+        },
+        computer_labs : {
+            existing : Number,
+            added : Number,
+            total : Number
+        },
+        internet : {
+            existing : Number,
+            added : Number,
+            total : Number
+        },
+        browsing_centres : {
+            existing : Number,
+            added : Number,
+            total : Number
+        },
+        office : {
+            existing : Number,
+            added : Number,
+            total : Number
+        },
+        others : {
+            existing : Number,
+            added : Number,
+            total : Number
+        }
+    },
+    
     computer_internet_access_training : String,
 
     maintenance_amount_in_lakhs : {
