@@ -1,0 +1,613 @@
+﻿{text: 'The Annual Quality Assurance Report (AQAR) of the IQAC', style: 'header'},
+        {
+            text: [
+                '\nAll NAAC accredited institutions will submit an annual self-reviewed progress report to NAAC, through its IQAC. The report is to detail the tangible results achieved in key areas, specifically identified by the  institutional IQAC at the beginning of the academic year. The AQAR will detail the results of the perspective plan worked out by the IQAC.',
+                {text: '(Note: The AQAR period would be the Academic Year. For example, July 1, 2012 to June 30, 2013)', italics: true}
+            ],
+            alignment: 'left'
+        },
+        {text: 'Part - A', style: 'header', bold: false},
+        {text: '1. Details of the Institution', style: 'subheader', alignment: 'left'},
+        {text: '1.1. Name of the Institution:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['institution_details']['institution_name'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\n1.2. Address Line 1:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['institution_details']['address_line_1'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\nAddress Line 2:', alignment: 'left', margin: [21, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['institution_details']['address_line_2'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\nCity/Town:', alignment: 'left', margin: [21, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['institution_details']['city_or_town'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\nState:', alignment: 'left', margin: [21, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['institution_details']['state'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\nPin Code:', alignment: 'left', margin: [21, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['institution_details']['pincode'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\nInstitution E-mail Address:', alignment: 'left', margin: [21, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['institution_details']['institute_email'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\nContact Nos:', alignment: 'left', margin: [21, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['institution_details']['contact_numbers'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\nName of the Head of the Institution:', alignment: 'left', margin: [21, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['institution_details']['institution_head'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\nMobile:', alignment: 'left', margin: [21, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['institution_details']['mobile_number'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\nTel. No. with STD Code:', alignment: 'left', margin: [21, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['institution_details']['telephone_no_with_std_code'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\nName of the IQAC Co-ordinator:', alignment: 'left', margin: [21, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['institution_details']['iqac_coordinator'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\nMobile:', alignment: 'left', margin: [21, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['institution_details']['iqac_coordinator_mobile'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\nIQAC E-mail Address:', alignment: 'left', margin: [21, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['institution_details']['iqac_email'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: ['\n1.3. ', {text: 'NAAC Track ID ', bold: true}, {text: '(For ex. MHCOGN 18879)', italics: true}, ':'], alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['naac_track_id'], alignment: 'justify'}]
+                ]
+            },
+            margin: [280, -15, 0, 0]
+        },
+        {text: ['\n1.4. ', {text: 'NAAC Executive Committee No. & Date: ', bold: true}, {text: '\n(For Example EC/32/A&A/143 dated 3-5-2004. \nThis EC no. is available in the right corner- bottom \nof your institution’s Accreditation Certificate)', italics: true}, ':'], alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['naac_executive_commitee_no_date'], alignment: 'justify'}]
+                ]
+            },
+            margin: [280, -30, 0, 0]
+        },
+        {text: '\n1.5. Website address:', alignment: 'left', margin: [0, 10, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['website_address'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\nWeb-link of the AQAR:', alignment: 'left', margin: [20, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['aqar_web_link'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, -15, 0, 0]
+        },
+        {text: '\nFor ex. http://www.ladykeanecollege.edu.in/AQAR2012-13.doc', alignment: 'left', margin: [40, 0, 0, 0], pageBreak: 'after'},
+        /*PART A - Page 2*/
+        {text: '\n1.6. Accreditation Details:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                headerRows: 1,
+                body: [
+                    [{text: 'Sl. No.', style: 'tableHeader'}, {text: 'Cycle', style: 'tableHeader'}, {text: 'Grade', style: 'tableHeader'}, {text: 'CGPA', style: 'tableHeader'}, {text: 'Year of Accreditation', style: 'tableHeader'}, {text: 'Validity Period', style: 'tableHeader'}],
+                    [{text: '1'}, {text: '1st Cycle'}, data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution']],
+                    [{text: '2'}, {text: '2nd Cycle'}, data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution']],
+                    [{text: '3'}, {text: '3rd Cycle'}, data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution']],
+                    [{text: '4'}, {text: '4th Cycle'}, data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution']],
+                ]
+            }
+        },
+        {text: '\n1.7. Date of Establishment of IQAC (DD/MM/YY):', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [300, -15, 0, 0]
+        },
+        {text: '\n1.8. AQAR for the year (for example 2010-11):', alignment: 'left', bold: true},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [300, -15, 0, 0]
+        },
+        {text: '\n1.9. Details of the previous year’s AQAR submitted to NAAC after the latest Assessment and Accreditation by NAAC ((for example AQAR 2010-11 submitted to NAAC on 12-10-2011):', alignment: 'left'},
+        {text: '\ni. AQAR (DD/MM/YY):', alignment: 'left', margin: [40, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [300, -15, 0, 0]
+        },
+        {text: '\nii. AQAR (DD/MM/YY):', alignment: 'left', margin: [40, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [300, -15, 0, 0]
+        },
+        {text: '\niii. AQAR (DD/MM/YY):', alignment: 'left', margin: [40, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [300, -15, 0, 0]
+        },
+        {text: '\niv. AQAR (DD/MM/YY):', alignment: 'left', margin: [40, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [300, -15, 0, 0]
+        },
+        {text: '\n1.10. Institutional Status:', alignment: 'left'},
+        {text: '\nUniversity:', alignment: 'left', margin: [40, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    ["State", "Central", "Deemed", "Private"],
+                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [300, -15, 0, 0]
+        },
+        {text: '\nAffiliated College:', alignment: 'left', margin: [40, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    ["Yes", "No"],
+                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [300, -15, 0, 0]
+        },
+        {text: '\nConstituent College:', alignment: 'left', margin: [40, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    ["Yes", "No"],
+                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [300, -15, 0, 0]
+        },
+        {text: '\nAutonomous College of UGC:', alignment: 'left', margin: [40, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    ["Yes", "No"],
+                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [300, -15, 0, 0]
+        },
+        {text: '\nRegulatory Agency Approved Institution:\n(eg. AICTE, BCI, MCI, PCI, NCI)', alignment: 'left', margin: [40, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    ["Yes", "No"],
+                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [300, -30, 0, 0]
+        },
+        {text: '\n\nType of Institution:', alignment: 'left', margin: [40, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    ["Co-Education", "Men", "Women"],
+                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [300, -20, 0, 0]
+        },
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    ["Urban", "Rural", "Tribal"],
+                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [300, 10, 0, 0],
+            pageBreak: 'after'
+        },
+        /* PART A PAGE 3*/
+        {text: '\nFinancial Status:', alignment: 'left', margin: [40, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    ["Grant-in-Aid", "UGC 2(f)", "UGC 12B", "Grant-in-Aid + Self-Financing", "Totally Self-Financing"],
+                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [140, -15, 0, 0]
+        },
+        {text: '\n1.11. Type of Faculty/Programme:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: "Arts", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "Science", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "Commerce", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "Law", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "PEI (Phys Edu)", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "TEI (Edu)", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "Engineering", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "Health Science", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "Management", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "Others", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [200, 10, 0, 0]
+        },
+        {text: '\n1.12. Name of the Affiliating University (for the Colleges):\n', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [300, -15, 0, 0]
+        },
+        {text: '\n1.13. Special status conferred by Central/ State Government-- UGC/CSIR/DST/DBT/ICMR etc:\n\n', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: "Autonomy by State/Central Govt./University", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "University with Potential for Excellence", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "DST Star Scheme", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "UGC-Special Assistance Programme", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "UGC-Innovative PG Programmes", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "UGC-COP Programmes", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "UGC-CPE", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "UGC-CE", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "DST-FIST", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "Any Other (Specify)", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                ]
+            },
+            margin: [100, 0, 0, 0],
+            pageBreak: 'after'
+        },
+        /* PART A - PART 2 */
+        {text: '2. IQAC Composition and Activities', style: 'subheader', alignment: 'left'},
+        {text: '\n2.1. No. of Teachers:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [350, -15, 0, 0]
+        },
+        {text: '\n2.2. No. of Administrative/Technical staff', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [350, -15, 0, 0]
+        },
+        {text: '\n2.3. No. of Students:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [350, -15, 0, 0]
+        },
+        {text: '\n2.4. No. of Management Representatives:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [350, -15, 0, 0]
+        },
+        {text: '\n2.5. No. of Alumni:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [350, -15, 0, 0]
+        },
+        {text: '\n2.6. No. of Any Other Stakeholder and Community Representatives:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [350, -15, 0, 0]
+        },
+        {text: '\n2.7. No. of Employers/Industrialists:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [350, -15, 0, 0]
+        },
+        {text: '\n2.8. No. of Other External Experts:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [350, -15, 0, 0]
+        },
+        {text: '\n2.9. Total No. of Members:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [350, -15, 0, 0]
+        },
+        {text: '\n2.10. No. of IQAC meetings held:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [350, -15, 0, 0]
+        },
+        {text: '\n2.11. No. of meetings with various stakeholders:\n\n', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    ["Total", "Faculty", "Non-Teaching Staff Students", "Alumni", "Others"],
+                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [40, 0, 0, 0]
+        },
+        {text: '\n2.12. Has IQAC received any funding from UGC During the Year?:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    ["Yes", "No"],
+                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [350, -15, 0, 0]
+        },
+        {text: '\nIf Yes, Mention the Amount:', alignment: 'left', margin: [40, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [350, -15, 0, 0]
+        },
+        {text: '\n2.13. Seminars and Conferences (Only Quality Related):', alignment: 'left'},
+        {text: '\n(i) No. of Seminars/Conferences/Workshops/Symposia organized by the IQAC\n\n', alignment: 'left', margin: [20, 0, 0 ,0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    ["Total", "International", "National", "State", "Institution Level"],
+                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [40, 0, 0, 0]
+        },
+        {text: '\n(ii) Themes', alignment: 'left', margin: [20, 0, 0 ,0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [150, -15, 0, 0]
+        },
+        {text: '\n2.14. Significant Activities and Contributions made by IQAC\n:', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [40, 0, 0, 0],
+            pageBreak: 'after'
+        },
+        {text: '\n2.15. Plan of Action by IQAC/Outcome:', alignment: 'left'},
+        {text:
+            [
+                {text: 'The plan of action chalked out by the IQAC in the beginning of the year towards quality enhancement and the outcome achieved by the end of the year *', alignment: 'left'},
+                {text: "\n* Attach the Academic Calendar of the year as Annexure\n\n", italics: true, alignment: 'left'}
+            ],
+            margin: [28, 0, 0, 0]
+        },
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    ["Plan of Action", "Achievements"],
+                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [40, 0, 0, 0]
+        },
+        {text: '\n2.16. Whether the AQAR was Placed in Statutory Body:\n\n', alignment: 'left'},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    ["Yes", "No", "Management", "Syndicate", "Any Other Body"],
+                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [40, 0, 0, 0]
+        },
+        {text: '\nProvide the details of the action taken:\n\n', alignment: 'left', margin: [40, 0, 0, 0]},
+        {
+            style: 'tableExample',
+            table: {
+                body: [
+                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                ]
+            },
+            margin: [60, 0, 0, 0],
+            pageBreak: 'after'
+        },
