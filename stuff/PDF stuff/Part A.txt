@@ -197,10 +197,10 @@
                 headerRows: 1,
                 body: [
                     [{text: 'Sl. No.', style: 'tableHeader'}, {text: 'Cycle', style: 'tableHeader'}, {text: 'Grade', style: 'tableHeader'}, {text: 'CGPA', style: 'tableHeader'}, {text: 'Year of Accreditation', style: 'tableHeader'}, {text: 'Validity Period', style: 'tableHeader'}],
-                    [{text: '1'}, {text: '1st Cycle'}, data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution']],
-                    [{text: '2'}, {text: '2nd Cycle'}, data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution']],
-                    [{text: '3'}, {text: '3rd Cycle'}, data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution']],
-                    [{text: '4'}, {text: '4th Cycle'}, data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution'], data['iqac_contribution']],
+                    [{text: '1'}, {text: '1st Cycle'}, data['accreditation_details']['first_cycle']['grade'], data['accreditation_details']['first_cycle']['cgpa'], data['accreditation_details']['first_cycle']['year_of_accreditation'], data['accreditation_details']['first_cycle']['validity']],
+                    [{text: '2'}, {text: '2nd Cycle'}, data['accreditation_details']['second_cycle']['grade'], data['accreditation_details']['second_cycle']['cgpa'], data['accreditation_details']['second_cycle']['year_of_accreditation'], data['accreditation_details']['second_cycle']['validity']],
+                    [{text: '3'}, {text: '3rd Cycle'}, data['accreditation_details']['third_cycle']['grade'], data['accreditation_details']['third_cycle']['cgpa'], data['accreditation_details']['third_cycle']['year_of_accreditation'], data['accreditation_details']['third_cycle']['validity']],
+                    [{text: '4'}, {text: '4th Cycle'}, data['accreditation_details']['fourth_cycle']['grade'], data['accreditation_details']['fourth_cycle']['cgpa'], data['accreditation_details']['fourth_cycle']['year_of_accreditation'], data['accreditation_details']['fourth_cycle']['validity']],
                 ]
             }
         },
@@ -209,7 +209,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['iqac_establishment_date'], alignment: 'justify'}]
                 ]
             },
             margin: [300, -15, 0, 0]
@@ -219,7 +219,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['aqar_of_the_year'], alignment: 'justify'}]
                 ]
             },
             margin: [300, -15, 0, 0]
@@ -230,7 +230,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['previous_aqar_submissions']['prev_aqar_submission1']['aqar_date'], alignment: 'justify'}]
                 ]
             },
             margin: [300, -15, 0, 0]
@@ -240,7 +240,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['previous_aqar_submissions']['prev_aqar_submission2']['aqar_date'], alignment: 'justify'}]
                 ]
             },
             margin: [300, -15, 0, 0]
@@ -250,7 +250,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['previous_aqar_submissions']['prev_aqar_submission3']['aqar_date'], alignment: 'justify'}]
                 ]
             },
             margin: [300, -15, 0, 0]
@@ -260,7 +260,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['previous_aqar_submissions']['prev_aqar_submission4']['aqar_date'], alignment: 'justify'}]
                 ]
             },
             margin: [300, -15, 0, 0]
@@ -272,7 +272,7 @@
             table: {
                 body: [
                     ["State", "Central", "Deemed", "Private"],
-                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['institutional_status']['university']['state'], alignment: 'justify'}, {text: data['institutional_status']['university']['central'], alignment: 'justify'}, {text: data['institutional_status']['university']['deemed'], alignment: 'justify'}, {text: data['institutional_status']['university']['private_uni'], alignment: 'justify'}]
                 ]
             },
             margin: [300, -15, 0, 0]
@@ -283,7 +283,7 @@
             table: {
                 body: [
                     ["Yes", "No"],
-                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['affliated_college']['yes'], alignment: 'justify'}, {text: data['affliated_college']['no'], alignment: 'justify'}]
                 ]
             },
             margin: [300, -15, 0, 0]
@@ -294,7 +294,7 @@
             table: {
                 body: [
                     ["Yes", "No"],
-                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['constituent_college']['yes'], alignment: 'justify'}, {text: data['constituent_college']['no'], alignment: 'justify'}]
                 ]
             },
             margin: [300, -15, 0, 0]
@@ -305,7 +305,7 @@
             table: {
                 body: [
                     ["Yes", "No"],
-                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['autonomous_college_of_ugc']['yes'], alignment: 'justify'}, {text: data['autonomous_college_of_ugc']['no'], alignment: 'justify'}]
                 ]
             },
             margin: [300, -15, 0, 0]
@@ -316,7 +316,7 @@
             table: {
                 body: [
                     ["Yes", "No"],
-                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['regulatory_agency_approved_institute']['yes'], alignment: 'justify'}, {text: data['regulatory_agency_approved_institute']['no'], alignment: 'justify'}]
                 ]
             },
             margin: [300, -30, 0, 0]
@@ -327,7 +327,7 @@
             table: {
                 body: [
                     ["Co-Education", "Men", "Women"],
-                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['type_of_institution1']['co_ed'], alignment: 'justify'}, {text: data['type_of_institution1']['men'], alignment: 'justify'}, {text: data['type_of_institution1']['women'], alignment: 'justify'}]
                 ]
             },
             margin: [300, -20, 0, 0]
@@ -337,7 +337,7 @@
             table: {
                 body: [
                     ["Urban", "Rural", "Tribal"],
-                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['type_of_institution2']['urban'], alignment: 'justify'}, {text: data['type_of_institution2']['rural'], alignment: 'justify'}, {text: data['type_of_institution2']['tribal'], alignment: 'justify'}]
                 ]
             },
             margin: [300, 10, 0, 0],
