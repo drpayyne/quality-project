@@ -7,7 +7,7 @@ var PartA1Schema = mongoose.schema({
   institution_name : String,
   address_line_1 : String,
   address_line_2 : String,
-  city_or_town : String
+  city_or_town : String,
   state : String,
   pincode : Number,
   institute_email : String,
@@ -55,19 +55,15 @@ var PartA1Schema = mongoose.schema({
 
   previous_aqar_submissions : {
     prev_aqar_submission1 : {
-      aqar_year : String,
       aqar_date : Date
     },
     prev_aqar_submission2 : {
-      aqar_year : String,
       aqar_date : Date
     },
     prev_aqar_submission3 : {
-      aqar_year : String,
       aqar_date : Date
     },
     prev_aqar_submission4 : {
-      aqar_year : String,
       aqar_date : Date
     }
   },
@@ -80,20 +76,20 @@ var PartA1Schema = mongoose.schema({
       private_uni : Number
     },
     affliated_college : {
-      yes1 : Number,
-      no1 : Number
+      yes : Number,
+      no : Number
     },
     constituent_college : {
-      yes2 : Number,
-      no2 : Number
+      yes : Number,
+      no : Number
     },
     autonomous_college_of_ugc : {
-      yes3 : Number,
-      no3 : Number
+      yes : Number,
+      no : Number
     },
     regulatory_agency_approved_institute : {
-      yes4 : Number,
-      no4 : Number
+      yes : Number,
+      no : Number
     },
     type_of_institution1 : {
       co_ed : Number,
@@ -127,7 +123,7 @@ var PartA1Schema = mongoose.schema({
     others : String
   },
 
-  affliating_uni_name : String
+  affliating_uni_name : String,
 
   special_status : {
     state_cental_govt_uni_autonomy : String,
@@ -140,7 +136,62 @@ var PartA1Schema = mongoose.schema({
     ugc_innovative_pg_program : String,
     ugc_cop : String,
     any_other : String
-  }
+  },
+  
+    no_of_teachers : Number,
+    no_of_tech_admin_staff : Number,
+    no_of_students : Number,
+    no_of_management_reps : Number,
+    no_of_alumni : Number,
+    no_of_other_stakeholders_community_reps : Number,
+    no_of_employers_industrialists : Number,
+    no_of_other_external_experts : Number,
+    total_no_of_members : Number,
+    no_of_iqac_meetings_held : Number,
+
+    no_of_meetings_with_various_stakeholders : {
+      No : Number,
+      faculty : Number,
+      non_teaching_staff_students : Number,
+      alumni : Number,
+      others : Number
+    },
+
+    ugc_funding_for_iqac : {     //Option Based Answering
+      yes : Number,
+      no : Number,
+      yes_amount : String   //Mentioned only if option yes is chosen
+    },
+
+    seminars_conferences : {
+      events_organized_by_iqac : {
+        total_no : Number,
+        international : Number,
+        national : Number,
+        state : Number,
+        institution_level : Number
+      },
+      themes : String
+    },
+
+    significant_contributions_activities_by_iqac : String,
+
+    iqac_plan_of_action : {
+      plan_of_action : String,
+      achievements : String
+    },
+
+    placement_of_aqar_in_statutory_body : {
+      yes2 : Number,
+      no2 : Number,
+      type_of_statutory_body : {
+        management : Number,
+        syndicate : Number,
+        any_other_body : Number
+      },
+      details_of_action_taken : String
+    }
+
 
   retainKeyOrder : true
 });
