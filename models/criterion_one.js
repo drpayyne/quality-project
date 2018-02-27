@@ -34,6 +34,12 @@ var criterionOneSchema = mongoose.Schema({
       self_finance_program_count : Number,
       career_oriented_program_count : Number
     },
+    diploma : {
+      existing_program_count : Number,
+      added_program_count : Number,
+      self_finance_program_count : Number,
+      career_oriented_program_count : Number
+    },
     certificate : {
       existing_program_count : Number,
       added_program_count : Number,
