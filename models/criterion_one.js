@@ -7,8 +7,8 @@ var criterionOneSchema = mongoose.Schema({
     phd : {
       existing_program_count : Number,
       added_program_count : Number,
-      self_finance_program_count = Number,
-      career_oriented_program_count = Number
+      self_finance_program_count : Number,
+      career_oriented_program_count : Number
     },
     pg : {
       existing_program_count : Number,
