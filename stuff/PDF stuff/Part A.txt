@@ -350,7 +350,7 @@
             table: {
                 body: [
                     ["Grant-in-Aid", "UGC 2(f)", "UGC 12B", "Grant-in-Aid + Self-Financing", "Totally Self-Financing"],
-                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['financial_status']['grant_in_aid'], alignment: 'justify'}, {text: data['financial_status']['ugc_2f'], alignment: 'justify'}, {text: data['financial_status']['ugc_12b'], alignment: 'justify'}, {text: data['financial_status']['grant_in_aid_plus_self_finance'], alignment: 'justify'}, {text: data['financial_status']['totally_self_finance'], alignment: 'justify'}]
                 ]
             },
             margin: [140, -15, 0, 0]
@@ -360,16 +360,16 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: "Arts", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "Science", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "Commerce", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "Law", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "PEI (Phys Edu)", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "TEI (Edu)", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "Engineering", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "Health Science", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "Management", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "Others", alignment: 'left'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: "Arts", alignment: 'left'}, {text: data['faculty_and_programme_type']['arts'], alignment: 'justify'}],
+                    [{text: "Science", alignment: 'left'}, {text: data['faculty_and_programme_type']['science'], alignment: 'justify'}],
+                    [{text: "Commerce", alignment: 'left'}, {text: data['faculty_and_programme_type']['commerce'], alignment: 'justify'}],
+                    [{text: "Law", alignment: 'left'}, {text: data['faculty_and_programme_type']['law'], alignment: 'justify'}],
+                    [{text: "PEI (Phys Edu)", alignment: 'left'}, {text: data['faculty_and_programme_type']['pei'], alignment: 'justify'}],
+                    [{text: "TEI (Edu)", alignment: 'left'}, {text: data['faculty_and_programme_type']['tei'], alignment: 'justify'}],
+                    [{text: "Engineering", alignment: 'left'}, {text: data['faculty_and_programme_type']['engineering'], alignment: 'justify'}],
+                    [{text: "Health Science", alignment: 'left'}, {text: data['faculty_and_programme_type']['health_science'], alignment: 'justify'}],
+                    [{text: "Management", alignment: 'left'}, {text: data['faculty_and_programme_type']['management'], alignment: 'justify'}],
+                    [{text: "Others", alignment: 'left'}, {text: data['faculty_and_programme_type']['others'], alignment: 'justify'}]
                 ]
             },
             margin: [200, 10, 0, 0]
@@ -379,7 +379,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['affliating_uni_name'], alignment: 'justify'}]
                 ]
             },
             margin: [300, -15, 0, 0]
@@ -389,16 +389,16 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: "Autonomy by State/Central Govt./University", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "University with Potential for Excellence", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "DST Star Scheme", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "UGC-Special Assistance Programme", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "UGC-Innovative PG Programmes", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "UGC-COP Programmes", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "UGC-CPE", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "UGC-CE", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "DST-FIST", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
-                    [{text: "Any Other (Specify)", alignment: "left"}, {text: data['iqac_contribution'], alignment: 'justify'}],
+                    [{text: "Autonomy by State/Central Govt./University", alignment: "left"}, {text: data['special_status']['state_cental_govt_uni_autonomy'], alignment: 'justify'}],
+                    [{text: "University with Potential for Excellence", alignment: "left"}, {text: data['special_status']['uni_with_potential_for_exellence'], alignment: 'justify'}],
+                    [{text: "DST Star Scheme", alignment: "left"}, {text: data['special_status']['dst_star_scheme'], alignment: 'justify'}],
+                    [{text: "UGC-Special Assistance Programme", alignment: "left"}, {text: data['special_status']['ugc_special_assistance_program'], alignment: 'justify'}],
+                    [{text: "UGC-Innovative PG Programmes", alignment: "left"}, {text: data['special_status']['ugc_innovative_pg_program'], alignment: 'justify'}],
+                    [{text: "UGC-COP Programmes", alignment: "left"}, {text: data['special_status']['ugc_cop'], alignment: 'justify'}],
+                    [{text: "UGC-CPE", alignment: "left"}, {text: data['special_status']['ugc_cpe'], alignment: 'justify'}],
+                    [{text: "UGC-CE", alignment: "left"}, {text: data['special_status']['ugc_ce'], alignment: 'justify'}],
+                    [{text: "DST-FIST", alignment: "left"}, {text: data['special_status']['dst_fist'], alignment: 'justify'}],
+                    [{text: "Any Other (Specify)", alignment: "left"}, {text: data['special_status']['any_other'], alignment: 'justify'}],
                 ]
             },
             margin: [100, 0, 0, 0],
@@ -411,7 +411,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['no_of_teachers'], alignment: 'justify'}]
                 ]
             },
             margin: [350, -15, 0, 0]
@@ -421,7 +421,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['no_of_tech_admin_staff'], alignment: 'justify'}]
                 ]
             },
             margin: [350, -15, 0, 0]
@@ -431,7 +431,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['no_of_students'], alignment: 'justify'}]
                 ]
             },
             margin: [350, -15, 0, 0]
@@ -441,7 +441,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['no_of_management_reps'], alignment: 'justify'}]
                 ]
             },
             margin: [350, -15, 0, 0]
@@ -451,7 +451,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['no_of_alumni'], alignment: 'justify'}]
                 ]
             },
             margin: [350, -15, 0, 0]
@@ -461,7 +461,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['no_of_other_stakeholders_community_reps'], alignment: 'justify'}]
                 ]
             },
             margin: [350, -15, 0, 0]
@@ -471,7 +471,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['no_of_employers_industrialists'], alignment: 'justify'}]
                 ]
             },
             margin: [350, -15, 0, 0]
@@ -481,7 +481,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['no_of_other_external_experts'], alignment: 'justify'}]
                 ]
             },
             margin: [350, -15, 0, 0]
@@ -491,7 +491,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['total_no_of_members'], alignment: 'justify'}]
                 ]
             },
             margin: [350, -15, 0, 0]
@@ -501,7 +501,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['no_of_iqac_meetings_held'], alignment: 'justify'}]
                 ]
             },
             margin: [350, -15, 0, 0]
@@ -512,7 +512,7 @@
             table: {
                 body: [
                     ["Total", "Faculty", "Non-Teaching Staff Students", "Alumni", "Others"],
-                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['no_of_meetings_with_various_stakeholders']['No'], alignment: 'justify'}, {text: data['no_of_meetings_with_various_stakeholders']['faculty'], alignment: 'justify'}, {text: data['no_of_meetings_with_various_stakeholders']['non_teaching_staff_students'], alignment: 'justify'}, {text: data['no_of_meetings_with_various_stakeholders']['alumni'], alignment: 'justify'}, {text: data['no_of_meetings_with_various_stakeholders']['others'], alignment: 'justify'}]
                 ]
             },
             margin: [40, 0, 0, 0]
@@ -523,7 +523,7 @@
             table: {
                 body: [
                     ["Yes", "No"],
-                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['ugc_funding_for_iqac']['yes'], alignment: 'justify'}, {text: data['ugc_funding_for_iqac']['no'], alignment: 'justify'}]
                 ]
             },
             margin: [350, -15, 0, 0]
@@ -533,7 +533,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['ugc_funding_for_iqac']['yes_amount'], alignment: 'justify'}]
                 ]
             },
             margin: [350, -15, 0, 0]
@@ -545,7 +545,7 @@
             table: {
                 body: [
                     ["Total", "International", "National", "State", "Institution Level"],
-                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['events_organized_by_iqac']['total_no'], alignment: 'justify'}, {text: data['events_organized_by_iqac']['international'], alignment: 'justify'}, {text: data['events_organized_by_iqac']['national'], alignment: 'justify'}, {text: data['events_organized_by_iqac']['state'], alignment: 'justify'}, {text: data['events_organized_by_iqac']['institution_level'], alignment: 'justify'}]
                 ]
             },
             margin: [40, 0, 0, 0]
@@ -555,7 +555,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['events_organized_by_iqac'][''], alignment: 'justify'}]
                 ]
             },
             margin: [150, -15, 0, 0]
@@ -565,7 +565,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['significant_contributions_activities_by_iqac'], alignment: 'justify'}]
                 ]
             },
             margin: [40, 0, 0, 0],
@@ -584,7 +584,7 @@
             table: {
                 body: [
                     ["Plan of Action", "Achievements"],
-                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['iqac_plan_of_action']['plan_of_action'], alignment: 'justify'}, {text: data['iqac_plan_of_action']['achievements'], alignment: 'justify'}]
                 ]
             },
             margin: [40, 0, 0, 0]
@@ -595,7 +595,7 @@
             table: {
                 body: [
                     ["Yes", "No", "Management", "Syndicate", "Any Other Body"],
-                    [{text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}, {text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['placement_of_aqar_in_statutory_body']['yes'], alignment: 'justify'}, {text: data['placement_of_aqar_in_statutory_body']['no'], alignment: 'justify'}, {text: data['placement_of_aqar_in_statutory_body']['type_of_statutory_body']['management'], alignment: 'justify'}, {text: data['placement_of_aqar_in_statutory_body']['type_of_statutory_body']['syndicate'], alignment: 'justify'}, {text: data['placement_of_aqar_in_statutory_body']['type_of_statutory_body']['any_other_body'], alignment: 'justify'}]
                 ]
             },
             margin: [40, 0, 0, 0]
@@ -605,7 +605,7 @@
             style: 'tableExample',
             table: {
                 body: [
-                    [{text: data['iqac_contribution'], alignment: 'justify'}]
+                    [{text: data['placement_of_aqar_in_statutory_body']['details_of_action_taken'], alignment: 'justify'}]
                 ]
             },
             margin: [60, 0, 0, 0],
