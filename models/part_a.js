@@ -1,8 +1,8 @@
-// Part A(1)
+// Part A
 let mongoose = require('mongoose');
 
-//Part A(1) Schema
-var PartA1Schema = mongoose.schema({
+//Part A Schema
+var PartASchema = mongoose.schema({
   institution_details : {
   institution_name : String,
   address_line_1 : String,
@@ -196,4 +196,4 @@ var PartA1Schema = mongoose.schema({
   retainKeyOrder : true
 });
 
-let PartA1 = module.exports = mongoose.model('PartA1', PartA1Schema, 'part_a');
+let PartA = module.exports = mongoose.model('PartA', PartASchema, 'part_a');
