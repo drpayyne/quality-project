@@ -46,12 +46,12 @@ var criterionOneSchema = mongoose.Schema({
       self_finance_program_count : Number,
       career_oriented_program_count : Number
     },
-    /*total : {
+    total : {
       existing_program_count : Number,
       added_program_count : Number,
       self_finance_program_count : Number,
       career_oriented_program_count : Number
-    }, */
+    }, 
     interdisciplinary : {
       existing_program_count : Number,
       added_program_count : Number,
@@ -71,6 +71,18 @@ var criterionOneSchema = mongoose.Schema({
     core : Number,
     elective_option : Number,
     open_option : Number,
+  },
+  
+  pattern_of_programmes : {
+    semester : {
+      no_of_programmes : Number
+    },
+    trimester : {
+      no_of_programmes : Number
+    },
+    annual : {
+      no_of_programmes : Number
+    }
   },
 
   stakeholder_feedback : {
