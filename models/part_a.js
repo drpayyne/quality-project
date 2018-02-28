@@ -182,8 +182,8 @@ var PartASchema = mongoose.schema({
     },
 
     placement_of_aqar_in_statutory_body : {
-      yes2 : Number,
-      no2 : Number,
+      yes : Number,
+      no : Number,
       type_of_statutory_body : {
         management : Number,
         syndicate : Number,
