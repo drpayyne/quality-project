@@ -75,23 +75,23 @@
 			],
 			[
 				{text: 'Completed', style: 'tableHeader'},
-				data['minor_project_details']['completed1']['number1'], 
-				data['minor_project_details']['completed1']['outlay_in_lakhs1'],
+				data['minor_project_details']['completed']['number'], 
+				data['minor_project_details']['completed']['outlay_in_lakhs'],
 			],
 			[
 				{text: 'Ongoing', style: 'tableHeader'},
-				data['minor_project_details']['ongoing1']['number1'],
-				data['minor_project_details']['ongoing1']['outlay_in_lakhs1'],
+				data['minor_project_details']['ongoing']['number'],
+				data['minor_project_details']['ongoing']['outlay_in_lakhs'],
 			],
 			[
 				{text: 'Sanctioned', style: 'tableHeader'},
-				data['minor_project_details']['sanctioned1']['number1'],
-				data['minor_project_details']['sanctioned1']['outlay_in_lakhs1'],
+				data['minor_project_details']['sanctioned']['number'],
+				data['minor_project_details']['sanctioned']['outlay_in_lakhs'],
 			],
 			[
 				{text: 'Submitted', style: 'tableHeader'},
-				data['minor_project_details']['submitted1']['number1'],
-				data['minor_project_details']['submitted1']['outlay_in_lakhs1'],
+				data['minor_project_details']['submitted']['number'],
+				data['minor_project_details']['submitted']['outlay_in_lakhs'],
 			],
 		]
 	}
@@ -160,7 +160,7 @@
 	}
 },
 {
-	text: '3.4. Details on Research Publications:',
+	text: '3.6. Research funds sanctioned and received from various funding agencies, industry and other organisations:',
 	alignment: 'left'
 },
 {
@@ -294,7 +294,7 @@
 				data['for_colleges']['cpe'],
 				data['for_colleges']['ce'],
 				data['for_colleges']['dbt_star_scheme'], 
-				data['for_colleges']['any_other_specify2']
+				data['for_colleges']['any_other_specify']
 			]
 		]
 	}
@@ -328,28 +328,28 @@
 			],
 			[
 				{text: 'International', style: 'tableHeader'},
-				data['conferences_organized_by_institution']['number']['international1'], 
-				data['conferences_organized_by_institution']['sponsoring_agencies']['international1'],
+				data['conferences_organized_by_institution']['number']['international'], 
+				data['conferences_organized_by_institution']['sponsoring_agencies']['international'],
 			],
 			[
 				{text: 'National', style: 'tableHeader'},
-				data['conferences_organized_by_institution']['number']['national1'],
-				data['conferences_organized_by_institution']['sponsoring_agencies']['national1'],
+				data['conferences_organized_by_institution']['number']['national'],
+				data['conferences_organized_by_institution']['sponsoring_agencies']['national'],
 			],
 			[
 				{text: 'State', style: 'tableHeader'},
-				data['conferences_organized_by_institution']['number']['state1'],
-				data['conferences_organized_by_institution']['sponsoring_agencies']['state1'],
+				data['conferences_organized_by_institution']['number']['state'],
+				data['conferences_organized_by_institution']['sponsoring_agencies']['state'],
 			],
 			[
 				{text: 'University', style: 'tableHeader'},
-				data['conferences_organized_by_institution']['number']['university1'],
-				data['conferences_organized_by_institution']['sponsoring_agencies']['university1'],
+				data['conferences_organized_by_institution']['number']['university'],
+				data['conferences_organized_by_institution']['sponsoring_agencies']['university'],
 			],
 			[
 				{text: 'College', style: 'tableHeader'},
-				data['conferences_organized_by_institution']['number']['college1'],
-				data['conferences_organized_by_institution']['sponsoring_agencies']['college1'],
+				data['conferences_organized_by_institution']['number']['college'],
+				data['conferences_organized_by_institution']['sponsoring_agencies']['college'],
 			],
 		]
 	}
@@ -380,8 +380,8 @@
 				{text: 'Any other', style: 'tableHeader'},
 			],
 			[
-				data['no_of_collaborations']['international3'], 
-				data['no_of_collaborations']['national3'],
+				data['no_of_collaborations']['international'], 
+				data['no_of_collaborations']['national'],
 				data['no_of_collaborations']['any_other'], 
 			]
 		]
@@ -446,10 +446,10 @@
 				{text:'Granted'}, 
 			],
 			[
-				data['no_of_patents']['applied']['national4'],
-				data['no_of_patents']['granted']['national4'],
-				data['no_of_patents']['applied']['international4'],
-				data['no_of_patents']['granted']['international4'],
+				data['no_of_patents']['applied']['national'],
+				data['no_of_patents']['granted']['national'],
+				data['no_of_patents']['applied']['international'],
+				data['no_of_patents']['granted']['international'],
 				data['no_of_patents']['applied']['commercialized'],
 				data['no_of_patents']['granted']['commercialized'],
 			]
@@ -475,12 +475,12 @@
 			],
 			[
 				data['no_of_awards_recognition_faculty_research_fellows']['total'], 
-				data['no_of_awards_recognition_faculty_research_fellows']['international5'],
-				data['no_of_awards_recognition_faculty_research_fellows']['national5'],
-				data['no_of_awards_recognition_faculty_research_fellows']['state5'],
-				data['no_of_awards_recognition_faculty_research_fellows']['university5'],
-				data['no_of_awards_recognition_faculty_research_fellows']['district5'], 
-				data['no_of_awards_recognition_faculty_research_fellows']['college5']
+				data['no_of_awards_recognition_faculty_research_fellows']['international'],
+				data['no_of_awards_recognition_faculty_research_fellows']['national'],
+				data['no_of_awards_recognition_faculty_research_fellows']['state'],
+				data['no_of_awards_recognition_faculty_research_fellows']['university'],
+				data['no_of_awards_recognition_faculty_research_fellows']['district'], 
+				data['no_of_awards_recognition_faculty_research_fellows']['college']
 			]
 		]
 	}
@@ -577,10 +577,10 @@
 				{text: 'International Level', style: 'tableHeader'},
 			],
 			[
-				data['ncc_student_participation']['university_level1'], 
-				data['ncc_student_participation']['national_level1'],
-				data['ncc_student_participation']['state_level1'], 
-				data['ncc_student_participation']['international1']
+				data['ncc_student_participation']['university_level'], 
+				data['ncc_student_participation']['national_level'],
+				data['ncc_student_participation']['state_level'], 
+				data['ncc_student_participation']['international']
 			]
 		]
 	}
@@ -600,10 +600,10 @@
 				{text: 'International Level', style: 'tableHeader'},
 			],
 			[
-				data['no_of_awards_in_nss']['university_level2'], 
-				data['no_of_awards_in_nss']['national_level2'],
-				data['no_of_awards_in_nss']['state_level2'], 
-				data['no_of_awards_in_nss']['international_level2']
+				data['no_of_awards_in_nss']['university_level'], 
+				data['no_of_awards_in_nss']['national_level'],
+				data['no_of_awards_in_nss']['state_level'], 
+				data['no_of_awards_in_nss']['international_level']
 			]
 		]
 	}
@@ -623,10 +623,10 @@
 				{text: 'International Level', style: 'tableHeader'},
 			],
 			[
-				data['no_of_awards_in_ncc']['university_level3'], 
-				data['no_of_awards_in_ncc']['national_level3'],
-				data['no_of_awards_in_ncc']['state_level3'], 
-				data['no_of_awards_in_ncc']['international_level3']
+				data['no_of_awards_in_ncc']['university_level'], 
+				data['no_of_awards_in_ncc']['national_level'],
+				data['no_of_awards_in_ncc']['state_level'], 
+				data['no_of_awards_in_ncc']['international_level']
 			]
 		]
 	}
@@ -651,7 +651,7 @@
 				data['no_of_extension_activities_organized']['college_forum'],
 				data['no_of_extension_activities_organized']['ncc'],
 				data['no_of_extension_activities_organized']['nss'], 
-				data['no_of_extension_activities_organized']['any_other1']
+				data['no_of_extension_activities_organized']['any_other']
 			]
 		]
 	}
