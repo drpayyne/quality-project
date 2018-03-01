@@ -182,11 +182,11 @@ var criterionThreeSchema = mongoose.schema({
     },
 
     no_of_patents : {           // 3.16
-      national4 : {
+      national : {
         applied : Number,
         granted : Number
       },
-      international4 : {
+      international : {
         applied : Number,
         granted : Number
       },
@@ -198,12 +198,12 @@ var criterionThreeSchema = mongoose.schema({
 
     no_of_awards_recognition_faculty_research_fellows : {   // 3.17
       total : Number,
-      international5 : Number,
-      national5 : Number,
-      state5 : Number,
-      university5 : Number,
-      district5 : Number,
-      college5 : Number
+      international : Number,
+      national : Number,
+      state : Number,
+      university : Number,
+      district : Number,
+      college : Number
     },
 
     faculty_count : {                               // 3.18
