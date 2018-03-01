@@ -9,15 +9,15 @@ var criterionSevenSchema = mongoose.Schema({
     action_taken_report : String,
 
     two_best_practices_of_institution : {
-      practice1 : String,
-      practice2 : String
+      practice : String,
+      practice : String
     },
 
     environment_awareness_protection_contribution : String,
 
     environment_audit_conducted : {
-      yes5 : Number,
-      no5 : Number
+      yes : Number,
+      no : Number
     },
 
     other_relevant_info : String
