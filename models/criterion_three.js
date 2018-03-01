@@ -26,21 +26,21 @@ var criterionThreeSchema = mongoose.schema({
     },
 
     minor_project_details : {                // 3.3
-      completed1 : {
-        number1 : Number,
-        outlay_in_lakhs1 : Number
+      completed : {
+        number : Number,
+        outlay_in_lakhs : Number
       },
-      ongoing1 : {
-        number1 : Number,
-        outlay_in_lakhs1 : Number
+      ongoing : {
+        number : Number,
+        outlay_in_lakhs : Number
       },
-      sanctioned1 : {
-        number1 : Number,
-        outlay_in_lakhs1 : Number
+      sanctioned : {
+        number : Number,
+        outlay_in_lakhs : Number
       },
-      submitted1 : {
-        number1 : Number,
-        outlay_in_lakhs1 : Number
+      submitted : {
+        number : Number,
+        outlay_in_lakhs : Number
       }
     },
 
@@ -143,33 +143,33 @@ var criterionThreeSchema = mongoose.schema({
       dbt_star_scheme : Number,
       inspire : Number,
       ce : Number,
-      any_other_specify2 : Number
+      any_other_specify : Number
     },
 
     revenue_generated_through_consultancy : String,    // 3.10
 
     conferences_organized_by_institution : {          // 3.11
       number : {
-        international1 : Number,
-        national1 : Number,
-        state1 : Number,
-        university1 : Number,
-        college1 : Number
+        international : Number,
+        national : Number,
+        state : Number,
+        university : Number,
+        college : Number
       },
       sponsoring_agencies : {
-        international1: String,
-        national1 : String,
-        state1: String,
-        university1 : String,
-        college1 : String
+        international : String,
+        national : String,
+        state : String,
+        university : String,
+        college : String
       }
     },
 
     no_of_faculty_served_chairperson_resource_expert : Number,   // 3.12
 
     no_of_collaborations : {        // 3.13
-      international3 : Number,
-      national3 : Number,
+      international : Number,
+      national : Number,
       any_other : Number
     },
 
@@ -228,24 +228,24 @@ var criterionThreeSchema = mongoose.schema({
     },
 
     ncc_student_participation : {            // 3.22
-      international_level1 : Number,
-      national_level1 : Number,
-      state_level1 : Number,
-      university_level1 : Number
+      international_level : Number,
+      national_level : Number,
+      state_level : Number,
+      university_level : Number
     },
 
     no_of_awards_in_nss : {        // 3.23
-      international_level2 : Number,
-      national_level2 : Number,
-      state_level2 : Number,
-      university_level2 : Number
+      international_level : Number,
+      national_level : Number,
+      state_level : Number,
+      university_level : Number
     },
 
     no_of_awards_in_ncc : {                  // 3.24
-      international_level3 : Number,
-      national_level3 : Number,
-      state_level3 : Number,
-      university_level3 : Number
+      international_level : Number,
+      national_level : Number,
+      state_level : Number,
+      university_level : Number
     },
 
     no_of_extension_activities_organized : {           // 3.25
@@ -253,7 +253,7 @@ var criterionThreeSchema = mongoose.schema({
       college_forum : Number,
       ncc : Number,
       nss : Number,
-      any_other1 : Number
+      any_other : Number
     },
                                            
     major_activities : String                             // 3.26
