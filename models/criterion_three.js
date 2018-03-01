@@ -255,7 +255,7 @@ var criterionThreeSchema = mongoose.schema({
       any_other : Number
     },
                                            
-    major_activities : String                             // 3.2
+    major_activities : String                             // 3.26
   retainKeyOrder : true
 });
 
