@@ -22,8 +22,8 @@ var criterionSixschema = mongoose.schema({
   },
   corpus_fund : String,
   financial_audit : {
-    yes1 : Number,
-    no1 : Number
+    yes : Number,
+    no : Number
   },
   academic_admin_audit : {
     academic : {
@@ -41,12 +41,12 @@ var criterionSixschema = mongoose.schema({
   },
   result_declaration : {
     ug_programmes : {
-      yes2 : Number,
-      no2 : Number
+      yes : Number,
+      no : Number
     },
     pg_programmes : {
-      yes2 : Number,
-      no2 : Number
+      yes : Number,
+      no : Number
     }
   },
   examination_reforms : String,
