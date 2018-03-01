@@ -192,7 +192,17 @@ var criterionFourSchema = mongoose.Schema({
             added : Number,
             total : Number
         },
+        computer_centres : {
+            existing : Number,
+            added : Number,
+            total : Number
+        },
         office : {
+            existing : Number,
+            added : Number,
+            total : Number
+        },
+        departments : {
             existing : Number,
             added : Number,
             total : Number
