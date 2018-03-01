@@ -3,7 +3,6 @@ let mongoose = require('mongoose');
 
 // Criterion Three schema
 var criterionThreeSchema = mongoose.schema({
-  research_consultancy_extension : {
     iqac_initiatives_promoting_research : String,    // 3.1
 
     major_project_details : {               // 3.2
@@ -256,8 +255,7 @@ var criterionThreeSchema = mongoose.schema({
       any_other : Number
     },
                                            
-    major_activities : String                             // 3.26
-  }
+    major_activities : String                             // 3.2
   retainKeyOrder : true
 });
 
