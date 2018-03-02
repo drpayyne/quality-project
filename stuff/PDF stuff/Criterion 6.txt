@@ -1,0 +1,387 @@
+{
+	text: 'Criterion - VI', 
+	style: 'header', 
+	alignment: 'left'
+},
+{
+	text: '6. Governance, Leadership and Management', 
+	style: 'subheader', 
+	alignment: 'left'
+},
+{
+	text: '6.1. State the Vision and Mission of the Institution:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.2. Does the Instituion have a Management Information System:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.3. Quality Improvement Strategies Adopted by the Institution for Each of the Following:', 
+	alignment: 'left'
+},
+{
+	text: '6.3.1. Curriculum Development:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.3.2. Teaching and Learning:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.3.3. Examination and Evaluation:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.3.4. Research and Development:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.3.5. Library, ICT and Physical Infrastructure/Instrumentation:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.3.6. Human Resource Management:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.3.7. Faculty and Staff Recruitment:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.3.8. Industry Interaction/Collaboration:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.3.9. Admission of Students:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.4. Welfare Schemes for:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[
+				{text: 'Teaching', style: 'tableHeader'}, 
+				{text: 'Non-Teaching', style: 'tableHeader'}, 
+				{text: 'Students', style: 'tableHeader'}, 
+			],
+			[
+				data[''][''], 
+				data[''][''], 
+				data[''][''], 
+			]
+        ]
+    }
+},
+{
+	text: '6.5. Total Corpus Fund Generated:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.6. Whether Annual Financial Audit has been done:', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[
+				{text: 'Yes', style: 'tableHeader'}, 
+				{text: 'No', style: 'tableHeader'}, 
+			],
+			[
+				data[''][''], 
+				data[''][''],  
+			]
+        ]
+    }
+},
+{
+	text: '6.7. Whether Academic and Administrative Audit (AAA) has been done?', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[	{text: 'Audit Type', style: 'tableHeader', colSpan: 1},
+				{text: 'External', style: 'tableHeader', colSpan: 2},
+				{}, 
+				{text: 'Internal', style: 'tableHeader', colSpan: 2},
+				{}, 
+			],
+			[
+				{text: 'Yes/No'}, 
+				{text:'Agency'}, 
+				{text: 'Yes/No'}, 
+				{text:'Authority'},  
+			],
+			[
+				{text: 'Academic', style: 'tableHeader'},
+				data[''][''][''], 
+				data['']['']['']	
+			],
+			[
+				{text: 'Administrative', style: 'tableHeader'},
+				data[''][''][''],
+				data['']['']['']
+			],
+        ]
+    }
+},
+{
+	text: '6.8. Does the University/Autonomous College declares Results within 30 Days?',
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		headerRows: 1,
+		body: [
+			[
+				{text: '	', style: 'tableHeader'},
+				{text: 'Yes', style: 'tableHeader'},
+				{text: 'No', style: 'tableHeader'},
+			],
+			[
+				{text: 'For UG Programmes', style: 'tableHeader'},
+				data[''][''][''], 
+				data['']['']['']
+			],
+			[
+				{text: 'For PG Programmes', style: 'tableHeader'},
+				data[''][''][''],
+				data['']['']['']
+			],
+		]
+	}
+},
+{
+	text: '6.9. What efforts made by the University/Autonomous College for Examination Reforms?', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.10. What efforts made by the University to promote Autonomy in the Affiliated/Constituent Colleges?', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.11. Activities and Support from the Alumni Association', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.12. Activites and Support from the Parent - Teacher Association', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.13. Development Programmes for Support Staff', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
+{
+	text: '6.14. Initiatives taken by the Institution to make the Campus Eco-friendly', 
+	alignment: 'left'
+},
+{
+	style: 'tableExample',
+	table: {
+		widths: [50],
+		body: [
+			[
+				data[]
+			]
+		]
+	}
+},
