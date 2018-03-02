@@ -10,6 +10,7 @@ var criterionFiveSchema = mongoose.Schema({
     total_no_of_students : {
       ug_students : Number,
       pg_students : Number,
+      phd_students : Number,
       other_students : Number
     },
     no_of_students_outside_the_state : Number,
