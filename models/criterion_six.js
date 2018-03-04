@@ -4,6 +4,7 @@ let mongoose = require('mongoose');
 
 //Criterion 6 schema
 var criterionSixschema = mongoose.schema({
+  vision_mission_institute : String,
   info_management_system : String,
   improvement_strategies : {
     curriculum_development : String,
@@ -12,6 +13,7 @@ var criterionSixschema = mongoose.schema({
     research_and_development : String,
     physical_infrastructure : String,
     human_resource_management : String,
+    faculty_staff_recruitment : String,
     industry_interaction_collab : String,
     student_admission : String
   },
