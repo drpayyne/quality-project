@@ -51,81 +51,34 @@ html, body {
   float: left;
   height: 100%;
   width: 10%;
-  padding-top: 6px;
-  padding-left: 4px;
 }
-.rpt-fin{
+.bk-btn{
   float: right;
+}
+.rpt-gen{
+  float: left;
 }
 
 
 /*make pdf btn*/
 .btn {
-  position: relative;
-  display: inline-block;
-  letter-spacing: 1.2px;
-  padding: 12px 32px;
+  min-width: 50%;
+  min-height: 90%;
   text-align: center;
   text-transform: uppercase;
-  overflow: hidden;
-  z-index: 1;
-  cursor: pointer;
-}
-.btn:focus {
-  outline: none;
-}
-
-.btn--primary {
-  color: lightslategray;
-}
-
-.btn--border {
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.btn--animated {
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-}
-.btn--animated.btn--border.btn--primary {
-  border: 1px solid lightslategray;
-}
-.btn--animated:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: lightslategray;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
-  z-index: -1;
-}
-.btn--animated:hover {
+  transition: 0.5s;
+  background-size: 200% auto;
   color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  border-radius: 10px;
+ }
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
 }
-.btn--animated:hover:before {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
-          transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+
+.btn-1 {
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
 }
 
 
