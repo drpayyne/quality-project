@@ -8,49 +8,49 @@ var criterionFourSchema = mongoose.Schema({
         existing : String,
         newly_created : String,
         source_of_fund : String,
-        total1 : String
+        total : String
       },
       campus_area : {
         existing : String,
         newly_created : String,
         source_of_fund : String,
-        total1 : String
+        total : String
       },
       class_rooms : {
         existing : String,
         newly_created : String,
         source_of_fund : String,
-        total1 : String
+        total : String
       },
       laboratories : {
         existing : String,
         newly_created : String,
         source_of_fund : String,
-        total1 : String
+        total : String
       },
       seminar_halls : {
         existing : String,
         newly_created : String,
         source_of_fund : String,
-        total1 : String
+        total : String
       },
       important_equipment_purchased : {
         existing : String,
         newly_created : String,
         source_of_fund : String,
-        total1 : String
+        total : String
       },
       value_of_equipment_purchased_in_lakhs : {
         existing : String,
         newly_created : String,
         source_of_fund : String,
-        total1 : String
+        total : String
       },
       others : {
         existing : String,
         newly_created : String,
         source_of_fund : String,
-        total1 : String
+        total : String
       }
     },
 
@@ -221,7 +221,7 @@ var criterionFourSchema = mongoose.Schema({
       campus_infrastructure_facilities : Number,
       equipment : Number,
       other_maintenance : Number,
-      total3 : Number
+      total : Number
     }
   retainKeyOrder : true
 });

@@ -3,7 +3,6 @@ let mongoose = require('mongoose');
 
 // Criterion Five Schema
 var criterionFiveSchema = mongoose.Schema({
-  student_support_progression : {
     iqac_contribution_student_support_services : String,
 
     efforts_tracking_progression : String,
@@ -11,6 +10,7 @@ var criterionFiveSchema = mongoose.Schema({
     total_no_of_students : {
       ug_students : Number,
       pg_students : Number,
+      phd_students : Number,
       other_students : Number
     },
     no_of_students_outside_the_state : Number,
@@ -134,7 +134,6 @@ var criterionFiveSchema = mongoose.Schema({
     social_initiatives_undertaken-by_students : Number,
 
     major_grievances_of_students : String
-  }
   retainKeyOrder : true
 });
 
