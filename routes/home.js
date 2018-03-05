@@ -6,7 +6,7 @@ let User = require('../models/user');
 router.get('/', function(req, res) {
     res.clearCookie('user');
     res.clearCookie('dept');
-    res.render('login');
+    res.render('home');
     console.log('Cookies cleared...');
     console.log(res.cookies);
 });

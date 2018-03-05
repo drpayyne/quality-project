@@ -50,14 +50,20 @@ app.use(function(req,res,next){
 
 //Home route GET
 app.get('/', function(req, res) {
-	res.redirect('/login');
+	res.redirect('/home');
 });
 
-//Import route files
+/* //Import route files
 let forms = require('./routes/forms');
 let login = require('./routes/login');
 app.use('/form', forms);
-app.use('/login', login);
+app.use('/login', login); */
+
+//Import route files
+let home = require('./routes/home');
+
+//Route files
+app.use('/home', home);
 
 //Start server
 app.listen(3000, function() {
