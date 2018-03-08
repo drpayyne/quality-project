@@ -20,57 +20,57 @@ html(lang='en')
           | IQAC Composition and Activities
         fieldset
           label 2.1 No. of Teachers:
-          input(type='number', name='r1c1', value=form.no_of_teachers)
+          input(type='number', name='form.no_of_teachers', value=form.no_of_teachers)
           label 2.2 No. of Administrative/Technical staff:
-          input(type='number', name='r1c1', value=form.no_of_tech_admin_staff)
+          input(type='number', name='form.no_of_tech_admin_staff', value=form.no_of_tech_admin_staff)
           label 2.3 No. of students:
-          input(type='number', name='r1c1', value=form.no_of_students)
+          input(type='number', name='form.no_of_students', value=form.no_of_students)
           label 2.4 No. of Management representatives:
-          input(type='number', name='r1c1', value=form.no_of_management_reps)
+          input(type='number', name='form.no_of_management_reps', value=form.no_of_management_reps)
           br
           label 2.5 No. of Alumni:
-          input(type='number', name='r1c1', value=form.no_of_alumni)
+          input(type='number', name='form.no_of_alumni', value=form.no_of_alumni)
           br
           label 2.6 No. of any other stakeholder and community representatives:
-          input(type='number', name='r1c1', value=form.no_of_other_stakeholders_community_reps)
+          input(type='number', name='form.no_of_other_stakeholders_community_reps', value=form.no_of_other_stakeholders_community_reps)
           br
           label 2.7 No. of Employers/ Industrialists:
-          input(type='number', name='r1c1', value=form.no_of_employers_industrialists)
+          input(type='number', name='form.no_of_employers_industrialists', value=form.no_of_employers_industrialists)
           br
           label 2.8 No. of other External Experts:
-          input(type='number', name='r1c1', value=form.no_of_other_external_experts)
+          input(type='number', name='form.no_of_other_external_experts', value=form.no_of_other_external_experts)
           br
           label 2.9 Total No. of members:
-          input(type='number', name='r1c1', value=form.total_no_of_members)
+          input(type='number', name='form.total_no_of_members', value=form.total_no_of_members)
           br
           label 2.10 No. of IQAC meetings held:
-          input(type='number', name='r1c1', value=form.no_of_iqac_meetings_held)
+          input(type='number', name='form.no_of_iqac_meetings_held', value=form.no_of_iqac_meetings_held)
           br
           label 2.11 No. of meetings with various stakeholders:
           table(style='width:100%')
             tr
               th No. of faculty
               td
-                input(type='number', name='r1c2', value=form.no_of_meetings_with_various_stakeholders.No)
+                input(type='number', name='form.no_of_meetings_with_various_stakeholders.No', value=form.no_of_meetings_with_various_stakeholders.No)
             tr
               th Non-Teaching Staff Students
               td
-                input(type='number', name='r2c2', value=form.no_of_meetings_with_various_stakeholders.faculty)
+                input(type='number', name='form.no_of_meetings_with_various_stakeholders.faculty', value=form.no_of_meetings_with_various_stakeholders.faculty)
             tr
               th Alumni
               td
-                input(type='number', name='r3c2', value=form.no_of_meetings_with_various_stakeholders.non_teaching_staff_students)
+                input(type='number', name='form.no_of_meetings_with_various_stakeholders.non_teaching_staff_students', value=form.no_of_meetings_with_various_stakeholders.non_teaching_staff_students)
             tr
               th Others
               td
-                input(type='number', name='r4c2', value=form.no_of_meetings_with_various_stakeholders.alumni)
+                input(type='number', name='form.no_of_meetings_with_various_stakeholders.alumni', value=form.no_of_meetings_with_various_stakeholders.alumni)
           label 2.12 Has IQAC received any funding from UGC during the year?
-          input(type='radio', name='r1c1', value=form.no_of_meetings_with_various_stakeholders.others)
+          input(type='radio', name='form.no_of_meetings_with_various_stakeholders.others', value=form.no_of_meetings_with_various_stakeholders.others)
           | YES
-          input(type='radio', name='r1c2', value=form.ugc_funding_for_iqac.yes)
+          input(type='radio', name='form.ugc_funding_for_iqac.yes', value=form.ugc_funding_for_iqac.yes)
           | NO
           label If yes, mention the amount:
-          input(type='number', name='r1c1', value=form.ugc_funding_for_iqac.no)
+          input(type='number', name='form.ugc_funding_for_iqac.no', value=form.ugc_funding_for_iqac.no)
           br
           label 2.13 Seminars and Conferences (only quality related)
           label i) No. of Seminars/Conferences/ Workshops/Symposia organized by the IQAC:
@@ -78,28 +78,28 @@ html(lang='en')
             tr
               th International
               td
-                input(type='number', name='r1c2', value=form.ugc_funding_for_iqac.yes_amount)
+                input(type='number', name='form.ugc_funding_for_iqac.yes_amount', value=form.ugc_funding_for_iqac.yes_amount)
             tr
               th National
               td
-                input(type='number', name='r2c2', value=form.seminars_conferences.events_organized_by_iqac.total_no)
+                input(type='number', name='form.seminars_conferences.events_organized_by_iqac.total_no', value=form.seminars_conferences.events_organized_by_iqac.total_no)
             tr
               th State
               td
-                input(type='number', name='r3c2', value=form.seminars_conferences.events_organized_by_iqac.international)
+                input(type='number', name='form.seminars_conferences.events_organized_by_iqac.international', value=form.seminars_conferences.events_organized_by_iqac.international)
             tr
               th Institution
               td
-                input(type='number', name='r4c2', value=form.seminars_conferences.events_organized_by_iqac.national)
+                input(type='number', name='form.seminars_conferences.events_organized_by_iqac.national', value=form.seminars_conferences.events_organized_by_iqac.national)
             tr
               th Total No.
               td
-                input(type='number', name='r5c2', value=form.seminars_conferences.events_organized_by_iqac.state)
+                input(type='number', name='form.seminars_conferences.events_organized_by_iqac.state', value=form.seminars_conferences.events_organized_by_iqac.state)
           label ii) Themes:
-          input(type='string', name='r1c1', value=form.seminars_conferences.events_organized_by_iqac.institution_level)
+          input(type='string', name='form.seminars_conferences.events_organized_by_iqac.institution_level', value=form.seminars_conferences.events_organized_by_iqac.institution_level)
           br
           label 2.14 Significant Activities and contributions made by IQAC:
-          input(type='text', name='r1c1', value=form.seminars_conferences.themes)
+          input(type='text', name='form.seminars_conferences.themes', value=form.seminars_conferences.themes)
           label 2.15 Plan of Action by IQAC/Outcome:
           label2
             | The plan of action chalked out by the IQAC in the beginning of the year towards quality enhancement and the outcome achieved by the end of the year *
@@ -109,19 +109,19 @@ html(lang='en')
               th Achievements
             tr
               td
-                input(type='text', name='r2c1', value=form.significant_contributions_activities_by_iqac)
+                input(type='text', name='form.significant_contributions_activities_by_iqac', value=form.significant_contributions_activities_by_iqac)
               td
-                input(type='text', name='r2c2', value=form.iqac_plan_of_action.plan_of_action)
+                input(type='text', name='form.iqac_plan_of_action.plan_of_action', value=form.iqac_plan_of_action.plan_of_action)
           label 2.15 Whether the AQAR was placed in statutory body:
-          input(type='radio', name='r1c1', value=form.iqac_plan_of_action.achievements)
+          input(type='radio', name='form.iqac_plan_of_action.achievements', value=form.iqac_plan_of_action.achievements)
           | Yes
-          input(type='radio', name='r1c2', value=form.placement_of_aqar_in_statutory_body.yes)
+          input(type='radio', name='form.placement_of_aqar_in_statutory_body.yes', value=form.placement_of_aqar_in_statutory_body.yes)
           | No
-          input(type='radio', name='r1c3', value=form.placement_of_aqar_in_statutory_body.no)
+          input(type='radio', name='form.placement_of_aqar_in_statutory_body.no', value=form.placement_of_aqar_in_statutory_body.no)
           | Management
-          input(type='radio', name='r1c4', value=form.placement_of_aqar_in_statutory_body.type_of_statutory_body.management)
+          input(type='radio', name='form.placement_of_aqar_in_statutory_body.type_of_statutory_body.management', value=form.placement_of_aqar_in_statutory_body.type_of_statutory_body.management)
           | Syndicate
-          input(type='radio', name='r1c5', value=form.placement_of_aqar_in_statutory_body.type_of_statutory_body.syndicate)
+          input(type='radio', name='form.placement_of_aqar_in_statutory_body.type_of_statutory_body.syndicate', value=form.placement_of_aqar_in_statutory_body.type_of_statutory_body.syndicate)
           | Any other body
           label Provide the details of the action taken:
-          input(type='text', name='r1c1', value=form.placement_of_aqar_in_statutory_body.type_of_statutory_body.any_other_body)
+          input(type='text', name='form.placement_of_aqar_in_statutory_body.type_of_statutory_body.any_other_body', value=form.placement_of_aqar_in_statutory_body.type_of_statutory_body.any_other_body)
