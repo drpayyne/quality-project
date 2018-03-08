@@ -41,41 +41,10 @@ html(lang='en')
           input(type='text', name='form.improvement_strategies.human_resource_management', value=form.improvement_strategies.human_resource_management)
           label 6.3.7 Faculty and Staff recruitment:
           input(type='text', name='form.improvement_strategies.faculty_staff_recruitment', value=form.improvement_strategies.faculty_staff_recruitment)
-          label
-            | 6.3.8   Industry Interaction / Collaboration (students projects, in-plant training, MOU, consultancy, visitors, guest lectures, training):
-          table(style='width:100%')
-            tr
-              th Student projects
-              th In-plant training
-              th MOU
-              th(colspan='2') Consultancy
-              th Guest lectures
-              th Training
-            tr
-              th
-              th
-              th
-              th No.
-              th Amount (in lakhs)
-              th
-              th
-            tr
-              td
-                input(type='number', name='r1c3', value='')
-              td
-                input(type='number', name='r1c3', value='')
-              td
-                input(type='number', name='r1c3', value='')
-              td
-                input(type='number', name='r1c3', value='')
-              td
-                input(type='number', name='r1c3', value='')
-              td
-                input(type='number', name='r1c3', value='')
-              td
-                input(type='number', name='r1c3', value='')
+          label 6.3.8   Industry Interaction / Collaboration:
+          input(type='text', name='form.improvement_strategies.industry_interaction_collab', value=form.improvement_strategies.industry_interaction_collab)
           label 6.3.9 Admission of Students:
-          input(type='text', name='rwv', value='')
+          input(type='text', name='form.improvement_strategies.student_admission', value=form.improvement_strategies.student_admission)
           label 6.4 Welfare schemes for:
           table(width='100%')
             tr
@@ -84,17 +53,17 @@ html(lang='en')
               th Students
             tr
               td
-                input(type='text', name='rwv', value='')
+                input(type='text', name='form.welfare_scheme.teaching', value=form.welfare_scheme.teaching)
               td
-                input(type='text', name='rwv', value='')
+                input(type='text', name='form.welfare_scheme.non_teaching', value=form.welfare_scheme.non_teaching)
               td
-                input(type='text', name='rwv', value='')
+                input(type='text', name='form.welfare_scheme.students', value=form.welfare_scheme.students)
           label 6.5 Total corpus fund generated:
-          input(type='number', name='rwv', value='')
+          input(type='number', name='form.corpus_fund', value=form.corpus_fund)
           label 6.6 Whether annual financial audit has been done:
-          input(type='radio', name='rwv', value='')
+          input(type='radio', name='form.financial_audit.yes', value=form.financial_audit.yes)
           | Yes
-          input(type='radio', name='rwv', value='')
+          input(type='radio', name='form.financial_audit.no', value=form.financial_audit.no)
           | No
           label 6.7 Whether Academic and Administrative Audit (AAA) has been done?
           table(width='100%')
@@ -111,45 +80,45 @@ html(lang='en')
             tr
               th Academic
               td
-                input(type='string', name='rwv', value='')
+                input(type='string', name='form.academic_admin_audit.academic.external_yes_no', value=form.academic_admin_audit.academic.external_yes_no)
               td
-                input(type='string', name='rwv', value='')
+                input(type='string', name='form.academic_admin_audit.academic.external_agency', value=form.academic_admin_audit.academic.external_agency)
               td
-                input(type='string', name='rwv', value='')
+                input(type='string', name='form.academic_admin_audit.academic.internal_yes_no', value=form.academic_admin_audit.academic.internal_yes_no)
               td
-                input(type='string', name='rwv', value='')
+                input(type='string', name='form.academic_admin_audit.academic.internal_agency', value=form.academic_admin_audit.academic.internal_agency)
             tr
               th Administrative
               td
-                input(type='string', name='rwv', value='')
+                input(type='string', name='form.academic_admin_audit.administrative.external_yes_no', value=form.academic_admin_audit.administrative.external_yes_no)
               td
-                input(type='string', name='rwv', value='')
+                input(type='string', name='form.academic_admin_audit.administrative.external_agency', value=form.academic_admin_audit.administrative.external_agency)
               td
-                input(type='string', name='rwv', value='')
+                input(type='string', name='form.academic_admin_audit.administrative.internal_yes_no', value=form.academic_admin_audit.administrative.internal_yes_no)
               td
-                input(type='string', name='rwv', value='')
+                input(type='string', name='form.academic_admin_audit.administrative.internal_agency', value=form.academic_admin_audit.administrative.internal_agency)
           label 6.8 Does the University/ Autonomous College declares results within 30 days?
           label For UG Programmes:
-          input(type='radio', name='rwv', value='')
+          input(type='radio', name='form.result_declaration.ug_programmes.yes', value=form.result_declaration.ug_programmes.yes)
           | Yes
-          input(type='radio', name='rwv', value='')
+          input(type='radio', name='form.result_declaration.ug_programmes.no', value=form.result_declaration.ug_programmes.no)
           | No
           label For PG Programmes:
-          input(type='radio', name='rwv', value='')
+          input(type='radio', name='form.result_declaration.pg_programmes.yes', value=form.result_declaration.pg_programmes.yes)
           | Yes
-          input(type='radio', name='rwv', value='')
+          input(type='radio', name='form.result_declaration.pg_programmes.no', value=form.result_declaration.pg_programmes.no)
           | No
           label
             | 6.9 What efforts are made by the University/ Autonomous College for Examination Reforms?
-          input(type='string', name='rfev', value='')
+          input(type='string', name='form.examination_reforms', value=form.examination_reforms)
           label
             | 6.10 What efforts are made by the University to promote autonomy in the affiliated/constituent colleges?
-          input(type='text', name='r1c3', value='')
+          input(type='text', name='form.autonomy_promotion', value=form.autonomy_promotion)
           label 6.11 Activities and support from the Alumni Association
-          input(type='text', name='r1c3', value='')
+          input(type='text', name='form.alumni_activity_support', value=form.alumni_activity_support)
           label 6.12 Activities and support from the Parent – Teacher Association:
-          input(type='text', name='r1c3', value='')
+          input(type='text', name='form.parent_teacher_activity_support', value=form.parent_teacher_activity_support)
           label 6.13 Development programmes for support staff:
-          input(type='text', name='r1c3', value='')
+          input(type='text', name='form.support_staff_development', value=form.support_staff_development)
           label 6.14 Initiatives taken by the institution to make the campus eco-friendly:
-          input(type='text', name='r1c3', value='')
+          input(type='text', name='form.eco_friendly_initiatives', value=form.eco_friendly_initiatives)
