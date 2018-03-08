@@ -223,7 +223,6 @@ var criterionFourSchema = mongoose.Schema({
       other_maintenance : Number,
       total : Number
     }
-  retainKeyOrder : true
-});
+  }, { retainKeyOrder: true });
 
 let CriterionFour = module.exports = mongoose.model('CriterionFour',criterionFourSchema,'criterion_four');

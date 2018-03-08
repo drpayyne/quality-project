@@ -191,9 +191,6 @@ var PartASchema = mongoose.schema({
       },
       details_of_action_taken : String
     }
-
-
-  retainKeyOrder : true
-});
+  }, { retainKeyOrder: true });
 
 let PartA = module.exports = mongoose.model('PartA', PartASchema, 'part_a');

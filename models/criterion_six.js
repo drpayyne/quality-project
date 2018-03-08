@@ -58,7 +58,6 @@ var criterionSixschema = mongoose.schema({
   support_staff_development : String,
   eco_friendly_initiatives : String
 
-  retainKeyOrder : true
-});
+}, { retainKeyOrder: true });
 
 let CriterionSix = module.exports = mongoose.model('CriterionSix', criterionSixschema, 'criterion_six');

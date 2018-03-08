@@ -1,0 +1,490 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title IQAC Form(Criterion – III)
+    link(rel='stylesheet', href='../css/normalize.min.css')
+    link(rel='stylesheet', href='../css/form.css')
+  body
+    .top-cont
+      .top-line
+        div(style='float: right')
+          button#back(type='button') BACK
+        div(style='float: left')
+          button(type='submit') SAVE
+    .bot-cont
+      form(action='index.html', method='post')
+        h1 Criterion – III
+        fieldset
+          legend
+            span.number 3
+            | Research, Consultancy and Extension
+          // 3.1, 3.8, 3.9, 3.21, 3.22, 3.23, 3.24, 3.25, 3.26 TO BE FILLED BY HOQ
+          label
+            | 3.1 Initiatives of the IQAC in Sensitizing/Promoting Research Climate in the institution:
+          input(type='text', name='refr', value=form.iqac_initiatives_promoting_research)
+          label 3.2 Details regarding major projects:
+          table(style='width:100%')
+            tr
+              th
+              th Completed
+              th Ongoing
+              th Sanctioned
+              th Submitted
+            tr
+              th Number
+              td
+                input(type='number', name='r1c3', value=form.major_project_details.completed.number)
+              td
+                input(type='number', name='r1c4', value=form.major_project_details.completed.outlay_in_lakhs)
+              td
+                input(type='number', name='r1c5', value=form.major_project_details.ongoing.number)
+              td
+                input(type='number', name='r1c6', value=form.major_project_details.ongoing.outlay_in_lakhs)
+            tr
+              th Outlay in Rs. Lakhs
+              td
+                input(type='number', name='r1c3', value=form.major_project_details.sanctioned.number)
+              td
+                input(type='number', name='r1c4', value=form.major_project_details.sanctioned.outlay_in_lakhs)
+              td
+                input(type='number', name='r1c5', value=form.major_project_details.submitted.number)
+              td
+                input(type='number', name='r1c6', value=form.major_project_details.submitted.outlay_in_lakhs)
+          label 3.3 Details regarding minor projects:
+          table(style='width:100%')
+            tr
+              th
+              th Completed
+              th Ongoing
+              th Sanctioned
+              th Submitted
+            tr
+              th Number
+              td
+                input(type='number', name='r1c3', value=form.minor_project_details.completed.number)
+              td
+                input(type='number', name='r1c4', value=form.minor_project_details.completed.outlay_in_lakhs)
+              td
+                input(type='number', name='r1c5', value=form.minor_project_details.ongoing.number)
+              td
+                input(type='number', name='r1c6', value=form.minor_project_details.ongoing.outlay_in_lakhs)
+            tr
+              th Outlay in Rs. Lakhs
+              td
+                input(type='number', name='r1c3', value=form.minor_project_details.sanctioned.number)
+              td
+                input(type='number', name='r1c4', value=form.minor_project_details.sanctioned.outlay_in_lakhs)
+              td
+                input(type='number', name='r1c5', value=form.minor_project_details.submitted.number)
+              td
+                input(type='number', name='r1c6', value=form.minor_project_details.submitted.outlay_in_lakhs)
+          label 3.4 Details on research publications:
+          table(style='width:100%')
+            tr
+              th
+              th International
+              th National
+              th Others
+            tr
+              th Peer Review Journals
+              td
+                input(type='number', name='r3c2', value=form.research_publication_details.international.peer_review_journals)
+              td
+                input(type='number', name='r3c3', value=form.research_publication_details.international.non_peer_review_journals)
+              td
+                input(type='number', name='r3c4', value=form.research_publication_details.international.e_journals)
+            tr
+              th Non-Peer Review Journals
+              td
+                input(type='number', name='r3c2', value=form.research_publication_details.international.conference_proceedings)
+              td
+                input(type='number', name='r3c3', value=form.research_publication_details.national.peer_review_journals)
+              td
+                input(type='number', name='r3c4', value=form.research_publication_details.national.non_peer_review_journals)
+            tr
+              th e-Journals
+              td
+                input(type='number', name='r3c2', value=form.research_publication_details.national.e_journals)
+              td
+                input(type='number', name='r3c3', value=form.research_publication_details.national.conference_proceedings)
+              td
+                input(type='number', name='r3c4', value=form.research_publication_details.others.peer_review_journals)
+            tr
+              th Conference proceedings
+              td
+                input(type='number', name='r3c2', value=form.research_publication_details.others.non_peer_review_journals)
+              td
+                input(type='number', name='r3c3', value=form.research_publication_details.others.e_journals)
+              td
+                input(type='number', name='r3c4', value=form.research_publication_details.others.conference_proceedings)
+          label 3.5 Details on Impact factor of publications:
+          table(style='width:100%')
+            tr
+              th Range
+              th Average
+              th h-index
+              th Nos. in SCOPUS
+            tr
+              td
+                input(type='number', name='r4c1', value=form.impact_factor_publication_details.range)
+              td
+                input(type='number', name='r4c2', value=form.impact_factor_publication_details.average)
+              td
+                input(type='number', name='r4c3', value=form.impact_factor_publication_details.index)
+              td
+                input(type='number', name='r4c3', value=form.impact_factor_publication_details.nos_of_scopus)
+          label
+            | 3.6 Research funds sanctioned and received from various funding agencies, industry and other organisations:
+          table(style='width:100%')
+            tr
+              th(colspan='3') International Level
+              th(colspan='3') National Level
+              th(colspan='3') State Level
+            tr
+              th Attended Seminars/ Workshops
+              th Presented papers
+              th Resource Persons
+              th Attended Seminars/ Workshops
+              th Presented papers
+              th Resource Persons
+              th Attended Seminars/ Workshops
+              th Presented papers
+              th Resource Persons
+            tr
+              td
+                input(type='number', name='r5c1', value=form.research_funds_sanctioned.major_project.duration_year)
+              td
+                input(type='number', name='r5c2', value=form.research_funds_sanctioned.major_project.funding_agency_name)
+              td
+                input(type='number', name='r5c3', value=form.research_funds_sanctioned.major_project.total_grant_sanctioned)
+              td
+                input(type='number', name='r5c4', value=form.research_funds_sanctioned.major_project.received)
+              td
+                input(type='number', name='r5c5', value=form.research_funds_sanctioned.minor_project.duration_year)
+              td
+                input(type='number', name='r5c6', value=form.research_funds_sanctioned.minor_project.funding_agency_name)
+              td
+                input(type='number', name='r5c7', value=form.research_funds_sanctioned.minor_project.total_grant_sanctioned)
+              td
+                input(type='number', name='r5c8', value=form.research_funds_sanctioned.minor_project.received)
+              td
+                input(type='number', name='r5c9', value=form.research_funds_sanctioned.interdisciplinary_project.duration_year)
+          label 3.7 No. of books published:
+          table(style='width:100%')
+            tr
+              th With ISBN No.
+              td
+                input(type='number', name='r5c1', value=form.research_funds_sanctioned.interdisciplinary_project.funding_agency_name)
+            tr
+              th Without ISBN No.
+              td
+                input(type='number', name='r5c1', value=form.research_funds_sanctioned.interdisciplinary_project.total_grant_sanctioned)
+            tr
+              th Chapters in edited books
+              td
+                input(type='number', name='r5c1', value=form.research_funds_sanctioned.interdisciplinary_project.received)
+          label 3.8 No. of University Departments receiving funds from:
+          table(style='width:100%')
+            tr
+              th UGC-SAP
+              td
+                input(type='number', name='r1c3', value=form.research_funds_sanctioned.industry_sponsored.duration_year)
+            tr
+              th CAS
+              td
+                input(type='number', name='r1c3', value=form.research_funds_sanctioned.industry_sponsored.funding_agency_name)
+            tr
+              th DST-FIST
+              td
+                input(type='number', name='r1c3', value=form.research_funds_sanctioned.industry_sponsored.total_grant_sanctioned)
+            tr
+              th DPE
+              td
+                input(type='number', name='r1c3', value=form.research_funds_sanctioned.industry_sponsored.received)
+            tr
+              th DBT Scheme/funds
+              td
+                input(type='number', name='r1c3', value=form.research_funds_sanctioned.uni_sponsored_project.duration_year)
+          label 3.9 For colleges:
+          table(style='width:100%')
+            tr
+              th Autonomy
+              td
+                input(type='number', name='r1c3', value=form.research_funds_sanctioned.uni_sponsored_project.funding_agency_name)
+            tr
+              th CPE
+              td
+                input(type='number', name='r1c3', value=form.research_funds_sanctioned.uni_sponsored_project.total_grant_sanctioned)
+            tr
+              th DBT Star Scheme
+              td
+                input(type='number', name='r1c3', value=form.research_funds_sanctioned.uni_sponsored_project.received)
+            tr
+              th INSPIRE
+              td
+                input(type='number', name='r1c3', value=form.research_funds_sanctioned.other_student_research_project.duration_year)
+            tr
+              th CE
+              td
+                input(type='number', name='r1c3', value=form.research_funds_sanctioned.other_student_research_project.funding_agency_name)
+            tr
+              th Any Other(specify)
+              td
+                input(type='number', name='r1c3', value=form.research_funds_sanctioned.other_student_research_project.total_grant_sanctioned)
+          label 3.10 Revenue generated through consultancy(Rs. in lakhs):
+          input(type='number', name='3.8')
+          label 3.11 No. of conferences organized:
+          table(style='width:100%')
+            tr
+              th Level
+              th International
+              th National
+              th State
+              th University
+              th College
+            tr
+              th Number
+              td
+                input(type='number', name='r5c5', value=form.research_funds_sanctioned.other_student_research_project.received)
+              td
+                input(type='number', name='r5c6', value=form.research_funds_sanctioned.any_other_specify.duration_year)
+              td
+                input(type='number', name='r5c7', value=form.research_funds_sanctioned.any_other_specify.funding_agency_name)
+              td
+                input(type='number', name='r5c8', value=form.research_funds_sanctioned.any_other_specify.total_grant_sanctioned)
+              td
+                input(type='number', name='r5c9', value=form.research_funds_sanctioned.any_other_specify.received)
+            tr
+              th Sponsoring agencies
+              td
+                input(type='number', name='r5c5', value=form.research_funds_sanctioned.total.duration_year)
+              td
+                input(type='number', name='r5c6', value=form.research_funds_sanctioned.total.funding_agency_name)
+              td
+                input(type='number', name='r5c7', value=form.research_funds_sanctioned.total.total_grant_sanctioned)
+              td
+                input(type='number', name='r5c8', value=form.research_funds_sanctioned.total.received)
+              td
+                input(type='number', name='r5c9', value=form.no_of_books_published.with_isbn_no)
+          label 3.12 No. of faculty served as experts, chairpersons or resource persons:
+          input(type='number', name='2.8')
+          label 3.13 No. of collaborations:
+          table(style='width:100%')
+            tr
+              th International
+              td
+                input(type='number', name='r9c4', value=form.no_of_books_published.without_isbn_no)
+            tr
+              th National
+              td
+                input(type='number', name='r9c3', value=form.no_of_books_published.chapters_in_edited_books)
+            tr
+              th Any
+              td
+                input(type='number', name='r9c3', value=form.no_of_uni_depts_receiving_funds.ugc_sap)
+          label 3.14 No. of linkages created during this year:
+          input(type='number', name='2.10')
+          label 3.15 Total budget for research for current year in lakhs:
+          table(style='width:100%')
+            tr
+              th From Funding agency
+              td
+                input(type='number', name='r11c1', value=form.no_of_uni_depts_receiving_funds.cas)
+            tr
+              th From College management
+              td
+                input(type='number', name='r11c1', value=form.no_of_uni_depts_receiving_funds.dst_fist)
+          label 3.16 No. of patents received this year:
+          table(style='width:100%')
+            tr
+              th Type of Patent
+              th
+              th Number
+            tr
+              th(rowspan='2') International
+              th Applied
+              td
+                input(type='number', name='r11c1', value=form.no_of_uni_depts_receiving_funds.dpe)
+            tr
+              th Granted
+              td
+                input(type='number', name='r11c1', value=form.no_of_uni_depts_receiving_funds.dbt_scheme_funds)
+            tr
+              th(rowspan='2') National
+              th Applied
+              td
+                input(type='number', name='r11c1', value=form.for_colleges.autonomy)
+            tr
+              th Granted
+              td
+                input(type='number', name='r11c1', value=form.for_colleges.cpe)
+            tr
+              th(rowspan='2') Commercialised
+              th Applied
+              td
+                input(type='number', name='r11c1', value=form.for_colleges.dbt_star_scheme)
+            tr
+              th Granted
+              td
+                input(type='number', name='r11c1', value=form.for_colleges.inspire)
+          label
+            | 3.17 No. of research awards/ recognitions received by faculty and research fellows Of the institute in the year:
+          table(style='width:100%')
+            tr
+              th Total
+              td
+                input(type='number', name='r13c1', value=form.for_colleges.ce)
+            tr
+              th International
+              td
+                input(type='number', name='r13c2', value=form.for_colleges.any_other_specify)
+            tr
+              th National
+              td
+                input(type='number', name='r13c3', value=form.revenue_generated_through_consultancy)
+            tr
+              th State
+              td
+                input(type='number', name='r13c4', value=form.conferences_organized_by_institution.number.international)
+            tr
+              th University
+              td
+                input(type='number', name='r13c5', value=form.conferences_organized_by_institution.number.national)
+            tr
+              th Dist
+              td
+                input(type='number', name='r13c6', value=form.conferences_organized_by_institution.number.state)
+            tr
+              th College
+              td
+                input(type='number', name='r13c7', value=form.conferences_organized_by_institution.number.university)
+          label
+            | 3.18 No. of faculty from the Institution who are Ph. D. Guides and students registered under them:
+          table(style='width:100%')
+            tr
+              th No. of Ph.D. guides
+              td
+                input(type='number', name='r14c1', value=form.conferences_organized_by_institution.number.college)
+            tr
+              th No. of registered students
+              td
+                input(type='number', name='r14c8', value=form.conferences_organized_by_institution.sponsoring_agencies.international)
+          label 3.19 No. of Ph.D. awarded by faculty from the Institution:
+          input(type='number', name='3.19')
+          label
+            | 3.20 No. of Research scholars receiving the Fellowships (Newly enrolled + existing ones):
+          table(style='width:100%')
+            tr
+              th JRF
+              td
+                input(type='number', name='r14c1', value=form.conferences_organized_by_institution.sponsoring_agencies.national)
+            tr
+              th SRF
+              td
+                input(type='number', name='r14c8', value=form.conferences_organized_by_institution.sponsoring_agencies.state)
+            tr
+              th Project fellows
+              td
+                input(type='number', name='r14c1', value=form.conferences_organized_by_institution.sponsoring_agencies.university)
+            tr
+              th Any other
+              td
+                input(type='number', name='r14c1', value=form.conferences_organized_by_institution.sponsoring_agencies.college)
+          label 3.21 No. of students Participated in NSS events:
+          table(style='width:100%')
+            tr
+              th University level
+              td
+                input(type='number', name='r14c1', value=form.no_of_faculty_served_chairperson_resource_expert)
+            tr
+              th State level
+              td
+                input(type='number', name='r14c8', value=form.no_of_collaborations.international)
+            tr
+              th International level
+              td
+                input(type='number', name='r14c1', value=form.no_of_collaborations.national)
+            tr
+              th National level
+              td
+                input(type='number', name='r14c1', value=form.no_of_collaborations.any_other)
+          label 3.22 No. of students participated in NCC events:
+          table(style='width:100%')
+            tr
+              th University level
+              td
+                input(type='number', name='r14c1', value=form.no_of_linkages_created_during_the_year)
+            tr
+              th State level
+              td
+                input(type='number', name='r14c8', value=form.current_year_research_budget_in_lakhs.from_funding_agency)
+            tr
+              th International level
+              td
+                input(type='number', name='r14c1', value=form.current_year_research_budget_in_lakhs.from_uni_college)
+            tr
+              th National level
+              td
+                input(type='number', name='r14c1', value=form.current_year_research_budget_in_lakhs.total)
+          label 3.23 No. of Awards won in NSS:
+          table(style='width:100%')
+            tr
+              th University level
+              td
+                input(type='number', name='r14c1', value=form.no_of_patents.national.applied)
+            tr
+              th State level
+              td
+                input(type='number', name='r14c8', value=form.no_of_patents.national.granted)
+            tr
+              th International level
+              td
+                input(type='number', name='r14c1', value=form.no_of_patents.international.applied)
+            tr
+              th National level
+              td
+                input(type='number', name='r14c1', value=form.no_of_patents.international.granted)
+          label 3.24 No.  of Awards won in NCC:
+          table(style='width:100%')
+            tr
+              th University level
+              td
+                input(type='number', name='r14c1', value=form.no_of_patents.commercialized.applied)
+            tr
+              th State level
+              td
+                input(type='number', name='r14c8', value=form.no_of_patents.commercialized.granted)
+            tr
+              th International level
+              td
+                input(type='number', name='r14c1', value=form.no_of_awards_recognition_faculty_research_fellows.total)
+            tr
+              th National level
+              td
+                input(type='number', name='r14c1', value=form.no_of_awards_recognition_faculty_research_fellows.international)
+          label 3.25 No. of Extension activities organized:
+          table(style='width:100%')
+            tr
+              th University forum
+              td
+                input(type='number', name='r14c1', value=form.no_of_awards_recognition_faculty_research_fellows.national)
+            tr
+              th College forum
+              td
+                input(type='number', name='r14c8', value=form.no_of_awards_recognition_faculty_research_fellows.state)
+            tr
+              th NCC
+              td
+                input(type='number', name='r14c1', value=form.no_of_awards_recognition_faculty_research_fellows.university)
+            tr
+              th NSS
+              td
+                input(type='number', name='r14c1', value=form.no_of_awards_recognition_faculty_research_fellows.district)
+            tr
+              th Any other
+              td
+                input(type='number', name='r14c1', value=form.no_of_awards_recognition_faculty_research_fellows.college)
+          label
+            | 3.26 Major Activities during the year in the sphere of extension activities and Institutional Social Responsibility:
+          input(type='text', name='mwr', value=form.faculty_count.phd_guides)

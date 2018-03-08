@@ -108,7 +108,6 @@ var criterionOneSchema = mongoose.Schema({
 
   new_dept_introduced : String
 
-  retainKeyOrder : true
-});
+}, { retainKeyOrder: true });
 
 let CriterionOne = module.exports = mongoose.model('CriterionOne',criterionOneSchema,'criterion_one');

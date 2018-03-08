@@ -130,11 +130,8 @@ var criterionFiveSchema = mongoose.Schema({
         national_level : Number
       }
     },
-
-    social_initiatives_undertaken-by_students : Number,
-
+    social_initiatives_undertaken_by_students : Number,
     major_grievances_of_students : String
-  retainKeyOrder : true
-});
+}, { retainKeyOrder: true });
 
 let CriterionFive = module.exports = mongoose.model('CriterionFive',criterionFiveSchema,'criterion_five');

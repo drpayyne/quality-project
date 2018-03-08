@@ -20,6 +20,5 @@ var criterionSevenSchema = mongoose.Schema({
     },
 
     other_relevant_info : String
-  retainKeyOrder : true
-});
+  }, { retainKeyOrder: true });
 let CriterionSeven = module.exports = mongoose.model('CriterionSeven',criterionSevenSchema,'criterion_seven');
