@@ -1,0 +1,84 @@
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title IQAC
+		link(rel="stylesheet" href="css/home1.css")
+		link(rel="stylesheet" href="css/normalize.min.css")
+		link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet")
+	body
+		.full-page
+			.left-contain
+				.container
+					section.card
+						.card_inner
+							.card_inner__circle
+								img
+								| img here
+							.card_inner__header
+								img
+								| Header
+							.card_inner__content
+								.title heading
+								.text
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+									br
+									br
+									| Fusce sed tortor in orci ultrices tempor quis ut leo. Fusce imperdiet eget ante eu faucibus. Nam rhoncus sapien
+			.cen-contain
+				.top-cen
+					h1 IQAC FORM LOGIN
+				.mid-cen
+					.log-contain
+						form(action="/home" method="post")
+							label(style="color: #FFF") User
+							br
+							.select_style
+								select(name="username")
+									option(value="NULL") Pick Department
+									option(value="CSE") CSE
+									option(value="ECE") ECE
+									option(value="CHE") CHE
+									option(value="BTC") BTC
+									option(value="MEC") MEC
+									option(value="HOQ") HOQ
+							br
+							label(style="color: #FFF") Password
+							br
+							input#password(type="password" name="userpass")
+							br
+							button(type="submit") Log in
+				.bot-cen
+					.container
+						section.card2
+							.card_inner
+								.card_inner__circle
+									img
+									| img here
+								.card_inner__header
+									img
+									| Header
+								.card_inner__content
+									.title heading
+									.text
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+										br
+										br
+										| Fusce sed tortor in orci ultrices tempor quis ut leo. Fusce imperdiet eget ante eu faucibus. Nam rhoncus sapien
+			.right-contain
+				.container
+					section.card
+						.card_inner
+							.card_inner__circle
+								img
+								| img here
+							.card_inner__header
+								img
+								| Header
+							.card_inner__content
+								.title heading
+								.text
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at posuere eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+									br
+									br
+									| Fusce sed tortor in orci ultrices tempor quis ut leo. Fusce imperdiet eget ante eu faucibus. Nam rhoncus sapien

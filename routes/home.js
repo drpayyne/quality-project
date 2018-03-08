@@ -1,11 +1,13 @@
 const express = require('express');
+const getFormData = require('get-form-data').default;
 const router = express.Router();
 
 let User = require('../models/user');
 
 router.get('/', function(req, res) {
     res.clearCookie('user');
-    res.clearCookie('dept');
+    res.clearCookie('department');
+    res.clearCookie('dept')
     res.render('home');
     console.log('Cookies cleared...');
     console.log(res.cookies);
@@ -22,21 +24,21 @@ router.post('/', function(req, res) {
             return console.log(err);
         }
         if(!user) {
-            res.redirect('/login');
+            res.redirect('/home');
             return console.log('User not found');
         }
         if(user.password!=password) {
-            res.redirect('/login');
+            res.redirect('/home');
             return console.log('Incorrect password');
         }
         res.cookie('user', user, {expires: 0});
-        res.cookie('dept', user.username, {expires: 0});
+        res.cookie('department', user.username, {expires: 0});
         console.log('Cookies set...');
-        res.redirect('/form');
-    });
+        res.redirect('/dashboard');
+    }); 
 });
 
-router.get('/register', function(req, res) {
+/* router.get('/register', function(req, res) {
     res.render('register');
 });
 
@@ -50,7 +52,7 @@ router.post('/register', function(req, res) {
         password: pass    
     };
 
-    console.log(user);
+    console.log(user); */
     
     /* user.save(function(err) {
         if(err) {
@@ -60,7 +62,7 @@ router.post('/register', function(req, res) {
         }
     }); */
 
-    query = {username: name};
+    /*query = {username: name};
     User.update(query, user, {upsert: true}, function(err) {
         if(err) {
             console.log(err);
@@ -68,6 +70,6 @@ router.post('/register', function(req, res) {
             res.redirect('/login/register');
         }
     })
-});
+}); */
 
 module.exports = router;

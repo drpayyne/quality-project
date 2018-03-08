@@ -15,6 +15,7 @@
     "express": "^4.16.2",
     "express-messages": "^1.0.1",
     "express-session": "^1.15.6",
+    "get-form-data": "^2.0.0",
     "json-addition": "^1.2.0",
     "mongoose": "^4.13.6",
     "passport": "^0.4.0",

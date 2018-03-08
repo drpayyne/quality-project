@@ -53,17 +53,17 @@ app.get('/', function(req, res) {
 	res.redirect('/home');
 });
 
-/* //Import route files
-let forms = require('./routes/forms');
-let login = require('./routes/login');
-app.use('/form', forms);
-app.use('/login', login); */
-
-//Import route files
+//Import routing files
 let home = require('./routes/home');
+let dashboard = require('./routes/dashboard');
+let form = require('./routes/form');
+let settings = require('./routes/settings');
 
 //Route files
 app.use('/home', home);
+app.use('/dashboard', dashboard);
+app.use('/form', form);
+app.use('/settings', settings);
 
 //Start server
 app.listen(3000, function() {
