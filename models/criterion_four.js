@@ -5,223 +5,223 @@ let mongoose = require('mongoose');
 var criterionFourSchema = mongoose.Schema({
     increase_in_infrastructure_details : {
       facilities : {
-        existing : String,
-        newly_created : String,
-        source_of_fund : String,
-        total : String
+        existing : { type: String, default: null },
+        newly_created : { type: String, default: null },
+        source_of_fund : { type: String, default: null },
+        total : { type: String, default: null }
       },
       campus_area : {
-        existing : String,
-        newly_created : String,
-        source_of_fund : String,
-        total : String
+        existing : { type: String, default: null },
+        newly_created : { type: String, default: null },
+        source_of_fund : { type: String, default: null },
+        total : { type: String, default: null }
       },
       class_rooms : {
-        existing : String,
-        newly_created : String,
-        source_of_fund : String,
-        total : String
+        existing : { type: String, default: null },
+        newly_created : { type: String, default: null },
+        source_of_fund : { type: String, default: null },
+        total : { type: String, default: null }
       },
       laboratories : {
-        existing : String,
-        newly_created : String,
-        source_of_fund : String,
-        total : String
+        existing : { type: String, default: null },
+        newly_created : { type: String, default: null },
+        source_of_fund : { type: String, default: null },
+        total : { type: String, default: null }
       },
       seminar_halls : {
-        existing : String,
-        newly_created : String,
-        source_of_fund : String,
-        total : String
+        existing : { type: String, default: null },
+        newly_created : { type: String, default: null },
+        source_of_fund : { type: String, default: null },
+        total : { type: String, default: null }
       },
       important_equipment_purchased : {
-        existing : String,
-        newly_created : String,
-        source_of_fund : String,
-        total : String
+        existing : { type: String, default: null },
+        newly_created : { type: String, default: null },
+        source_of_fund : { type: String, default: null },
+        total : { type: String, default: null }
       },
       value_of_equipment_purchased_in_lakhs : {
-        existing : String,
-        newly_created : String,
-        source_of_fund : String,
-        total : String
+        existing : { type: String, default: null },
+        newly_created : { type: String, default: null },
+        source_of_fund : { type: String, default: null },
+        total : { type: String, default: null }
       },
       others : {
-        existing : String,
-        newly_created : String,
-        source_of_fund : String,
-        total : String
+        existing : { type: String, default: null },
+        newly_created : { type: String, default: null },
+        source_of_fund : { type: String, default: null },
+        total : { type: String, default: null }
       }
     },
 
-    computerization_of_administration_and_library : String,
+    computerization_of_administration_and_library : { type: String, default: null },
 
     library_services : {
       text_books : {
         existing : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         },
         newly_added : {
-          num : Number,
-          val : Number,
+          num : { type: Number, default: null },
+          val : { type: Number, default: null },
         },
         total : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         }
       },
       reference_books : {
         existing : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         },
         newly_added : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         },
         total : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         }
       },
       e_books : {
         existing : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         },
         newly_added : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         },
         total : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         }
       },
       journals : {
         existing : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         },
         newly_added : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         },
         total : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         }
       },
       ejournals : {
         existing : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         },
         newly_added : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         },
         total : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         }
       },
       digital_database : {
         existing : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         },
         newly_added : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         },
         total : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         }
       },
       cd_video : {
         existing : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         },
         newly_added : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         },
         total : {
-          num : Number,
-          val : Number
+          num : { type: Number, default: null },
+          val : { type: Number, default: null }
         }
       },
       other : {
         existing : {
-          num : Number,
-          val : String
+          num : { type: Number, default: null },
+          val : { type: String, default: null }
         },
         newly_added : {
-          num : Number,
-          val : String
+          num : { type: Number, default: null },
+          val : { type: String, default: null }
         },
         total : {
-          num : Number,
-          val : String
+          num : { type: Number, default: null },
+          val : { type: String, default: null }
         }
       }
     },
  
     tech_upgrade : {
         total_computers : {
-            existing : Number,
-            added : Number,
-            total : Number
+            existing : { type: Number, default: null },
+            added : { type: Number, default: null },
+            total : { type: Number, default: null }
         },
         computer_labs : {
-            existing : Number,
-            added : Number,
-            total : Number
+            existing : { type: Number, default: null },
+            added : { type: Number, default: null },
+            total : { type: Number, default: null }
         },
         internet : {
-            existing : Number,
-            added : Number,
-            total : Number
+            existing : { type: Number, default: null },
+            added : { type: Number, default: null },
+            total : { type: Number, default: null }
         },
         browsing_centres : {
-            existing : Number,
-            added : Number,
-            total : Number
+            existing : { type: Number, default: null },
+            added : { type: Number, default: null },
+            total : { type: Number, default: null }
         },
         computer_centres : {
-            existing : Number,
-            added : Number,
-            total : Number
+            existing : { type: Number, default: null },
+            added : { type: Number, default: null },
+            total : { type: Number, default: null }
         },
         office : {
-            existing : Number,
-            added : Number,
-            total : Number
+            existing : { type: Number, default: null },
+            added : { type: Number, default: null },
+            total : { type: Number, default: null }
         },
         departments : {
-            existing : Number,
-            added : Number,
-            total : Number
+            existing : { type: Number, default: null },
+            added : { type: Number, default: null },
+            total : { type: Number, default: null }
         },
         others : {
-            existing : Number,
-            added : Number,
-            total : Number
+            existing : { type: Number, default: null },
+            added : { type: Number, default: null },
+            total : { type: Number, default: null }
         }
     },
     
-    computer_internet_access_training : String,
+    computer_internet_access_training : { type: String, default: null },
 
     maintenance_amount_in_lakhs : {
-      ict : Number,
-      campus_infrastructure_facilities : Number,
-      equipment : Number,
-      other_maintenance : Number,
-      total : Number
+      ict : { type: Number, default: null },
+      campus_infrastructure_facilities : { type: Number, default: null },
+      equipment : { type: Number, default: null },
+      other_maintenance : { type: Number, default: null },
+      total : { type: Number, default: null }
     }
   }, { retainKeyOrder: true });
 
