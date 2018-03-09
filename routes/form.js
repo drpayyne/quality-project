@@ -14,6 +14,7 @@ let CriterionEight = require('../models/criterion_eight');
 
 router.get('/:page', function(req, res ) {
 	console.log(req.cookies);
+	console.log(req.body);
 
 	if(!req.cookies.user) {
 		res.redirect('/home');
@@ -183,10 +184,107 @@ router.get('/:page', function(req, res ) {
 	}
 });
 
-router.post('/', function(req, res) {
+router.post('/:page', function(req, res) {
 	console.log(req.cookies);
 	console.log(req.body);
-	res.redirect('/dashboard');
+	console.log(req.params.page);
+
+	var form = req.body;
+	var id = req.params.page;
+	var query = { department: req.cookies.department};
+
+	switch(req.params.page) {
+		case 'details':
+			PartAOne.update(null, form, {upsert: true}, function(err) {
+				if(err) {
+					console.log(err);
+				} else {
+					res.redirect('/form/details');
+				}
+			});
+			break;
+		case 'iqac':
+			PartATwo.update(null, form, {upsert: true}, function(err) {
+				if(err) {
+					console.log(err);
+				} else {
+					res.redirect('/form/iqac');
+				}
+			});
+			break;
+		case 'criterion1':
+			CriterionOne.update(null, form, {upsert: true}, function(err) {
+				if(err) {
+					console.log(err);
+				} else {
+					res.redirect('/form/criterion1');
+				}
+			});
+			break;
+		case 'criterion2':
+			CriterionTwo.update(query, form, {upsert: true}, function(err) {
+				if(err) {
+					console.log(err);
+				} else {
+					res.redirect('/form/criterion2');
+				}
+			});
+			break;
+		case 'criterion3':
+			CriterionThree.update(query, form, {upsert: true}, function(err) {
+				if(err) {
+					console.log(err);
+				} else {
+					res.redirect('/form/criterion3');
+				}
+			});
+			break;
+		case 'criterion4':
+			CriterionFour.update(query, form, {upsert: true}, function(err) {
+				if(err) {
+					console.log(err);
+				} else {
+					res.redirect('/form/criterion4');
+				}
+			});
+			break;
+		case 'criterion5':
+			CriterionFive.update(query, form, {upsert: true}, function(err) {
+				if(err) {
+					console.log(err);
+				} else {
+					res.redirect('/form/criterion5');
+				}
+			});
+			break;
+		case 'criterion6':
+			CriterionSix.update(query, form, {upsert: true}, function(err) {
+				if(err) {
+					console.log(err);
+				} else {
+					res.redirect('/form/criterion6');
+				}
+			});
+			break;
+		case 'criterion7':
+			CriterionSeven.update(null, form, {upsert: true}, function(err) {
+				if(err) {
+					console.log(err);
+				} else {
+					res.redirect('/form/criterion7');
+				}
+			});
+			break;
+		case 'criterion8':
+			CriterionEight.update(null, form, {upsert: true}, function(err) {
+				if(err) {
+					console.log(err);
+				} else {
+					res.redirect('/form/criterion8');
+				}
+			});
+			break;
+	}
 });
 
 module.exports = router;

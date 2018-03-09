@@ -3,6 +3,7 @@ let mongoose = require('mongoose');
 
 // Criterion Three schema
 var criterionThreeSchema = mongoose.Schema({
+  department: { type: String, default: null },
     iqac_initiatives_promoting_research : { type: String, default: null },    // 3.1
 
     major_project_details : {               // 3.2

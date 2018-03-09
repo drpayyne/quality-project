@@ -4,6 +4,7 @@ let mongoose = require('mongoose');
 
 //Criterion 6 schema
 var criterionSixschema = mongoose.Schema({
+  department: { type: String, default: null },
   vision_mission_institute : { type: String, default: null },
   info_management_system : { type: String, default: null },
   improvement_strategies : {

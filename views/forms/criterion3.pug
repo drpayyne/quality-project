@@ -13,7 +13,7 @@ html(lang='en')
 				div(style='float: left')
 					button(type='submit') SAVE
 		.bot-cont
-			form(action='/form', method='post')
+			form(action='/form/criterion3', method='post')
 				h1 Criterion – III
 				h2 #{cookies.dept}
 				fieldset
@@ -23,7 +23,7 @@ html(lang='en')
 					// 3.1, 3.8, 3.9, 3.21, 3.22, 3.23, 3.24, 3.25, 3.26 TO BE FILLED BY HOQ
 					label
 						| 3.1 Initiatives of the IQAC in Sensitizing/Promoting Research Climate in the institution:
-					input(type='text', name='form.iqac_initiatives_promoting_research', value=form.iqac_initiatives_promoting_research)
+					input(type='text', name='iqac_initiatives_promoting_research', value=form.iqac_initiatives_promoting_research)
 					label 3.2 Details regarding major projects:
 					table(style='width:100%')
 						tr
@@ -35,25 +35,25 @@ html(lang='en')
 						tr
 							th Number
 							td
-								input(type='number', name='form.major_project_details.completed.number', value=form.major_project_details.completed.number)
+								input(type='number', name='major_project_details.completed.number', value=form.major_project_details.completed.number)
 							td
-								input(type='number', name='form.major_project_details.ongoing.number', value=form.major_project_details.ongoing.number)
+								input(type='number', name='major_project_details.ongoing.number', value=form.major_project_details.ongoing.number)
 							td
-								input(type='number', name='form.major_project_details.sanctioned.number', value=form.major_project_details.sanctioned.number)
+								input(type='number', name='major_project_details.sanctioned.number', value=form.major_project_details.sanctioned.number)
 							td
-								input(type='number', name='form.major_project_details.submitted.number', value=form.major_project_details.submitted.number)
+								input(type='number', name='major_project_details.submitted.number', value=form.major_project_details.submitted.number)
 								
 						tr
 							th Outlay in Rs. Lakhs
 							td
-								input(type='number', name='form.major_project_details.completed.outlay_in_lakhs', value=form.major_project_details.completed.outlay_in_lakhs)
+								input(type='number', name='major_project_details.completed.outlay_in_lakhs', value=form.major_project_details.completed.outlay_in_lakhs)
 							td
-								input(type='number', name='form.major_project_details.ongoing.outlay_in_lakhs', value=form.major_project_details.ongoing.outlay_in_lakhs)
+								input(type='number', name='major_project_details.ongoing.outlay_in_lakhs', value=form.major_project_details.ongoing.outlay_in_lakhs)
 							 
 							td
-								input(type='number', name='form.major_project_details.sanctioned.outlay_in_lakhs', value=form.major_project_details.sanctioned.outlay_in_lakhs)
+								input(type='number', name='major_project_details.sanctioned.outlay_in_lakhs', value=form.major_project_details.sanctioned.outlay_in_lakhs)
 							td
-								input(type='number', name='form.major_project_details.submitted.outlay_in_lakhs', value=form.major_project_details.submitted.outlay_in_lakhs)
+								input(type='number', name='major_project_details.submitted.outlay_in_lakhs', value=form.major_project_details.submitted.outlay_in_lakhs)
 					label 3.3 Details regarding minor projects:
 					table(style='width:100%')
 						tr
@@ -65,23 +65,23 @@ html(lang='en')
 						tr
 							th Number
 							td
-								input(type='number', name='form.minor_project_details.completed.number', value=form.minor_project_details.completed.number)
+								input(type='number', name='minor_project_details.completed.number', value=form.minor_project_details.completed.number)
 							td
-								input(type='number', name='form.minor_project_details.ongoing.number', value=form.minor_project_details.ongoing.number)
+								input(type='number', name='minor_project_details.ongoing.number', value=form.minor_project_details.ongoing.number)
 							td
-								input(type='number', name='form.minor_project_details.sanctioned.number', value=form.minor_project_details.sanctioned.number)
+								input(type='number', name='minor_project_details.sanctioned.number', value=form.minor_project_details.sanctioned.number)
 							td
-								input(type='number', name='form.minor_project_details.submitted.number', value=form.minor_project_details.submitted.number)
+								input(type='number', name='minor_project_details.submitted.number', value=form.minor_project_details.submitted.number)
 						tr
 							th Outlay in Rs. Lakhs
 							td
-								input(type='number', name='form.minor_project_details.completed.outlay_in_lakhs', value=form.minor_project_details.completed.outlay_in_lakhs)
+								input(type='number', name='minor_project_details.completed.outlay_in_lakhs', value=form.minor_project_details.completed.outlay_in_lakhs)
 							td
-								input(type='number', name='form.minor_project_details.ongoing.outlay_in_lakhs', value=form.minor_project_details.ongoing.outlay_in_lakhs)
+								input(type='number', name='minor_project_details.ongoing.outlay_in_lakhs', value=form.minor_project_details.ongoing.outlay_in_lakhs)
 							td
-								input(type='number', name='form.minor_project_details.sanctioned.outlay_in_lakhs', value=form.minor_project_details.sanctioned.outlay_in_lakhs)
+								input(type='number', name='minor_project_details.sanctioned.outlay_in_lakhs', value=form.minor_project_details.sanctioned.outlay_in_lakhs)
 							td
-								input(type='number', name='form.minor_project_details.submitted.outlay_in_lakhs', value=form.minor_project_details.submitted.outlay_in_lakhs)
+								input(type='number', name='minor_project_details.submitted.outlay_in_lakhs', value=form.minor_project_details.submitted.outlay_in_lakhs)
 					label 3.4 Details on research publications:
 					table(style='width:100%')
 						tr
@@ -92,35 +92,35 @@ html(lang='en')
 						tr
 							th Peer Review Journals
 							td
-								input(type='number', name='form.research_publication_details.international.peer_review_journals', value=form.research_publication_details.international.peer_review_journals)
+								input(type='number', name='research_publication_details.international.peer_review_journals', value=form.research_publication_details.international.peer_review_journals)
 							td
-								input(type='number', name='form.research_publication_details.national.peer_review_journals', value=form.research_publication_details.national.peer_review_journals)                
+								input(type='number', name='research_publication_details.national.peer_review_journals', value=form.research_publication_details.national.peer_review_journals)                
 							td
-								input(type='number', name='form.research_publication_details.others.peer_review_journals', value=form.research_publication_details.others.peer_review_journals)            
+								input(type='number', name='research_publication_details.others.peer_review_journals', value=form.research_publication_details.others.peer_review_journals)            
 						tr
 							th Non-Peer Review Journals
 							td
-								input(type='number', name='form.research_publication_details.international.non_peer_review_journals', value=form.research_publication_details.international.non_peer_review_journals)    
+								input(type='number', name='research_publication_details.international.non_peer_review_journals', value=form.research_publication_details.international.non_peer_review_journals)    
 							td
-								input(type='number', name='form.research_publication_details.national.non_peer_review_journals', value=form.research_publication_details.national.non_peer_review_journals)
+								input(type='number', name='research_publication_details.national.non_peer_review_journals', value=form.research_publication_details.national.non_peer_review_journals)
 							td
-								input(type='number', name='form.research_publication_details.others.non_peer_review_journals', value=form.research_publication_details.others.non_peer_review_journals)
+								input(type='number', name='research_publication_details.others.non_peer_review_journals', value=form.research_publication_details.others.non_peer_review_journals)
 						tr
 							th e-Journals
 							td
-								input(type='number', name='form.research_publication_details.international.e_journals', value=form.research_publication_details.international.e_journals)            
+								input(type='number', name='research_publication_details.international.e_journals', value=form.research_publication_details.international.e_journals)            
 							td
-								input(type='number', name='form.research_publication_details.national.e_journals', value=form.research_publication_details.national.e_journals) 
+								input(type='number', name='research_publication_details.national.e_journals', value=form.research_publication_details.national.e_journals) 
 							td
-								input(type='number', name='form.research_publication_details.others.e_journals', value=form.research_publication_details.others.e_journals)
+								input(type='number', name='research_publication_details.others.e_journals', value=form.research_publication_details.others.e_journals)
 						tr
 							th Conference proceedings
 							td
-								input(type='number', name='form.research_publication_details.international.conference_proceedings', value=form.research_publication_details.international.conference_proceedings)
+								input(type='number', name='research_publication_details.international.conference_proceedings', value=form.research_publication_details.international.conference_proceedings)
 							td
-								input(type='number', name='form.research_publication_details.national.conference_proceedings', value=form.research_publication_details.national.conference_proceedings)
+								input(type='number', name='research_publication_details.national.conference_proceedings', value=form.research_publication_details.national.conference_proceedings)
 							td
-								input(type='number', name='form.research_publication_details.others.conference_proceedings', value=form.research_publication_details.others.conference_proceedings)
+								input(type='number', name='research_publication_details.others.conference_proceedings', value=form.research_publication_details.others.conference_proceedings)
 					label 3.5 Details on Impact factor of publications:
 					table(style='width:100%')
 						tr
@@ -130,13 +130,13 @@ html(lang='en')
 							th Nos. in SCOPUS
 						tr
 							td
-								input(type='number', name='form.impact_factor_publication_details.range', value=form.impact_factor_publication_details.range)
+								input(type='number', name='impact_factor_publication_details.range', value=form.impact_factor_publication_details.range)
 							td
-								input(type='number', name='form.impact_factor_publication_details.average', value=form.impact_factor_publication_details.average)
+								input(type='number', name='impact_factor_publication_details.average', value=form.impact_factor_publication_details.average)
 							td
-								input(type='number', name='form.impact_factor_publication_details.index', value=form.impact_factor_publication_details.index)
+								input(type='number', name='impact_factor_publication_details.index', value=form.impact_factor_publication_details.index)
 							td
-								input(type='number', name='form.impact_factor_publication_details.nos_of_scopus', value=form.impact_factor_publication_details.nos_of_scopus)
+								input(type='number', name='impact_factor_publication_details.nos_of_scopus', value=form.impact_factor_publication_details.nos_of_scopus)
 					label
 						| 3.6 Research funds sanctioned and received from various funding agencies, industry and other organisations:
 					table(style='width:100%')
@@ -149,97 +149,97 @@ html(lang='en')
 						tr
 							th Major Projects
 							td
-								input(type='number', name='form.research_funds_sanctioned.major_project.duration_year', value=form.research_funds_sanctioned.major_project.duration_year)
+								input(type='number', name='research_funds_sanctioned.major_project.duration_year', value=form.research_funds_sanctioned.major_project.duration_year)
 							td
-								input(type='number', name='form.research_funds_sanctioned.major_project.funding_agency_name', value=form.research_funds_sanctioned.major_project.funding_agency_name)
+								input(type='number', name='research_funds_sanctioned.major_project.funding_agency_name', value=form.research_funds_sanctioned.major_project.funding_agency_name)
 							td
-								input(type='number', name='form.research_funds_sanctioned.major_project.total_grant_sanctioned', value=form.research_funds_sanctioned.major_project.total_grant_sanctioned)
+								input(type='number', name='research_funds_sanctioned.major_project.total_grant_sanctioned', value=form.research_funds_sanctioned.major_project.total_grant_sanctioned)
 							td
-								input(type='number', name='form.research_funds_sanctioned.major_project.received', value=form.research_funds_sanctioned.major_project.received)
+								input(type='number', name='research_funds_sanctioned.major_project.received', value=form.research_funds_sanctioned.major_project.received)
 						tr
 							th Minor Projects
 							td
-								input(type='number', name='form.research_funds_sanctioned.minor_project.duration_year', value=form.research_funds_sanctioned.minor_project.duration_year)
+								input(type='number', name='research_funds_sanctioned.minor_project.duration_year', value=form.research_funds_sanctioned.minor_project.duration_year)
 							td
-								input(type='number', name='form.research_funds_sanctioned.minor_project.funding_agency_name', value=form.research_funds_sanctioned.minor_project.funding_agency_name)
+								input(type='number', name='research_funds_sanctioned.minor_project.funding_agency_name', value=form.research_funds_sanctioned.minor_project.funding_agency_name)
 							td
-								input(type='number', name='form.research_funds_sanctioned.minor_project.total_grant_sanctioned', value=form.research_funds_sanctioned.minor_project.total_grant_sanctioned)
+								input(type='number', name='research_funds_sanctioned.minor_project.total_grant_sanctioned', value=form.research_funds_sanctioned.minor_project.total_grant_sanctioned)
 							td
-								input(type='number', name='form.research_funds_sanctioned.minor_project.received', value=form.research_funds_sanctioned.minor_project.received)
+								input(type='number', name='research_funds_sanctioned.minor_project.received', value=form.research_funds_sanctioned.minor_project.received)
 						tr
 							th Interdisciplinary Projects
 							td
-								input(type='number', name='form.research_funds_sanctioned.interdisciplinary_project.duration_year', value=form.research_funds_sanctioned.interdisciplinary_project.duration_year)
+								input(type='number', name='research_funds_sanctioned.interdisciplinary_project.duration_year', value=form.research_funds_sanctioned.interdisciplinary_project.duration_year)
 							td
-								input(type='number', name='form.research_funds_sanctioned.interdisciplinary_project.funding_agency_name', value=form.research_funds_sanctioned.interdisciplinary_project.funding_agency_name)
+								input(type='number', name='research_funds_sanctioned.interdisciplinary_project.funding_agency_name', value=form.research_funds_sanctioned.interdisciplinary_project.funding_agency_name)
 							td
-								input(type='number', name='form.research_funds_sanctioned.interdisciplinary_project.total_grant_sanctioned', value=form.research_funds_sanctioned.interdisciplinary_project.total_grant_sanctioned)
+								input(type='number', name='research_funds_sanctioned.interdisciplinary_project.total_grant_sanctioned', value=form.research_funds_sanctioned.interdisciplinary_project.total_grant_sanctioned)
 							td
-								input(type='number', name='form.research_funds_sanctioned.interdisciplinary_project.received', value=form.research_funds_sanctioned.interdisciplinary_project.received)
+								input(type='number', name='research_funds_sanctioned.interdisciplinary_project.received', value=form.research_funds_sanctioned.interdisciplinary_project.received)
 						tr
 							th Industry Sponsored
 							td
-								input(type='number', name='form.research_funds_sanctioned.industry_sponsored.duration_year', value=form.research_funds_sanctioned.industry_sponsored.duration_year)
+								input(type='number', name='research_funds_sanctioned.industry_sponsored.duration_year', value=form.research_funds_sanctioned.industry_sponsored.duration_year)
 							td
-								input(type='number', name='form.research_funds_sanctioned.industry_sponsored.funding_agency_name', value=form.research_funds_sanctioned.industry_sponsored.funding_agency_name)
+								input(type='number', name='research_funds_sanctioned.industry_sponsored.funding_agency_name', value=form.research_funds_sanctioned.industry_sponsored.funding_agency_name)
 							td
-								input(type='number', name='form.research_funds_sanctioned.industry_sponsored.total_grant_sanctioned', value=form.research_funds_sanctioned.industry_sponsored.total_grant_sanctioned)
+								input(type='number', name='research_funds_sanctioned.industry_sponsored.total_grant_sanctioned', value=form.research_funds_sanctioned.industry_sponsored.total_grant_sanctioned)
 							td
-								input(type='number', name='form.research_funds_sanctioned.industry_sponsored.received', value=form.research_funds_sanctioned.industry_sponsored.received)
+								input(type='number', name='research_funds_sanctioned.industry_sponsored.received', value=form.research_funds_sanctioned.industry_sponsored.received)
 						tr
 							th Projects sponsored by the University / College
 							td
-								input(type='number', name='form.research_funds_sanctioned.uni_sponsored_project.duration_year', value=form.research_funds_sanctioned.uni_sponsored_project.duration_year)
+								input(type='number', name='research_funds_sanctioned.uni_sponsored_project.duration_year', value=form.research_funds_sanctioned.uni_sponsored_project.duration_year)
 							td
-								input(type='number', name='form.research_funds_sanctioned.uni_sponsored_project.funding_agency_name', value=form.research_funds_sanctioned.uni_sponsored_project.funding_agency_name)
+								input(type='number', name='research_funds_sanctioned.uni_sponsored_project.funding_agency_name', value=form.research_funds_sanctioned.uni_sponsored_project.funding_agency_name)
 							td
-								input(type='number', name='form.research_funds_sanctioned.uni_sponsored_project.total_grant_sanctioned', value=form.research_funds_sanctioned.uni_sponsored_project.total_grant_sanctioned)
+								input(type='number', name='research_funds_sanctioned.uni_sponsored_project.total_grant_sanctioned', value=form.research_funds_sanctioned.uni_sponsored_project.total_grant_sanctioned)
 							td
-								input(type='number', name='form.research_funds_sanctioned.uni_sponsored_project.received', value=form.research_funds_sanctioned.uni_sponsored_project.received)
+								input(type='number', name='research_funds_sanctioned.uni_sponsored_project.received', value=form.research_funds_sanctioned.uni_sponsored_project.received)
 						tr
 							th Students Research Projects
 							td
-								input(type='number', name='form.research_funds_sanctioned.other_student_research_project.duration_year', value=form.research_funds_sanctioned.other_student_research_project.duration_year)
+								input(type='number', name='research_funds_sanctioned.other_student_research_project.duration_year', value=form.research_funds_sanctioned.other_student_research_project.duration_year)
 							td
-								input(type='number', name='form.research_funds_sanctioned.other_student_research_project.funding_agency_name', value=form.research_funds_sanctioned.other_student_research_project.funding_agency_name)
+								input(type='number', name='research_funds_sanctioned.other_student_research_project.funding_agency_name', value=form.research_funds_sanctioned.other_student_research_project.funding_agency_name)
 							td
-								input(type='number', name='form.research_funds_sanctioned.other_student_research_project.total_grant_sanctioned', value=form.research_funds_sanctioned.other_student_research_project.total_grant_sanctioned)
+								input(type='number', name='research_funds_sanctioned.other_student_research_project.total_grant_sanctioned', value=form.research_funds_sanctioned.other_student_research_project.total_grant_sanctioned)
 							td
-								input(type='number', name='form.research_funds_sanctioned.other_student_research_project.received', value=form.research_funds_sanctioned.other_student_research_project.received)
+								input(type='number', name='research_funds_sanctioned.other_student_research_project.received', value=form.research_funds_sanctioned.other_student_research_project.received)
 						tr
 							th Other Projects
 							td
-								input(type='number', name='form.research_funds_sanctioned.any_other_specify.duration_year', value=form.research_funds_sanctioned.any_other_specify.duration_year)
+								input(type='number', name='research_funds_sanctioned.any_other_specify.duration_year', value=form.research_funds_sanctioned.any_other_specify.duration_year)
 							td
-								input(type='number', name='form.research_funds_sanctioned.any_other_specify.funding_agency_name', value=form.research_funds_sanctioned.any_other_specify.funding_agency_name)
+								input(type='number', name='research_funds_sanctioned.any_other_specify.funding_agency_name', value=form.research_funds_sanctioned.any_other_specify.funding_agency_name)
 							td
-								input(type='number', name='form.research_funds_sanctioned.any_other_specify.total_grant_sanctioned', value=form.research_funds_sanctioned.any_other_specify.total_grant_sanctioned)
+								input(type='number', name='research_funds_sanctioned.any_other_specify.total_grant_sanctioned', value=form.research_funds_sanctioned.any_other_specify.total_grant_sanctioned)
 							td
-								input(type='number', name='form.research_funds_sanctioned.any_other_specify.received', value=form.research_funds_sanctioned.any_other_specify.received)
+								input(type='number', name='research_funds_sanctioned.any_other_specify.received', value=form.research_funds_sanctioned.any_other_specify.received)
 						//-tr
 							th Total
 							td
-								input(type='number', name='form.research_funds_sanctioned.total.duration_year', value=form.research_funds_sanctioned.total.duration_year)
+								input(type='number', name='research_funds_sanctioned.total.duration_year', value=form.research_funds_sanctioned.total.duration_year)
 							td
-								input(type='number', name='form.research_funds_sanctioned.total.funding_agency_name', value=form.research_funds_sanctioned.total.funding_agency_name)
+								input(type='number', name='research_funds_sanctioned.total.funding_agency_name', value=form.research_funds_sanctioned.total.funding_agency_name)
 							td
-								input(type='number', name='form.research_funds_sanctioned.total.total_grant_sanctioned', value=form.research_funds_sanctioned.total.total_grant_sanctioned)
+								input(type='number', name='research_funds_sanctioned.total.total_grant_sanctioned', value=form.research_funds_sanctioned.total.total_grant_sanctioned)
 							td
-								input(type='number', name='form.research_funds_sanctioned.total.received', value=form.research_funds_sanctioned.total.received)
+								input(type='number', name='research_funds_sanctioned.total.received', value=form.research_funds_sanctioned.total.received)
 					label 3.7 No. of books published:
 					table(style='width:100%')
 						tr
 							th With ISBN No.
 							td
-								input(type='number', name='form.no_of_books_published.with_isbn_no', value=form.no_of_books_published.with_isbn_no)
+								input(type='number', name='no_of_books_published.with_isbn_no', value=form.no_of_books_published.with_isbn_no)
 						tr
 							th Without ISBN No.
 							td
-								input(type='number', name='form.no_of_books_published.without_isbn_no', value=form.no_of_books_published.without_isbn_no)
+								input(type='number', name='no_of_books_published.without_isbn_no', value=form.no_of_books_published.without_isbn_no)
 						tr
 							th Chapters in edited books
 							td
-								input(type='number', name='form.no_of_books_published.chapters_in_edited_books', value=form.no_of_books_published.chapters_in_edited_books)
+								input(type='number', name='no_of_books_published.chapters_in_edited_books', value=form.no_of_books_published.chapters_in_edited_books)
 					label 3.8 No. of University Departments receiving funds from:
 					table(style='width:100%')
 						tr
@@ -289,7 +289,7 @@ html(lang='en')
 							td
 								input(type='number', name='r13c2', value=form.for_colleges.any_other_specify)
 					label 3.10 Revenue generated through consultancy(Rs. in lakhs):
-						input(type='number', name='form.revenue_generated_through_consultancy', value=form.revenue_generated_through_consultancy)
+						input(type='number', name='revenue_generated_through_consultancy', value=form.revenue_generated_through_consultancy)
 					label 3.11 No. of conferences organized:
 					table(style='width:100%')
 						tr
@@ -324,223 +324,223 @@ html(lang='en')
 							td
 								input(type='number', name='r14c1', value=form.conferences_organized_by_institution.sponsoring_agencies.college)
 					label 3.12 No. of faculty served as experts, chairpersons or resource persons:
-					input(type='number', name='form.no_of_faculty_served_chairperson_resource_expert', value=form.no_of_faculty_served_chairperson_resource_expert)
+					input(type='number', name='no_of_faculty_served_chairperson_resource_expert', value=form.no_of_faculty_served_chairperson_resource_expert)
 					label 3.13 No. of collaborations:
 					table(style='width:100%')
 						tr
 							th International
 							td
-								input(type='number', name='form.no_of_collaborations.international', value=form.no_of_collaborations.international)
+								input(type='number', name='no_of_collaborations.international', value=form.no_of_collaborations.international)
 						tr
 							th National
 							td
-								input(type='number', name='form.no_of_collaborations.national', value=form.no_of_collaborations.national)
+								input(type='number', name='no_of_collaborations.national', value=form.no_of_collaborations.national)
 						tr
 							th Any
 							td
-								input(type='number', name='form.no_of_collaborations.any_other', value=form.no_of_collaborations.any_other)
+								input(type='number', name='no_of_collaborations.any_other', value=form.no_of_collaborations.any_other)
 					label 3.14 No. of linkages created during this year:
-					input(type='number', name='form.no_of_linkages_created_during_the_year', value=form.no_of_linkages_created_during_the_year)
+					input(type='number', name='no_of_linkages_created_during_the_year', value=form.no_of_linkages_created_during_the_year)
 					label 3.15 Total budget for research for current year in lakhs:
 					table(style='width:100%')
 						tr
 							th From Funding agency
 							td
-								input(type='number', name='form.current_year_research_budget_in_lakhs.from_funding_agency', value=form.current_year_research_budget_in_lakhs.from_funding_agency)
+								input(type='number', name='current_year_research_budget_in_lakhs.from_funding_agency', value=form.current_year_research_budget_in_lakhs.from_funding_agency)
 						tr
 							th From College management
 							td
-								input(type='number', name='form.current_year_research_budget_in_lakhs.from_uni_college', value=form.current_year_research_budget_in_lakhs.from_uni_college)
+								input(type='number', name='current_year_research_budget_in_lakhs.from_uni_college', value=form.current_year_research_budget_in_lakhs.from_uni_college)
 						tr
 							th Total
 							td
-								input(type='number', name='form.current_year_research_budget_in_lakhs.total', value=form.current_year_research_budget_in_lakhs.total)
+								input(type='number', name='current_year_research_budget_in_lakhs.total', value=form.current_year_research_budget_in_lakhs.total)
 					label 3.16 No. of patents received this year:
 					table(style='width:100%')
 						tr
 							th(rowspan='2') International
 							th Applied
 							td
-								input(type='number', name='form.no_of_patents.international.applied', value=form.no_of_patents.international.applied)
+								input(type='number', name='no_of_patents.international.applied', value=form.no_of_patents.international.applied)
 						tr
 							th Granted
 							td
-								input(type='number', name='form.no_of_patents.international.granted', value=form.no_of_patents.international.granted)
+								input(type='number', name='no_of_patents.international.granted', value=form.no_of_patents.international.granted)
 						tr
 							th(rowspan='2') National
 							th Applied
 							td
-								input(type='number', name='form.no_of_patents.national.applied', value=form.no_of_patents.national.applied)
+								input(type='number', name='no_of_patents.national.applied', value=form.no_of_patents.national.applied)
 						tr
 							th Granted
 							td
-								input(type='number', name='form.no_of_patents.national.granted', value=form.no_of_patents.national.granted)
+								input(type='number', name='no_of_patents.national.granted', value=form.no_of_patents.national.granted)
 						tr
 							th(rowspan='2') Commercialised
 							th Applied
 							td
-								input(type='number', name='form.no_of_patents.commercialized.applied', value=form.no_of_patents.commercialized.applied)
+								input(type='number', name='no_of_patents.commercialized.applied', value=form.no_of_patents.commercialized.applied)
 						tr
 							th Granted
 							td
-								input(type='number', name='form.no_of_patents.commercialized.granted', value=form.no_of_patents.commercialized.granted)
+								input(type='number', name='no_of_patents.commercialized.granted', value=form.no_of_patents.commercialized.granted)
 					label
 						| 3.17 No. of research awards/ recognitions received by faculty and research fellows Of the institute in the year:
 					table(style='width:100%')
 						tr
 							th Total
 							td
-								input(type='number', name='form.no_of_awards_recognition_faculty_research_fellows.total', value=form.no_of_awards_recognition_faculty_research_fellows.total)
+								input(type='number', name='no_of_awards_recognition_faculty_research_fellows.total', value=form.no_of_awards_recognition_faculty_research_fellows.total)
 						tr
 							th International
 							td
-								input(type='number', name='form.no_of_awards_recognition_faculty_research_fellows.international', value=form.no_of_awards_recognition_faculty_research_fellows.international)
+								input(type='number', name='no_of_awards_recognition_faculty_research_fellows.international', value=form.no_of_awards_recognition_faculty_research_fellows.international)
 						tr
 							th National
 							td   
-								input(type='number', name='form.no_of_awards_recognition_faculty_research_fellows.national', value=form.no_of_awards_recognition_faculty_research_fellows.national)         
+								input(type='number', name='no_of_awards_recognition_faculty_research_fellows.national', value=form.no_of_awards_recognition_faculty_research_fellows.national)         
 						tr
 							th State
 							td
-								input(type='number', name='form.no_of_awards_recognition_faculty_research_fellows.state', value=form.no_of_awards_recognition_faculty_research_fellows.state)
+								input(type='number', name='no_of_awards_recognition_faculty_research_fellows.state', value=form.no_of_awards_recognition_faculty_research_fellows.state)
 						tr
 							th University
 							td
-								input(type='number', name='form.no_of_awards_recognition_faculty_research_fellows.university', value=form.no_of_awards_recognition_faculty_research_fellows.university)
+								input(type='number', name='no_of_awards_recognition_faculty_research_fellows.university', value=form.no_of_awards_recognition_faculty_research_fellows.university)
 						tr
 							th Dist
 							td
-								input(type='number', name='form.no_of_awards_recognition_faculty_research_fellows.district', value=form.no_of_awards_recognition_faculty_research_fellows.district)
+								input(type='number', name='no_of_awards_recognition_faculty_research_fellows.district', value=form.no_of_awards_recognition_faculty_research_fellows.district)
 						tr
 							th College
 							td
-								input(type='number', name='form.no_of_awards_recognition_faculty_research_fellows.college', value=form.no_of_awards_recognition_faculty_research_fellows.college)
+								input(type='number', name='no_of_awards_recognition_faculty_research_fellows.college', value=form.no_of_awards_recognition_faculty_research_fellows.college)
 					label
 						| 3.18 No. of faculty from the Institution who are Ph. D. Guides and students registered under them:
 					table(style='width:100%')
 						tr
 							th No. of Ph.D. guides
 							td
-								input(type='text', name='form.faculty_count.phd_guides', value=form.faculty_count.phd_guides)
+								input(type='text', name='faculty_count.phd_guides', value=form.faculty_count.phd_guides)
 						tr
 							th No. of registered students
 							td
-								input(type='text', name='form.faculty_count.students_registered_under_them', value=form.faculty_count.students_registered_under_them)
+								input(type='text', name='faculty_count.students_registered_under_them', value=form.faculty_count.students_registered_under_them)
 					label 3.19 No. of Ph.D. awarded by faculty from the Institution:
-					input(type='number', name='form.no_of_phd_awarded_institution_faculty', value=form.no_of_phd_awarded_institution_faculty)
+					input(type='number', name='no_of_phd_awarded_institution_faculty', value=form.no_of_phd_awarded_institution_faculty)
 					label
 						| 3.20 No. of Research scholars receiving the Fellowships (Newly enrolled + existing ones):
 					table(style='width:100%')
 						tr
 							th JRF
 							td
-								input(type='number', name='form.no_of_research_scholars_receiving_fellowships.jrf', value=form.no_of_research_scholars_receiving_fellowships.jrf)
+								input(type='number', name='no_of_research_scholars_receiving_fellowships.jrf', value=form.no_of_research_scholars_receiving_fellowships.jrf)
 						tr
 							th SRF
 							td
-								input(type='number', name='form.no_of_research_scholars_receiving_fellowships.srf', value=form.no_of_research_scholars_receiving_fellowships.srf)
+								input(type='number', name='no_of_research_scholars_receiving_fellowships.srf', value=form.no_of_research_scholars_receiving_fellowships.srf)
 						tr
 							th Project fellows
 							td
-								input(type='number', name='form.no_of_research_scholars_receiving_fellowships.project_fellows', value=form.no_of_research_scholars_receiving_fellowships.project_fellows)
+								input(type='number', name='no_of_research_scholars_receiving_fellowships.project_fellows', value=form.no_of_research_scholars_receiving_fellowships.project_fellows)
 						tr
 							th Any other
 							td
-								input(type='number', name='form.no_of_research_scholars_receiving_fellowships.any_other', value=form.no_of_research_scholars_receiving_fellowships.any_other)
+								input(type='number', name='no_of_research_scholars_receiving_fellowships.any_other', value=form.no_of_research_scholars_receiving_fellowships.any_other)
 					label 3.21 No. of students Participated in NSS events:
 					table(style='width:100%')
 						tr
 							th University level
 							td
-								input(type='number', name='form.nss_student_participants.university_level', value=form.nss_student_participants.university_level)
+								input(type='number', name='nss_student_participants.university_level', value=form.nss_student_participants.university_level)
 						tr
 							th State level
 							td
-								input(type='number', name='form.nss_student_participants.state_level', value=form.nss_student_participants.state_level)
+								input(type='number', name='nss_student_participants.state_level', value=form.nss_student_participants.state_level)
 						tr
 							th International level
 							td
-								input(type='number', name='form.nss_student_participants.international_level', value=form.nss_student_participants.international_level)
+								input(type='number', name='nss_student_participants.international_level', value=form.nss_student_participants.international_level)
 						tr
 							th National level
 							td
-								input(type='number', name='form.nss_student_participants.national_level', value=form.nss_student_participants.national_level)
+								input(type='number', name='nss_student_participants.national_level', value=form.nss_student_participants.national_level)
 					label 3.22 No. of students participated in NCC events:
 					table(style='width:100%')
 						tr
 							th University level
 							td
-								input(type='number', name='form.ncc_student_participation.university_level', value=form.nss_student_participants.university_level)
+								input(type='number', name='ncc_student_participation.university_level', value=form.nss_student_participants.university_level)
 						tr
 							th State level
 							td
-								input(type='number', name='form.ncc_student_participation.state_level', value=form.nss_student_participants.state_level)
+								input(type='number', name='ncc_student_participation.state_level', value=form.nss_student_participants.state_level)
 						tr
 							th International level
 							td
-								input(type='number', name='form.ncc_student_participation.international_level', value=form.nss_student_participants.international_level)
+								input(type='number', name='ncc_student_participation.international_level', value=form.nss_student_participants.international_level)
 						tr
 							th National level
 							td
-								input(type='number', name='form.ncc_student_participation.national_level', value=form.nss_student_participants.national_level)
+								input(type='number', name='ncc_student_participation.national_level', value=form.nss_student_participants.national_level)
 					label 3.23 No. of Awards won in NSS:
 					table(style='width:100%')
 						tr
 							th University level
 							td
-								input(type='number', name='form.no_of_awards_in_nss.university_level', value=form.nss_student_participants.university_level)
+								input(type='number', name='no_of_awards_in_nss.university_level', value=form.nss_student_participants.university_level)
 						tr
 							th State level
 							td
-								input(type='number', name='form.no_of_awards_in_nss.state_level', value=form.nss_student_participants.state_level)
+								input(type='number', name='no_of_awards_in_nss.state_level', value=form.nss_student_participants.state_level)
 						tr
 							th International level
 							td
-								input(type='number', name='form.no_of_awards_in_nss.international_level', value=form.nss_student_participants.international_level)
+								input(type='number', name='no_of_awards_in_nss.international_level', value=form.nss_student_participants.international_level)
 						tr
 							th National level
 							td
-								input(type='number', name='form.no_of_awards_in_nss.national_level', value=form.nss_student_participants.national_level)
+								input(type='number', name='no_of_awards_in_nss.national_level', value=form.nss_student_participants.national_level)
 					label 3.24 No.  of Awards won in NCC:
 					table(style='width:100%')
 						tr
 							th University level
 							td
-								input(type='number', name='form.no_of_awards_in_ncc.university_level', value=form.nss_student_participants.university_level)
+								input(type='number', name='no_of_awards_in_ncc.university_level', value=form.nss_student_participants.university_level)
 						tr
 							th State level
 							td
-								input(type='number', name='form.no_of_awards_in_ncc.state_level', value=form.nss_student_participants.state_level)
+								input(type='number', name='no_of_awards_in_ncc.state_level', value=form.nss_student_participants.state_level)
 						tr
 							th International level
 							td
-								input(type='number', name='form.no_of_awards_in_ncc.international_level', value=form.nss_student_participants.international_level)
+								input(type='number', name='no_of_awards_in_ncc.international_level', value=form.nss_student_participants.international_level)
 						tr
 							th National level
 							td
-								input(type='number', name='form.no_of_awards_in_ncc.national_level', value=form.nss_student_participants.national_level)
+								input(type='number', name='no_of_awards_in_ncc.national_level', value=form.nss_student_participants.national_level)
 					label 3.25 No. of Extension activities organized:
 					table(style='width:100%')
 						tr
 							th University forum
 							td
-								input(type='number', name='form.no_of_extension_activities_organized.university_forum', value=form.no_of_extension_activities_organized.university_forum)
+								input(type='number', name='no_of_extension_activities_organized.university_forum', value=form.no_of_extension_activities_organized.university_forum)
 						tr
 							th College forum
 							td
-								input(type='number', name='form.no_of_extension_activities_organized.college_forum', value=form.no_of_extension_activities_organized.college_forum)
+								input(type='number', name='no_of_extension_activities_organized.college_forum', value=form.no_of_extension_activities_organized.college_forum)
 						tr
 							th NCC
 							td
-								input(type='number', name='form.no_of_extension_activities_organized.ncc', value=form.no_of_extension_activities_organized.ncc)
+								input(type='number', name='no_of_extension_activities_organized.ncc', value=form.no_of_extension_activities_organized.ncc)
 						tr
 							th NSS
 							td
-								input(type='number', name='form.no_of_extension_activities_organized.nss', value=form.no_of_extension_activities_organized.nss)
+								input(type='number', name='no_of_extension_activities_organized.nss', value=form.no_of_extension_activities_organized.nss)
 						tr
 							th Any other
 							td
-								input(type='number', name='form.no_of_extension_activities_organized.any_other', value=form.no_of_extension_activities_organized.any_other)
+								input(type='number', name='no_of_extension_activities_organized.any_other', value=form.no_of_extension_activities_organized.any_other)
 					label | 3.26 Major Activities during the year in the sphere of extension activities and Institutional Social Responsibility:
-						input(type='text', name='form.major_activities', value=form.major_activities)
+						input(type='text', name='major_activities', value=form.major_activities)
 				button(type='submit') SAVE

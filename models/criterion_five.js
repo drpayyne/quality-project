@@ -3,6 +3,7 @@ let mongoose = require('mongoose');
 
 // Criterion Five Schema
 var criterionFiveSchema = mongoose.Schema({
+  department: { type: String, default: null },
     iqac_contribution_student_support_services : { type: String, default: null },
 
     efforts_tracking_progression : { type: String, default: null },

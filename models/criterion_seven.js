@@ -3,6 +3,7 @@ let mongoose = require('mongoose');
 
 // Criterion Seven Schema
 var criterionSevenSchema = mongoose.Schema({
+  department: { type: String, default: null },
     innovations_introduced_for_positive_impact : { type: String, default: null },
 
     action_taken_report : { type: String, default: null },

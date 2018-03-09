@@ -3,6 +3,7 @@ let mongoose = require('mongoose');
 
 // Criterion Four schema
 var criterionFourSchema = mongoose.Schema({
+  department: { type: String, default: null },
     increase_in_infrastructure_details : {
       facilities : {
         existing : { type: String, default: null },
