@@ -77,6 +77,16 @@ router.get('/:page', function(req, res ) {
 					if(document==null) {
 						console.log("Creating new object");
 						document = new CriterionTwo({});
+						document.pass_percent_dist[0] = {
+							programme_title: null,
+							students_appeared: null,
+							division: {
+								distinction_percent: null,
+								percent_one: null,
+								percent_two: null,
+								percent_three: null
+							}
+						};
 					}
 					console.log(document);
 					res.render('forms/criterion2', {
@@ -182,7 +192,7 @@ router.get('/:page', function(req, res ) {
 			});
 			break;
 	}
-});
+}); 
 
 router.post('/:page', function(req, res) {
 	console.log(req.cookies);
@@ -222,6 +232,25 @@ router.post('/:page', function(req, res) {
 			});
 			break;
 		case 'criterion2':
+
+			form.pass_percent_dist = [];
+			form.pass_percent_dist[0] = {
+				programme_title: null,
+				students_appeared: null,
+				division: {
+					distinction_percent: null,
+					percent_one: null,
+					percent_two: null,
+					percent_three: null
+				}
+			};
+			form.pass_percent_dist[0].programme_title = form["pass_percent_dist[0].programme_title"];
+			form.pass_percent_dist[0].students_appeared = form["pass_percent_dist[0].students_appeared"];
+			form.pass_percent_dist[0].division.distinction_percent = form["pass_percent_dist[0].division.distinction_percent"];
+			form.pass_percent_dist[0].division.percent_one = form["pass_percent_dist[0].division.percent_one"];
+			form.pass_percent_dist[0].division.percent_two = form["pass_percent_dist[0].division.percent_two"];
+			form.pass_percent_dist[0].division.percent_three = form["pass_percent_dist[0].division.percent_three"];
+
 			CriterionTwo.update(query, form, {upsert: true}, function(err) {
 				if(err) {
 					console.log(err);
