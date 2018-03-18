@@ -3,6 +3,7 @@ let mongoose = require('mongoose');
 
 //Part A Schema
 var PartATwoSchema = mongoose.Schema({
+	department: { type: String, default: null },
 	no_of_teachers : {   type: Number, default: null },
 	no_of_tech_admin_staff : { type: Number, default: null },
 	no_of_students : { type: Number, default: null },

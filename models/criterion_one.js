@@ -2,6 +2,7 @@
 let mongoose = require('mongoose');
 
 var criterionOneSchema = mongoose.Schema({
+	department: { type: String, default: null },
   academic_program_details :  {
     phd : {
       existing_program_count : { type: Number, default: null },

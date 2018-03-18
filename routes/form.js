@@ -13,6 +13,7 @@ let CriterionSeven = require('../models/criterion_seven');
 let CriterionEight = require('../models/criterion_eight');
 
 router.get('/:page', function(req, res ) {
+	console.log('FORMS PAGE');
 	console.log(req.cookies);
 	console.log(req.body);
 
@@ -205,6 +206,7 @@ router.post('/:page', function(req, res) {
 
 	switch(req.params.page) {
 		case 'details':
+			form.department = 'HOQ';
 			PartAOne.update(null, form, {upsert: true}, function(err) {
 				if(err) {
 					console.log(err);
@@ -214,6 +216,7 @@ router.post('/:page', function(req, res) {
 			});
 			break;
 		case 'iqac':
+			form.department = 'HOQ';
 			PartATwo.update(null, form, {upsert: true}, function(err) {
 				if(err) {
 					console.log(err);
@@ -223,6 +226,7 @@ router.post('/:page', function(req, res) {
 			});
 			break;
 		case 'criterion1':
+			form.department = 'HOQ';
 			CriterionOne.update(null, form, {upsert: true}, function(err) {
 				if(err) {
 					console.log(err);
@@ -296,6 +300,7 @@ router.post('/:page', function(req, res) {
 			});
 			break;
 		case 'criterion7':
+			form.department = 'HOQ';
 			CriterionSeven.update(null, form, {upsert: true}, function(err) {
 				if(err) {
 					console.log(err);
@@ -305,6 +310,7 @@ router.post('/:page', function(req, res) {
 			});
 			break;
 		case 'criterion8':
+			form.department = 'HOQ';
 			CriterionEight.update(null, form, {upsert: true}, function(err) {
 				if(err) {
 					console.log(err);

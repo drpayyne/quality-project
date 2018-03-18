@@ -1,85 +1,98 @@
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Dashboard</title>
-
-  <link rel="stylesheet" href="css/dashboard.css">
-  <link rel="stylesheet" href="css/normalize.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="css/dashboard.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-  <div class="top-contain">
-    <div class="top-line">
-      <div class="dept-sel">
-        <div class="select_style">
-          <select name="username">
-            <option value="NULL">Pick Department</option>
-            <option value="CSE">CSE</option>
-            <option value="ECE">ECE</option>
-            <option value="CHE">CHE</option>
-            <option value="BTC">BTC</option>
-            <option value="MEC">MEC</option>
-            <option value="HOQ">HOQ</option>
-          </select>
-        </div>
-      </div>
-      <div class="rpt-fin">
-        <div id="gen" class="btn btn--border btn--primary btn--animated">Generate Report</div>
-      </div>
-      <h1 class="top-header">DASHBOARD</h1>
-    </div>
-  </div>
-  <div class="bot-contain">
-    <div class="bot-left">
-      <h2 align="center">PART - A</h2>
-      <div class="button-container-2">
-        <span class="mas">Criterion-1</span>
-        <button id='PaC1' type="button" name="Hover">Criterion-1</button>
-      </div>
-      <div class="button-container-2">
-        <span class="mas">Criterion-2</span>
-        <button id='PaC2' type="button" name="Hover">Criterion-2</button>
-      </div>
-    </div>
-    <div class="bot-cen">
-    </div>
-    <div class="bot-right">
-      <h2 align="center">PART - B</h2>
-      <div class="button-container-2">
-        <span class="mas">Criterion-1</span>
-        <button id='PbC1' type="button" name="Hover">Criterion-1</button>
-      </div>
-      <div class="button-container-2">
-        <span class="mas">Criterion-2</span>
-        <button id='PbC2' type="button" name="Hover">Criterion-2</button>
-      </div>
-      <div class="button-container-2">
-        <span class="mas">Criterion-3</span>
-        <button id='PbC3' type="button" name="Hover">Criterion-3</button>
-      </div>
-      <div class="button-container-2">
-        <span class="mas">Criterion-4</span>
-        <button id='PbC4' type="button" name="Hover">Criterion-4</button>
-      </div>
-      <div class="button-container-2">
-        <span class="mas">Criterion-5</span>
-        <button id='PbC5' type="button" name="Hover">Criterion-5</button>
-      </div>
-      <div class="button-container-2">
-        <span class="mas">Criterion-6</span>
-        <button id='PbC6' type="button" name="Hover">Criterion-6</button>
-      </div>
-      <div class="button-container-2">
-        <span class="mas">Criterion-7</span>
-        <button id='PbC7' type="button" name="Hover">Criterion-7</button>
-      </div>
-      <div class="button-container-2">
-        <span class="mas">Criterion-8</span>
-        <button id='PbC8' type="button" name="Hover">Criterion-8</button>
-      </div>
-    </div>
-  </div>
+	<div class="container-fluid h-100">
+		<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+			<span class="navbar-brand mb-0 h1">IQAC Dashboard</span>
+			<a class="navbar-brand" href="#">Logout</a>
+		</nav>
+		<div class="row my-4">
+			<div class="col">
+				<div class="card w-50 mx-auto">
+					<div class="card-body">
+						<h5 class="card-title">HOQ Options</h5>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">
+								<form class="form-inline">
+									<div class="input-group mx-auto">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Department</span>
+										</div>
+										<select class="form-control mr-sm-2" id="department_select">
+											<option>ATM</option>
+											<option>BTC</option>
+											<option>CHE</option>
+											<option>CSE</option>
+											<option>CVE</option>
+											<option>ECE</option>
+											<option>EEE</option>
+											<option>IT</option>
+											<option>MAR</option>
+											<option>MEC</option>
+										</select>
+									</div>
+								</form>
+							</li>
+							<li class="list-group-item text-center"><a href="#" class="btn btn-primary">Generate PDF</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="card w-50 my-3 mx-auto">
+					<div class="card-body">
+						<h5 class="card-title">Part A</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To be filled by HOQ</h6>
+						<div class="row">
+							<div class="col d-flex justify-content-center">
+								<a href="#" class="btn btn-primary custom-button">A1</a>
+							</div>
+							<div class="col d-flex justify-content-center">
+								<a href="#" class="btn btn-primary custom-button">A2</a>
+							</div>
+						</div>
+		  			</div>
+				</div>
+				<div class="card w-50 mx-auto">
+					<div class="card-body">
+						<h5 class="card-title">Part B</h5>
+						<h6 class="card-subtitle mb-2 text-muted">To be filled by Department / HOQ</h6>
+						<div class="row">
+							<div class="col m-1 d-flex justify-content-center">
+								<a href="#" class="btn btn-primary custom-button">Criterion 1</a>
+							</div>
+							<div class="col m-1 d-flex justify-content-center">
+								<a href="#" class="btn btn-primary custom-button">Criterion 2</a>
+							</div>
+							<div class="col m-1 d-flex justify-content-center">
+								<a href="#" class="btn btn-primary custom-button">Criterion 3</a>
+							</div>
+							<div class="col m-1 d-flex justify-content-center">
+								<a href="#" class="btn btn-primary custom-button">Criterion 4</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col m-1 d-flex justify-content-center">
+								<a href="#" class="btn btn-primary custom-button">Criterion 5</a>
+							</div>
+							<div class="col m-1 d-flex justify-content-center">
+								<a href="#" class="btn btn-primary custom-button">Criterion 6</a>
+							</div>
+							<div class="col m-1 d-flex justify-content-center">
+								<a href="#" class="btn btn-primary custom-button">Criterion 7</a>
+							</div>
+							<div class="col m-1 d-flex justify-content-center">
+								<a href="#" class="btn btn-primary custom-button">Conclusion</a>
+							</div>
+						</div>
+		  			</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

@@ -3,6 +3,7 @@ let mongoose = require('mongoose');
 
 //Part A Schema
 var PartAOneSchema = mongoose.Schema({
+	department: { type: String, default: null },
   institution_details : {
   institution_name : { type: String, default: null },
   address_line_1 : { type: String, default: null },
