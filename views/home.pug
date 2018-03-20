@@ -34,14 +34,9 @@ html(lang="en")
 							label(style="color: #FFF") User
 							br
 							.select_style
-								select(name="username")
-									option(value="NULL") Pick Department
-									option(value="CSE") CSE
-									option(value="ECE") ECE
-									option(value="CHE") CHE
-									option(value="BTC") BTC
-									option(value="MEC") MEC
-									option(value="HOQ") HOQ
+								select#department_select(name="username")
+									each val in ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC', 'HOQ']
+										option= val
 							br
 							label(style="color: #FFF") Password
 							br

@@ -25,7 +25,7 @@ html(lang="en")
 												.input-group-prepend
 													span.input-group-text Department
 												select#department_select.form-control.mr-sm-2
-													each val in ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC']
+													each val in ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC', 'HOQ']
 														option= val
 									li.list-group-item.text-center
 										a.btn.btn-primary.mr-3(href='/dashboard/prepare') Prepare PDF
@@ -56,12 +56,11 @@ html(lang="en")
 									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion3")') Criterion 3
 								.col.m-1.d-flex.justify-content-center
 									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion4")') Criterion 4
-							.row
 								.col.m-1.d-flex.justify-content-center
 									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion5")') Criterion 5
-								.col.m-1.d-flex.justify-content-center
-									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion6")') Criterion 6
 								if cookies.user.username == 'HOQ'
+									.col.m-1.d-flex.justify-content-center
+										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion6")') Criterion 6
 									.col.m-1.d-flex.justify-content-center
 										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion7")') Criterion 7
 									.col.m-1.d-flex.justify-content-center

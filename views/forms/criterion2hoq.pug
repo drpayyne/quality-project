@@ -14,12 +14,10 @@ html(lang='en')
 		.container-fluid.h-100
 			nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
 				span.navbar-brand.mb-0.h1 IQAC Criterion 2 - #{cookies.user.username}
-				if cookies.user.username == 'HOQ' 
-					span.navbar-brand.mb-0.h1 #{cookies.department}
 				a.navbar-brand(href='/home') Logout
 			.row.my-4
 				.col
-					form(action='/form/criterion2', method='POST')
+					form(action='/form/criterion2hoq', method='POST')
 						legend
 							span.number 2.
 							| Teaching, Learning and Evaluation
@@ -168,18 +166,19 @@ html(lang='en')
 								th I%
 								th II%
 								th III%
-							tr
-								td #{cookies.department}
-								td
-									input(type='number', name='pass_percent_dist.students_appeared', value=form.pass_percent_dist.students_appeared)
-								td
-									input(type='number', name='pass_percent_dist.division.distinction_percent', value=form.pass_percent_dist.division.distinction_percent)
-								td
-									input(type='number', name='pass_percent_dist.division.percent_one', value=form.pass_percent_dist.division.percent_one)
-								td
-									input(type='number', name='pass_percent_dist.division.percent_two', value=form.pass_percent_dist.division.percent_two)
-								td
-									input(type='number', name='pass_percent_dist.division.percent_three', value=form.pass_percent_dist.division.percent_three)
+							each val, index in ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC']
+								tr
+									td= val
+									td
+										input(type='number', name='c1r' + index, value=form.pass_percent_dist[index].students_appeared)
+									td
+										input(type='number', name='c2r' + index, value=form.pass_percent_dist[index].division.distinction_percent)
+									td
+										input(type='number', name='c3r' + index, value=form.pass_percent_dist[index].division.percent_one)
+									td
+										input(type='number', name='c4r' + index, value=form.pass_percent_dist[index].division.percent_two)
+									td
+										input(type='number', name='c5r' + index, value=form.pass_percent_dist[index].division.percent_three)
 						//TO BE FILLED BY HOQ
 						label 2.12 How does IQAC Contribute/Monitor/Evaluate the Teaching & Learning processes:
 						input(type='text', name='iqac_contribution', value=form.iqac_contribution)

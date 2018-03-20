@@ -30,6 +30,7 @@ router.get('/:type', function(req, res) {
 			res.redirect('/dashboard');
 			break;
 		case 'generate':
+			PDF.make_pdf();
 			break;
 		default:
 			break;

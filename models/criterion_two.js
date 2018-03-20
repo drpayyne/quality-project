@@ -7,8 +7,7 @@ let deptPassPercentSchema = ({
 		distinction_percent: { type: Number, default: null },
 		percent_one: { type: Number, default: null },
 		percent_two: { type: Number, default: null },
-		percent_three: { type: Number, default: null }/* ,
-		percent_pass: { type: Number, default: null } */
+		percent_three: { type: Number, default: null }
 	}
 });
 
@@ -77,7 +76,16 @@ var criterionTwoSchema = mongoose.Schema({
 		faculty_dev_workshop: { type: Number, default: null }
 	},
 	avg_student_attendance: { type: Number, default: null },
-	pass_percent_dist: [deptPassPercentSchema],
+	pass_percent_dist: {
+		programme_title: { type: String, default: null },
+		students_appeared: { type: Number, default: null },
+		division: {
+			distinction_percent: { type: Number, default: null },
+			percent_one: { type: Number, default: null },
+			percent_two: { type: Number, default: null },
+			percent_three: { type: Number, default: null }
+		}
+	},
 	iqac_contribution: { type: String, default: null },
 	faculty_dev_initiative: {
 		refresher_courses: { type: Number, default: null },

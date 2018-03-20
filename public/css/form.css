@@ -16,6 +16,15 @@ th, td {
 body {
   font-family: 'Nunito', sans-serif;
   color: #384047;
+  padding-top: 70px;
+}
+
+.fixed-but {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 form {

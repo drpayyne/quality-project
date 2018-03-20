@@ -5,6 +5,7 @@ let PartAOne = require('../models/part_a1');
 let PartATwo = require('../models/part_a2');
 let CriterionOne = require('../models/criterion_one');
 let CriterionTwo = require('../models/criterion_two');
+let CriterionTwoHoq = require('../models/criterion_two_hoq');
 let CriterionThree = require('../models/criterion_three');
 let CriterionFour = require('../models/criterion_four');
 let CriterionFive = require('../models/criterion_five');
@@ -57,11 +58,40 @@ function sum() {
 		console.log('criterion5 ' + CFives.length);
 		console.log('criterion6 ' + CSixes.length);
 
+		var array = CTwos;
 		var document = jsonAdd.addJSONs(CTwos);
 		document._doc.department = 'HOQ';
+		var pass_dist_arr = [];
+		for(var i=0; i<10; i++) {
+			console.log(array[i]);
+			console.log('*************');
+			let pass_dist = {}, div = {};
+			if (array[i] != null) {
+				div = {
+					distinction_percent: array[i].pass_percent_dist.division.distinction_percent,
+					percent_one: array[i].pass_percent_dist.division.percent_one,
+					percent_two: array[i].pass_percent_dist.division.percent_two,
+					percent_three: array[i].pass_percent_dist.division.percent_three
+				}	
+				pass_dist.students_appeared = array[i].pass_percent_dist.students_appeared;
+			} else {
+				div = {
+					distinction_percent: null,
+					percent_one: null,
+					percent_two: null,
+					percent_three: null
+				}
+				pass_dist.students_appeared = null;
+			}
+			pass_dist.programme_title = departments[i];
+			pass_dist.division = div;
+			pass_dist_arr[i] = pass_dist;
+		}
+		document._doc.pass_percent_dist = pass_dist_arr;
 		delete document._doc["_id"];
 		delete document._doc["__v"];
-		CriterionTwo.update({department: 'HOQ'}, document._doc, { upsert: true }, function(err) {
+		console.log(document._doc);
+		CriterionTwoHoq.update({department: 'HOQ'}, document._doc, { upsert: true }, function(err) {
 			if(err) console.log(err);
 		});
 
