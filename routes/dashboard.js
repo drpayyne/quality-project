@@ -17,8 +17,8 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-	console.log(req.body.department);
-	console.log(req.body.path);
+	console.log(req.body);
+	res.clearCookie('department');
 	res.cookie('department', req.body.department, {expires: 0});
 	res.redirect(req.body.path);
 });
@@ -35,15 +35,6 @@ router.get('/:type', function(req, res) {
 		default:
 			break;
 	}
-}); 
-
-router.post('/:type', function(req, res) {
-	console.log(req.body);
-	console.log(req.params.type);
-	if(req.params.type == 'generate') {
-		PDF.make_pdf();
-	}
-	res.redirect('/dashboard');
 });
 
 module.exports = router;

@@ -88,33 +88,33 @@ router.get('/:page', function(req, res ) {
 			});
 			break;
 		case 'criterion2hoq':
-		CriterionTwoHoq.findOne({department: req.cookies.department}, function(err, document) {
-			if(err)
-				console.log(err);
-			else {
-				if(document==null) {
-					console.log("Creating new object");
-					document = new CriterionTwoHoq({});
-					for(let i = 0; i < 10; i++) {
-						document.pass_percent_dist[i] = {
-							programme_title: null,
-							students_appeared: null,
-							division: {
-								distinction_percent: null,
-								percent_one: null,
-								percent_two: null,
-								percent_three: null
-							}
-						};
+			CriterionTwoHoq.findOne({department: 'HOQ'}, function(err, document) {
+				if(err)
+					console.log(err);
+				else {
+					if(document==null) {
+						console.log("Creating new object");
+						document = new CriterionTwoHoq({});
+						for(let i = 0; i < 10; i++) {
+							document.pass_percent_dist[i] = {
+								programme_title: null,
+								students_appeared: null,
+								division: {
+									distinction_percent: null,
+									percent_one: null,
+									percent_two: null,
+									percent_three: null
+								}
+							};
+						}
 					}
+					console.log(document);
+					res.render('forms/criterion2hoq', {
+						form: document
+					});
 				}
-				console.log(document);
-				res.render('forms/criterion2hoq', {
-					form: document
-				});
-			}
-		});
-		break;	
+			});
+			break;	
 		case 'criterion3':
 			CriterionThree.findOne({department: req.cookies.department}, function(err, document) {
 				if(err)

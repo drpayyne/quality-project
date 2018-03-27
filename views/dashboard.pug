@@ -5,8 +5,6 @@ html(lang="en")
 		title Dashboard
 		link(rel='stylesheet', href='css/dashboard.css')
 		link(rel='stylesheet', href='css/bootstrap.css')
-		script.
-			var username='#{cookies.user.username}';
 	body
 		.container-fluid.h-100
 			nav.navbar.navbar-light(style='background-color: #e3f2fd;')
@@ -19,14 +17,6 @@ html(lang="en")
 							.card-body
 								h5.card-title HOQ Options
 								ul.list-group.list-group-flush
-									li.list-group-item
-										form.form-inline
-											.input-group.mx-auto
-												.input-group-prepend
-													span.input-group-text Department
-												select#department_select.form-control.mr-sm-2
-													each val in ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC', 'HOQ']
-														option= val
 									li.list-group-item.text-center
 										a.btn.btn-primary.mr-3(href='/dashboard/prepare') Prepare PDF
 										a.btn.btn-primary.ml-3(href='#') Generate PDF
@@ -44,9 +34,17 @@ html(lang="en")
 							h5.card-title Part B
 							if cookies.user.username == 'HOQ'
 								h6.card-subtitle.mb-2.text-muted To be filled by Department / HOQ
+								form.form-inline
+									.input-group
+										.input-group-prepend
+											span.input-group-text Department
+										select#department_select.form-control
+											each val in ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC', 'HOQ']
+												option= val
 							else
 								h6.card-subtitle.mb-2.text-muted To be filled by Department
 							.row
+								.col-12.m-1.d-flex.justify-content-center
 								if cookies.user.username == 'HOQ'
 									.col.m-1.d-flex.justify-content-center
 										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion1")') Criterion 1
@@ -65,4 +63,8 @@ html(lang="en")
 										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion7")') Criterion 7
 									.col.m-1.d-flex.justify-content-center
 										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion8")') Conclusion
+			form(action='#')
+				each val in ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC', 'HOQ']
+					if cookies.user.username == val
+						input#dept_cookie(type='hidden', name='dept', value=val)
 		script(src='/js/dashboard.js')
