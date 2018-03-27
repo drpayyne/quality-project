@@ -14,7 +14,7 @@ h1 {
   width: 100%;
   display: flex;
   justify-content: center;
-  background: url("../RES/ep_naturalblack.png") center repeat;
+  background: url("ep_naturalblack.png") center repeat;
 }
 .left-contain{
   height: 100%;
