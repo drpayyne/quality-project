@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title IQAC Form(Criterion – VIII)
+    link(rel='stylesheet', href='../css/normalize.min.css')
+    link(rel='stylesheet', href='../css/form.css')
+  body
+    .top-cont
+      .top-line
+        div(style='float: right')
+          button#back(type='button') BACK
+        div(style='float: left')
+          button(type='submit') SAVE
+    .bot-cont
+      form(action='index.html', method='post')
+        h1 Criterion – VIII
+        fieldset
+          // TO BE FILLED BY HOQ
+          legend
+            span.number 8
+            | Plans of institution for next year
+          label Plan Details:
+          input(type='text', name='r1c3', value=form.plans_of_institution_next_year)
