@@ -9,12 +9,16 @@ h1 {
   text-align: center;
   color: #fff;
 }
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+* {
+  font-family: 'Open Sans', sans-serif;
+}
 .full-page{
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
-  background: url("../RES/ep_naturalblack.png") center repeat;
+  background: url("ep_naturalblack.png") center repeat;
 }
 .left-contain{
   height: 100%;
@@ -291,35 +295,77 @@ body .container .card_inner__cta {
 
 
 /*LOGIN*/
-.select_style
-{
-	background: #FFF;
-	overflow: hidden;
-	display: inline-block;
-	color: #525252;
-	font-weight: 300;
-	-webkit-border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
-	-moz-border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
-	border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
-	-webkit-box-shadow: 0 0 5px rgba(123, 123, 123, 0.2);
-	-moz-box-shadow: 0 0 5px rgba(123,123,123,.2);
-	box-shadow: 0 0 5px rgba(123, 123, 123, 0.2);
-	border: solid 1px #DADADA;
-	font-family: "helvetica neue",arial;
-	position: relative;
-	cursor: pointer;
-	padding-right:20px;
-
+.loginSection {
+  width: 70%;
+  text-align: center;
+  display: flex;
+  color: white;
+  box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
 }
-.select_style select
-{
-	-webkit-appearance: none;
-	appearance:none;
-	width:120%;
-	background:none;
-	background:transparent;
-	border:none;
-	outline:none;
-	cursor:pointer;
-	padding:7px 10px;
+
+.info {
+  width: 45%;
+  background: rgba(20, 20, 20, .8);
+  padding: 30px 0;
+  border-right: 5px solid rgba(30, 30, 30, .8);
+  h2 {
+    padding-top: 30px;
+    font-weight: 300;
+  }
+  p {
+    font-size: 18px;
+  }
+  .icon {
+    font-size: 8em;
+    padding: 20px 0;
+    color: rgba(10, 180, 180, 1);
+  }
+}
+
+.loginForm {
+  width: 100%;
+  background: rgba(20, 40, 40, .8);
+  transition: .2s;
+  h2 {
+    font-weight: 300;
+  }
+}
+
+.inputFields {
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #56CCF2;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, .2);
+  color: white;
+  outline: none;
+}
+
+.noBullet {
+  list-style-type: none;
+  padding: 0;
+}
+
+#login-btn {
+  border: 1px solid #56CCF2;
+  background: rgba(20, 20, 20, .6);
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+#login-btn:hover {
+  background: #56CCF2;
+  padding: 10px 80px;
+}
+
+.hide {
+  visibility: hidden;
 }

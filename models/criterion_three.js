@@ -5,7 +5,6 @@ let mongoose = require('mongoose');
 var criterionThreeSchema = mongoose.Schema({
   department: { type: String, default: null },
     iqac_initiatives_promoting_research : { type: String, default: null },    // 3.1
-
     major_project_details : {               // 3.2
       completed : {
         number : { type: Number, default: null },
@@ -24,7 +23,6 @@ var criterionThreeSchema = mongoose.Schema({
         outlay_in_lakhs : { type: Number, default: null }
       }
     },
-
     minor_project_details : {                // 3.3
       completed : {
         number : { type: Number, default: null },

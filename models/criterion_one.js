@@ -73,10 +73,10 @@ var criterionOneSchema = mongoose.Schema({
   },
 
   curriculum_flexibility : {
-    cbcs : { type: Number, default: null },
-    core : { type: Number, default: null },
-    elective_option : { type: Number, default: null },
-    open_option : { type: Number, default: null },
+    cbcs : { type: String, default: 'off' },
+    core : { type: String, default: 'off' },
+    elective_option : { type: String, default: 'off' },
+    open_option : { type: String, default: 'off' },
   },
   
   pattern_of_programmes : {
@@ -92,16 +92,16 @@ var criterionOneSchema = mongoose.Schema({
   },
 
   stakeholder_feedback : {
-    alumni : { type: Number, default: null },
-    parents : { type: Number, default: null },
-    employers : { type: Number, default: null },
-    student : { type: Number, default: null }
+    alumni : { type: String, default: 'off' },
+    parents : { type: String, default: 'off' },
+    employers : { type: String, default: 'off' },
+    student : { type: String, default: 'off' }
   },
 
   mode_of_feedback : {
-    online : { type: Number, default: null },
-    manual : { type: Number, default: null },
-    coop_school : { type: Number, default: null }
+    online : { type: String, default: 'off' },
+    manual : { type: String, default: 'off' },
+    coop_school : { type: String, default: 'off' }
   },
 
   syllabus_revision_feedback : { type: String, default: null },

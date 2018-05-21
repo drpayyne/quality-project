@@ -246,13 +246,32 @@ router.post('/:page', function(req, res) {
 			break;
 		case 'criterion1':
 			form.department = 'HOQ';
-			CriterionOne.update(null, form, {upsert: true}, function(err) {
+			//console.log(form);
+			recursiveGetProperty(form);
+			//HANDLING CHECKBOX INPUTS
+			/*if(form.curriculum_flexibility.cbcs == undefined) console.log(1);
+			if(form.curriculum_flexibility.core == undefined) form.curriculum_flexibility.core = 'off';
+			if(form.curriculum_flexibility.elective_option == undefined) form.curriculum_flexibility.elective_option = 'off';
+			if(form.curriculum_flexibility.open_option == undefined) form.curriculum_flexibility.open_option = 'off';
+			if(form.stakeholder_feedback.alumni == undefined) form.stakeholder_feedback.alumni = 'off';
+			if(form.stakeholder_feedback.parents == undefined) form.stakeholder_feedback.parents = 'off';
+			if(form.stakeholder_feedback.employers == undefined) form.stakeholder_feedback.employers = 'off';
+			if(form.stakeholder_feedback.students == undefined) form.stakeholder_feedback.students = 'off';
+			if(form.mode_of_feedback.online == undefined) form.mode_of_feedback.online = 'off';
+			if(form.mode_of_feedback.manual == undefined) form.mode_of_feedback.manual = 'off';
+			if(form.mode_of_feedback.coop_school == undefined) form.mode_of_feedback.coop_school = 'off';
+
+			if(curriculum_flexibility in form) {
+				if(!(cbcs in form.curriculum_flexibility)) form.curriculum_flexibility.core = 'off';
+			}*/
+
+			/*CriterionOne.replaceOne(null, form, {upsert: true}, function(err) {
 				if(err) {
 					console.log(err);
 				} else {
 					res.redirect('/form/criterion1');
 				}
-			});
+			});*/
 			break;
 		case 'criterion2':
 			CriterionTwo.update(query, form, {upsert: true}, function(err) {
@@ -357,5 +376,16 @@ router.post('/:page', function(req, res) {
 			break;
 	}
 });
+
+function recursiveGetProperty(obj) {
+	let property;
+    for (property in obj) {
+		if (obj[property] instanceof Object) {
+            recursiveGetProperty(obj[property]);
+        } else if (Array.isArray(obj)) {
+			console.log(property);
+		}
+    }
+}    
 
 module.exports = router;

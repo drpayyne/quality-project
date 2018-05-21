@@ -13,15 +13,16 @@ html(lang='en')
 	body
 		.container-fluid.h-100
 			nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
+				a.navbar-brand(href='/dashboard') Back
 				span.navbar-brand.mb-0.h1 IQAC Criterion 2 - #{cookies.user.username}
-				if cookies.user.username == 'HOQ' 
-					span.navbar-brand.mb-0.h1 #{cookies.department}
+					if cookies.user.username == 'HOQ'
+						span.navbar-brand.mb-0.h1 - #{cookies.department}
 				a.navbar-brand(href='/home') Logout
 			.row.my-4
 				.col
 					form(action='/form/criterion2', method='POST')
 						legend
-							span.number 2.
+							span.number 2
 							| Teaching, Learning and Evaluation
 						label 2.1 Total No. of permanent faculty:
 						table(style='width:100%')
