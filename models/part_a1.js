@@ -70,44 +70,39 @@ var PartAOneSchema = mongoose.Schema({
   },
 
   institutional_status : {   //Option Based Answering
-    university : {
-      state : { type: Number, default: null },
-      central : { type: Number, default: null },
-      deemed : { type: Number, default: null },
-      private_uni : { type: Number, default: null }
-    },
+    university : { type: String, default: 'off' },
     affliated_college : {
-      yes : { type: Number, default: null },
-      no : { type: Number, default: null }
+      yes : { type: String, default: 'off' },
+      no : { type: String, default: 'off' }
     },
     constituent_college : {
-      yes : { type: Number, default: null },
-      no : { type: Number, default: null }
+      yes : { type: String, default: 'off' },
+      no : { type: String, default: 'off' }
     },
     autonomous_college_of_ugc : {
-      yes : { type: Number, default: null },
-      no : { type: Number, default: null }
+      yes : { type: String, default: 'off' },
+      no : { type: String, default: 'off' }
     },
     regulatory_agency_approved_institute : {
-      yes : { type: Number, default: null },
-      no : { type: Number, default: null }
+      yes : { type: String, default: 'off' },
+      no : { type: String, default: 'off' }
     },
     type_of_institution1 : {
-      co_ed : { type: Number, default: null },
-      men : { type: Number, default: null },
-      women : { type: Number, default: null }
+      co_ed : { type: String, default: 'off' },
+      men : { type: String, default: 'off' },
+      women : { type: String, default: 'off' }
     },
     type_of_institution2 : {
-      urban : { type: Number, default: null },
-      rural : { type: Number, default: null },
-      tribal : { type: Number, default: null }
+      urban : { type: String, default: 'off' },
+      rural : { type: String, default: 'off' },
+      tribal : { type: String, default: 'off' }
     },
     financial_status : {
-      grant_in_aid : { type: Number, default: null },
-      ugc_2f : { type: Number, default: null },
-      ugc_12b : { type: Number, default: null },
-      grant_in_aid_plus_self_finance : { type: Number, default: null },
-      totally_self_finance : { type: Number, default: null }
+      grant_in_aid : { type: String, default: 'off' },
+      ugc_2f : { type: String, default: 'off' },
+      ugc_12b : { type: String, default: 'off' },
+      grant_in_aid_plus_self_finance : { type: String, default: 'off' },
+      totally_self_finance : { type: String, default: 'off' }
     }
   },
 

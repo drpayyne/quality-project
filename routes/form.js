@@ -226,13 +226,25 @@ router.post('/:page', function(req, res) {
 	switch(req.params.page) {
 		case 'details':
 			form.department = 'HOQ';
-			PartAOne.update(null, form, {upsert: true}, function(err) {
+			PartAOne.deleteOne(null, function(err) {
+				if(err) {
+					console.log(err);
+				} else {
+					console.log('Deleted existing docs of PartAOne');
+					PartAOne.create(form, function(err, doc) {
+						console.log(doc);
+						console.log('Inserted PartAOne.');
+						res.redirect('/form/details');	
+					});
+				}
+			});
+			/* PartAOne.update(null, form, {upsert: true}, function(err) {
 				if(err) {
 					console.log(err);
 				} else {
 					res.redirect('/form/details');
 				}
-			});
+			}); */
 			break;
 		case 'iqac':
 			form.department = 'HOQ';

@@ -14,9 +14,7 @@ html(lang='en')
 		.container-fluid.h-100
 			nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
 				a.navbar-brand(href='/dashboard') Back
-				span.navbar-brand.mb-0.h1 IQAC Part A-1 - #{cookies.user.username} 
-					if cookies.user.username == 'HOQ'
-						span.navbar-brand.mb-0.h1 - #{cookies.department}
+				span.navbar-brand.mb-0.h1 IQAC Part A-1 - #{cookies.user.username}
 				a.navbar-brand(href='/home') Logout
 			.row.my-4
 				.col
@@ -160,36 +158,36 @@ html(lang='en')
 							br
 							br
 							| University:
-						input(type='radio', name='institutional_status.university.state', value=form.institutional_status.university.state)
+						input(type='radio', name='institutional_status.university', value='state', checked=(form.institutional_status.university == 'state'))
 						| State
-						input(type='radio', name='institutional_status.university.central', value=form.institutional_status.university.central)
+						input(type='radio', name='institutional_status.university', value='central', checked=(form.institutional_status.university == 'central'))
 						| Central
-						input(type='radio', name='institutional_status.university.deemed', value=form.institutional_status.university.deemed)
+						input(type='radio', name='institutional_status.university', value='deemed', checked=(form.institutional_status.university == 'deemed'))
 						| Deemed
-						input(type='radio', name='institutional_status.university.private_uni', value=form.institutional_status.university.private_uni)
+						input(type='radio', name='institutional_status.university', value='private_uni', checked=(form.institutional_status.university == 'private_uni'))
 						| Private
 						label Affiliated College:
-						input(type='radio', name='institutional_status.affliated_college.yes', value=form.institutional_status.affliated_college.yes)
+						input(type='radio', name='institutional_status.affliated_college', value='yes', checked=(form.institutional_status.affliated_college == 'yes'))
 						| YES
-						input(type='radio', name='institutional_status.affliated_college.no', value=form.institutional_status.affliated_college.no)
+						input(type='radio', name='institutional_status.affliated_college', value='no', checked=(form.institutional_status.affliated_college == 'no'))
 						| NO
 						label Constituent College:
-						input(type='radio', name='institutional_status.constituent_college.yes', value=form.institutional_status.constituent_college.yes)
+						input(type='radio', name='institutional_status.constituent_college', value='yes', checked=(form.institutional_status.constituent_college == 'yes'))
 						| YES
-						input(type='radio', name='institutional_status.constituent_college.no', value=form.institutional_status.constituent_college.no)
+						input(type='radio', name='institutional_status.constituent_college', value='no', checked=(form.institutional_status.constituent_college == 'no'))
 						| NO
 						label Autonomous college of UGC:
-						input(type='radio', name='institutional_status.autonomous_college_of_ugc.yes', value=form.institutional_status.autonomous_college_of_ugc.yes)
+						input(type='radio', name='institutional_status.autonomous_college_of_ugc', value='yes', checked=(form.institutional_status.autonomous_college_of_ugc == 'yes'))
 						| YES
-						input(type='radio', name='institutional_status.autonomous_college_of_ugc.no', value=form.institutional_status.autonomous_college_of_ugc.no)
+						input(type='radio', name='institutional_status.autonomous_college_of_ugc', value='no', checked=(form.institutional_status.autonomous_college_of_ugc == 'no'))
 						| NO
 						label Regulatory Agency approved Institution:
-						input(type='radio', name='institutional_status.regulatory_agency_approved_institute.yes', value=form.institutional_status.regulatory_agency_approved_institute.yes)
+						input(type='radio', name='institutional_status.regulatory_agency_approved_institute', value='yes', checked=(form.institutional_status.regulatory_agency_approved_institute == 'yes'))
 						| YES
-						input(type='radio', name='institutional_status.regulatory_agency_approved_institute.no', value=form.institutional_status.regulatory_agency_approved_institute.no)
+						input(type='radio', name='institutional_status.regulatory_agency_approved_institute', value='no', checked=(form.institutional_status.regulatory_agency_approved_institute == 'no'))
 						| NO
 						label Type Of Institution:
-						input(type='checkbox', name='institutional_status.type_of_institution1.co_ed', value=form.institutional_status.type_of_institution1.co_ed)
+						input(type='checkbox', name='institutional_status.type_of_institution1.co_ed')
 						| Co-Education
 						input(type='checkbox', name='institutional_status.type_of_institution1.men', value=form.institutional_status.type_of_institution1.men)
 						| Men
