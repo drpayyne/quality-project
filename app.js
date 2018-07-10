@@ -8,7 +8,7 @@ const session = require('express-session');
 var cookieParser = require('cookie-parser')
 
 //Mongoose init
-mongoose.connect('mongodb://gopinath:password@127.0.0.1/form?authSource=admin', {
+mongoose.connect('mongodb://jd:abcd123@ds231941.mlab.com:31941/iqac_db', {
 	useMongoClient: true
 });
 let db = mongoose.connection;
@@ -58,12 +58,14 @@ let home = require('./routes/home');
 let dashboard = require('./routes/dashboard');
 let form = require('./routes/form');
 let settings = require('./routes/settings');
+let login = require('./routes/login')
 
 //Route files
 app.use('/home', home);
 app.use('/dashboard', dashboard);
 app.use('/form', form);
 app.use('/settings', settings);
+app.use('/login', login)
 
 //Start server
 app.listen(3000, function() {
