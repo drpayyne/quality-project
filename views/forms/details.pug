@@ -187,47 +187,48 @@ html(lang='en')
 						input(type='radio', name='institutional_status.regulatory_agency_approved_institute', value='no', checked=(form.institutional_status.regulatory_agency_approved_institute == 'no'))
 						| NO
 						label Type Of Institution:
-						input(type='checkbox', name='institutional_status.type_of_institution1.co_ed')
+						input(type='radio', name='institutional_status.type_of_institution1', value='co-ed', checked=(form.institutional_status.type_of_institution1 == 'co-ed'))
 						| Co-Education
-						input(type='checkbox', name='institutional_status.type_of_institution1.men', value=form.institutional_status.type_of_institution1.men)
+						input(type='radio', name='institutional_status.type_of_institution1', value='men', checked=(form.institutional_status.type_of_institution1 == 'men'))
 						| Men
-						input(type='checkbox', name='institutional_status.type_of_institution1.women', value=form.institutional_status.type_of_institution1.women)
+						input(type='radio', name='institutional_status.type_of_institution1', value='women', checked=(form.institutional_status.type_of_institution1 == 'women'))
 						| Women
-						input(type='checkbox', name='institutional_status.type_of_institution2.urban', value=form.institutional_status.type_of_institution2.urban)
+						br
+						input(type='radio', name='institutional_status.type_of_institution2', value='urban', checked=(form.institutional_status.type_of_institution2 == 'urban'))
 						| Urban
-						input(type='checkbox', name='institutional_status.type_of_institution2.rural', value=form.institutional_status.type_of_institution2.rural)
+						input(type='radio', name='institutional_status.type_of_institution2', value='rural', checked=(form.institutional_status.type_of_institution2 == 'rural'))
 						| Rural
-						input(type='checkbox', name='institutional_status.type_of_institution2.tribal', value=form.institutional_status.type_of_institution2.tribal)
+						input(type='radio', name='institutional_status.type_of_institution2', value='tribal', checked=(form.institutional_status.type_of_institution2 == 'tribal'))
 						| Tribal
 						label Financial Status:
-						input(type='checkbox', name='institutional_status.financial_status.grant_in_aid', value=form.institutional_status.financial_status.grant_in_aid)
+						input(type='radio', name='institutional_status.financial_status', value='grant_in_aid', checked=(form.institutional_status.financial_status == 'grant_id_aid'))
 						| Grant-in-aid
-						input(type='checkbox', name='institutional_status.financial_status.ugc_2f', value=form.institutional_status.financial_status.ugc_2f)
+						input(type='radio', name='institutional_status.financial_status', value='ugc_2f', checked=(form.institutional_status.financial_status == 'ugc_2f'))
 						| UGC 2(f)
-						input(type='checkbox', name='institutional_status.financial_status.ugc_12b', value=form.institutional_status.financial_status.ugc_12b)
+						input(type='radio', name='institutional_status.financial_status', value='ugc_12b', checked=(form.institutional_status.financial_status == 'ugc_12b'))
 						| UGC 12B
-						input(type='checkbox', name='institutional_status.financial_status.grant_in_aid_plus_self_finance', value=form.institutional_status.financial_status.grant_in_aid_plus_self_finance)
+						input(type='radio', name='institutional_status.financial_status', value='grant_in_aid_plus_self_finance', checked=(form.institutional_status.financial_status == 'grant_in_aid_plus_self_finance'))
 						| Grant-in-aid + Self Financing
-						input(type='checkbox', name='institutional_status.financial_status.totally_self_finance', value=form.institutional_status.financial_status.totally_self_finance)
+						input(type='radio', name='institutional_status.figrant_id_aid', value='totally_grant_id_aidance', checked=(form.institutional_status.financial_status == 'totally_self_finance'))
 						| Totally Self-financing
 						label 1.11 Type of Faculty/Programme:
-						input(type='checkbox', name='faculty_and_programme_type.arts', value=form.faculty_and_programme_type.arts)
+						input(type='checkbox', name='faculty_and_programme_type.arts', checked=(form.faculty_and_programme_type.arts == 'on'))
 						| Arts
-						input(type='checkbox', name='faculty_and_programme_type.science', value=form.faculty_and_programme_type.science)
+						input(type='checkbox', name='faculty_and_programme_type.science', checked=(form.faculty_and_programme_type.science == 'on'))
 						| Science
-						input(type='checkbox', name='faculty_and_programme_type.commerce', value=form.faculty_and_programme_type.commerce)
+						input(type='checkbox', name='faculty_and_programme_type.commerce', checked=(form.faculty_and_programme_type.commerce == 'on'))
 						| Commerce
-						input(type='checkbox', name='faculty_and_programme_type.law', value=form.faculty_and_programme_type.law)
+						input(type='checkbox', name='faculty_and_programme_type.law', checked=(form.faculty_and_programme_type.law == 'on'))
 						| Law
-						input(type='checkbox', name='faculty_and_programme_type.pei', value=form.faculty_and_programme_type.pei)
+						input(type='checkbox', name='faculty_and_programme_type.pei', checked=(form.faculty_and_programme_type.pei == 'on'))
 						| PEI (Phys Edu)
-						input(type='checkbox', name='faculty_and_programme_type.tei', value=form.faculty_and_programme_type.tei)
+						input(type='checkbox', name='faculty_and_programme_type.tei', checked=(form.faculty_and_programme_type.tei == 'on'))
 						| TEI (Edu)
-						input(type='checkbox', name='faculty_and_programme_type.engineering', value=form.faculty_and_programme_type.engineering)
+						input(type='checkbox', name='faculty_and_programme_type.engineering', checked=(form.faculty_and_programme_type.engineering == 'on'))
 						| Engineering
-						input(type='checkbox', name='faculty_and_programme_type.health_science', value=form.faculty_and_programme_type.health_science)
+						input(type='checkbox', name='faculty_and_programme_type.health_science', checked=(form.faculty_and_programme_type.health_science == 'on'))
 						| Health Science
-						input(type='checkbox', name='faculty_and_programme_type.management', value=form.faculty_and_programme_type.management)
+						input(type='checkbox', name='faculty_and_programme_type.management', checked=(form.faculty_and_programme_type.management == 'on'))
 						| Management
 						br
 						| Other(Specify):

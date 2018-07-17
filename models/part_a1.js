@@ -51,71 +51,45 @@ var PartAOneSchema = mongoose.Schema({
     }
   },
 
-  iqac_establishment_date : Date,
+  iqac_establishment_date : String,
   aqar_of_the_year : { type: String, default: null },
 
   previous_aqar_submissions : {
     prev_aqar_submission1 : {
-      aqar_date : Date
+      aqar_date : String
     },
     prev_aqar_submission2 : {
-      aqar_date : Date
+      aqar_date : String
     },
     prev_aqar_submission3 : {
-      aqar_date : Date
+      aqar_date : String
     },
     prev_aqar_submission4 : {
-      aqar_date : Date
+      aqar_date : String
     }
   },
 
   institutional_status : {   //Option Based Answering
-    university : { type: String, default: 'off' },
-    affliated_college : {
-      yes : { type: String, default: 'off' },
-      no : { type: String, default: 'off' }
-    },
-    constituent_college : {
-      yes : { type: String, default: 'off' },
-      no : { type: String, default: 'off' }
-    },
-    autonomous_college_of_ugc : {
-      yes : { type: String, default: 'off' },
-      no : { type: String, default: 'off' }
-    },
-    regulatory_agency_approved_institute : {
-      yes : { type: String, default: 'off' },
-      no : { type: String, default: 'off' }
-    },
-    type_of_institution1 : {
-      co_ed : { type: String, default: 'off' },
-      men : { type: String, default: 'off' },
-      women : { type: String, default: 'off' }
-    },
-    type_of_institution2 : {
-      urban : { type: String, default: 'off' },
-      rural : { type: String, default: 'off' },
-      tribal : { type: String, default: 'off' }
-    },
-    financial_status : {
-      grant_in_aid : { type: String, default: 'off' },
-      ugc_2f : { type: String, default: 'off' },
-      ugc_12b : { type: String, default: 'off' },
-      grant_in_aid_plus_self_finance : { type: String, default: 'off' },
-      totally_self_finance : { type: String, default: 'off' }
-    }
+    university : { type: String, default: '' },
+    affliated_college : { type: String, default: '' },
+    constituent_college :{ type: String, default: '' },
+    autonomous_college_of_ugc :{ type: String, default: '' },
+    regulatory_agency_approved_institute :{ type: String, default: '' },
+    type_of_institution1 :{ type: String, default: '' },
+    type_of_institution2 : { type: String, default: '' },
+    financial_status :{ type: String, default: '' }
   },
 
   faculty_and_programme_type : {   //Option Based Answering
-    arts : { type: Number, default: null },
-    science : { type: Number, default: null },
-    commerce : { type: Number, default: null },
-    law : { type: Number, default: null },
-    pei : { type: Number, default: null },
-    tei : { type: Number, default: null },
-    engineering : { type: Number, default: null },
-    health_science : { type: Number, default: null },
-    management : { type: Number, default: null },
+    arts : { type: String, default: 'off' },
+    science : { type: String, default: 'off' },
+    commerce : { type: String, default: 'off' },
+    law : { type: String, default: 'off' },
+    pei : { type: String, default: 'off' },
+    tei : { type: String, default: 'off' },
+    engineering : { type: String, default: 'off' },
+    health_science : { type: String, default: 'off' },
+    management : { type: String, default: 'off' },
     others : { type: String, default: null }
   },
 

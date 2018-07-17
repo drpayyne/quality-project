@@ -15,7 +15,9 @@ let CriterionEight = require('../models/criterion_eight');
 
 router.get('/:page', function(req, res ) {
 	console.log('FORMS PAGE');
+	console.log('COOKIES RECEIVED')
 	console.log(req.cookies);
+	console.log('BODY RECEIVED')
 	console.log(req.body);
 
 	if(!req.cookies.user) {
@@ -32,6 +34,7 @@ router.get('/:page', function(req, res ) {
 						console.log("Creating new object");
 						document = new PartAOne({});
 					}
+					console.log('DOCUMENT DISPLAYING')
 					console.log(document);
 					res.render('forms/details', {
 						form: document,
@@ -48,6 +51,7 @@ router.get('/:page', function(req, res ) {
 						console.log("Creating new object");
 						document = new PartATwo({});
 					}
+					console.log('DOCUMENT DISPLAYING')
 					console.log(document);
 					res.render('forms/iqac', {
 						form: document
@@ -64,6 +68,7 @@ router.get('/:page', function(req, res ) {
 						console.log("Creating new object");
 						document = new CriterionOne({});
 					}
+					console.log('DOCUMENT DISPLAYING')
 					console.log(document);
 					res.render('forms/criterion1', {
 						form: document
@@ -80,6 +85,7 @@ router.get('/:page', function(req, res ) {
 						console.log("Creating new object");
 						document = new CriterionTwo({});
 					}
+					console.log('DOCUMENT DISPLAYING')
 					console.log(document);
 					res.render('forms/criterion2', {
 						form: document
@@ -108,6 +114,7 @@ router.get('/:page', function(req, res ) {
 							};
 						}
 					}
+					console.log('DOCUMENT DISPLAYING')
 					console.log(document);
 					res.render('forms/criterion2hoq', {
 						form: document
@@ -124,6 +131,7 @@ router.get('/:page', function(req, res ) {
 						console.log("Creating new object");
 						document = new CriterionThree({});
 					}
+					console.log('DOCUMENT DISPLAYING')
 					console.log(document);
 					res.render('forms/criterion3', {
 						form: document
@@ -140,6 +148,7 @@ router.get('/:page', function(req, res ) {
 						console.log("Creating new object");
 						document = new CriterionFour({});
 					}
+					console.log('DOCUMENT DISPLAYING')
 					console.log(document);
 					res.render('forms/criterion4', {
 						form: document
@@ -156,6 +165,7 @@ router.get('/:page', function(req, res ) {
 						console.log("Creating new object");
 						document = new CriterionFive({});
 					}
+					console.log('DOCUMENT DISPLAYING')
 					console.log(document);
 					res.render('forms/criterion5', {
 						form: document
@@ -172,6 +182,7 @@ router.get('/:page', function(req, res ) {
 						console.log("Creating new object");
 						document = new CriterionSix({});
 					}
+					console.log('DOCUMENT DISPLAYING')
 					console.log(document);
 					res.render('forms/criterion6', {
 						form: document
@@ -188,6 +199,7 @@ router.get('/:page', function(req, res ) {
 						console.log("Creating new object");
 						document = new CriterionSeven({});
 					}
+					console.log('DOCUMENT DISPLAYING')
 					console.log(document);
 					res.render('forms/criterion7', {
 						form: document
@@ -204,6 +216,7 @@ router.get('/:page', function(req, res ) {
 						console.log("Creating new object");
 						document = new CriterionEight({});
 					}
+					console.log('DOCUMENT DISPLAYING')
 					console.log(document);
 					res.render('forms/criterion8', {
 						form: document
@@ -215,8 +228,11 @@ router.get('/:page', function(req, res ) {
 }); 
 
 router.post('/:page', function(req, res) {
+	console.log('COOKIES RECEIVED')
 	console.log(req.cookies);
+	console.log('BODY RECEIVED')
 	console.log(req.body);
+	console.log('PAGE RECEIVED')
 	console.log(req.params.page);
 
 	var form = req.body;
@@ -226,7 +242,7 @@ router.post('/:page', function(req, res) {
 	switch(req.params.page) {
 		case 'details':
 			form.department = 'HOQ';
-			PartAOne.deleteOne(null, function(err) {
+			/* PartAOne.deleteOne(null, function(err) {
 				if(err) {
 					console.log(err);
 				} else {
@@ -237,14 +253,14 @@ router.post('/:page', function(req, res) {
 						res.redirect('/form/details');	
 					});
 				}
-			});
-			/* PartAOne.update(null, form, {upsert: true}, function(err) {
+			}); */
+			PartAOne.update(null, form, {upsert: true}, function(err) {
 				if(err) {
 					console.log(err);
 				} else {
 					res.redirect('/form/details');
 				}
-			}); */
+			});
 			break;
 		case 'iqac':
 			form.department = 'HOQ';
