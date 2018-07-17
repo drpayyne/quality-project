@@ -10,7 +10,6 @@ router.get('/', function(req, res) {
     res.clearCookie('dept')
     res.render('home');
     console.log('Cookies cleared...');
-    console.log(res.cookies);
 });
 
 router.post('/', function(req, res) {

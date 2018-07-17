@@ -5,6 +5,7 @@ const PDF = require('../gen/pdf.js');
 const SUM = require('../gen/sum.js');
 
 router.get('/', function(req, res) {
+	console.log('COOKIES IN REQ:')
 	console.log(req.cookies);
 
 	if(!req.cookies.user) {

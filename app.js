@@ -44,7 +44,9 @@ app.use(session({
 app.use(cookieParser());
 
 app.use(function(req,res,next){
-    res.locals.cookies = req.cookies;
+	res.locals.cookies = req.cookies;
+	console.log('MIDDLEWARE')
+	console.log(res.locals.cookies)
     next();
 });
 
