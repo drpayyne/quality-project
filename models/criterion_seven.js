@@ -8,17 +8,11 @@ var criterionSevenSchema = mongoose.Schema({
 
     action_taken_report : { type: String, default: null },
 
-    two_best_practices_of_institution : {
-      practice1 : { type: String, default: null },
-      practice2 : { type: String, default: null }
-    },
+    two_best_practices_of_institution : { type: String, default: null },
 
     environment_awareness_protection_contribution : { type: String, default: null },
 
-    environment_audit_conducted : {
-      yes : { type: Number, default: null },
-      no : { type: Number, default: null }
-    },
+    environment_audit_conducted : { type: String, default: '' },
 
     other_relevant_info : { type: String, default: null }
   }, { retainKeyOrder: true });

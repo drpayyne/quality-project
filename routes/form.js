@@ -191,7 +191,7 @@ router.get('/:page', function(req, res ) {
 			});
 			break;
 		case 'criterion7':
-			CriterionSeven.findOne({department: req.cookies.department}, function(err, document) {
+			CriterionSeven.findOne(null, function(err, document) {
 				if(err)
 					console.log(err);
 				else {
