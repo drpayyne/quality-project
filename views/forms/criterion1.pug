@@ -147,13 +147,13 @@ html(lang='en')
 							| 1.2
 							br
 							| (i) Flexibility of the Curriculum:
-						input(type='checkbox', name='curriculum_flexibility.cbcs', checked=(form.curriculum_flexibility.cbcs == 'on'))
+						input(type='radio', name='curriculum_flexibility', value='cbcs', checked=(form.curriculum_flexibility == 'cbcs'))
 						| CBCS
-						input(type='checkbox', name='curriculum_flexibility.core', checked=form.curriculum_flexibility.core == 'on')
+						input(type='radio', name='curriculum_flexibility', value='core', checked=(form.curriculum_flexibility == 'core'))
 						| Core
-						input(type='checkbox', name='curriculum_flexibility.elective_option', checked=form.curriculum_flexibility.elective_option == 'on')
+						input(type='radio', name='curriculum_flexibility', value='elec', checked=(form.curriculum_flexibility == 'elec'))
 						| Elective option
-						input(type='checkbox', name='curriculum_flexibility.open_option', checked=form.curriculum_flexibility.open_option == 'on')
+						input(type='radio', name='curriculum_flexibility', value='open', checked=(form.curriculum_flexibility == 'open'))
 						| Open Options
 						label (ii) Pattern of programmes:
 						table(width='100%')
@@ -185,11 +185,11 @@ html(lang='en')
 						input(type='checkbox', name='stakeholder_feedback.student', checked=(form.stakeholder_feedback.student=='on'))
 						| Students
 						label Mode of feedback:
-						input(type='checkbox', name='mode_of_feedback.online', checked=(form.mode_of_feedback.online=='on'))
+						input(type='radio', name='mode_of_feedback', value='online', checked=(form.mode_of_feedback == 'online'))
 						| Online
-						input(type='checkbox', name='mode_of_feedback.manual', checked=(form.mode_of_feedback.manual=='on'))
+						input(type='radio', name='mode_of_feedback', value='manual', checked=(form.mode_of_feedback == 'manual'))
 						| Manual
-						input(type='checkbox', name='mode_of_feedback.coop_school', checked=(form.mode_of_feedback.coop_school=='on'))
+						input(type='radio', name='mode_of_feedback', value='coop', checked=(form.mode_of_feedback == 'coop'))
 						| Co-operating schools (for PEI)
 						label
 							| 1.4 Whether there is any revision/update of regulation or syllabi, if yes, mention their salient aspects:

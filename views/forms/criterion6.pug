@@ -8,6 +8,8 @@ html(lang='en')
 		link(rel='stylesheet', href='/css/bootstrap.css')
 		link(rel='stylesheet', href='/css/normalize.min.css')
 		link(rel='stylesheet', href='/css/form.css')
+		script(src='/jquery/jquery.min.js')
+		script(src='/js/form.js')
 		script.
 			var username='#{cookies.user.username}';
 	body
@@ -89,14 +91,14 @@ html(lang='en')
 									input(type='radio', name='academic_admin_audit.academic.external', value='no' checked=(form.academic_admin_audit.academic.external == 'no'))
 									| No
 								td
-									input(type='string', name='academic_admin_audit.academic.external_agency', value=form.academic_admin_audit.academic.external_agency)
+									input(type='string', id='acad_ext', name='academic_admin_audit.academic.external_agency', value=form.academic_admin_audit.academic.external_agency)
 								td
 									input(type='radio', name='academic_admin_audit.academic.internal', value='yes' checked=(form.academic_admin_audit.academic.internal == 'yes'))
 									| Yes
 									input(type='radio', name='academic_admin_audit.academic.internal', value='no' checked=(form.academic_admin_audit.academic.internal == 'no'))
 									| No
 								td
-									input(type='string', name='academic_admin_audit.academic.internal_authority', value=form.academic_admin_audit.academic.internal_authority)
+									input(type='string', id='acad_int',name='academic_admin_audit.academic.internal_authority', value=form.academic_admin_audit.academic.internal_authority)
 							tr
 								th Administrative
 								td
@@ -105,14 +107,14 @@ html(lang='en')
 									input(type='radio', name='academic_admin_audit.administrative.external', value='no' checked=(form.academic_admin_audit.administrative.external == 'no'))
 									| No
 								td
-									input(type='string', name='academic_admin_audit.administrative.external_agency', value=form.academic_admin_audit.administrative.external_agency)
+									input(type='string', id='adm_external',name='academic_admin_audit.administrative.external_agency', value=form.academic_admin_audit.administrative.external_agency)
 								td
 									input(type='radio', name='academic_admin_audit.administrative.internal', value='yes' checked=(form.academic_admin_audit.administrative.internal == 'yes'))
 									| Yes
 									input(type='radio', name='academic_admin_audit.administrative.internal', value='no' checked=(form.academic_admin_audit.administrative.internal == 'no'))
 									| No
 								td
-									input(type='string', name='academic_admin_audit.administrative.internal_authority', value=form.academic_admin_audit.administrative.internal_authority)
+									input(type='string', id='adm_internal', name='academic_admin_audit.administrative.internal_authority', value=form.academic_admin_audit.administrative.internal_authority)
 						label 6.8 Does the University/ Autonomous College declares results within 30 days?
 						label For UG Programmes:
 						input(type='radio', name='result_declaration.ug_programmes', value='yes', checked=(form.result_declaration.ug_programmes == 'yes'))
@@ -139,4 +141,3 @@ html(lang='en')
 						label 6.14 Initiatives taken by the institution to make the campus eco-friendly:
 						input(type='text', name='eco_friendly_initiatives', value=form.eco_friendly_initiatives)
 						button.fixed-but(type='submit') SAVE
-				//-script(src='/js/form.js')

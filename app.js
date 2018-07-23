@@ -34,6 +34,8 @@ app.set('view engine', 'pug');
 //Set public folder
 app.use(express.static(path.join(__dirname, '/public')));
 
+app.use('/jquery', express.static(path.join(__dirname, '/node_modules/jquery/dist')));
+
 //Express session middleware
 app.use(session({
 	secret: 'secret',

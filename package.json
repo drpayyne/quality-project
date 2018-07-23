@@ -18,6 +18,7 @@
     "express-messages": "^1.0.1",
     "express-session": "^1.15.6",
     "get-form-data": "^2.0.0",
+    "jquery": "^3.3.1",
     "json-addition": "^1.2.0",
     "merge": "^1.2.0",
     "mongoose": "^4.13.6",
