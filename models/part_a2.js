@@ -16,44 +16,35 @@ var PartATwoSchema = mongoose.Schema({
 	no_of_iqac_meetings_held : { type: Number, default: null },
 
 	no_of_meetings_with_various_stakeholders : {
-	No : { type: Number, default: null },
-	faculty : { type: Number, default: null },
-	non_teaching_staff_students : { type: Number, default: null },
-	alumni : { type: Number, default: null },
-	others : { type: Number, default: null }
+		num_faculty : { type: Number, default: null },
+		non_teaching_staff_students : { type: Number, default: null },
+		alumni : { type: Number, default: null },
+		others : { type: Number, default: null }
 	},
 
-	ugc_funding_for_iqac : {     //Option Based Answering
-	yes : { type: Number, default: null },
-	no : { type: Number, default: null },
-	yes_amount : { type: String, default: null }   //Mentioned only if option yes is chosen
-	},
+	ugc_funding_for_iqac : { type: String, default: null },
+	ugc_funding_for_iqac_amount : { type: String, default: null },
 
 	seminars_conferences : {
-	events_organized_by_iqac : {
-		total_no : { type: Number, default: null },
-		international : { type: Number, default: null },
-		national : { type: Number, default: null },
-		state : { type: Number, default: null },
-		institution_level : { type: Number, default: null }
-	},
-	themes : { type: String, default: null }
+		events_organized_by_iqac : {
+			total_no : { type: Number, default: null },
+			international : { type: Number, default: null },
+			national : { type: Number, default: null },
+			state : { type: Number, default: null },
+			institution_level : { type: Number, default: null }
+		},
+		themes : { type: String, default: null }
 	},
 
 	significant_contributions_activities_by_iqac : { type: String, default: null },
 
 	iqac_plan_of_action : {
-		plan_of_action : { type: String, default: null },
+		plan : { type: String, default: null },
 		achievements : { type: String, default: null }
 	},
 	placement_of_aqar_in_statutory_body : {
-		yes : { type: Number, default: null },
-		no : { type: Number, default: null },
-		type_of_statutory_body : {
-			management : { type: Number, default: null },
-			syndicate : { type: Number, default: null },
-			any_other_body : { type: Number, default: null }
-		},
+		option : { type: String, default: '' },
+		type_of_statutory_body : { type: String, default: '' },
 		details_of_action_taken : { type: String, default: null }
 	}
 }, { retainKeyOrder: true });

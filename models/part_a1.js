@@ -89,9 +89,10 @@ var PartAOneSchema = mongoose.Schema({
     tei : { type: String, default: 'off' },
     engineering : { type: String, default: 'off' },
     health_science : { type: String, default: 'off' },
-    management : { type: String, default: 'off' },
-    others : { type: String, default: null }
+    management : { type: String, default: 'off' }
   },
+
+  faculty_and_programme_type_other: { type: String, default: null },
 
   affliating_uni_name : { type: String, default: null },
 

@@ -38,7 +38,7 @@ html(lang='en')
 						input(type='string', name='institution_details.state', value=form.institution_details.state)
 						br
 						label Pin code:
-						input(type='string', name='institution_details.pincode', value=form.institution_details.pincode)
+						input(type='number', name='institution_details.pincode', value=form.institution_details.pincode)
 						br
 						label Institution e-mail address:
 						input(type='string', name='institution_details.institute_email', value=form.institution_details.institute_email)
@@ -53,13 +53,13 @@ html(lang='en')
 						input(type='string', name='institution_details.telephone_no_with_std_code', value=form.institution_details.telephone_no_with_std_code)
 						br
 						label Mobile:
-						input(type='string', name='institution_details.mobile_number', value=form.institution_details.mobile_number)
+						input(type='number', name='institution_details.mobile_number', value=form.institution_details.mobile_number)
 						br
 						label Name of the IQAC Co-ordinator:
 						input(type='string', name='institution_details.iqac_coordinator', value=form.institution_details.iqac_coordinator)
 						br
 						label Mobile:
-						input(type='string', name='institution_details.iqac_coordinator_mobile', value=form.institution_details.iqac_coordinator_mobile)
+						input(type='number', name='institution_details.iqac_coordinator_mobile', value=form.institution_details.iqac_coordinator_mobile)
 						br
 						label IQACe-mail address:
 						input(type='string', name='institution_details.iqac_email', value=form.institution_details.iqac_email)
@@ -90,7 +90,7 @@ html(lang='en')
 								th 1
 								th 1st Cycle
 								td
-									input(type='number', name='accreditation_details.first_cycle.grade', value=form.accreditation_details.first_cycle.grade)
+									input(type='string', name='accreditation_details.first_cycle.grade', value=form.accreditation_details.first_cycle.grade)
 								td
 									input(type='number', name='accreditation_details.first_cycle.cgpa', value=form.accreditation_details.first_cycle.cgpa)
 								td
@@ -101,7 +101,7 @@ html(lang='en')
 								th 2
 								th 2nd Cycle
 								td
-									input(type='number', name='accreditation_details.second_cycle.grade', value=form.accreditation_details.second_cycle.grade)
+									input(type='string', name='accreditation_details.second_cycle.grade', value=form.accreditation_details.second_cycle.grade)
 								td
 									input(type='number', name='accreditation_details.second_cycle.cgpa', value=form.accreditation_details.second_cycle.cgpa)
 								td
@@ -112,7 +112,7 @@ html(lang='en')
 								th 3
 								th 3rd Cycle
 								td
-									input(type='number', name='accreditation_details.third_cycle.grade', value=form.accreditation_details.third_cycle.grade)
+									input(type='string', name='accreditation_details.third_cycle.grade', value=form.accreditation_details.third_cycle.grade)
 								td
 									input(type='number', name='accreditation_details.third_cycle.cgpa', value=form.accreditation_details.third_cycle.cgpa)
 								td
@@ -123,7 +123,7 @@ html(lang='en')
 								th 4
 								th 4th Cycle
 								td
-									input(type='number', name='accreditation_details.fourth_cycle.grade', value=form.accreditation_details.fourth_cycle.grade)
+									input(type='string', name='accreditation_details.fourth_cycle.grade', value=form.accreditation_details.fourth_cycle.grade)
 								td
 									input(type='number', name='accreditation_details.fourth_cycle.cgpa', value=form.accreditation_details.fourth_cycle.cgpa)
 								td
@@ -232,7 +232,7 @@ html(lang='en')
 						| Management
 						br
 						| Other(Specify):
-						input(type='string', name='faculty_and_programme_type.others', value=form.faculty_and_programme_type.others)
+						input(type='string', name='faculty_and_programme_type_others', value=form.faculty_and_programme_type_others)
 						label 1.12 Name of the Affiliating University (for the Colleges):
 						input(type='string', name='affliating_uni_name', value=form.affliating_uni_name)
 						label

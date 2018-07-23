@@ -143,21 +143,17 @@ html(lang='en')
 									input(type='number', name='academic_program_details.innovative.self_finance_program_count', value=form.academic_program_details.innovative.self_finance_program_count)
 								td
 									input(type='number', name='academic_program_details.innovative.career_oriented_program_count', value=form.academic_program_details.innovative.career_oriented_program_count)
-						input(type='hidden', name='curriculum_flexibility.cbcs', value ='off')
 						label
 							| 1.2
 							br
 							| (i) Flexibility of the Curriculum:
-						input(type='checkbox', name='curriculum_flexibility.cbcs', checked=form.curriculum_flexibility.cbcs=='on')
-						input(type='hidden', name='curriculum_flexibility.core', value ='off')
+						input(type='checkbox', name='curriculum_flexibility.cbcs', checked=(form.curriculum_flexibility.cbcs == 'on'))
 						| CBCS
-						input(type='checkbox', name='curriculum_flexibility.core', checked=form.curriculum_flexibility.core=='on')
-						input(type='hidden', name='curriculum_flexibility.elective_option', value ='off')
+						input(type='checkbox', name='curriculum_flexibility.core', checked=form.curriculum_flexibility.core == 'on')
 						| Core
-						input(type='checkbox', name='curriculum_flexibility.elective_option', checked=form.curriculum_flexibility.elective_option=='on')
-						input(type='hidden', name='curriculum_flexibility.open_option', value ='off')
+						input(type='checkbox', name='curriculum_flexibility.elective_option', checked=form.curriculum_flexibility.elective_option == 'on')
 						| Elective option
-						input(type='checkbox', name='curriculum_flexibility.open_option', checked=form.curriculum_flexibility.open_option=='on')
+						input(type='checkbox', name='curriculum_flexibility.open_option', checked=form.curriculum_flexibility.open_option == 'on')
 						| Open Options
 						label (ii) Pattern of programmes:
 						table(width='100%')
@@ -180,20 +176,20 @@ html(lang='en')
 							| 1.3
 							br
 							| Feedback from stakeholders (On all aspects):
-						input(type='checkbox', name='stakeholder_feedback.alumni', checked=form.stakeholder_feedback.alumni=='on')
+						input(type='checkbox', name='stakeholder_feedback.alumni', checked=(form.stakeholder_feedback.alumni=='on'))
 						| Alumini
-						input(type='checkbox', name='stakeholder_feedback.parents', checked=form.stakeholder_feedback.parents=='on')
+						input(type='checkbox', name='stakeholder_feedback.parents', checked=(form.stakeholder_feedback.parents=='on'))
 						| Parents
-						input(type='checkbox', name='stakeholder_feedback.employers', checked=form.stakeholder_feedback.employers=='on')
+						input(type='checkbox', name='stakeholder_feedback.employers', checked=(form.stakeholder_feedback.employers=='on'))
 						| Employers
-						input(type='checkbox', name='stakeholder_feedback.student', checked=form.stakeholder_feedback.student=='on') 
+						input(type='checkbox', name='stakeholder_feedback.student', checked=(form.stakeholder_feedback.student=='on'))
 						| Students
 						label Mode of feedback:
-						input(type='checkbox', name='mode_of_feedback.online', checked=form.mode_of_feedback.online=='on')
+						input(type='checkbox', name='mode_of_feedback.online', checked=(form.mode_of_feedback.online=='on'))
 						| Online
-						input(type='checkbox', name='mode_of_feedback.manual', checked=form.mode_of_feedback.manual=='on')
+						input(type='checkbox', name='mode_of_feedback.manual', checked=(form.mode_of_feedback.manual=='on'))
 						| Manual
-						input(type='checkbox', name='mode_of_feedback.coop_school', checked=form.mode_of_feedback.coop_school=='on')
+						input(type='checkbox', name='mode_of_feedback.coop_school', checked=(form.mode_of_feedback.coop_school=='on'))
 						| Co-operating schools (for PEI)
 						label
 							| 1.4 Whether there is any revision/update of regulation or syllabi, if yes, mention their salient aspects:
