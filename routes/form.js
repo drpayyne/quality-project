@@ -243,37 +243,30 @@ router.post('/:page', function(req, res) {
 		case 'details':
 			form.department = 'HOQ';
 
-			req.body.faculty_and_programme_type =  {}
+			// PartAOne.update(null, form, {upsert: true}, function(err) {
+			// 	if(err) {
+			// 		console.log(err);
+			// 	} else {
+			// 		res.redirect('/form/details');
+			// 	}
+			// });
 
-			form.faculty_and_programme_type = {
-				arts : typeof req.body.faculty_and_programme_type.arts == undefined ? 'off' : 'on',
-				science : req.body.faculty_and_programme_type.science || 'off',
-				commerce : req.body.faculty_and_programme_type.commerce || 'off',
-				law : req.body.faculty_and_programme_type.law || 'off',
-				pei : req.body.faculty_and_programme_type.pei || 'off',
-				tei : req.body.faculty_and_programme_type.tei || 'off',
-				engineering : req.body.faculty_and_programme_type.engineering || 'off',
-				health_science : req.body.faculty_and_programme_type.health_science || 'off',
-				management : req.body.faculty_and_programme_type.management || 'off',
-			}
-
-			/* form.faculty_and_programme_type.arts = req.body.faculty_and_programme_type.arts || 'off'
-			form.faculty_and_programme_type.science = req.body.faculty_and_programme_type.science || 'off'
-			form.faculty_and_programme_type.commerce = req.body.faculty_and_programme_type.commerce || 'off'
-			form.faculty_and_programme_type.law = req.body.faculty_and_programme_type.law || 'off'
-			form.faculty_and_programme_type.pei = req.body.faculty_and_programme_type.pei || 'off'
-			form.faculty_and_programme_type.tei = req.body.faculty_and_programme_type.tei || 'off'
-			form.faculty_and_programme_type.engineering = req.body.faculty_and_programme_type.engineering || 'off'
-			form.faculty_and_programme_type.health_science = req.body.faculty_and_programme_type.health_science || 'off'
-			form.faculty_and_programme_type.management = req.body.faculty_and_programme_type.management || 'off' */
-
-			PartAOne.update(null, form, {upsert: true}, function(err) {
+			PartAOne.deleteOne({}, function(err, document) {
 				if(err) {
-					console.log(err);
+					console.log(err)
+					res.send(err)
 				} else {
-					res.redirect('/form/details');
+					PartAOne.updateOne(null, form, {upsert: true, setDefaultsOnInsert: true}, function(err, document) {
+						if(err){
+							console.log(err)
+							res.send(err)
+						} else {
+							res.redirect('/form/details')
+						}
+					})
 				}
-			});
+			})
+
 			break;
 		case 'iqac':
 			form.department = 'HOQ';
