@@ -15,8 +15,6 @@ html(lang='en')
 			nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
 				a.navbar-brand(href='/dashboard') Back
 				span.navbar-brand.mb-0.h1 IQAC Part A-2 - #{cookies.user.username}
-					if cookies.user.username == 'HOQ'
-						span.navbar-brand.mb-0.h1 - #{cookies.department}
 				a.navbar-brand(href='/home') Logout
 			.row.my-4
 				.col

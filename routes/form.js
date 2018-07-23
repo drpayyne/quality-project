@@ -174,7 +174,7 @@ router.get('/:page', function(req, res ) {
 			});
 			break;
 		case 'criterion6':
-			CriterionSix.findOne({department: req.cookies.department}, function(err, document) {
+			CriterionSix.findOne(null, function(err, document) {
 				if(err)
 					console.log(err);
 				else {
@@ -280,13 +280,20 @@ router.post('/:page', function(req, res) {
 			break;
 		case 'criterion1':
 			form.department = 'HOQ'
-			CriterionOne.update(query, form, {upsert: true}, function(err) {
+			CriterionOne.deleteOne({}, function(err, doc) {
 				if(err) {
-					console.log(err);
+					console.log(err)
+					res.send(err)
 				} else {
-					res.redirect('/form/criterion1');
+					CriterionOne.update(null, form, {upsert: true}, function(err) {
+						if(err) {
+							console.log(err);
+						} else {
+							res.redirect('/form/criterion1');
+						}
+					});
 				}
-			});
+			})
 			break;
 		case 'criterion2':
 			CriterionTwo.update(query, form, {upsert: true}, function(err) {
@@ -361,7 +368,7 @@ router.post('/:page', function(req, res) {
 			break;
 		case 'criterion6':
 			form.department = 'HOQ';
-			CriterionSix.update(query, form, {upsert: true}, function(err) {
+			CriterionSix.update(null, form, {upsert: true}, function(err) {
 				if(err) {
 					console.log(err);
 				} else {

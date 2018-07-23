@@ -24,33 +24,24 @@ var criterionSixschema = mongoose.Schema({
     students : { type: String, default: null }
   },
   corpus_fund : { type: String, default: null },
-  financial_audit : {
-    yes : { type: Number, default: null },
-    no : { type: Number, default: null }
-  },
+  financial_audit : { type: String, default: '' },
   academic_admin_audit : {
     academic : {
-      external_yes_no : { type: String, default: null },
+      external : { type: String, default: '' },
       external_agency : { type: String, default: null },
-      internal_yes_no : { type: String, default: null },
-      internal_agency : { type: String, default: null }
+      internal : { type: String, default: '' },
+      internal_authority : { type: String, default: null }
     },
     administrative : {
-      external_yes_no : { type: String, default: null },
+      external : { type: String, default: '' },
       external_agency : { type: String, default: null },
-      internal_yes_no : { type: String, default: null },
-      internal_agency : { type: String, default: null }
+      internal : { type: String, default: '' },
+      internal_authority : { type: String, default: null }
     }
   },
   result_declaration : {
-    ug_programmes : {
-      yes : { type: Number, default: null },
-      no : { type: Number, default: null }
-    },
-    pg_programmes : {
-      yes : { type: Number, default: null },
-      no : { type: Number, default: null }
-    }
+    ug_programmes : { type: String, default: '' },
+    pg_programmes :{ type: String, default: '' }
   },
   examination_reforms : { type: String, default: null },
   autonomy_promotion : { type: String, default: null },
