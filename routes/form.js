@@ -242,15 +242,6 @@ router.post('/:page', function(req, res) {
 	switch(req.params.page) {
 		case 'details':
 			form.department = 'HOQ';
-
-			// PartAOne.update(null, form, {upsert: true}, function(err) {
-			// 	if(err) {
-			// 		console.log(err);
-			// 	} else {
-			// 		res.redirect('/form/details');
-			// 	}
-			// });
-
 			PartAOne.deleteOne({}, function(err, document) {
 				if(err) {
 					console.log(err)
@@ -266,7 +257,6 @@ router.post('/:page', function(req, res) {
 					})
 				}
 			})
-
 			break;
 		case 'iqac':
 			form.department = 'HOQ';

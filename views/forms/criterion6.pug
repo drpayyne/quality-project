@@ -107,14 +107,14 @@ html(lang='en')
 									input(type='radio', name='academic_admin_audit.administrative.external', value='no' checked=(form.academic_admin_audit.administrative.external == 'no'))
 									| No
 								td
-									input(type='string', id='adm_external',name='academic_admin_audit.administrative.external_agency', value=form.academic_admin_audit.administrative.external_agency)
+									input(type='string', id='adm_ext',name='academic_admin_audit.administrative.external_agency', value=form.academic_admin_audit.administrative.external_agency)
 								td
 									input(type='radio', name='academic_admin_audit.administrative.internal', value='yes' checked=(form.academic_admin_audit.administrative.internal == 'yes'))
 									| Yes
 									input(type='radio', name='academic_admin_audit.administrative.internal', value='no' checked=(form.academic_admin_audit.administrative.internal == 'no'))
 									| No
 								td
-									input(type='string', id='adm_internal', name='academic_admin_audit.administrative.internal_authority', value=form.academic_admin_audit.administrative.internal_authority)
+									input(type='string', id='adm_int', name='academic_admin_audit.administrative.internal_authority', value=form.academic_admin_audit.administrative.internal_authority)
 						label 6.8 Does the University/ Autonomous College declares results within 30 days?
 						label For UG Programmes:
 						input(type='radio', name='result_declaration.ug_programmes', value='yes', checked=(form.result_declaration.ug_programmes == 'yes'))
