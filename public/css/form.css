@@ -101,10 +101,10 @@ select {
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
 }
 
-input[type="radio"],
+/*input[type="radio"],
 input[type="checkbox"] {
   margin: 0 4px 8px 0;
-}
+}*/
 
 select {
   padding: 6px;
@@ -166,6 +166,11 @@ label.light {
   text-align: center;
   text-shadow: 0 1px 0 rgba(255,255,255,0.2);
   border-radius: 100%;
+}
+
+.form-control{
+  background-color: #e8eeef;
+  color: #8a97a0;
 }
 
 @media screen and (min-width: 480px) {
