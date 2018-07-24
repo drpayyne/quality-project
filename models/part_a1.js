@@ -54,20 +54,7 @@ var PartAOneSchema = mongoose.Schema({
   iqac_establishment_date : String,
   aqar_of_the_year : { type: String, default: null },
 
-  previous_aqar_submissions : {
-    prev_aqar_submission1 : {
-      aqar_date : String
-    },
-    prev_aqar_submission2 : {
-      aqar_date : String
-    },
-    prev_aqar_submission3 : {
-      aqar_date : String
-    },
-    prev_aqar_submission4 : {
-      aqar_date : String
-    }
-  },
+  previous_aqar_submissions : { type: String, default: '' },
 
   institutional_status : {   //Option Based Answering
     university : { type: String, default: '' },
