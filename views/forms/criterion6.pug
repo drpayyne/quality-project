@@ -26,32 +26,43 @@ html(lang='en')
 						legend
 							span.number 6
 							| Governance, Leadership and Management
-						// EXCEPT  6.3.8 the rest TO BE FILLED BY HOQ
-						label 6.1 State the Vision and Mission of the institution:
+						label 6.1 State the Vision and Mission of the institution: 
+							span.badge.badge-primary HOQ
 						input(type='text', name='vision_mission_institute', value=form.vision_mission_institute)
-						label 6.2 Does the Institution has a management Information System:
+						label 6.2 Does the Institution has a management Information System: 
+							span.badge.badge-primary HOQ
 						input(type='text', name='info_management_system', value=form.info_management_system)
 						label
 							| 6.3 Quality improvement strategies adopted by the institution for each of the following:
-						label 6.3.1 Curriculum Development:
+						label 6.3.1 Curriculum Development: 
+							span.badge.badge-primary HOQ
 						input(type='text', name='improvement_strategies.curriculum_development', value=form.improvement_strategies.curriculum_development)
-						label 6.3.2 Teaching and Learning:
+						label 6.3.2 Teaching and Learning: 
+							span.badge.badge-primary HOQ
 						input(type='text', name='improvement_strategies.teaching_and_learning', value=form.improvement_strategies.teaching_and_learning)
-						label 6.3.3 Examination and Evaluation:
+						label 6.3.3 Examination and Evaluation: 
+							span.badge.badge-primary HOQ
 						input(type='text', name='improvement_strategies.exam_and_evaluation', value=form.improvement_strategies.exam_and_evaluation)
-						label 6.3.4 Research and Development:
+						label 6.3.4 Research and Development: 
+							span.badge.badge-primary HOQ
 						input(type='text', name='improvement_strategies.research_and_development', value=form.improvement_strategies.research_and_development)
-						label 6.3.5 Library, ICT and physical infrastructure/instrumentation:
+						label 6.3.5 Library, ICT and physical infrastructure/instrumentation: 
+							span.badge.badge-primary HOQ
 						input(type='text', name='improvement_strategies.physical_infrastructure', value=form.improvement_strategies.physical_infrastructure)
-						label 6.3.6 Human Resource Management:
+						label 6.3.6 Human Resource Management: 	
+							span.badge.badge-primary HOQ
 						input(type='text', name='improvement_strategies.human_resource_management', value=form.improvement_strategies.human_resource_management)
-						label 6.3.7 Faculty and Staff recruitment:
+						label 6.3.7 Faculty and Staff recruitment: 
+							span.badge.badge-primary HOQ
 						input(type='text', name='improvement_strategies.faculty_staff_recruitment', value=form.improvement_strategies.faculty_staff_recruitment)
-						label 6.3.8   Industry Interaction / Collaboration:
+						label 6.3.8 Industry Interaction / Collaboration: 
+							span.badge.badge-primary HOQ
 						input(type='text', name='improvement_strategies.industry_interaction_collab', value=form.improvement_strategies.industry_interaction_collab)
-						label 6.3.9 Admission of Students:
+						label 6.3.9 Admission of Students: 
+							span.badge.badge-primary HOQ
 						input(type='text', name='improvement_strategies.student_admission', value=form.improvement_strategies.student_admission)
-						label 6.4 Welfare schemes for:
+						label 6.4 Welfare schemes for: 
+							span.badge.badge-primary HOQ
 						table(width='100%')
 							tr
 								th Teaching
@@ -64,14 +75,17 @@ html(lang='en')
 									input(type='text', name='welfare_scheme.non_teaching', value=form.welfare_scheme.non_teaching)
 								td
 									input(type='text', name='welfare_scheme.students', value=form.welfare_scheme.students)
-						label 6.5 Total corpus fund generated:
+						label 6.5 Total corpus fund generated: 
+							span.badge.badge-primary HOQ
 						input(type='number', name='corpus_fund', value=form.corpus_fund)
-						label 6.6 Whether annual financial audit has been done:
+						label 6.6 Whether annual financial audit has been done: 
+							span.badge.badge-primary HOQ
 						input(type='radio', name='financial_audit', value='yes', checked=(form.financial_audit == 'yes'))
 						| Yes
 						input(type='radio', name='financial_audit', value='no', checked=(form.financial_audit == 'no'))
 						| No
-						label 6.7 Whether Academic and Administrative Audit (AAA) has been done?
+						label 6.7 Whether Academic and Administrative Audit (AAA) has been done? 
+							span.badge.badge-primary HOQ
 						table(width='100%')
 							tr
 								th Audit Type
@@ -115,7 +129,8 @@ html(lang='en')
 									| No
 								td
 									input(type='string', id='adm_int', name='academic_admin_audit.administrative.internal_authority', value=form.academic_admin_audit.administrative.internal_authority)
-						label 6.8 Does the University/ Autonomous College declares results within 30 days?
+						label 6.8 Does the University/ Autonomous College declares results within 30 days? 
+							span.badge.badge-primary HOQ
 						label For UG Programmes:
 						input(type='radio', name='result_declaration.ug_programmes', value='yes', checked=(form.result_declaration.ug_programmes == 'yes'))
 						| Yes
@@ -127,17 +142,23 @@ html(lang='en')
 						input(type='radio', name='result_declaration.pg_programmes', value='no', checked=(form.result_declaration.pg_programmes == 'no'))
 						| No
 						label
-							| 6.9 What efforts are made by the University/ Autonomous College for Examination Reforms?
+							| 6.9 What efforts are made by the University/ Autonomous College for Examination Reforms? 
+							span.badge.badge-primary HOQ
 						input(type='string', name='examination_reforms', value=form.examination_reforms)
 						label
-							| 6.10 What efforts are made by the University to promote autonomy in the affiliated/constituent colleges?
+							| 6.10 What efforts are made by the University to promote autonomy in the affiliated/constituent colleges? 
+							span.badge.badge-primary HOQ
 						input(type='text', name='autonomy_promotion', value=form.autonomy_promotion)
-						label 6.11 Activities and support from the Alumni Association
+						label 6.11 Activities and support from the Alumni Association 
+							span.badge.badge-primary HOQ
 						input(type='text', name='alumni_activity_support', value=form.alumni_activity_support)
-						label 6.12 Activities and support from the Parent – Teacher Association:
+						label 6.12 Activities and support from the Parent – Teacher Association: 
+							span.badge.badge-primary HOQ
 						input(type='text', name='parent_teacher_activity_support', value=form.parent_teacher_activity_support)
-						label 6.13 Development programmes for support staff:
+						label 6.13 Development programmes for support staff: 
+							span.badge.badge-primary HOQ
 						input(type='text', name='support_staff_development', value=form.support_staff_development)
-						label 6.14 Initiatives taken by the institution to make the campus eco-friendly:
+						label 6.14 Initiatives taken by the institution to make the campus eco-friendly: 
+							span.badge.badge-primary HOQ
 						input(type='text', name='eco_friendly_initiatives', value=form.eco_friendly_initiatives)
 						button.fixed-but(type='submit') SAVE
