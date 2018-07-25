@@ -11,9 +11,7 @@ var departments = ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR',
 
 function sum() {
 	console.log('SUMMING UP')
-	var CTwos = [], CThrees = [], CFours = [], CFives = [];
-	var flag;
-
+	var CTwos = [], CThrees = [], CFours = [], CFives = [], flag;
 	async.eachSeries(departments, function(department, callback) {
 		flag = 0
 		if(department) {
@@ -22,34 +20,33 @@ function sum() {
 				if(err) console.log(err);
 				else CTwos.push(doc);
 				flag++
-				console.log('CTwos length: ' + CTwos.length)
 				if(flag == 4) callback(console.log('DONE'))
 			});
 			CriterionThree.findOne({department: department}, function(err, doc) {
 				if(err) console.log(err);
 				else CThrees.push(doc);
 				flag++
-				console.log('CThrees length: ' + CThrees.length)
 				if(flag == 4) callback(console.log('DONE'))
 			});
 			CriterionFour.findOne({department: department}, function(err, doc) {
 				if(err) console.log(err);
 				else CFours.push(doc);
 				flag++
-				console.log('CFours length: ' + CFours.length)
 				if(flag == 4) callback(console.log('DONE'))
 			});
 			CriterionFive.findOne({department: department}, function(err, doc) {
 				if(err) console.log(err);
 				else CFives.push(doc);
 				flag++
-				console.log('CFives length: ' + CFives.length)
 				if(flag == 4) callback(console.log('DONE'))
 			});
 		}
 	}, function(err) {
-		console.log('ALL DONE ' + err)
-
+		console.log('ALL DONE with error : ' + err)
+		console.log('CTwos length: ' + CTwos.length)
+		console.log('CThrees length: ' + CThrees.length)
+		console.log('CFours length: ' + CFours.length)
+		console.log('CFives length: ' + CFives.length)
 		/* var array = CTwos;
 		var document = jsonAdd.addJSONs(CTwos);
 		document._doc.department = 'HOQ';
