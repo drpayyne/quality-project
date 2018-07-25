@@ -2,108 +2,108 @@ let mongoose = require('mongoose');
 
 //Criterion 2 schema
 var criterionTwoSchema = mongoose.Schema({
-	department: { type: String, default: null },
+	department: { type: String, default: '' },
 	permanent_faculty: {
-		asst_prof: { type: Number, default: null },
-		asso_prof: { type: Number, default: null },
-		prof: { type: Number, default: null },
-		others: { type: Number, default: null }/* ,
-		total: { type: Number, default: null } */
+		asst_prof: { type: Number, default: 0 },
+		asso_prof: { type: Number, default: 0 },
+		prof: { type: Number, default: 0 },
+		others: { type: Number, default: 0 }/* ,
+		total: { type: Number, default: 0 } */
 	},
-	permanent_faculty_phd: { type: Number, default: null },
+	permanent_faculty_phd: { type: Number, default: 0 },
 	faculty_pos_recruited_vacant: {
 		asst_prof: {
-			recruited: { type: Number, default: null },
-			vacant: { type: Number, default: null }
+			recruited: { type: Number, default: 0 },
+			vacant: { type: Number, default: 0 }
 		},
 		asso_prof: {
-			recruited: { type: Number, default: null },
-			vacant: { type: Number, default: null }
+			recruited: { type: Number, default: 0 },
+			vacant: { type: Number, default: 0 }
 		},
 		prof: {
-			recruited: { type: Number, default: null },
-			vacant: { type: Number, default: null }
+			recruited: { type: Number, default: 0 },
+			vacant: { type: Number, default: 0 }
 		},
 		others: {
-			recruited: { type: Number, default: null },
-			vacant: { type: Number, default: null }
+			recruited: { type: Number, default: 0 },
+			vacant: { type: Number, default: 0 }
 		}/* ,
 		total: {
-			recruited: { type: Number, default: null },
-			vacant: { type: Number, default: null }
+			recruited: { type: Number, default: 0 },
+			vacant: { type: Number, default: 0 }
 		} */
 	},
 	guest_visit_temp_faculty: {
-		guest: { type: Number, default: null },
-		visiting: { type: Number, default: null },
-		temporary: { type: Number, default: null }
+		guest: { type: Number, default: 0 },
+		visiting: { type: Number, default: 0 },
+		temporary: { type: Number, default: 0 }
 	},
 	faculty_participation: {
 		international: {
-			seminar_workshop: { type: Number, default: null },
-			paper_presented: { type: Number, default: null },
-			resource_persons: { type: Number, default: null }
+			seminar_workshop: { type: Number, default: 0 },
+			paper_presented: { type: Number, default: 0 },
+			resource_persons: { type: Number, default: 0 }
 		},
 		national: {
-			seminar_workshop: { type: Number, default: null },
-			paper_presented: { type: Number, default: null },
-			resource_persons: { type: Number, default: null }
+			seminar_workshop: { type: Number, default: 0 },
+			paper_presented: { type: Number, default: 0 },
+			resource_persons: { type: Number, default: 0 }
 		},
 		state: {
-			seminar_workshop: { type: Number, default: null },
-			paper_presented: { type: Number, default: null },
-			resource_persons: { type: Number, default: null }
+			seminar_workshop: { type: Number, default: 0 },
+			paper_presented: { type: Number, default: 0 },
+			resource_persons: { type: Number, default: 0 }
 		}
 	},
 	//TO BE FILLED BY HOQ
-	innovative_process_adopted: { type: String, default: null },
-	actual_teaching_days: { type: Number, default: null },
-	exam_reforms_initiated: { type: Number, default: null },
+	innovative_process_adopted: { type: String, default: '' },
+	actual_teaching_days: { type: Number, default: 0 },
+	exam_reforms_initiated: { type: Number, default: 0 },
 	curriculum_incharge_faculty_members: {
-		curriculum_revision: { type: Number, default: null },
-		member_board: { type: Number, default: null },
-		faculty_dev_workshop: { type: Number, default: null }
+		curriculum_revision: { type: Number, default: 0 },
+		member_board: { type: Number, default: 0 },
+		faculty_dev_workshop: { type: Number, default: 0 }
 	},
-	avg_student_attendance: { type: Number, default: null },
+	avg_student_attendance: { type: Number, default: 0 },
 	pass_percent_dist: {
-		department: { type: String, default: null },
-		programme_title: { type: String, default: null },
-		students_appeared: { type: Number, default: null },
+		department: { type: String, default: '' },
+		programme_title: { type: String, default: '' },
+		students_appeared: { type: Number, default: 0 },
 		division: {
-			distinction_percent: { type: Number, default: null },
-			percent_one: { type: Number, default: null },
-			percent_two: { type: Number, default: null },
-			percent_three: { type: Number, default: null }
+			distinction_percent: { type: Number, default: 0 },
+			percent_one: { type: Number, default: 0 },
+			percent_two: { type: Number, default: 0 },
+			percent_three: { type: Number, default: 0 }
 		}
 	},
-	iqac_contribution: { type: String, default: null },
+	iqac_contribution: { type: String, default: '' },
 	faculty_dev_initiative: {
-		refresher_courses: { type: Number, default: null },
-		ugc_fac_improvement_prog: { type: Number, default: null },
-		hrd_programme:{ type: Number, default: null },
-		orientation_programme: { type: Number, default: null },
-		fac_exchange_programme: { type: Number, default: null },
-		staff_training_univ: { type: Number, default: null },
-		staff_training_other: { type: Number, default: null },
-		summer_winter_workshops: { type: Number, default: null },
-		others: { type: Number, default: null }
+		refresher_courses: { type: Number, default: 0 },
+		ugc_fac_improvement_prog: { type: Number, default: 0 },
+		hrd_programme:{ type: Number, default: 0 },
+		orientation_programme: { type: Number, default: 0 },
+		fac_exchange_programme: { type: Number, default: 0 },
+		staff_training_univ: { type: Number, default: 0 },
+		staff_training_other: { type: Number, default: 0 },
+		summer_winter_workshops: { type: Number, default: 0 },
+		others: { type: Number, default: 0 }
 	},
 	admin_tech_staff: {
 		permanent_employees: {
-			admin: { type: Number, default: null },
-			technical: { type: Number, default: null }
+			admin: { type: Number, default: 0 },
+			technical: { type: Number, default: 0 }
 		},
 		vacant_positions: {
-			admin: { type: Number, default: null },
-			technical: { type: Number, default: null }
+			admin: { type: Number, default: 0 },
+			technical: { type: Number, default: 0 }
 		},
 		permanent_positions_filled: {
-			admin: { type: Number, default: null },
-			technical: { type: Number, default: null }
+			admin: { type: Number, default: 0 },
+			technical: { type: Number, default: 0 }
 		},
 		temporary_positions_filled: {
-			admin: { type: Number, default: null },
-			technical: { type: Number, default: null }
+			admin: { type: Number, default: 0 },
+			technical: { type: Number, default: 0 }
 		}
 	}  
 }, { retainKeyOrder: true });
