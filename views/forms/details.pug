@@ -170,29 +170,9 @@ html(lang='en')
             label 1.8 AQAR for the year (for example 2010-11):
             .input-group
               textarea.form-control(type='string', name='aqar_of_the_year')  #{form.aqar_of_the_year}
-            label
-              | 1.9 Details of the previous year’s AQAR submitted to NAAC after the latest Assessment and Accreditation by NAAC ((for example AQAR 2010-11submitted to NAAC on 12-10-2011):
-            table(style='width:100%')
-              tr
-                th i)AQAR
-                td
-                  .input-group
-                    input.form-control(type='date', name='previous_aqar_submissions.prev_aqar_submission1.aqar_date', value=form.previous_aqar_submissions.prev_aqar_submission1.aqar_date)
-              tr
-                th ii)AQAR
-                td
-                  .input-group
-                    input.form-control(type='date', name='previous_aqar_submissions.prev_aqar_submission2.aqar_date', value=form.previous_aqar_submissions.prev_aqar_submission2.aqar_date)
-              tr
-                th iii)AQAR
-                td
-                  .input-group
-                    input.form-control(type='date', name='previous_aqar_submissions.prev_aqar_submission3.aqar_date', value=form.previous_aqar_submissions.prev_aqar_submission3.aqar_date)
-              tr
-                th iv)AQAR
-                td
-                  .input-group
-                    input.form-control(type='date', name='previous_aqar_submissions.prev_aqar_submission4.aqar_date', value=form.previous_aqar_submissions.prev_aqar_submission4.aqar_date)
+            label 1.9 Details of the previous year’s AQAR submitted to NAAC after the latest Assessment and Accreditation by NAAC ((for example AQAR 2010-11submitted to NAAC on 12-10-2011):
+            .input-group
+              input.form-control(type='date', name='previous_aqar_submissions', value=form.previous_aqar_submissions)
             label
               | 1.10 Institutional Status:
               br
