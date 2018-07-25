@@ -1,11 +1,10 @@
 var async = require('async');
 var jsonAdd  = require('json-addition');
 
-let CriterionTwo = require('../models/criterion_two');
-let CriterionTwoHoq = require('../models/criterion_two_hoq');
-let CriterionThree = require('../models/criterion_three');
-let CriterionFour = require('../models/criterion_four');
-let CriterionFive = require('../models/criterion_five');
+let DCriterionTwo = require('../models/department/criterion_two');
+let DCriterionThree = require('../models/department/criterion_three');
+let DCriterionFour = require('../models/department/criterion_four');
+let DCriterionFive = require('../models/department/criterion_five');
 
 var departments = ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC'];
 
@@ -16,25 +15,25 @@ function sum() {
 		flag = 0
 		if(department) {
 			console.log('STARTING TO INIT DOCS :' + department);
-			CriterionTwo.findOne({department: department}, function(err, doc) {
+			DCriterionTwo.findOne({department: department}, function(err, doc) {
 				if(err) console.log(err);
 				else CTwos.push(doc);
 				flag++
 				if(flag == 4) callback(console.log('DONE'))
 			});
-			CriterionThree.findOne({department: department}, function(err, doc) {
+			DCriterionThree.findOne({department: department}, function(err, doc) {
 				if(err) console.log(err);
 				else CThrees.push(doc);
 				flag++
 				if(flag == 4) callback(console.log('DONE'))
 			});
-			CriterionFour.findOne({department: department}, function(err, doc) {
+			DCriterionFour.findOne({department: department}, function(err, doc) {
 				if(err) console.log(err);
 				else CFours.push(doc);
 				flag++
 				if(flag == 4) callback(console.log('DONE'))
 			});
-			CriterionFive.findOne({department: department}, function(err, doc) {
+			DCriterionFive.findOne({department: department}, function(err, doc) {
 				if(err) console.log(err);
 				else CFives.push(doc);
 				flag++

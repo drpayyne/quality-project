@@ -1,17 +1,22 @@
 const express = require('express');
 const router = express.Router();
 
-let PartAOne = require('../models/part_a1');
-let PartATwo = require('../models/part_a2');
-let CriterionOne = require('../models/criterion_one');
-let CriterionTwo = require('../models/criterion_two');
-let CriterionTwoHoq = require('../models/criterion_two_hoq');
-let CriterionThree = require('../models/criterion_three');
-let CriterionFour = require('../models/criterion_four');
-let CriterionFive = require('../models/criterion_five');
-let CriterionSix = require('../models/criterion_six');
-let CriterionSeven = require('../models/criterion_seven');
-let CriterionEight = require('../models/criterion_eight');
+let HPartAOne = require('../models/hoq/part_a1');
+let HPartATwo = require('../models/hoq/part_a2');
+let HCriterionOne = require('../models/hoq/criterion_one');
+let HCriterionTwo = require('../models/hoq/criterion_two');
+let HCriterionThree = require('../models/hoq/criterion_three');
+let HCriterionFour = require('../models/hoq/criterion_four');
+let HCriterionFive = require('../models/hoq/criterion_five');
+let HCriterionSix = require('../models/hoq/criterion_six');
+let HCriterionSeven = require('../models/hoq/criterion_seven');
+let HCriterionEight = require('../models/hoq/criterion_eight');
+
+
+let DCriterionTwo = require('../models/department/criterion_two');
+let DCriterionThree = require('../models/department/criterion_three');
+let DCriterionFour = require('../models/department/criterion_four');
+let DCriterionFive = require('../models/department/criterion_five');
 
 router.get('/:page', function(req, res ) {
 	console.log('FORMS PAGE');
