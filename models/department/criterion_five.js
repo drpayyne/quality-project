@@ -24,4 +24,4 @@ var criterionFiveSchema = mongoose.Schema({
 	}
 }, { retainKeyOrder: true });
 
-module.exports = mongoose.model('CriterionFive',criterionFiveSchema,'criterion_five');
+module.exports = mongoose.model('DCriterionFive',criterionFiveSchema,'criterion_five');

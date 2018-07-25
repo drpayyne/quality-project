@@ -31,7 +31,7 @@ router.get('/:page', function(req, res ) {
 
 	switch(req.params.page) {
 		case 'details':
-			PartAOne.findOne({}, function(err, document) {
+			HPartAOne.findOne({}, function(err, document) {
 				if(err)
 					console.log(err);
 				else {
@@ -48,7 +48,7 @@ router.get('/:page', function(req, res ) {
 			});
 			break;
 		case 'iqac':
-			PartATwo.findOne({}, function(err, document) {
+			HPartATwo.findOne({}, function(err, document) {
 				if(err)
 					console.log(err);
 				else {
@@ -65,7 +65,7 @@ router.get('/:page', function(req, res ) {
 			});
 			break;
 		case 'criterion1':
-			CriterionOne.findOne({}, function(err, document) {
+			HCriterionOne.findOne({}, function(err, document) {
 				if(err)
 					console.log(err);
 				else {
@@ -82,110 +82,165 @@ router.get('/:page', function(req, res ) {
 			});
 			break;
 		case 'criterion2':
-			CriterionTwo.findOne({department: req.cookies.department}, function(err, document) {
-				if(err)
-					console.log(err);
-				else {
-					if(document==null) {
-						console.log("Creating new object");
-						document = new CriterionTwo({});
-					}
-					console.log('DOCUMENT DISPLAYING')
-					console.log(document);
-					res.render('forms/criterion2', {
-						form: document
-					});
-				}
-			});
-			break;
-		case 'criterion2hoq':
-			CriterionTwoHoq.findOne({department: 'HOQ'}, function(err, document) {
-				if(err)
-					console.log(err);
-				else {
-					if(document==null) {
-						console.log("Creating new object");
-						document = new CriterionTwoHoq({});
-						for(let i = 0; i < 10; i++) {
-							document.pass_percent_dist[i] = {
-								programme_title: null,
-								students_appeared: null,
-								division: {
-									distinction_percent: null,
-									percent_one: null,
-									percent_two: null,
-									percent_three: null
-								}
-							};
+			if(req.cookies.department == 'HOQ') {
+				HCriterionTwo.findOne({department: 'HOQ'}, function(err, document) {
+					if(err)
+						console.log(err);
+					else {
+						if(document==null) {
+							console.log("Creating new object");
+							document = new HCriterionTwo({});
+							for(let i = 0; i < 10; i++) {
+								document.pass_percent_dist[i] = {
+									programme_title: null,
+									students_appeared: null,
+									division: {
+										distinction_percent: null,
+										percent_one: null,
+										percent_two: null,
+										percent_three: null
+									}
+								};
+							}
 						}
+						console.log('DOCUMENT DISPLAYING')
+						console.log(document);
+						res.render('forms/criterion2hoq', {
+							form: document
+						});
 					}
-					console.log('DOCUMENT DISPLAYING')
-					console.log(document);
-					res.render('forms/criterion2hoq', {
-						form: document
-					});
-				}
-			});
+				});
+			} else {
+				DCriterionTwo.findOne({department: req.cookies.department}, function(err, document) {
+					if(err)
+						console.log(err);
+					else {
+						if(document==null) {
+							console.log("Creating new object");
+							document = new CriterionTwo({});
+						}
+						console.log('DOCUMENT DISPLAYING')
+						console.log(document);
+						res.render('forms/criterion2', {
+							form: document
+						});
+					}
+				});
+			}
 			break;	
 		case 'criterion3':
-			CriterionThree.findOne({department: req.cookies.department}, function(err, document) {
-				if(err)
-					console.log(err);
-				else {
-					if(document==null) {
-						console.log("Creating new object");
-						document = new CriterionThree({});
+			if(req.cookies.department == 'HOQ') {
+				HCriterionThree.findOne({department: 'HOQ'}, function(err, document) {
+					if(err)
+						console.log(err);
+					else {
+						if(document==null) {
+							console.log("Creating new object");
+							document = new HCriterionThree({});
+						}
+						console.log('DOCUMENT DISPLAYING')
+						console.log(document);
+						res.render('forms/criterion3', {
+							form: document
+						});
 					}
-					console.log('DOCUMENT DISPLAYING')
-					console.log(document);
-					res.render('forms/criterion3', {
-						form: document
-					});
-				}
-			});
+				});
+			} else {
+				DCriterionThree.findOne({department: req.cookies.department}, function(err, document) {
+					if(err)
+						console.log(err);
+					else {
+						if(document==null) {
+							console.log("Creating new object");
+							document = new DCriterionThree({});
+						}
+						console.log('DOCUMENT DISPLAYING')
+						console.log(document);
+						res.render('forms/criterion3', {
+							form: document
+						});
+					}
+				});
+			}
 			break;
 		case 'criterion4':
-			CriterionFour.findOne({department: req.cookies.department}, function(err, document) {
-				if(err)
-					console.log(err);
-				else {
-					if(document==null) {
-						console.log("Creating new object");
-						document = new CriterionFour({});
+			if(req.cookies.department == 'HOQ') {
+				HCriterionFour.findOne({department: 'HOQ'}, function(err, document) {
+					if(err)
+						console.log(err);
+					else {
+						if(document==null) {
+							console.log("Creating new object");
+							document = new HCriterionFour({});
+						}
+						console.log('DOCUMENT DISPLAYING')
+						console.log(document);
+						res.render('forms/criterion4', {
+							form: document
+						});
 					}
-					console.log('DOCUMENT DISPLAYING')
-					console.log(document);
-					res.render('forms/criterion4', {
-						form: document
-					});
-				}
-			});
+				});
+			} else {
+				DCriterionFour.findOne({department: req.cookies.department}, function(err, document) {
+					if(err)
+						console.log(err);
+					else {
+						if(document==null) {
+							console.log("Creating new object");
+							document = new DCriterionFour({});
+						}
+						console.log('DOCUMENT DISPLAYING')
+						console.log(document);
+						res.render('forms/criterion4', {
+							form: document
+						});
+					}
+				});
+			}
 			break;
 		case 'criterion5':
-			CriterionFive.findOne({department: req.cookies.department}, function(err, document) {
-				if(err)
-					console.log(err);
-				else {
-					if(document==null) {
-						console.log("Creating new object");
-						document = new CriterionFive({});
+			if(req.cookies.department == 'HOQ') {
+				HCriterionFive.findOne({department: 'HOQ'}, function(err, document) {
+					if(err)
+						console.log(err);
+					else {
+						if(document==null) {
+							console.log("Creating new object");
+							document = new HCriterionFive({});
+						}
+						console.log('DOCUMENT DISPLAYING')
+						console.log(document);
+						res.render('forms/criterion5', {
+							form: document
+						});
 					}
-					console.log('DOCUMENT DISPLAYING')
-					console.log(document);
-					res.render('forms/criterion5', {
-						form: document
-					});
-				}
-			});
+				});
+			} else {
+				DCriterionFive.findOne({department: req.cookies.department}, function(err, document) {
+					if(err)
+						console.log(err);
+					else {
+						if(document==null) {
+							console.log("Creating new object");
+							document = new DCriterionFive({});
+						}
+						console.log('DOCUMENT DISPLAYING')
+						console.log(document);
+						res.render('forms/criterion5', {
+							form: document
+						});
+					}
+				});
+			}
 			break;
 		case 'criterion6':
-			CriterionSix.findOne(null, function(err, document) {
+			HCriterionSix.findOne(null, function(err, document) {
 				if(err)
 					console.log(err);
 				else {
 					if(document==null) {
 						console.log("Creating new object");
-						document = new CriterionSix({});
+						document = new HCriterionSix({});
 					}
 					console.log('DOCUMENT DISPLAYING')
 					console.log(document);
@@ -196,13 +251,13 @@ router.get('/:page', function(req, res ) {
 			});
 			break;
 		case 'criterion7':
-			CriterionSeven.findOne(null, function(err, document) {
+			HCriterionSeven.findOne(null, function(err, document) {
 				if(err)
 					console.log(err);
 				else {
 					if(document==null) {
 						console.log("Creating new object");
-						document = new CriterionSeven({});
+						document = new HCriterionSeven({});
 					}
 					console.log('DOCUMENT DISPLAYING')
 					console.log(document);
@@ -213,13 +268,13 @@ router.get('/:page', function(req, res ) {
 			});
 			break;
 		case 'criterion8':
-			CriterionEight.findOne(null, function(err, document) {
+			HCriterionEight.findOne(null, function(err, document) {
 				if(err)
 					console.log(err);
 				else {
 					if(document==null) {
 						console.log("Creating new object");
-						document = new CriterionEight({});
+						document = new HCriterionEight({});
 					}
 					console.log('DOCUMENT DISPLAYING')
 					console.log(document);
@@ -232,7 +287,7 @@ router.get('/:page', function(req, res ) {
 	}
 }); 
 
-router.post('/:page', function(req, res) {
+/* router.post('/:page', function(req, res) {
 	console.log('COOKIES RECEIVED')
 	console.log(req.cookies);
 	console.log('BODY RECEIVED')
@@ -392,6 +447,6 @@ router.post('/:page', function(req, res) {
 			});
 			break;
 	}
-}); 
+});  */
 
 module.exports = router;

@@ -52,4 +52,4 @@ var criterionSixschema = mongoose.Schema({
 
 }, { retainKeyOrder: true });
 
-let CriterionSix = module.exports = mongoose.model('CriterionSix', criterionSixschema, 'criterion_six');
+module.exports = mongoose.model('HCriterionSix', criterionSixschema, 'criterion_six');

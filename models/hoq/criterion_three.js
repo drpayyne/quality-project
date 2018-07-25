@@ -257,4 +257,4 @@ var criterionThreeSchema = mongoose.Schema({
     major_activities : { type: String, default: '' }                             // 3.26
   }, { retainKeyOrder: true });
 
-let CriterionThree = module.exports = mongoose.model('CriterionThree',criterionThreeSchema,'criterion_three');
+module.exports = mongoose.model('HCriterionThree',criterionThreeSchema,'criterion_three');

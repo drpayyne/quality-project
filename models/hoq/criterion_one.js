@@ -101,4 +101,4 @@ var criterionOneSchema = mongoose.Schema({
 
 }, { retainKeyOrder: true });
 
-let CriterionOne = module.exports = mongoose.model('CriterionOne',criterionOneSchema,'criterion_one');
+module.exports = mongoose.model('HCriterionOne',criterionOneSchema,'criterion_one');

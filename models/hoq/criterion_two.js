@@ -107,4 +107,4 @@ var criterionTwoHoqSchema = mongoose.Schema({
 	}  
 }, { retainKeyOrder: true });
 
-let CriterionTwoHoq = module.exports = mongoose.model('CriterionTwoHoq', criterionTwoHoqSchema, 'criterion_two_hoq');
+module.exports = mongoose.model('HCriterionTwo', criterionTwoHoqSchema, 'criterion_two_hoq');

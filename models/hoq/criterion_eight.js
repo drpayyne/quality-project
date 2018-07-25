@@ -8,4 +8,4 @@ var criterionEightSchema = mongoose.Schema({
   plans_of_institution_next_year : { type: String, default: ''}
 });
 
-let CriterionEight = module.exports = mongoose.model('CriterionEight',criterionEightSchema,'criterion_eight');
+module.exports = mongoose.model('HCriterionEight',criterionEightSchema,'criterion_eight');

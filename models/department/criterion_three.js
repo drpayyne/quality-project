@@ -151,4 +151,4 @@ var criterionThreeSchema = mongoose.Schema({
 	}
 }, { retainKeyOrder: true });
 
-module.exports = mongoose.model('CriterionThree',criterionThreeSchema,'criterion_three');
+module.exports = mongoose.model('DCriterionThree',criterionThreeSchema,'criterion_three');

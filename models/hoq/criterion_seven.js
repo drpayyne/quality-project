@@ -16,4 +16,5 @@ var criterionSevenSchema = mongoose.Schema({
 
     other_relevant_info : { type: String, default: '' }
   }, { retainKeyOrder: true });
-let CriterionSeven = module.exports = mongoose.model('CriterionSeven',criterionSevenSchema,'criterion_seven');
+
+  module.exports = mongoose.model('HCriterionSeven',criterionSevenSchema,'criterion_seven');

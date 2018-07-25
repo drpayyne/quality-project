@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const PDF = require('../gen/pdf.js');
+//const PDF = require('../gen/pdf.js');
 const SUM = require('../gen/sum.js');
 
 router.get('/', function(req, res) {

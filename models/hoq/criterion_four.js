@@ -226,4 +226,4 @@ var criterionFourSchema = mongoose.Schema({
     }
   }, { retainKeyOrder: true });
 
-let CriterionFour = module.exports = mongoose.model('CriterionFour',criterionFourSchema,'criterion_four');
+module.exports = mongoose.model('HCriterionFour',criterionFourSchema,'criterion_four');

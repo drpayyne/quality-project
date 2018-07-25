@@ -123,4 +123,4 @@ var criterionFiveSchema = mongoose.Schema({
 	major_grievances_of_students : { type: String, default: '' }
 }, { retainKeyOrder: true });
 
-let CriterionFive = module.exports = mongoose.model('CriterionFive',criterionFiveSchema,'criterion_five');
+module.exports = mongoose.model('HCriterionFive',criterionFiveSchema,'criterion_five');

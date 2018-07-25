@@ -97,4 +97,4 @@ var PartAOneSchema = mongoose.Schema({
   }
   }, { retainKeyOrder: true });
 
-let PartAOne = module.exports = mongoose.model('PartAOne', PartAOneSchema, 'part_a1');
+module.exports = mongoose.model('HPartAOne', PartAOneSchema, 'part_a1');
