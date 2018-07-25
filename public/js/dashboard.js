@@ -1,12 +1,26 @@
 console.log(document.cookie);
 
 $(document).ready(function() {
+	console.log('DOCUMENT READY')
+
+	if ($('#department_select option:selected').val() == 'HOQ') {
+		console.log('HOQ SELECT')
+		$('.hoq-only').css('display', 'block')
+	}
+	else {
+		console.log('DEPARTMENT SELECT')
+		$('.hoq-only').hide()
+	}
+
 	$('#department_select').change(function() {
+		console.log('SELECT CLICKED')
 		if ($('#department_select option:selected').val() == 'HOQ') {
+			console.log('HOQ SELECT')
 			$('.hoq-only').css('display', 'block')
 		}
 		else {
-			$('.hoq-only').css('display', 'none')
+			console.log('DEPARTMENT SELECT')
+			$('.hoq-only').hide()
 		}
 	})
 })
