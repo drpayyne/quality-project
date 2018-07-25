@@ -133,16 +133,17 @@ html(lang='en')
 								td
 									input(type='number', name='faculty_participation.state.resource_persons', value=form.faculty_participation.state.resource_persons)
 						//TO BE FILLED BY HOQ
-						label 2.6 Innovative processes adopted by the institution in Teaching and Learning:
-						.input-group
-							textarea.form-control(type='string', name='innovative_process_adopted') #{form.innovative_process_adopted}
-						label 2.7 Total No. of actual teaching days during this academic year:
-						input(type='number', name='actual_teaching_days', value=form.actual_teaching_days)
-						label
-							| 2.8 Examination/ Evaluation Reforms initiated by the Institution:
-							br
-							| (for example: Open Book Examination, Bar Coding,Double Valuation, Photocopy, Online Multiple Choice Questions)
-						input(type='number', name='exam_reforms_initiated', value=form.exam_reforms_initiated)
+						if cookies.department == 'HOQ'
+							label 2.6 Innovative processes adopted by the institution in Teaching and Learning:
+							.input-group
+								textarea.form-control(type='string', name='innovative_process_adopted') #{form.innovative_process_adopted}
+							label 2.7 Total No. of actual teaching days during this academic year:
+							input(type='number', name='actual_teaching_days', value=form.actual_teaching_days)
+							label
+								| 2.8 Examination/ Evaluation Reforms initiated by the Institution:
+								br
+								| (for example: Open Book Examination, Bar Coding,Double Valuation, Photocopy, Online Multiple Choice Questions)
+							input(type='number', name='exam_reforms_initiated', value=form.exam_reforms_initiated)
 						label
 							| 2.9 No. of faculty members involved in curriculum, Restructuring/revision/syllabus development as member of Board of Study/Faculty/Curriculum Development workshop:
 						table(style='width:100%')
@@ -183,9 +184,10 @@ html(lang='en')
 								td
 									input(type='number', name='pass_percent_dist.division.percent_three', value=form.pass_percent_dist.division.percent_three)
 						//TO BE FILLED BY HOQ
-						label 2.12 How does IQAC Contribute/Monitor/Evaluate the Teaching & Learning processes:
-						.input-group
-							textarea.form-control(type='string', name='iqac_contribution') #{form.iqac_contribution}
+						if cookies.department == 'HOQ'
+							label 2.12 How does IQAC Contribute/Monitor/Evaluate the Teaching & Learning processes:
+							.input-group
+								textarea.form-control(type='string', name='iqac_contribution') #{form.iqac_contribution}
 						label 2.13 Initiatives undertaken towards faculty development:
 						table(style='width:100%')
 							tr
@@ -261,6 +263,5 @@ html(lang='en')
 									input(type='number', name='admin_tech_staff.temporary_positions_filled.admin', value=form.admin_tech_staff.temporary_positions_filled.admin)
 								td
 									input(type='number', name='admin_tech_staff.temporary_positions_filled.technical', value=form.admin_tech_staff.temporary_positions_filled.technical)
-						input(type='hidden', name='row_val', value=length)
 						button.fixed-but(type='submit') SAVE
 				//-script(src='/js/form.js')

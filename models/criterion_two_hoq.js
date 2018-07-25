@@ -1,16 +1,5 @@
 let mongoose = require('mongoose');
 
-let deptPassPercentSchema = ({
-	programme_title: { type: String, default: null },
-	students_appeared: { type: Number, default: null },
-	division: {
-		distinction_percent: { type: Number, default: null },
-		percent_one: { type: Number, default: null },
-		percent_two: { type: Number, default: null },
-		percent_three: { type: Number, default: null }
-	}
-});
-
 //Criterion 2 schema
 var criterionTwoHoqSchema = mongoose.Schema({
 	department: { type: String, default: null },
