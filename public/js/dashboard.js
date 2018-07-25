@@ -1,5 +1,14 @@
 console.log(document.cookie);
 
+$(document).ready(function() {
+	if ($('#department_select option:selected').val() == 'HOQ') {
+		$('.hoq-only').css('display', 'block')
+	}
+	else {
+		$('.hoq-only').css('display', 'none')
+	}
+})
+
 function getSite(path) {
 
 	console.log(document.getElementById('dept_cookie'));
