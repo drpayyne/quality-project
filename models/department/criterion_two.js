@@ -7,8 +7,7 @@ var criterionTwoSchema = mongoose.Schema({
 		asst_prof: { type: Number, default: 0 },
 		asso_prof: { type: Number, default: 0 },
 		prof: { type: Number, default: 0 },
-		others: { type: Number, default: 0 }/* ,
-		total: { type: Number, default: 0 } */
+		others: { type: Number, default: 0 }
 	},
 	permanent_faculty_phd: { type: Number, default: 0 },
 	faculty_pos_recruited_vacant: {
@@ -55,10 +54,6 @@ var criterionTwoSchema = mongoose.Schema({
 			resource_persons: { type: Number, default: 0 }
 		}
 	},
-	//TO BE FILLED BY HOQ
-	innovative_process_adopted: { type: String, default: '' },
-	actual_teaching_days: { type: Number, default: 0 },
-	exam_reforms_initiated: { type: Number, default: 0 },
 	curriculum_incharge_faculty_members: {
 		curriculum_revision: { type: Number, default: 0 },
 		member_board: { type: Number, default: 0 },
@@ -76,7 +71,6 @@ var criterionTwoSchema = mongoose.Schema({
 			percent_three: { type: Number, default: 0 }
 		}
 	},
-	iqac_contribution: { type: String, default: '' },
 	faculty_dev_initiative: {
 		refresher_courses: { type: Number, default: 0 },
 		ugc_fac_improvement_prog: { type: Number, default: 0 },
