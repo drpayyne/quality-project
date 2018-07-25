@@ -104,7 +104,8 @@ html(lang='en')
 							textarea.form-control(type='string', name='seminars_conferences.themes') #{form.seminars_conferences.themes}
 						br
 						label 2.14 Significant Activities and contributions made by IQAC:
-						input(type='text', name='significant_contributions_activities_by_iqac', value=form.significant_contributions_activities_by_iqac)
+						.input-group
+							textarea.form-control(type='string', name='significant_contributions_activities_by_iqac') #{form.significant_contributions_activities_by_iqac}
 						label 2.15 Plan of Action by IQAC/Outcome:
 						label2
 							| The plan of action chalked out by the IQAC in the beginning of the year towards quality enhancement and the outcome achieved by the end of the year *
@@ -114,9 +115,11 @@ html(lang='en')
 								th Achievements
 							tr
 								td
-									input(type='text', name='iqac_plan_of_action.plan', value=form.iqac_plan_of_action.plan)
+									.input-group
+										textarea.form-control(type='string', name='iqac_plan_of_action.plan') #{form.iqac_plan_of_action.plan}
 								td
-									input(type='text', name='iqac_plan_of_action.achievements', value=form.iqac_plan_of_action.achievements)
+									.input-group
+										textarea.form-control(type='string', name='iqac_plan_of_action.achievements') #{form.iqac_plan_of_action.achievements}
 						label 2.15 Whether the AQAR was placed in statutory body:
 						input(type='radio', name='placement_of_aqar_in_statutory_body.option', value='yes', checked=(form.placement_of_aqar_in_statutory_body.option == 'yes'))
 						| Yes
@@ -130,5 +133,6 @@ html(lang='en')
 						input(type='radio', name='placement_of_aqar_in_statutory_body.type_of_statutory_body', value='any_other_body', checked=(form.placement_of_aqar_in_statutory_body.type_of_statutory_body == 'any_other_body'))
 						| Any other body
 						label Provide the details of the action taken:
-							input(type='text', name='placement_of_aqar_in_statutory_body.details_of_action_taken', value=form.placement_of_aqar_in_statutory_body.details_of_action_taken)
+						.input-group
+							textarea.form-control(type='string', name='placement_of_aqar_in_statutory_body.details_of_action_taken') #{form.placement_of_aqar_in_statutory_body.details_of_action_taken}
 						button.fixed-but(type='submit') SAVE
