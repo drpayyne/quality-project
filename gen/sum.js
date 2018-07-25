@@ -12,31 +12,43 @@ var departments = ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR',
 function sum() {
 	console.log('SUMMING UP')
 	var CTwos = [], CThrees = [], CFours = [], CFives = [];
+	var flag;
 
-	async.eachSeries(departments, function(department) {
-		console.log(department);
-		CriterionTwo.findOne({department: department}, function(err, doc) {
-			if(err) console.log(err);
-			else CTwos.push(doc);
-		});
-		CriterionThree.findOne({department: department}, function(err, doc) {
-			if(err) console.log(err);
-			else CThrees.push(doc);
-		});
-		CriterionFour.findOne({department: department}, function(err, doc) {
-			if(err) console.log(err);
-			else CFours.push(doc);
-		});
-		CriterionFive.findOne({department: department}, function(err, doc) {
-			if(err) console.log(err);
-			else CFives.push(doc);
-		});
+	async.eachSeries(departments, function(department, callback) {
+		flag = 0
+		if(department) {
+			console.log('STARTING TO INIT DOCS :' + department);
+			CriterionTwo.findOne({department: department}, function(err, doc) {
+				if(err) console.log(err);
+				else CTwos.push(doc);
+				flag++
+				console.log('CTwos length: ' + CTwos.length)
+				if(flag == 4) callback(console.log('DONE'))
+			});
+			CriterionThree.findOne({department: department}, function(err, doc) {
+				if(err) console.log(err);
+				else CThrees.push(doc);
+				flag++
+				console.log('CThrees length: ' + CThrees.length)
+				if(flag == 4) callback(console.log('DONE'))
+			});
+			CriterionFour.findOne({department: department}, function(err, doc) {
+				if(err) console.log(err);
+				else CFours.push(doc);
+				flag++
+				console.log('CFours length: ' + CFours.length)
+				if(flag == 4) callback(console.log('DONE'))
+			});
+			CriterionFive.findOne({department: department}, function(err, doc) {
+				if(err) console.log(err);
+				else CFives.push(doc);
+				flag++
+				console.log('CFives length: ' + CFives.length)
+				if(flag == 4) callback(console.log('DONE'))
+			});
+		}
 	}, function(err) {
-		console.log('err ' + err)
-		console.log('criterion2 ' + CTwos.length);
-		console.log('criterion3 ' + CThrees.length);
-		console.log('criterion4 ' + CFours.length);
-		console.log('criterion5 ' + CFives.length);
+		console.log('ALL DONE ' + err)
 
 		/* var array = CTwos;
 		var document = jsonAdd.addJSONs(CTwos);
