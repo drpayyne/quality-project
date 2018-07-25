@@ -7,6 +7,7 @@ let DCriterionFour = require('../models/department/criterion_four');
 let DCriterionFive = require('../models/department/criterion_five');
 
 let HCriterionFive = require('../models/hoq/criterion_five');
+let HCriterionFour = require('../models/hoq/criterion_four');
 
 var departments = ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC'];
 
@@ -94,15 +95,15 @@ function sum() {
 		delete document._doc["__v"];
 		CriterionThree.update({department: 'HOQ'}, document._doc, { upsert: true }, function(err) {
 			if(err) console.log(err);
-		});
+		});*/
 
 		document = jsonAdd.addJSONs(CFours);
 		document._doc.department = 'HOQ';
 		delete document._doc["_id"];
 		delete document._doc["__v"];
-		CriterionFour.update({department: 'HOQ'}, document._doc, { upsert: true }, function(err) {
+		HCriterionFour.update({department: 'HOQ'}, document._doc, { upsert: true }, function(err) {
 			if(err) console.log(err);
-		});*/
+		});
 
 		document = jsonAdd.addJSONs(CFives);
 		document._doc.department = 'HOQ';
@@ -111,14 +112,6 @@ function sum() {
 		HCriterionFive.update({department: 'HOQ'}, document._doc, { upsert: true }, function(err) {
 			if(err) console.log(err);
 		});
-
-		/*document = jsonAdd.addJSONs(CSixes);
-		document._doc.department = 'HOQ';
-		delete document._doc["_id"];
-		delete document._doc["__v"];
-		CriterionSix.update({department: 'HOQ'}, document._doc, { upsert: true }, function(err) {
-			if(err) console.log(err);
-		}); */
 
 	});
 }
