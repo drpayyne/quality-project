@@ -24,78 +24,92 @@ html(lang='en')
               | Details Of Institution
             // TO BE FILLED BY HOQ
             label 1.1 Name of the Institution:
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.institution_name', value=form.institution_details.institution_name)
             br
             label 1.2
             label Address Line 1:
+              span.badge.badge-primary HOQ
             .input-group
               textarea.form-control(type='string', name='institution_details.address_line_1') #{form.institution_details.address_line_1}
             label Address Line 2:
+              span.badge.badge-primary HOQ
             .input-group
               textarea.form-control(type='string', name='institution_details.address_line_2') #{form.institution_details.address_line_2}
             label City/Town:
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.city_or_town', value=form.institution_details.city_or_town)
             br
             label State:
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.state', value=form.institution_details.state)
             br
             label Pin code:
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.pincode', value=form.institution_details.pincode)
             br
             label Institution e-mail address:
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.institute_email', value=form.institution_details.institute_email)
             br
             label Contact Number:
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.contact_numbers', value=form.institution_details.contact_numbers)
             br
             label Name of the Head of the Institution:
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.institution_head', value=form.institution_details.institution_head)
             br
             label Telephone Number with STD Code:
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.telephone_no_with_std_code', value=form.institution_details.telephone_no_with_std_code)
             br
             label Mobile:
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.mobile_number', value=form.institution_details.mobile_number)
             br
             label Name of the IQAC Co-ordinator:
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.iqac_coordinator', value=form.institution_details.iqac_coordinator)
             br
             label Mobile:
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.iqac_coordinator_mobile', value=form.institution_details.iqac_coordinator_mobile)
             br
             label IQACe-mail address:
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.iqac_email', value=form.institution_details.iqac_email)
-            br
             label 1.3 NAAC Track ID (For ex. MHCOGN 18879):
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='naac_track_id', value=form.naac_track_id)
-            br
-            label
-              | 1.4 NAAC Executive Committee No. & Date:(For Example EC/32/A&A/143 dated 3-5-2004.This EC no. is available in the right corner- bottom of your institution’s Accreditation Certificate)
+            label 1.4 NAAC Executive Committee No. & Date:(For Example EC/32/A&A/143 dated 3-5-2004.This EC no. is available in the right corner- bottom of your institution’s Accreditation Certificate)
+              span.badge.badge-primary HOQ
             .input-group
               textarea.form-control(type='string', name='naac_executive_commitee_no_date') #{form.naac_executive_commitee_no_date}
             label 1.5
             label Website address:
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='website_address', value=form.website_address)
-            br
             label Web-link of the AQAR:
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='aqar_web_link', value=form.aqar_web_link)
-            br
             label 1.6 Accreditation Details:
+              span.badge.badge-primary HOQ
             table(style='width:100%')
               tr
                 th Sl.No
@@ -165,19 +179,20 @@ html(lang='en')
                   .input-group
                     input.form-control(type='number', name='accreditation_details.fourth_cycle.validity', value=form.accreditation_details.fourth_cycle.validity)
             label 1.7 Date of Establishment of IQAC(DD/MM/YYYY):
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='date', name='iqac_establishment_date', value=form.iqac_establishment_date)
             label 1.8 AQAR for the year (for example 2010-11):
+              span.badge.badge-primary HOQ
             .input-group
               textarea.form-control(type='string', name='aqar_of_the_year')  #{form.aqar_of_the_year}
             label 1.9 Details of the previous year’s AQAR submitted to NAAC after the latest Assessment and Accreditation by NAAC ((for example AQAR 2010-11submitted to NAAC on 12-10-2011):
+              span.badge.badge-primary HOQ
             .input-group
               textarea.form-control(type='string', name='previous_aqar_submissions', rows=4) #{form.previous_aqar_submissions}
-            label
-              | 1.10 Institutional Status:
-              br
-              br
-              | University:
+            label 1.10 Institutional Status:
+              span.badge.badge-primary HOQ
+            label University:
             .custom-control.custom-radio
               input#InsUniState.custom-control-input(type='radio', name='institutional_status.university', value='state', checked=(form.institutional_status.university == 'state'))
               label.custom-control-label(for='InsUniState') State
@@ -219,6 +234,7 @@ html(lang='en')
               input#RegAgeNo.custom-control-input(type='radio', name='institutional_status.regulatory_agency_approved_institute', value='no', checked=(form.institutional_status.regulatory_agency_approved_institute == 'no'))
               label.custom-control-label(for='RegAgeNo') No
             label Type Of Institution:
+              span.badge.badge-primary HOQ
             label i)
             .custom-control.custom-radio
               input#CoEdu.custom-control-input(type='radio', name='institutional_status.type_of_institution1', value='co-ed', checked=(form.institutional_status.type_of_institution1 == 'co-ed'))
@@ -257,6 +273,7 @@ html(lang='en')
               input#TotSelf.custom-control-input(type='radio', name='institutional_status.financial_status', value='totally_grant_id_aidance', checked=(form.institutional_status.financial_status == 'totally_self_finance'))
               label.custom-control-label(for='TotSelf') Totally Self-financing
             label 1.11 Type of Faculty/Programme:
+              span.badge.badge-primary HOQ
             .custom-control.custom-checkbox.custom-control-inline
               input#Arts.custom-control-input(type='checkbox', name='faculty_and_programme_type.arts', checked=(form.faculty_and_programme_type.arts == 'on'))
               label.custom-control-label(for='Arts') Arts
@@ -289,10 +306,11 @@ html(lang='en')
             .input-group
               input.form-control(type='string', name='faculty_and_programme_type.others', value=form.faculty_and_programme_type.others)
             label 1.12 Name of the Affiliating University (for the Colleges):
+              span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='affliating_uni_name', value=form.affliating_uni_name)
-            label
-              | 1.13 Special status conferred by Central/ State Government(UGC/CSIR/DST/DBT/ICMR etc):
+            label 1.13 Special status conferred by Central/ State Government(UGC/CSIR/DST/DBT/ICMR etc):
+              span.badge.badge-primary HOQ
             |         Autonomy by State/Central Govt. / University:
             br
             .input-group
