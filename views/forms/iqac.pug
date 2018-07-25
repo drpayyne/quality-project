@@ -22,8 +22,8 @@ html(lang='en')
 				.col
 					form(action='/form/iqac', method='post')
 						legend
-						span.number 2
-						| IQAC Composition and Activities
+							span.number 2
+							| IQAC Composition and Activities
 						// TO BE FILLED BY HOQ
 						label 2.1 No. of Teachers:
 						input(type='number', name='no_of_teachers', value=form.no_of_teachers)
@@ -105,7 +105,8 @@ html(lang='en')
 						input(type='string', name='seminars_conferences.events_organized_by_iqac.institution_level', value=form.seminars_conferences.events_organized_by_iqac.institution_level)
 						br
 						label 2.14 Significant Activities and contributions made by IQAC:
-						input(type='text', name='seminars_conferences.themes', value=form.seminars_conferences.themes)
+						.input-group
+							textarea.form-control(type='string', name='seminars_conferences.themes') #{form.seminars_conferences.themes}
 						label 2.15 Plan of Action by IQAC/Outcome:
 						label2
 							| The plan of action chalked out by the IQAC in the beginning of the year towards quality enhancement and the outcome achieved by the end of the year *
@@ -115,10 +116,12 @@ html(lang='en')
 								th Achievements
 							tr
 								td
-									input(type='text', name='significant_contributions_activities_by_iqac', value=form.significant_contributions_activities_by_iqac)
+									.input-group
+										textarea.form-control(type='string', name='significant_contributions_activities_by_iqac') #{form.significant_contributions_activities_by_iqac}
 								td
-									input(type='text', name='iqac_plan_of_action.plan_of_action', value=form.iqac_plan_of_action.plan_of_action)
-						label 2.15 Whether the AQAR was placed in statutory body:
+									.input-group
+										textarea.form-control(type='string', name='iqac_plan_of_action.plan_of_action') #{form.iqac_plan_of_action.plan_of_action}
+						label 2.16 Whether the AQAR was placed in statutory body:
 						input(type='radio', name='iqac_plan_of_action.achievements', value=form.iqac_plan_of_action.achievements)
 						| Yes
 						input(type='radio', name='placement_of_aqar_in_statutory_body.yes', value=form.placement_of_aqar_in_statutory_body.yes)
@@ -130,5 +133,6 @@ html(lang='en')
 						input(type='radio', name='placement_of_aqar_in_statutory_body.type_of_statutory_body.syndicate', value=form.placement_of_aqar_in_statutory_body.type_of_statutory_body.syndicate)
 						| Any other body
 						label Provide the details of the action taken:
-						input(type='text', name='placement_of_aqar_in_statutory_body.type_of_statutory_body.any_other_body', value=form.placement_of_aqar_in_statutory_body.type_of_statutory_body.any_other_body)
+						.input-group
+							textarea.form-control(type='string', name='placement_of_aqar_in_statutory_body.type_of_statutory_body.any_other_body') #{form.placement_of_aqar_in_statutory_body.type_of_statutory_body.any_other_body}
 						button.fixed-but(type='submit') SAVE
