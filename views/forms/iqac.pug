@@ -24,33 +24,44 @@ html(lang='en')
 							| IQAC Composition and Activities
 						// TO BE FILLED BY HOQ
 						label 2.1 No. of Teachers:
+							span.badge.badge-primary HOQ
 						input(type='number', name='no_of_teachers', value=form.no_of_teachers)
 						label 2.2 No. of Administrative/Technical staff:
+							span.badge.badge-primary HOQ
 						input(type='number', name='no_of_tech_admin_staff', value=form.no_of_tech_admin_staff)
 						label 2.3 No. of students:
+							span.badge.badge-primary HOQ
 						input(type='number', name='no_of_students', value=form.no_of_students)
 						label 2.4 No. of Management representatives:
+							span.badge.badge-primary HOQ
 						input(type='number', name='no_of_management_reps', value=form.no_of_management_reps)
 						br
 						label 2.5 No. of Alumni:
+							span.badge.badge-primary HOQ
 						input(type='number', name='no_of_alumni', value=form.no_of_alumni)
 						br
 						label 2.6 No. of any other stakeholder and community representatives:
+							span.badge.badge-primary HOQ
 						input(type='number', name='no_of_other_stakeholders_community_reps', value=form.no_of_other_stakeholders_community_reps)
 						br
 						label 2.7 No. of Employers/ Industrialists:
+							span.badge.badge-primary HOQ
 						input(type='number', name='no_of_employers_industrialists', value=form.no_of_employers_industrialists)
 						br
 						label 2.8 No. of other External Experts:
+							span.badge.badge-primary HOQ
 						input(type='number', name='no_of_other_external_experts', value=form.no_of_other_external_experts)
 						br
 						label 2.9 Total No. of members:
+							span.badge.badge-primary HOQ
 						input(type='number', name='total_no_of_members', value=form.total_no_of_members)
 						br
 						label 2.10 No. of IQAC meetings held:
+							span.badge.badge-primary HOQ
 						input(type='number', name='no_of_iqac_meetings_held', value=form.no_of_iqac_meetings_held)
 						br
 						label 2.11 No. of meetings with various stakeholders:
+							span.badge.badge-primary HOQ
 						table(style='width:100%')
 							tr
 								th No. of faculty
@@ -69,6 +80,7 @@ html(lang='en')
 								td
 									input(type='number', name='no_of_meetings_with_various_stakeholders.others', value=form.no_of_meetings_with_various_stakeholders.others)
 						label 2.12 Has IQAC received any funding from UGC during the year?
+							span.badge.badge-primary HOQ
 						input(type='radio', name='ugc_funding_for_iqac', value='yes', checked=(form.ugc_funding_for_iqac == 'yes'))
 						| YES
 						input(type='radio', name='ugc_funding_for_iqac', value='no', checked=(form.ugc_funding_for_iqac == 'no'))
@@ -78,6 +90,7 @@ html(lang='en')
 						br
 						label 2.13 Seminars and Conferences (only quality related)
 						label i) No. of Seminars/Conferences/ Workshops/Symposia organized by the IQAC:
+							span.badge.badge-primary HOQ
 						table(style='width:100%')
 							tr
 								th International
@@ -100,14 +113,17 @@ html(lang='en')
 								td
 									input(type='number', name='seminars_conferences.events_organized_by_iqac.total_no', value=form.seminars_conferences.events_organized_by_iqac.total_no)
 						label ii) Themes:
+							span.badge.badge-primary HOQ
 						.input-group
-							textarea.form-control(type='string', name='seminars_conferences.themes') #{form.seminars_conferences.themes}
+							textarea.form-control(type='string', name='seminars_conferences.themes', rows=3) #{form.seminars_conferences.themes}
 						br
 						label 2.14 Significant Activities and contributions made by IQAC:
+							span.badge.badge-primary HOQ
 						.input-group
-							textarea.form-control(type='string', name='significant_contributions_activities_by_iqac') #{form.significant_contributions_activities_by_iqac}
+							textarea.form-control(type='string', name='significant_contributions_activities_by_iqac', rows=3) #{form.significant_contributions_activities_by_iqac}
 						label 2.15 Plan of Action by IQAC/Outcome:
-						label2
+							span.badge.badge-primary HOQ
+						label
 							| The plan of action chalked out by the IQAC in the beginning of the year towards quality enhancement and the outcome achieved by the end of the year *
 						table(width='100%')
 							tr
@@ -120,7 +136,8 @@ html(lang='en')
 								td
 									.input-group
 										textarea.form-control(type='string', name='iqac_plan_of_action.achievements') #{form.iqac_plan_of_action.achievements}
-						label 2.15 Whether the AQAR was placed in statutory body:
+						label 2.16 Whether the AQAR was placed in statutory body:
+							span.badge.badge-primary HOQ
 						input(type='radio', name='placement_of_aqar_in_statutory_body.option', value='yes', checked=(form.placement_of_aqar_in_statutory_body.option == 'yes'))
 						| Yes
 						input(type='radio', name='placement_of_aqar_in_statutory_body.option', value='no', checked=(form.placement_of_aqar_in_statutory_body.option == 'no'))
@@ -134,5 +151,5 @@ html(lang='en')
 						| Any other body
 						label Provide the details of the action taken:
 						.input-group
-							textarea.form-control(type='string', name='placement_of_aqar_in_statutory_body.details_of_action_taken') #{form.placement_of_aqar_in_statutory_body.details_of_action_taken}
+							textarea.form-control(type='string', name='placement_of_aqar_in_statutory_body.details_of_action_taken', rows=3) #{form.placement_of_aqar_in_statutory_body.details_of_action_taken}
 						button.fixed-but(type='submit') SAVE

@@ -172,7 +172,7 @@ html(lang='en')
               textarea.form-control(type='string', name='aqar_of_the_year')  #{form.aqar_of_the_year}
             label 1.9 Details of the previous year’s AQAR submitted to NAAC after the latest Assessment and Accreditation by NAAC ((for example AQAR 2010-11submitted to NAAC on 12-10-2011):
             .input-group
-              input.form-control(type='date', name='previous_aqar_submissions', value=form.previous_aqar_submissions)
+              textarea.form-control(type='string', name='previous_aqar_submissions', rows=4) #{form.previous_aqar_submissions}
             label
               | 1.10 Institutional Status:
               br

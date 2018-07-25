@@ -26,6 +26,7 @@ html(lang='en')
 							| Curricular Aspects
 						// TO BE FILLED BY HOQ
 						label 1.1 No. of Teachers:
+							span.badge.badge-primary HOQ
 						table(style='width:100%')
 							tr
 								th Level of the Programme
@@ -143,10 +144,9 @@ html(lang='en')
 									input(type='number', name='academic_program_details.innovative.self_finance_program_count', value=form.academic_program_details.innovative.self_finance_program_count)
 								td
 									input(type='number', name='academic_program_details.innovative.career_oriented_program_count', value=form.academic_program_details.innovative.career_oriented_program_count)
-						label
-							| 1.2
-							br
-							| (i) Flexibility of the Curriculum:
+						label 1.2
+						label (i) Flexibility of the Curriculum:
+							span.badge.badge-primary HOQ
 						input(type='radio', name='curriculum_flexibility', value='cbcs', checked=(form.curriculum_flexibility == 'cbcs'))
 						| CBCS
 						input(type='radio', name='curriculum_flexibility', value='core', checked=(form.curriculum_flexibility == 'core'))
@@ -156,6 +156,7 @@ html(lang='en')
 						input(type='radio', name='curriculum_flexibility', value='open', checked=(form.curriculum_flexibility == 'open'))
 						| Open Options
 						label (ii) Pattern of programmes:
+							span.badge.badge-primary HOQ
 						table(width='100%')
 							tr
 								th Pattern
@@ -172,10 +173,9 @@ html(lang='en')
 								th Annual
 								td
 									input(type='number', name='pattern_of_programmes.annual.no_of_programmes', value=form.pattern_of_programmes.annual.no_of_programmes)
-						label
-							| 1.3
-							br
-							| Feedback from stakeholders (On all aspects):
+						label 1.3
+						label Feedback from stakeholders (On all aspects):
+							span.badge.badge-primary HOQ
 						input(type='checkbox', name='stakeholder_feedback.alumni', checked=(form.stakeholder_feedback.alumni=='on'))
 						| Alumini
 						input(type='checkbox', name='stakeholder_feedback.parents', checked=(form.stakeholder_feedback.parents=='on'))
@@ -185,17 +185,19 @@ html(lang='en')
 						input(type='checkbox', name='stakeholder_feedback.student', checked=(form.stakeholder_feedback.student=='on'))
 						| Students
 						label Mode of feedback:
+							span.badge.badge-primary HOQ
 						input(type='radio', name='mode_of_feedback', value='online', checked=(form.mode_of_feedback == 'online'))
 						| Online
 						input(type='radio', name='mode_of_feedback', value='manual', checked=(form.mode_of_feedback == 'manual'))
 						| Manual
 						input(type='radio', name='mode_of_feedback', value='coop', checked=(form.mode_of_feedback == 'coop'))
 						| Co-operating schools (for PEI)
-						label
-							| 1.4 Whether there is any revision/update of regulation or syllabi, if yes, mention their salient aspects:
+						label 1.4 Whether there is any revision/update of regulation or syllabi, if yes, mention their salient aspects:
+							span.badge.badge-primary HOQ
 						.input-group
-							textarea.form-control(type='string', name='syllabus_revision_feedback') #{form.syllabus_revision_feedback}
+							textarea.form-control(type='string', name='syllabus_revision_feedback', rows=4) #{form.syllabus_revision_feedback}
 						label 1.5 Any new Department/Centre introduced during the year. If yes, give details:
+							span.badge.badge-primary HOQ
 						.input-group
-							textarea.form-control(type='string', name='new_dept_introduced') #{form.new_dept_introduced}
+							textarea.form-control(type='string', name='new_dept_introduced', rows=4) #{form.new_dept_introduced}
 						button.fixed-but(type='submit') SAVE

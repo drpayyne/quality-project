@@ -14,7 +14,7 @@ html(lang='en')
 		.container-fluid.h-100
 			nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
 				a.navbar-brand(href='/dashboard') Back
-				span.navbar-brand.mb-0.h1 IQAC Criterion 5 - #{cookies.user.username} 
+				span.navbar-brand.mb-0.h1 IQAC Criterion 5 - #{cookies.user.username}
 					if (cookies.user.username == 'HOQ' && cookies.department != 'HOQ')
 						span.navbar-brand.mb-0.h1 - #{cookies.department}
 				a.navbar-brand(href='/home') Logout
@@ -25,13 +25,15 @@ html(lang='en')
 							span.number 5
 							| Student Support and Progression
 						if cookies.department == 'HOQ'
-							label 5.1 Contribution of IQAC in enhancing awareness about Student Support Services: 
+							label 5.1 Contribution of IQAC in enhancing awareness about Student Support Services:
 								span.badge.badge-primary  HOQ
-							input(type='text', name='iqac_contribution_student_support_services', value=form.iqac_contribution_student_support_services)
-							label 5.2 Efforts made by the institution for tracking the progression: 
+							.input-groups
+								textarea.form-control(type='string', name='iqac_contribution_student_support_services', rows=4) #{form.iqac_contribution_student_support_services}
+							label 5.2 Efforts made by the institution for tracking the progression:
 								span.badge.badge-primary  HOQ
-							input(type='text', name='efforts_tracking_progression', value=form.efforts_tracking_progression)
-							label 5.3 (a) Total Number of students 
+							.input-group
+								textarea.form-control(type='string', name='efforts_tracking_progression', rows=4) #{form.efforts_tracking_progression}
+							label 5.3 (a) Total Number of students
 								span.badge.badge-primary  HOQ
 							table(width='100%')
 								tr
@@ -48,10 +50,10 @@ html(lang='en')
 										input(type='number', name='total_no_of_students.phd_students', value=form.total_no_of_students.phd_students)
 									td
 										input(type='number', name='total_no_of_students.other_students', value=form.total_no_of_students.other_students)
-							label 5.3 (b) No. of students outside the state 
+							label 5.3 (b) No. of students outside the state
 								span.badge.badge-primary  HOQ
 							input(type='number', name='no_of_students_outside_the_state', value=form.no_of_students_outside_the_state)
-							label 5.3 (c) No. of international students 
+							label 5.3 (c) No. of international students
 								span.badge.badge-primary  HOQ
 							table(width='100%')
 								tr
@@ -124,13 +126,14 @@ html(lang='en')
 										input(type='number', name='demand_ratio', value=form.demand_ratio)
 									td
 										input(type='number', name='dropout_percentage', value=form.dropout_percentage)
-							label 5.4 Details of student support mechanism for coaching for competitive examinations(If any): 
+							label 5.4 Details of student support mechanism for coaching for competitive examinations(If any):
 								span.badge.badge-primary  HOQ
-							input(type='text', name='student_support_mechanism', value=form.student_support_mechanism)
-							label No. of students beneficiaries: 
+							.input-group
+								textarea.form-control(type='string', name='student_support_mechanism', rows=4) #{form.student_support_mechanism}
+							label No. of students beneficiaries:
 								span.badge.badge-primary  HOQ
 							input(type='number', name='no_of_student_beneficiaries', value=form.no_of_student_beneficiaries)
-							label 5.5 No. of students qualified in these examinations: 
+							label 5.5 No. of students qualified in these examinations:
 								span.badge.badge-primary  HOQ
 							table(style='width:100%')
 								tr
@@ -165,13 +168,14 @@ html(lang='en')
 									th Others
 									td
 										input(type='number', name='no_of_students_qualified_for_examinations.others', value=form.no_of_students_qualified_for_examinations.others)
-							label 5.6 Details of student counselling and career guidance: 
+							label 5.6 Details of student counselling and career guidance:
 								span.badge.badge-primary  HOQ
-							input(type='text', name='student_counselling_career_guidance', value=form.student_counselling_career_guidance)
-							label No. of students benefitted: 
+							.input-group
+								textarea.form-control(type='string', name='student_counselling_career_guidance', rows=4) #{form.student_counselling_career_guidance}
+							label No. of students benefitted:
 								span.badge.badge-primary  HOQ
 							input(type='number', name='no_of_students_benefitted', value=form.no_of_students_benefitted)
-							label 5.7 Details of campus placement: 
+							label 5.7 Details of campus placement:
 								span.badge.badge-primary  HOQ
 							table(width='100%')
 								tr
@@ -191,11 +195,12 @@ html(lang='en')
 										input(type='number', name='campus_placement_details.on_campus.placed_students', value=form.campus_placement_details.on_campus.placed_students)
 									td
 										input(type='number', name='campus_placement_details.off_campus.placed_students', value=form.campus_placement_details.off_campus.placed_students)
-							label 5.8 Details of gender sensitization programmes: 
+							label 5.8 Details of gender sensitization programmes:
 								span.badge.badge-primary  HOQ
-							input(type='text', name='gender_sensitization_programmes', value=form.gender_sensitization_programmes)
+							.input-groups
+								textarea.form-control(type='string', name='gender_sensitization_programmes', rows=4) #{form.gender_sensitization_programmes}
 							label 5.9 Students Activities:
-							label 5.9.1 No. of students participated in Sports, Games and other events: 
+							label 5.9.1 No. of students participated in Sports, Games and other events:
 								span.badge.badge-primary  HOQ
 							table(width='100%')
 								tr
@@ -209,7 +214,7 @@ html(lang='en')
 										input(type='number', name='students_activities.participation_sports_games_other_events.national_level', value=form.students_activities.participation_sports_games_other_events.national_level)
 									td
 										input(type='number', name='students_activities.participation_sports_games_other_events.international_level', value=form.students_activities.participation_sports_games_other_events.international_level)
-							label No. of students participated in cultural events: 
+							label No. of students participated in cultural events:
 								span.badge.badge-primary  HOQ
 							table(width='100%')
 								tr
@@ -224,7 +229,7 @@ html(lang='en')
 									td
 										input(type='number', name='students_activities.participation_cultural_events.international_level', value=form.students_activities.participation_cultural_events.international_level)
 							label 5.9.2 No. of medals /awards won by students in Sports, Games and other events
-							label Sports: 
+							label Sports:
 								span.badge.badge-primary  HOQ
 							table(width='100%')
 								tr
@@ -238,7 +243,7 @@ html(lang='en')
 										input(type='number', name='students_activities.no_of_medals_awards.sports_games.national_level', value=form.students_activities.no_of_medals_awards.sports_games.national_level)
 									td
 										input(type='number', name='students_activities.no_of_medals_awards.sports_games.international_level', value=form.students_activities.no_of_medals_awards.sports_games.international_level)
-							label Cultural: 
+							label Cultural:
 								span.badge.badge-primary HOQ
 							table(width='100%')
 								tr
@@ -252,7 +257,7 @@ html(lang='en')
 										input(type='number', name='students_activities.no_of_medals_awards.culturals.national_level', value=form.students_activities.no_of_medals_awards.culturals.national_level)
 									td
 										input(type='number', name='students_activities.no_of_medals_awards.culturals.international_level', value=form.students_activities.no_of_medals_awards.culturals.international_level)
-						label 5.10 Scholarships and Financial Support: 
+						label 5.10 Scholarships and Financial Support:
 							span.badge.badge-success DEPARTMENT
 						table(style='width:100%')
 							tr
@@ -285,7 +290,7 @@ html(lang='en')
 									input(type='number', name='scholarship_financial_support.international_national_recognition.amount_in_lakhs', value=form.scholarship_financial_support.international_national_recognition.amount_in_lakhs, disabled)
 						if cookies.department == 'HOQ'
 							label 5.11 Student organised / initiatives
-							label Fairs: 
+							label Fairs:
 								span.badge.badge-primary HOQ
 							table(width='100%')
 								tr
@@ -299,7 +304,7 @@ html(lang='en')
 										input(type='number', name='student_organized_initiatives.fairs.national_level', value=form.student_organized_initiatives.fairs.national_level)
 									td
 										input(type='number', name='student_organized_initiatives.fairs.international_level', value=form.student_organized_initiatives.fairs.international_level)
-							label Exhibition: 
+							label Exhibition:
 								span.badge.badge-primary HOQ
 							table(width='100%')
 								tr
@@ -313,10 +318,10 @@ html(lang='en')
 										input(type='number', name='student_organized_initiatives.exhibition.national_level', value=form.student_organized_initiatives.exhibition.national_level)
 									td
 										input(type='number', name='student_organized_initiatives.exhibition.international_level', value=form.student_organized_initiatives.exhibition.international_level)
-							label 5.12 No. of social initiatives undertaken by the students: 
+							label 5.12 No. of social initiatives undertaken by the students:
 								span.badge.badge-primary HOQ
 							input(type='number', name='social_initiatives_undertaken_by_students', value=form.social_initiatives_undertaken_by_students)
-							label 5.13 Major grievances of students (if any) redressed: 
+							label 5.13 Major grievances of students (if any) redressed:
 								span.badge.badge-primary HOQ
 							input(type='string', name='major_grievances_of_students', value=form.major_grievances_of_students)
 						button.fixed-but(type='submit') SAVE

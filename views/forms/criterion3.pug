@@ -14,7 +14,7 @@ html(lang='en')
 		.container-fluid.h-100
 			nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
 				a.navbar-brand(href='/dashboard') Back
-				span.navbar-brand.mb-0.h1 IQAC Criterion 3 - #{cookies.user.username} 
+				span.navbar-brand.mb-0.h1 IQAC Criterion 3 - #{cookies.user.username}
 					if (cookies.user.username == 'HOQ' && cookies.department != 'HOQ')
 						span.navbar-brand.mb-0.h1 - #{cookies.department}
 				a.navbar-brand(href='/home') Logout
@@ -26,10 +26,11 @@ html(lang='en')
 							| Research, Consultancy and Extension
 						// 3.1, 3.8, 3.9, 3.21, 3.22, 3.23, 3.24, 3.25, 3.26 TO BE FILLED BY HOQ
 						if cookies.department == 'HOQ'
-							label 3.1 Initiatives of the IQAC in Sensitizing/Promoting Research Climate in the institution: 
+							label 3.1 Initiatives of the IQAC in Sensitizing/Promoting Research Climate in the institution:
 								span.badge.badge-primary HOQ
-							input(type='text', name='iqac_initiatives_promoting_research', value=form.iqac_initiatives_promoting_research)
-						label 3.2 Details regarding major projects: 
+							.input-group
+								textarea.form-control(type='string', name='iqac_initiatives_promoting_research', rows=4) #{form.iqac_initiatives_promoting_research}
+						label 3.2 Details regarding major projects:
 							span.badge.badge-success DEPARTMENT
 						table(style='width:100%')
 							tr
@@ -60,7 +61,7 @@ html(lang='en')
 									input(type='number', name='major_project_details.sanctioned.outlay_in_lakhs', value=form.major_project_details.sanctioned.outlay_in_lakhs)
 								td
 									input(type='number', name='major_project_details.submitted.outlay_in_lakhs', value=form.major_project_details.submitted.outlay_in_lakhs)
-						label 3.3 Details regarding minor projects: 
+						label 3.3 Details regarding minor projects:
 							span.badge.badge-success DEPARTMENT
 						table(style='width:100%')
 							tr
@@ -89,7 +90,7 @@ html(lang='en')
 									input(type='number', name='minor_project_details.sanctioned.outlay_in_lakhs', value=form.minor_project_details.sanctioned.outlay_in_lakhs)
 								td
 									input(type='number', name='minor_project_details.submitted.outlay_in_lakhs', value=form.minor_project_details.submitted.outlay_in_lakhs)
-						label 3.4 Details on research publications: 
+						label 3.4 Details on research publications:
 							span.badge.badge-success DEPARTMENT
 						table(style='width:100%')
 							tr
@@ -130,7 +131,7 @@ html(lang='en')
 								td
 									input(type='number', name='research_publication_details.others.conference_proceedings', value=form.research_publication_details.others.conference_proceedings)
 						if cookies.department == 'HOQ'
-							label 3.5 Details on Impact factor of publications: 
+							label 3.5 Details on Impact factor of publications:
 								span.badge.badge-primary HOQ
 							table(style='width:100%')
 								tr
@@ -147,7 +148,7 @@ html(lang='en')
 										input(type='number', name='impact_factor_publication_details.index', value=form.impact_factor_publication_details.index)
 									td
 										input(type='number', name='impact_factor_publication_details.nos_of_scopus', value=form.impact_factor_publication_details.nos_of_scopus)
-						label 3.6 Research funds sanctioned and received from various funding agencies, industry and other organisations: 
+						label 3.6 Research funds sanctioned and received from various funding agencies, industry and other organisations:
 							span.badge.badge-success DEPARTMENT
 						table(style='width:100%')
 							tr
@@ -236,7 +237,7 @@ html(lang='en')
 									input(type='number', name='research_funds_sanctioned.total.total_grant_sanctioned', value=form.research_funds_sanctioned.total.total_grant_sanctioned)
 								td
 									input(type='number', name='research_funds_sanctioned.total.received', value=form.research_funds_sanctioned.total.received)
-						label 3.7 No. of books published: 
+						label 3.7 No. of books published:
 							span.badge.badge-success DEPARTMENT
 						table(style='width:100%')
 							tr
@@ -252,7 +253,7 @@ html(lang='en')
 								td
 									input(type='number', name='no_of_books_published.chapters_in_edited_books', value=form.no_of_books_published.chapters_in_edited_books)
 						if cookies.department == 'HOQ'
-							label 3.8 No. of University Departments receiving funds from: 
+							label 3.8 No. of University Departments receiving funds from:
 								span.badge.badge-primary HOQ
 							table(style='width:100%')
 								tr
@@ -275,7 +276,7 @@ html(lang='en')
 									th DBT Scheme/funds
 									td
 										input(type='number', name='no_of_uni_depts_receiving_funds.dbt_scheme_funds', value=form.no_of_uni_depts_receiving_funds.dbt_scheme_funds)
-							label 3.9 For colleges: 
+							label 3.9 For colleges:
 								span.badge.badge-primary HOQ
 							table(style='width:100%')
 								tr
@@ -302,10 +303,10 @@ html(lang='en')
 									th Any Other(specify)
 									td
 										input(type='number', name='for_colleges.any_other_specify', value=form.for_colleges.any_other_specify)
-						label 3.10 Revenue generated through consultancy(Rs. in lakhs): 
+						label 3.10 Revenue generated through consultancy(Rs. in lakhs):
 							span.badge.badge-success DEPARTMENT
 							input(type='number', name='revenue_generated_through_consultancy', value=form.revenue_generated_through_consultancy)
-						label 3.11 No. of conferences organized: 
+						label 3.11 No. of conferences organized:
 							span.badge.badge-success DEPARTMENT
 						table(style='width:100%')
 							tr
@@ -339,10 +340,10 @@ html(lang='en')
 									input(type='number', name='conferences_organized_by_institution.sponsoring_agencies.university', value=form.conferences_organized_by_institution.sponsoring_agencies.university)
 								td
 									input(type='number', name='conferences_organized_by_institution.sponsoring_agencies.college', value=form.conferences_organized_by_institution.sponsoring_agencies.college)
-						label 3.12 No. of faculty served as experts, chairpersons or resource persons: 
+						label 3.12 No. of faculty served as experts, chairpersons or resource persons:
 							span.badge.badge-success DEPARTMENT
 						input(type='number', name='no_of_faculty_served_chairperson_resource_expert', value=form.no_of_faculty_served_chairperson_resource_expert)
-						label 3.13 No. of collaborations: 
+						label 3.13 No. of collaborations:
 							span.badge.badge-success DEPARTMENT
 						table(style='width:100%')
 							tr
@@ -357,10 +358,10 @@ html(lang='en')
 								th Any
 								td
 									input(type='number', name='no_of_collaborations.any_other', value=form.no_of_collaborations.any_other)
-						label 3.14 No. of linkages created during this year: 
+						label 3.14 No. of linkages created during this year:
 							span.badge.badge-success DEPARTMENT
 						input(type='number', name='no_of_linkages_created_during_the_year', value=form.no_of_linkages_created_during_the_year)
-						label 3.15 Total budget for research for current year in lakhs: 
+						label 3.15 Total budget for research for current year in lakhs:
 							span.badge.badge-success DEPARTMENT
 						table(style='width:100%')
 							tr
@@ -375,7 +376,7 @@ html(lang='en')
 								th Total
 								td
 									input(type='number', name='current_year_research_budget_in_lakhs.total', value=form.current_year_research_budget_in_lakhs.total)
-						label 3.16 No. of patents received this year: 
+						label 3.16 No. of patents received this year:
 							span.badge.badge-success DEPARTMENT
 						table(style='width:100%')
 							tr
@@ -405,7 +406,7 @@ html(lang='en')
 								th Granted
 								td
 									input(type='number', name='no_of_patents.commercialized.granted', value=form.no_of_patents.commercialized.granted)
-						label 3.17 No. of research awards/ recognitions received by faculty and research fellows Of the institute in the year: 
+						label 3.17 No. of research awards/ recognitions received by faculty and research fellows Of the institute in the year:
 							span.badge.badge-success DEPARTMENT
 						table(style='width:100%')
 							tr
@@ -436,22 +437,24 @@ html(lang='en')
 								th College
 								td
 									input(type='number', name='no_of_awards_recognition_faculty_research_fellows.college', value=form.no_of_awards_recognition_faculty_research_fellows.college)
-						label 3.18 No. of faculty from the Institution who are Ph. D. Guides and students registered under them: 
+						label 3.18 No. of faculty from the Institution who are Ph. D. Guides and students registered under them:
 							span.badge.badge-success DEPARTMENT
 						table(style='width:100%')
 							tr
 								th No. of Ph.D. guides
 								td
-									input(type='text', name='faculty_count.phd_guides', value=form.faculty_count.phd_guides)
+									.input-group
+										textarea.form-control(type='string', name='faculty_count.phd_guides', rows=4) #{form.faculty_count.phd_guides}
 							tr
 								th No. of registered students
 								td
-									input(type='text', name='faculty_count.students_registered_under_them', value=form.faculty_count.students_registered_under_them)
-						label 3.19 No. of Ph.D. awarded by faculty from the Institution: 
+									.input-group
+										textarea.form-control(type='string', name='faculty_count.students_registered_under_them', rows=4) #{form.faculty_count.students_registered_under_them}
+						label 3.19 No. of Ph.D. awarded by faculty from the Institution:
 							span.badge.badge-success DEPARTMENT
 						input(type='number', name='no_of_phd_awarded_institution_faculty', value=form.no_of_phd_awarded_institution_faculty)
 						if cookies.department == 'HOQ'
-							label 3.20 No. of Research scholars receiving the Fellowships (Newly enrolled + existing ones): 
+							label 3.20 No. of Research scholars receiving the Fellowships (Newly enrolled + existing ones):
 								span.badge.badge-primary HOQ
 							table(style='width:100%')
 								tr
@@ -471,7 +474,7 @@ html(lang='en')
 									td
 										input(type='number', name='no_of_research_scholars_receiving_fellowships.any_other', value=form.no_of_research_scholars_receiving_fellowships.any_other)
 							if cookies.user.username == 'HOQ'
-								label 3.21 No. of students Participated in NSS events: 
+								label 3.21 No. of students Participated in NSS events:
 									span.badge.badge-primary HOQ
 								table(style='width:100%')
 									tr
@@ -490,7 +493,7 @@ html(lang='en')
 										th National level
 										td
 											input(type='number', name='nss_student_participants.national_level', value=form.nss_student_participants.national_level)
-								label 3.22 No. of students participated in NCC events: 
+								label 3.22 No. of students participated in NCC events:
 									span.badge.badge-primary HOQ
 								table(style='width:100%')
 									tr
@@ -509,7 +512,7 @@ html(lang='en')
 										th National level
 										td
 											input(type='number', name='ncc_student_participation.national_level', value=form.nss_student_participants.national_level)
-								label 3.23 No. of Awards won in NSS: 
+								label 3.23 No. of Awards won in NSS:
 									span.badge.badge-primary HOQ
 								table(style='width:100%')
 									tr
@@ -528,7 +531,7 @@ html(lang='en')
 										th National level
 										td
 											input(type='number', name='no_of_awards_in_nss.national_level', value=form.nss_student_participants.national_level)
-								label 3.24 No. of Awards won in NCC: 
+								label 3.24 No. of Awards won in NCC:
 									span.badge.badge-primary HOQ
 								table(style='width:100%')
 									tr
@@ -570,8 +573,9 @@ html(lang='en')
 										th Any other
 										td
 											input(type='number', name='no_of_extension_activities_organized.any_other', value=form.no_of_extension_activities_organized.any_other)
-								label 3.26 Major Activities during the year in the sphere of extension activities and Institutional Social Responsibility: 
+								label 3.26 Major Activities during the year in the sphere of extension activities and Institutional Social Responsibility:
 									span.badge.badge-primary HOQ
-								input(type='text', name='major_activities', value=form.major_activities)
+								.input-group
+									textarea.form-control(type='string', name='major_activities', rows=4) #{form.major_activities}
 						button.fixed-but(type='submit') SAVE
 				//-script(src='/js/form.js')

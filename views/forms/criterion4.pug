@@ -14,7 +14,7 @@ html(lang='en')
 		.container-fluid.h-100
 			nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
 				a.navbar-brand(href='/dashboard') Back
-				span.navbar-brand.mb-0.h1 IQAC Criterion 4 - #{cookies.user.username} 
+				span.navbar-brand.mb-0.h1 IQAC Criterion 4 - #{cookies.user.username}
 					if (cookies.user.username == 'HOQ' && cookies.department != 'HOQ')
 						span.navbar-brand.mb-0.h1 - #{cookies.department}
 				a.navbar-brand(href='/home') Logout
@@ -26,7 +26,7 @@ html(lang='en')
 							| Infrastructure and Learning Resources
 						// 4.1, 4.2, 4.3 TO BE FILLED BY HOQ
 						if cookies.department == 'HOQ'
-							label 4.1 Details of increase in infrastructure facilities: 
+							label 4.1 Details of increase in infrastructure facilities:
 								span.badge.badge-primary HOQ
 							table(style='width:100%')
 								tr
@@ -105,10 +105,11 @@ html(lang='en')
 										input(type='number', name='increase_in_infrastructure_details.others.source_of_fund', value= form.increase_in_infrastructure_details.others.source_of_fund)
 									//td
 										input(type='number', name='increase_in_infrastructure_details.others.total', value= form.increase_in_infrastructure_details.others.total)
-							label 4.2 Computerization of administration and library: 
+							label 4.2 Computerization of administration and library:
 								span.badge.badge-primary HOQ
-							input(type='text', name='computerization_of_administration_and_library', value= form.computerization_of_administration_and_library)
-							label 4.3  Library services: 
+							.input-group
+								textarea.form-control(type='string', name='computerization_of_administration_and_library', rows=4) #{form.computerization_of_administration_and_library}
+							label 4.3  Library services:
 								span.badge.badge-primary HOQ
 							table(style='width:100%')
 								tr
@@ -236,7 +237,7 @@ html(lang='en')
 										input(type='number', name='library_services.other.total.num', value= form.library_services.other.total.num)
 									//td
 										input(type='number', name='library_services.other.total.val', value= form.library_services.other.total.val)
-						label 4.4 Technology up gradation (overall): 
+						label 4.4 Technology up gradation (overall):
 							span.badge.badge-success DEPARTMENT
 						table(style='width:100%')
 							tr
@@ -304,10 +305,11 @@ html(lang='en')
 								td
 									input(type='number', name='tech_upgrade.others.total', value= form.tech_upgrade.others.total)
 						if cookies.department == 'HOQ'
-							label 4.5 Computer, Internet access, training to teachers, students, and other programmes for technology upgradation (Networking, e-Governance etc.): 
+							label 4.5 Computer, Internet access, training to teachers, students, and other programmes for technology upgradation (Networking, e-Governance etc.):
 								span.badge.badge-primary HOQ
-							input(type='text', name='computer_internet_access_training', value=form.computer_internet_access_training)
-							label 4.6  Amount spent on maintenance in lakhs: 
+							.input-group
+								textarea.form-control(type='string', name='computer_internet_access_training', rows=4) #{form.computer_internet_access_training}
+							label 4.6  Amount spent on maintenance in lakhs:
 								span.badge.badge-primary HOQ
 							table(style='width:100%')
 								tr
