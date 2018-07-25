@@ -55,12 +55,13 @@ function getSite(path) {
 
 	hiddenField.setAttribute("type", "hidden");
 	hiddenField.setAttribute("name", "path");
+	hiddenField.setAttribute("value", path);
 
-	if((username === 'HOQ') && (path === '/form/criterion2')) {
-		hiddenField.setAttribute("value", "/form/criterion2hoq");
-	} else {
-		hiddenField.setAttribute("value", path);
-	}
+	// if((username === 'HOQ') && (path === '/form/criterion2')) {
+	// 	hiddenField.setAttribute("value", "/form/criterion2hoq");
+	// } else {
+	// 	hiddenField.setAttribute("value", path);
+	// }
 
 	form.appendChild(hiddenField);
     document.body.appendChild(form);

@@ -171,18 +171,33 @@ html(lang='en')
 								th I%
 								th II%
 								th III%
-							tr
-								td #{cookies.department}
-								td
-									input(type='number', name='pass_percent_dist.students_appeared', value=form.pass_percent_dist.students_appeared)
-								td
-									input(type='number', name='pass_percent_dist.division.distinction_percent', value=form.pass_percent_dist.division.distinction_percent)
-								td
-									input(type='number', name='pass_percent_dist.division.percent_one', value=form.pass_percent_dist.division.percent_one)
-								td
-									input(type='number', name='pass_percent_dist.division.percent_two', value=form.pass_percent_dist.division.percent_two)
-								td
-									input(type='number', name='pass_percent_dist.division.percent_three', value=form.pass_percent_dist.division.percent_three)
+							if cookies.department == 'HOQ'
+								each val, index in ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC']
+									tr
+										td= val
+										td
+											input(type='number', name='c1r' + index, value=form.pass_percent_dist[index].students_appeared)
+										td
+											input(type='number', name='c2r' + index, value=form.pass_percent_dist[index].division.distinction_percent)
+										td
+											input(type='number', name='c3r' + index, value=form.pass_percent_dist[index].division.percent_one)
+										td
+											input(type='number', name='c4r' + index, value=form.pass_percent_dist[index].division.percent_two)
+										td
+											input(type='number', name='c5r' + index, value=form.pass_percent_dist[index].division.percent_three)
+							else
+								tr
+									td #{cookies.department}
+									td
+										input(type='number', name='pass_percent_dist.students_appeared', value=form.pass_percent_dist.students_appeared)
+									td
+										input(type='number', name='pass_percent_dist.division.distinction_percent', value=form.pass_percent_dist.division.distinction_percent)
+									td
+										input(type='number', name='pass_percent_dist.division.percent_one', value=form.pass_percent_dist.division.percent_one)
+									td
+										input(type='number', name='pass_percent_dist.division.percent_two', value=form.pass_percent_dist.division.percent_two)
+									td
+										input(type='number', name='pass_percent_dist.division.percent_three', value=form.pass_percent_dist.division.percent_three)
 						//TO BE FILLED BY HOQ
 						if cookies.department == 'HOQ'
 							label 2.12 How does IQAC Contribute/Monitor/Evaluate the Teaching & Learning processes:

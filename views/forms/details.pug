@@ -109,7 +109,7 @@ html(lang='en')
                 th 1st Cycle
                 td
                   .input-group
-                    input.form-control(type='number', name='accreditation_details.first_cycle.grade', value=form.accreditation_details.first_cycle.grade)
+                    input.form-control(type='string', name='accreditation_details.first_cycle.grade', value=form.accreditation_details.first_cycle.grade)
                 td
                   .input-group
                     input.form-control(type='number', name='accreditation_details.first_cycle.cgpa', value=form.accreditation_details.first_cycle.cgpa)
@@ -124,7 +124,7 @@ html(lang='en')
                 th 2nd Cycle
                 td
                   .input-group
-                    input.form-control(type='number', name='accreditation_details.second_cycle.grade', value=form.accreditation_details.second_cycle.grade)
+                    input.form-control(type='string', name='accreditation_details.second_cycle.grade', value=form.accreditation_details.second_cycle.grade)
                 td
                   .input-group
                     input.form-control(type='number', name='accreditation_details.second_cycle.cgpa', value=form.accreditation_details.second_cycle.cgpa)
@@ -139,7 +139,7 @@ html(lang='en')
                 th 3rd Cycle
                 td
                   .input-group
-                    input.form-control(type='number', name='accreditation_details.third_cycle.grade', value=form.accreditation_details.third_cycle.grade)
+                    input.form-control(type='string', name='accreditation_details.third_cycle.grade', value=form.accreditation_details.third_cycle.grade)
                 td
                   .input-group
                     input.form-control(type='number', name='accreditation_details.third_cycle.cgpa', value=form.accreditation_details.third_cycle.cgpa)
@@ -154,7 +154,7 @@ html(lang='en')
                 th 4th Cycle
                 td
                   .input-group
-                    input.form-control(type='number', name='accreditation_details.fourth_cycle.grade', value=form.accreditation_details.fourth_cycle.grade)
+                    input.form-control(type='string', name='accreditation_details.fourth_cycle.grade', value=form.accreditation_details.fourth_cycle.grade)
                 td
                   .input-group
                     input.form-control(type='number', name='accreditation_details.fourth_cycle.cgpa', value=form.accreditation_details.fourth_cycle.cgpa)
@@ -170,7 +170,7 @@ html(lang='en')
             label 1.8 AQAR for the year (for example 2010-11):
             .input-group
               textarea.form-control(type='string', name='aqar_of_the_year')  #{form.aqar_of_the_year}
-            label 1.9 Details of the previous year’s AQAR submitted to NAAC after the latest Assessment and Accreditation by NAAC ((for example AQAR 2010-11submitted to NAAC on 12-10-2011):
+            label 1.9 Details of the previous year’s AQAR submitted to NAAC after the latest Assessment and Accreditation by NAAC ( For example AQAR 2016-17 was submitted to NAAC on 12-10-2017 ):
             .input-group
               input.form-control(type='date', name='previous_aqar_submissions', value=form.previous_aqar_submissions)
             label

@@ -1,7 +1,7 @@
 let mongoose = require('mongoose');
 
 //Criterion 2 schema
-var criterionTwoHoqSchema = mongoose.Schema({
+var criterionTwoSchema = mongoose.Schema({
 	department: { type: String, default: '' },
 	permanent_faculty: {
 		asst_prof: { type: Number, default: 0 },
@@ -107,4 +107,4 @@ var criterionTwoHoqSchema = mongoose.Schema({
 	}  
 }, { retainKeyOrder: true });
 
-module.exports = mongoose.model('HCriterionTwo', criterionTwoHoqSchema, 'criterion_two_hoq');
+module.exports = mongoose.model('HCriterionTwo', criterionTwoSchema, 'criterion_two');
