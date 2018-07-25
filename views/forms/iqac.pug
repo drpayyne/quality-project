@@ -20,8 +20,8 @@ html(lang='en')
 				.col
 					form(action='/form/iqac', method='post')
 						legend
-						span.number 2
-						| IQAC Composition and Activities
+							span.number 2
+							| IQAC Composition and Activities
 						// TO BE FILLED BY HOQ
 						label 2.1 No. of Teachers:
 						input(type='number', name='no_of_teachers', value=form.no_of_teachers)
@@ -100,7 +100,8 @@ html(lang='en')
 								td
 									input(type='number', name='seminars_conferences.events_organized_by_iqac.total_no', value=form.seminars_conferences.events_organized_by_iqac.total_no)
 						label ii) Themes:
-						input(type='string', name='seminars_conferences.themes', value=form.seminars_conferences.themes)
+						.input-group
+							textarea.form-control(type='string', name='seminars_conferences.themes') #{form.seminars_conferences.themes}
 						br
 						label 2.14 Significant Activities and contributions made by IQAC:
 						input(type='text', name='significant_contributions_activities_by_iqac', value=form.significant_contributions_activities_by_iqac)
@@ -129,5 +130,10 @@ html(lang='en')
 						input(type='radio', name='placement_of_aqar_in_statutory_body.type_of_statutory_body', value='any_other_body', checked=(form.placement_of_aqar_in_statutory_body.type_of_statutory_body == 'any_other_body'))
 						| Any other body
 						label Provide the details of the action taken:
+<<<<<<< HEAD
 						input(type='text', name='placement_of_aqar_in_statutory_body.details_of_action_taken', value=form.placement_of_aqar_in_statutory_body.details_of_action_taken)
+=======
+						.input-group
+							textarea.form-control(type='string', name='placement_of_aqar_in_statutory_body.type_of_statutory_body.any_other_body') #{form.placement_of_aqar_in_statutory_body.type_of_statutory_body.any_other_body}
+>>>>>>> mods
 						button.fixed-but(type='submit') SAVE

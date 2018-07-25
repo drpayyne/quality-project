@@ -132,7 +132,8 @@ html(lang='en')
 									input(type='number', name='faculty_participation.state.resource_persons', value=form.faculty_participation.state.resource_persons)
 						//TO BE FILLED BY HOQ
 						label 2.6 Innovative processes adopted by the institution in Teaching and Learning:
-						input(type='text', name='innovative_process_adopted', value=form.innovative_process_adopted)
+						.input-group
+							textarea.form-control(type='string', name='innovative_process_adopted') #{form.innovative_process_adopted}
 						label 2.7 Total No. of actual teaching days during this academic year:
 						input(type='number', name='actual_teaching_days', value=form.actual_teaching_days)
 						label
@@ -182,7 +183,8 @@ html(lang='en')
 										input(type='number', name='c5r' + index, value=form.pass_percent_dist[index].division.percent_three)
 						//TO BE FILLED BY HOQ
 						label 2.12 How does IQAC Contribute/Monitor/Evaluate the Teaching & Learning processes:
-						input(type='text', name='iqac_contribution', value=form.iqac_contribution)
+						.input-group
+							textarea.form-control(type='string', name='iqac_contribution') #{form.iqac_contribution}
 						label 2.13 Initiatives undertaken towards faculty development:
 						table(style='width:100%')
 							tr

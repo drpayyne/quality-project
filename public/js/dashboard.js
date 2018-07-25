@@ -1,12 +1,14 @@
 console.log(document.cookie);
 
 $(document).ready(function() {
-	if ($('#department_select option:selected').val() == 'HOQ') {
-		$('.hoq-only').css('display', 'block')
-	}
-	else {
-		$('.hoq-only').css('display', 'none')
-	}
+	$('#department_select').change(function() {
+		if ($('#department_select option:selected').val() == 'HOQ') {
+			$('.hoq-only').css('display', 'block')
+		}
+		else {
+			$('.hoq-only').css('display', 'none')
+		}
+	})
 })
 
 function getSite(path) {

@@ -193,7 +193,9 @@ html(lang='en')
 						| Co-operating schools (for PEI)
 						label
 							| 1.4 Whether there is any revision/update of regulation or syllabi, if yes, mention their salient aspects:
-						input(type='text', name='syllabus_revision_feedback', value=form.syllabus_revision_feedback)
+						.input-group
+							textarea.form-control(type='string', name='syllabus_revision_feedback') #{form.syllabus_revision_feedback}
 						label 1.5 Any new Department/Centre introduced during the year. If yes, give details:
-						input(type='text', name='new_dept_introduced', value=form.new_dept_introduced)
+						.input-group
+							textarea.form-control(type='string', name='new_dept_introduced') #{form.new_dept_introduced}
 						button.fixed-but(type='submit') SAVE
