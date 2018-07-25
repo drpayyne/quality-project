@@ -41,13 +41,12 @@ html(lang="en")
 										select#department_select.form-control
 											each val in ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC', 'HOQ']
 												option= val
+								br
 							else
 								h6.card-subtitle.mb-2.text-muted To be filled by Department
 							.row
-								.col-12.m-1.d-flex.justify-content-center
-								if cookies.user.username == 'HOQ'
-									.col.m-1.d-flex.justify-content-center
-										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion1")') Criterion 1
+								.col.m-1.d-flex.justify-content-center
+									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion1")') Criterion 1
 								.col.m-1.d-flex.justify-content-center
 									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion2")') Criterion 2
 								.col.m-1.d-flex.justify-content-center
@@ -56,13 +55,12 @@ html(lang="en")
 									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion4")') Criterion 4
 								.col.m-1.d-flex.justify-content-center
 									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion5")') Criterion 5
-								if cookies.user.username == 'HOQ'
-									.col.m-1.d-flex.justify-content-center
-										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion6")') Criterion 6
-									.col.m-1.d-flex.justify-content-center
-										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion7")') Criterion 7
-									.col.m-1.d-flex.justify-content-center
-										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion8")') Conclusion
+								.col.m-1.d-flex.justify-content-center
+									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion6")') Criterion 6
+								.col.m-1.d-flex.justify-content-center
+									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion7")') Criterion 7
+								.col.m-1.d-flex.justify-content-center
+									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion8")') Conclusion
 			form(action='#')
 				each val in ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC', 'HOQ']
 					if cookies.user.username == val

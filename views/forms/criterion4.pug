@@ -14,8 +14,8 @@ html(lang='en')
 		.container-fluid.h-100
 			nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
 				a.navbar-brand(href='/dashboard') Back
-				span.navbar-brand.mb-0.h1 IQAC Criterion 4 - #{cookies.user.username}
-					if cookies.user.username == 'HOQ'
+				span.navbar-brand.mb-0.h1 IQAC Criterion 4 - #{cookies.user.username} 
+					if (cookies.user.username == 'HOQ' && cookies.department != 'HOQ')
 						span.navbar-brand.mb-0.h1 - #{cookies.department}
 				a.navbar-brand(href='/home') Logout
 			.row.my-4
@@ -25,7 +25,7 @@ html(lang='en')
 							span.number 4
 							| Infrastructure and Learning Resources
 						// 4.1, 4.2, 4.3 TO BE FILLED BY HOQ
-						if cookies.user.username == 'HOQ'
+						if cookies.department == 'HOQ'
 							label 4.1 Details of increase in infrastructure facilities:
 							table(style='width:100%')
 								tr
@@ -299,30 +299,31 @@ html(lang='en')
 									input(type='number', name='tech_upgrade.departments.total', value= form.tech_upgrade.departments.total)
 								td
 									input(type='number', name='tech_upgrade.others.total', value= form.tech_upgrade.others.total)
-						label
-							| 4.5 Computer, Internet access, training to teachers and students and any other programme for technology upgradation (Networking, e-Governance etc.):
-						input(type='text', name='computer_internet_access_training', value=form.computer_internet_access_training)
-						label 4.6  Amount spent on maintenance in lakhs:
-						table(style='width:100%')
-							tr
-								th ICT
-								td
-									input(type='number', name='maintenance_amount_in_lakhs.ict', value= form.maintenance_amount_in_lakhs.ict)
-							tr
-								th Campus Infrastructure and facilities
-								td
-									input(type='number', name='maintenance_amount_in_lakhs.campus_infrastructure_facilities', value= form.maintenance_amount_in_lakhs.campus_infrastructure_facilities)
-							tr
-								th Equipments
-								td
-									input(type='number', name='maintenance_amount_in_lakhs.equipment', value= form.maintenance_amount_in_lakhs.equipment)
-							tr
-								th Others
-								td
-									input(type='number', name='maintenance_amount_in_lakhs.other_maintenance', value= form.maintenance_amount_in_lakhs.other_maintenance)
-							//tr
-								th Total
-								td
-									input(type='number', name='maintenance_amount_in_lakhs.total', value= form.maintenance_amount_in_lakhs.total)
+						if cookies.department == 'HOQ'
+							label
+								| 4.5 Computer, Internet access, training to teachers and students and any other programme for technology upgradation (Networking, e-Governance etc.):
+							input(type='text', name='computer_internet_access_training', value=form.computer_internet_access_training)
+							label 4.6  Amount spent on maintenance in lakhs:
+							table(style='width:100%')
+								tr
+									th ICT
+									td
+										input(type='number', name='maintenance_amount_in_lakhs.ict', value= form.maintenance_amount_in_lakhs.ict)
+								tr
+									th Campus Infrastructure and facilities
+									td
+										input(type='number', name='maintenance_amount_in_lakhs.campus_infrastructure_facilities', value= form.maintenance_amount_in_lakhs.campus_infrastructure_facilities)
+								tr
+									th Equipments
+									td
+										input(type='number', name='maintenance_amount_in_lakhs.equipment', value= form.maintenance_amount_in_lakhs.equipment)
+								tr
+									th Others
+									td
+										input(type='number', name='maintenance_amount_in_lakhs.other_maintenance', value= form.maintenance_amount_in_lakhs.other_maintenance)
+								//tr
+									th Total
+									td
+										input(type='number', name='maintenance_amount_in_lakhs.total', value= form.maintenance_amount_in_lakhs.total)
 						button.fixed-but(type='submit') SAVE
 				//-script(src='/js/form.js')
