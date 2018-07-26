@@ -232,18 +232,6 @@ router.post('/submit/:dept', function(req, res) {
 
 	form.avg_student_attendance = req.body.r10c1;
 
-	/* let div = {
-		distinction_percent: req.body.r11c3s1,
-		percent_one: req.body.r11c4s1,
-		percent_two: req.body.r11c5s1,
-		percent_three: req.body.r11c6s1,
-		percent_pass: req.body.r11c7s1
-	}
-
-	form.pass_percent_dist[0].programme_title = req.body.r11c1s1;
-	form.pass_percent_dist[0].students_appeared = req.body.r11c2s1;
-	form.pass_percent_dist[0].division = div; */
-
 	let divs = [];
 	let r11c1s = [req.body.r11c1s1, req.body.r11c1s2, req.body.r11c1s3, req.body.r11c1s4, req.body.r11c1s5];
 	let r11c2s = [req.body.r11c2s1, req.body.r11c2s2, req.body.r11c2s3, req.body.r11c2s4, req.body.r11c2s5];

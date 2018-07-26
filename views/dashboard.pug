@@ -1,48 +1,68 @@
-html(lang='en')
-  head
-    meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    title Dashboard
-    link(rel='stylesheet', href='css/dashboard.css')
-    link(rel='stylesheet', href='css/normalize.min.css')
-    link(href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css', rel='stylesheet')
-  body
-    .top-contain
-      .top-line
-        h1.top-header DASHBOARD
-    .bot-contain
-      .bot-left
-        h2(align='center') PART - A
-        .button-container-2
-          span.mas Criterion-1
-          button#PaC1(type='button', name='Hover') Criterion-1
-        .button-container-2
-          span.mas Criterion-2
-          button#PaC2(type='button', name='Hover') Criterion-2
-      .bot-cen
-      .bot-right
-        h2(align='center') PART - B
-        .button-container-2
-          span.mas Criterion-1
-          button#PbC1(type='button', name='Hover') Criterion-1
-        .button-container-2
-          span.mas Criterion-2
-          button#PbC2(type='button', name='Hover') Criterion-2
-        .button-container-2
-          span.mas Criterion-3
-          button#PbC3(type='button', name='Hover') Criterion-3
-        .button-container-2
-          span.mas Criterion-4
-          button#PbC4(type='button', name='Hover') Criterion-4
-        .button-container-2
-          span.mas Criterion-5
-          button#PbC5(type='button', name='Hover') Criterion-5
-        .button-container-2
-          span.mas Criterion-6
-          button#PbC6(type='button', name='Hover') Criterion-6
-        .button-container-2
-          span.mas Criterion-7
-          button#PbC7(type='button', name='Hover') Criterion-7
-        .button-container-2
-          span.mas Criterion-8
-          button#PbC8(type='button', name='Hover') Criterion-8
+html(lang="en")
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Dashboard
+		link(rel='stylesheet', href='css/dashboard.css')
+		link(rel='stylesheet', href='css/bootstrap.css')
+		script.
+			var username='#{cookies.user.username}';
+	body
+		.container-fluid.h-100
+			nav.navbar.navbar-light(style='background-color: #e3f2fd;')
+				span.navbar-brand.mb-0.h1 IQAC Dashboard - #{cookies.user.username}
+				a.navbar-brand(href='/home') Logout
+			.row.my-4
+				.col
+					if cookies.user.username == 'HOQ'
+						.card.w-50.mx-auto
+							.card-body
+								h5.card-title HOQ Options
+								ul.list-group.list-group-flush
+									li.list-group-item
+										form.form-inline
+											.input-group.mx-auto
+												.input-group-prepend
+													span.input-group-text Department
+												select#department_select.form-control.mr-sm-2
+													each val in ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC', 'HOQ']
+														option= val
+									li.list-group-item.text-center
+										a.btn.btn-primary.mr-3(href='/dashboard/prepare') Prepare PDF
+										a.btn.btn-primary.ml-3(href='#') Generate PDF
+						.card.w-50.my-3.mx-auto
+							.card-body
+								h5.card-title Part A
+								h6.card-subtitle.mb-2.text-muted To be filled by HOQ
+								.row
+									.col.m-1.d-flex.justify-content-center
+										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/details")') A1
+									.col.m-1.d-flex.justify-content-center
+										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/iqac")') A2
+					.card.w-50.mx-auto
+						.card-body
+							h5.card-title Part B
+							if cookies.user.username == 'HOQ'
+								h6.card-subtitle.mb-2.text-muted To be filled by Department / HOQ
+							else
+								h6.card-subtitle.mb-2.text-muted To be filled by Department
+							.row
+								if cookies.user.username == 'HOQ'
+									.col.m-1.d-flex.justify-content-center
+										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion1")') Criterion 1
+								.col.m-1.d-flex.justify-content-center
+									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion2")') Criterion 2
+								.col.m-1.d-flex.justify-content-center
+									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion3")') Criterion 3
+								.col.m-1.d-flex.justify-content-center
+									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion4")') Criterion 4
+								.col.m-1.d-flex.justify-content-center
+									button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion5")') Criterion 5
+								if cookies.user.username == 'HOQ'
+									.col.m-1.d-flex.justify-content-center
+										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion6")') Criterion 6
+									.col.m-1.d-flex.justify-content-center
+										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion7")') Criterion 7
+									.col.m-1.d-flex.justify-content-center
+										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/criterion8")') Conclusion
+		script(src='/js/dashboard.js')

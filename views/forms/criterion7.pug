@@ -1,0 +1,47 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title IQAC AQAR
+    link(rel='stylesheet', href='/css/dashboard.css')
+    link(rel='stylesheet', href='/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/normalize.min.css')
+    link(rel='stylesheet', href='/css/form.css')
+    script.
+      var username='#{cookies.user.username}';
+  body
+    .container-fluid.h-100
+      nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
+        span.navbar-brand.mb-0.h1 IQAC Criterion 7 - #{cookies.user.username}
+        if cookies.user.username == 'HOQ'
+          span.navbar-brand.mb-0.h1 #{cookies.department}
+        a.navbar-brand(href='/home') Logout
+      .row.my-4
+        .col
+          form(action='/form/criterion7', method='POST')
+            legend
+              span.number 7
+              | Innovations and Best Practices
+            // TO BE FILLED BY HOQ
+            label
+              | 7.1 Innovations introduced during this academic year which have created a positive impact on the functioning of the institution. Give details:
+            input(type='text', name='form.innovations_introduced_for_positive_impact', value=form.innovations_introduced_for_positive_impact)
+            label
+              | 7.2 Provide the Action Taken Report (ATR) based on the plan of action decided upon at the beginning of the year:
+            input(type='text', name='form.action_taken_report', value=form.action_taken_report)
+            label
+              | 7.3 Give two Best Practices of the institution (please see the format in the NAAC Self-study Manuals):
+            input(type='text', name='r1c1', value=form.two_best_practices_of_institution.practice1)
+            label 7.4 Contribution to environmental awareness/protection:
+            input(type='text', name='form.environment_awareness_protection_contribution', value=form.environment_awareness_protection_contribution)
+            label 7.5 Whether environmental audit was conducted?:
+            input(type='radio', name='form.environment_audit_conducted.yes', value=form.environment_audit_conducted.yes)
+            | Yes
+            input(type='radio', name='form.environment_audit_conducted.no', value=form.environment_audit_conducted.no)
+            | No
+            label
+              | 7.6 Any other relevant information the institution wishes to add.(for example SWOT Analysis):
+            input(type='text', name='form.other_relevant_info', value=form.other_relevant_info)
+            button.fixed-but(type='submit') SAVE
+        //-script(src='/js/form.js')

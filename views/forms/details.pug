@@ -1,0 +1,279 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title IQAC AQAR
+    link(rel='stylesheet', href='/css/dashboard.css')
+    link(rel='stylesheet', href='/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/normalize.min.css')
+    link(rel='stylesheet', href='/css/form.css')
+    script.
+      var username='#{cookies.user.username}';
+  body
+    .container-fluid.h-100
+      nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
+        span.navbar-brand.mb-0.h1 IQAC Part A-1 - #{cookies.user.username}
+        if cookies.user.username == 'HOQ'
+          span.navbar-brand.mb-0.h1 #{cookies.department}
+        a.navbar-brand(href='/home') Logout
+      .row.my-4
+        .col
+          form(action='/form/details', method='post')
+            legend
+              span.number 1
+              | Details Of Institution
+            // TO BE FILLED BY HOQ
+            label 1.1 Name of the Institution:
+            input(type='string', name='institution_details.institution_name', value=form.institution_details.institution_name)
+            br
+            label 1.2
+            label Address Line 1:
+            input(type='text', name='institution_details.address_line_1', value=form.institution_details.address_line_1)
+            label Address Line 2:
+            input(type='text', name='institution_details.address_line_2', value=form.institution_details.address_line_2)
+            label City/Town:
+            input(type='string', name='institution_details.city_or_town', value=form.institution_details.city_or_town)
+            br
+            label State:
+            input(type='string', name='institution_details.state', value=form.institution_details.state)
+            br
+            label Pin code:
+            input(type='string', name='institution_details.pincode', value=form.institution_details.pincode)
+            br
+            label Institution e-mail address:
+            input(type='string', name='institution_details.institute_email', value=form.institution_details.institute_email)
+            br
+            label Contact Number:
+            input(type='string', name='institution_details.contact_numbers', value=form.institution_details.contact_numbers)
+            br
+            label Name of the Head of the Institution:
+            input(type='string', name='institution_details.institution_head', value=form.institution_details.institution_head)
+            br
+            label Telephone Number with STD Code:
+            input(type='string', name='institution_details.telephone_no_with_std_code', value=form.institution_details.telephone_no_with_std_code)
+            br
+            label Mobile:
+            input(type='string', name='institution_details.mobile_number', value=form.institution_details.mobile_number)
+            br
+            label Name of the IQAC Co-ordinator:
+            input(type='string', name='institution_details.iqac_coordinator', value=form.institution_details.iqac_coordinator)
+            br
+            label Mobile:
+            input(type='string', name='institution_details.iqac_coordinator_mobile', value=form.institution_details.iqac_coordinator_mobile)
+            br
+            label IQACe-mail address:
+            input(type='string', name='institution_details.iqac_email', value=form.institution_details.iqac_email)
+            br
+            label 1.3 NAAC Track ID (For ex. MHCOGN 18879):
+            input(type='string', name='naac_track_id', value=form.naac_track_id)
+            br
+            label
+              | 1.4 NAAC Executive Committee No. & Date:(For Example EC/32/A&A/143 dated 3-5-2004.This EC no. is available in the right corner- bottom of your institution’s Accreditation Certificate)
+            input(type='text', name='naac_executive_commitee_no_date', value=form.naac_executive_commitee_no_date)
+            lable 1.5
+            label Website address:
+            input(type='string', name='website_address', value=form.website_address)
+            br
+            label Web-link of the AQAR:
+            input(type='string', name='aqar_web_link', value=form.aqar_web_link)
+            br
+            label 1.6 Accreditation Details:
+            table(style='width:100%')
+              tr
+                th Sl.No
+                th Cycle
+                th Grade
+                th CGPA
+                th Year of Accreditation
+                th Validity Period
+              tr
+                th 1
+                th 1st Cycle
+                td
+                  input(type='number', name='accreditation_details.first_cycle.grade', value=form.accreditation_details.first_cycle.grade)
+                td
+                  input(type='number', name='accreditation_details.first_cycle.cgpa', value=form.accreditation_details.first_cycle.cgpa)
+                td
+                  input(type='number', name='accreditation_details.first_cycle.year_of_accreditation', value=form.accreditation_details.first_cycle.year_of_accreditation)
+                td
+                  input(type='number', name='accreditation_details.first_cycle.validity', value=form.accreditation_details.first_cycle.validity)
+              tr
+                th 2
+                th 2nd Cycle
+                td
+                  input(type='number', name='accreditation_details.second_cycle.grade', value=form.accreditation_details.second_cycle.grade)
+                td
+                  input(type='number', name='accreditation_details.second_cycle.cgpa', value=form.accreditation_details.second_cycle.cgpa)
+                td
+                  input(type='number', name='accreditation_details.second_cycle.year_of_accreditation', value=form.accreditation_details.second_cycle.year_of_accreditation)
+                td
+                  input(type='number', name='accreditation_details.second_cycle.validity', value=form.accreditation_details.second_cycle.validity)
+              tr
+                th 3
+                th 3rd Cycle
+                td
+                  input(type='number', name='accreditation_details.third_cycle.grade', value=form.accreditation_details.third_cycle.grade)
+                td
+                  input(type='number', name='accreditation_details.third_cycle.cgpa', value=form.accreditation_details.third_cycle.cgpa)
+                td
+                  input(type='number', name='accreditation_details.third_cycle.year_of_accreditation', value=form.accreditation_details.third_cycle.year_of_accreditation)
+                td
+                  input(type='number', name='accreditation_details.third_cycle.validity', value=form.accreditation_details.third_cycle.validity)
+              tr
+                th 4
+                th 4th Cycle
+                td
+                  input(type='number', name='accreditation_details.fourth_cycle.grade', value=form.accreditation_details.fourth_cycle.grade)
+                td
+                  input(type='number', name='accreditation_details.fourth_cycle.cgpa', value=form.accreditation_details.fourth_cycle.cgpa)
+                td
+                  input(type='number', name='accreditation_details.fourth_cycle.year_of_accreditation', value=form.accreditation_details.fourth_cycle.year_of_accreditation)
+                td
+                  input(type='number', name='accreditation_details.fourth_cycle.validity', value=form.accreditation_details.fourth_cycle.validity)
+            label 1.7 Date of Establishment of IQAC(DD/MM/YYYY):
+            input(type='date', name='iqac_establishment_date', value=form.iqac_establishment_date)
+            label 1.8 AQAR for the year (for example 2010-11):
+            input(type='text', name='aqar_of_the_year', value=form.aqar_of_the_year)
+            label
+              | 1.9 Details of the previous year’s AQAR submitted to NAAC after the latest Assessment and Accreditation by NAAC ((for example AQAR 2010-11submitted to NAAC on 12-10-2011):
+            table(style='width:100%')
+              tr
+                th i)AQAR
+                td
+                  input(type='date', name='previous_aqar_submissions.prev_aqar_submission1.aqar_date', value=form.previous_aqar_submissions.prev_aqar_submission1.aqar_date)
+              tr
+                th ii)AQAR
+                td
+                  input(type='date', name='previous_aqar_submissions.prev_aqar_submission2.aqar_date', value=form.previous_aqar_submissions.prev_aqar_submission2.aqar_date)
+              tr
+                th iii)AQAR
+                td
+                  input(type='date', name='previous_aqar_submissions.prev_aqar_submission3.aqar_date', value=form.previous_aqar_submissions.prev_aqar_submission3.aqar_date)
+              tr
+                th iv)AQAR
+                td
+                  input(type='date', name='previous_aqar_submissions.prev_aqar_submission4.aqar_date', value=form.previous_aqar_submissions.prev_aqar_submission4.aqar_date)
+            label
+              | 1.10 Institutional Status:
+              br
+              br
+              | University:
+            input(type='radio', name='institutional_status.university.state', value=form.institutional_status.university.state)
+            | State
+            input(type='radio', name='institutional_status.university.central', value=form.institutional_status.university.central)
+            | Central
+            input(type='radio', name='institutional_status.university.deemed', value=form.institutional_status.university.deemed)
+            | Deemed
+            input(type='radio', name='institutional_status.university.private_uni', value=form.institutional_status.university.private_uni)
+            | Private
+            label Affiliated College:
+            input(type='radio', name='institutional_status.affliated_college.yes', value=form.institutional_status.affliated_college.yes)
+            | YES
+            input(type='radio', name='institutional_status.affliated_college.no', value=form.institutional_status.affliated_college.no)
+            | NO
+            label Constituent College:
+            input(type='radio', name='institutional_status.constituent_college.yes', value=form.institutional_status.constituent_college.yes)
+            | YES
+            input(type='radio', name='institutional_status.constituent_college.no', value=form.institutional_status.constituent_college.no)
+            | NO
+            label Autonomous college of UGC:
+            input(type='radio', name='institutional_status.autonomous_college_of_ugc.yes', value=form.institutional_status.autonomous_college_of_ugc.yes)
+            | YES
+            input(type='radio', name='institutional_status.autonomous_college_of_ugc.no', value=form.institutional_status.autonomous_college_of_ugc.no)
+            | NO
+            label Regulatory Agency approved Institution:
+            input(type='radio', name='institutional_status.regulatory_agency_approved_institute.yes', value=form.institutional_status.regulatory_agency_approved_institute.yes)
+            | YES
+            input(type='radio', name='institutional_status.regulatory_agency_approved_institute.no', value=form.institutional_status.regulatory_agency_approved_institute.no)
+            | NO
+            label Type Of Institution:
+            input(type='checkbox', name='institutional_status.type_of_institution1.co_ed', value=form.institutional_status.type_of_institution1.co_ed)
+            | Co-Education
+            input(type='checkbox', name='institutional_status.type_of_institution1.men', value=form.institutional_status.type_of_institution1.men)
+            | Men
+            input(type='checkbox', name='institutional_status.type_of_institution1.women', value=form.institutional_status.type_of_institution1.women)
+            | Women
+            input(type='checkbox', name='institutional_status.type_of_institution2.urban', value=form.institutional_status.type_of_institution2.urban)
+            | Urban
+            input(type='checkbox', name='institutional_status.type_of_institution2.rural', value=form.institutional_status.type_of_institution2.rural)
+            | Rural
+            input(type='checkbox', name='institutional_status.type_of_institution2.tribal', value=form.institutional_status.type_of_institution2.tribal)
+            | Tribal
+            label Financial Status:
+            input(type='checkbox', name='institutional_status.financial_status.grant_in_aid', value=form.institutional_status.financial_status.grant_in_aid)
+            | Grant-in-aid
+            input(type='checkbox', name='institutional_status.financial_status.ugc_2f', value=form.institutional_status.financial_status.ugc_2f)
+            | UGC 2(f)
+            input(type='checkbox', name='institutional_status.financial_status.ugc_12b', value=form.institutional_status.financial_status.ugc_12b)
+            | UGC 12B
+            input(type='checkbox', name='institutional_status.financial_status.grant_in_aid_plus_self_finance', value=form.institutional_status.financial_status.grant_in_aid_plus_self_finance)
+            | Grant-in-aid + Self Financing
+            input(type='checkbox', name='institutional_status.financial_status.totally_self_finance', value=form.institutional_status.financial_status.totally_self_finance)
+            | Totally Self-financing
+            label 1.11 Type of Faculty/Programme:
+            input(type='checkbox', name='faculty_and_programme_type.arts', value=form.faculty_and_programme_type.arts)
+            | Arts
+            input(type='checkbox', name='faculty_and_programme_type.science', value=form.faculty_and_programme_type.science)
+            | Science
+            input(type='checkbox', name='faculty_and_programme_type.commerce', value=form.faculty_and_programme_type.commerce)
+            | Commerce
+            input(type='checkbox', name='faculty_and_programme_type.law', value=form.faculty_and_programme_type.law)
+            | Law
+            input(type='checkbox', name='faculty_and_programme_type.pei', value=form.faculty_and_programme_type.pei)
+            | PEI (Phys Edu)
+            input(type='checkbox', name='faculty_and_programme_type.tei', value=form.faculty_and_programme_type.tei)
+            | TEI (Edu)
+            input(type='checkbox', name='faculty_and_programme_type.engineering', value=form.faculty_and_programme_type.engineering)
+            | Engineering
+            input(type='checkbox', name='faculty_and_programme_type.health_science', value=form.faculty_and_programme_type.health_science)
+            | Health Science
+            input(type='checkbox', name='faculty_and_programme_type.management', value=form.faculty_and_programme_type.management)
+            | Management
+            br
+            | Other(Specify):
+            input(type='string', name='faculty_and_programme_type.others', value=form.faculty_and_programme_type.others)
+            label 1.12 Name of the Affiliating University (for the Colleges):
+            input(type='string', name='affliating_uni_name', value=form.affliating_uni_name)
+            label
+              | 1.13 Special status conferred by Central/ State Government(UGC/CSIR/DST/DBT/ICMR etc):
+            |         Autonomy by State/Central Govt. / University:
+            br
+            input(type='string', name='special_status.state_cental_govt_uni_autonomy', value=form.special_status.state_cental_govt_uni_autonomy)
+            br
+            | University with Potential for Excellence:
+            br
+            input(type='string', name='special_status.uni_with_potential_for_exellence', value=form.special_status.uni_with_potential_for_exellence)
+            br
+            | DST Star Scheme:
+            br
+            input(type='string', name='special_status.ugc_cpe', value=form.special_status.ugc_cpe)
+            br
+            | UGC-CPE:
+            br
+            input(type='string', name='special_status.ugc_ce', value=form.special_status.ugc_ce)
+            br
+            | UGC-CE:
+            br
+            input(type='string', name='special_status.dst_star_scheme', value=form.special_status.dst_star_scheme)
+            br
+            | UGC-Special Assistance Programme:
+            br
+            input(type='string', name='special_status.dst_fist', value=form.special_status.dst_fist)
+            br
+            | UGC-Innovative PG programmes:
+            br
+            input(type='string', name='special_status.ugc_special_assistance_program', value=form.special_status.ugc_special_assistance_program)
+            br
+            | UGC-COP Programmes:
+            br
+            input(type='string', name='special_status.ugc_innovative_pg_program', value=form.special_status.ugc_innovative_pg_program)
+            br
+            | DST-FIST:
+            br
+            input(type='string', name='special_status.ugc_cop', value=form.special_status.ugc_cop)
+            br
+            | Any other (Specify):
+            br
+            input(type='string', name='special_status.any_other', value=form.special_status.any_other)
+            button.fixed-but(type='submit') SAVE

@@ -1,0 +1,90 @@
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Dashboard
+
+		<!-- Bootstrap CSS -->
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+	body
+		nav.navbar.navbar-dark.bg-dark
+			a.navbar-brand(href='/dashboard') IQAC
+			a.nav-link(href='/home') Logout
+		if cookies.user.username == 'HOQ'
+			.container
+				.row
+					.col-sm
+						form(action='/dashboard/setdept', method='post')
+							.dropdown
+								button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+									| Select Department
+								.dropdown-menu(aria-labelledby='dropdownMenuButton')
+									a.dropdown-item(href='#') BTC
+									a.dropdown-item(href='#') CSE
+
+					.col-sm
+					| One of three columns
+		ul.navbar-nav
+			li.nav-item
+				form.form-inline
+					select(name="username")
+						option(value="NULL") Pick Department
+						option(value="CSE") CSE
+						option(value="ECE") ECE
+						option(value="CHE") CHE
+						option(value="BTC") BTC
+						option(value="MEC") MEC
+						option(value="HOQ") HOQ
+				
+				form(action='/dashboard/generate', method='post')
+					button(type='submit') Generate PDF
+			span.navbar-text
+				| DASHBOARD - #{cookies.department}
+			li.nav-item
+				a.nav-link(href='/home') Logout
+		.bot-contain
+			.bot-left
+				h2(align="center") PART - A
+				.button-container-2
+					span.mas Criterion-1
+					button(type="button" name="Hover") 
+						a(href='/form/details') Criterion-1
+				.button-container-2
+					span.mas Criterion-2
+					button(type="button" name="Hover") 
+						a(href='/form/iqac') Criterion-2
+			.bot-cen
+			.bot-right
+				h2(align="center") PART - B
+				.button-container-2
+					span.mas Criterion-1
+					button(type="button" name="Hover") 
+						a(href='/form/criterion1') Criterion-1
+				.button-container-2
+					span.mas Criterion-2
+					button(type="button" name="Hover") 
+						a(href='/form/criterion2') Criterion-2
+				.button-container-2
+					span.mas Criterion-3
+					button(type="button" name="Hover") 
+						a(href='/form/criterion3') Criterion-3
+				.button-container-2
+					span.mas Criterion-4
+					button(type="button" name="Hover") 
+						a(href='/form/criterion4') Criterion-4
+				.button-container-2
+					span.mas Criterion-5
+					button(type="button" name="Hover") 
+						a(href='/form/criterion5') Criterion-5
+				.button-container-2
+					span.mas Criterion-6
+					button(type="button" name="Hover") 
+						a(href='/form/criterion6') Criterion-6
+				.button-container-2
+					span.mas Criterion-7
+					button(type="button" name="Hover") 
+						a(href='/form/criterion7') Criterion-7
+				.button-container-2
+					span.mas Criterion-8
+					button(type="button" name="Hover") 
+						a(href='/form/criterion8') Criterion-8
