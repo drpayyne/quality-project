@@ -16,11 +16,29 @@ html(lang="en")
 					if cookies.user.username == 'HOQ'
 						.card.w-50.mx-auto
 							.card-body
-								h5.card-title HOQ Options
+								h5.card-title HOQ Administrative Control
 								ul.list-group.list-group-flush
 									li.list-group-item.text-center
-										a.btn.btn-primary.mr-3(href='/dashboard/prepare') Prepare PDF
-										a.btn.btn-primary.ml-3(href='#') Generate PDF
+										button.btn.btn-primary(type='button', data-toggle='modal', data-target='#preparePdfModal')
+											| Prepare PDF
+										#preparePdfModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='preparePdfCenterTitle', aria-hidden='true')
+											.modal-dialog.modal-dialog-centered(role='document')
+												.modal-content
+													.modal-header
+														h5#preparePdfCenterTitle.modal-title Prepare PDF
+														button.close(type='button', data-dismiss='modal', aria-label='Close')
+														span(aria-hidden='true') &times;
+													.modal-body
+														| Are you sure you want to prepare PDF?
+													.modal-footer
+														button.btn.btn-secondary(type='button', data-dismiss='modal') No, take me back
+														button.btn.btn-primary(type='button') Yes, I&apos;m sure
+
+										button.btn.btn-primary.mx-3(type='button', data-toggle='modal', data-target='#genPdfModal')
+											| Generate PDF
+										button.btn.btn-danger(type='button', data-toggle='modal', data-target='#initAqarModal')
+											| Initialize AQAR
+									
 						.card.w-50.my-3.mx-auto
 							.card-body
 								h5.card-title Part A
