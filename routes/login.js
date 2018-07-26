@@ -47,11 +47,11 @@ router.post('/register', function(req, res) {
 
     let user = {
         username: name,
-        password: pass    
+        password: pass
     };
 
     console.log(user);
-    
+
     /* user.save(function(err) {
         if(err) {
             console.log(err);

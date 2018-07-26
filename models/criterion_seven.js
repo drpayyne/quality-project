@@ -3,23 +3,17 @@ let mongoose = require('mongoose');
 
 // Criterion Seven Schema
 var criterionSevenSchema = mongoose.Schema({
-    innovations_introduced_for_positive_impact : String,
+  department: { type: String, default: null },
+    innovations_introduced_for_positive_impact : { type: String, default: null },
 
-    action_taken_report : String,
+    action_taken_report : { type: String, default: null },
 
-    two_best_practices_of_institution : {
-      practice1 : String,
-      practice2 : String
-    },
+    two_best_practices_of_institution : { type: String, default: null },
 
-    environment_awareness_protection_contribution : String,
+    environment_awareness_protection_contribution : { type: String, default: null },
 
-    environment_audit_conducted : {
-      yes : Number,
-      no : Number
-    },
+    environment_audit_conducted : { type: String, default: '' },
 
-    other_relevant_info : String
-  retainKeyOrder : true
-});
+    other_relevant_info : { type: String, default: null }
+  }, { retainKeyOrder: true });
 let CriterionSeven = module.exports = mongoose.model('CriterionSeven',criterionSevenSchema,'criterion_seven');

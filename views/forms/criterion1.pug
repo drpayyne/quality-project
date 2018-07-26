@@ -1,0 +1,203 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title IQAC AQAR
+		link(rel='stylesheet', href='/css/dashboard.css')
+		link(rel='stylesheet', href='/css/bootstrap.css')
+		link(rel='stylesheet', href='/css/normalize.min.css')
+		link(rel='stylesheet', href='/css/form.css')
+		script.
+			var username='#{cookies.user.username}';
+	body
+		.container-fluid.h-100
+			nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
+				a.navbar-brand(href='/dashboard') Back
+				span.navbar-brand.mb-0.h1 IQAC Criterion 1 - #{cookies.user.username}
+				//	if cookies.user.username == 'HOQ'
+				//		span.navbar-brand.mb-0.h1 - #{cookies.department}
+				a.navbar-brand(href='/home') Logout
+			.row.my-4
+				.col
+					form(action='/form/criterion1', method='post')
+						legend
+							span.number 1
+							| Curricular Aspects
+						// TO BE FILLED BY HOQ
+						label 1.1 No. of Teachers:
+							span.badge.badge-primary HOQ
+						table(style='width:100%')
+							tr
+								th Level of the Programme
+								th Number of existing  Programmes
+								th Number of programmes added during the year
+								th Number of self-financing programmes
+								th Number of value added / Career Oriented programmes
+							tr
+								th PhD
+								td
+									input(type='number', name='academic_program_details.phd.existing_program_count', value=form.academic_program_details.phd.existing_program_count)
+								td
+									input(type='number', name='academic_program_details.phd.added_program_count', value=form.academic_program_details.phd.added_program_count)
+								td
+									input(type='number', name='academic_program_details.phd.self_finance_program_count', value=form.academic_program_details.phd.self_finance_program_count)
+								td
+									input(type='number', name='academic_program_details.phd.career_oriented_program_count', value=form.academic_program_details.phd.career_oriented_program_count)
+							tr
+								th PG
+								td
+									input(type='number', name='academic_program_details.pg.existing_program_count', value=form.academic_program_details.pg.existing_program_count)
+								td
+									input(type='number', name='academic_program_details.pg.added_program_count', value=form.academic_program_details.pg.added_program_count)
+								td
+									input(type='number', name='academic_program_details.pg.self_finance_program_count', value=form.academic_program_details.pg.self_finance_program_count)
+								td
+									input(type='number', name='academic_program_details.pg.career_oriented_program_count', value=form.academic_program_details.pg.career_oriented_program_count)
+							tr
+								th UG
+								td
+									input(type='number', name='academic_program_details.ug.existing_program_count', value=form.academic_program_details.ug.existing_program_count)
+								td
+									input(type='number', name='academic_program_details.ug.added_program_count', value=form.academic_program_details.ug.added_program_count)
+								td
+									input(type='number', name='academic_program_details.ug.self_finance_program_count', value=form.academic_program_details.ug.self_finance_program_count)
+								td
+									input(type='number', name='academic_program_details.ug.career_oriented_program_count', value=form.academic_program_details.ug.career_oriented_program_count)
+							tr
+								th PG Diploma
+								td
+									input(type='number', name='academic_program_details.pg_diploma.existing_program_count', value=form.academic_program_details.pg_diploma.existing_program_count)
+								td
+									input(type='number', name='academic_program_details.pg_diploma.added_program_count', value=form.academic_program_details.pg_diploma.added_program_count)
+								td
+									input(type='number', name='academic_program_details.pg_diploma.self_finance_program_count', value=form.academic_program_details.pg_diploma.self_finance_program_count)
+								td
+									input(type='number', name='academic_program_details.pg_diploma.career_oriented_program_count', value=form.academic_program_details.pg_diploma.career_oriented_program_count)
+							tr
+								th Advanced Diploma
+								td
+									input(type='number', name='academic_program_details.adv_diploma.existing_program_count', value=form.academic_program_details.adv_diploma.existing_program_count)
+								td
+									input(type='number', name='academic_program_details.adv_diploma.added_program_count', value=form.academic_program_details.adv_diploma.added_program_count)
+								td
+									input(type='number', name='academic_program_details.adv_diploma.self_finance_program_count', value=form.academic_program_details.adv_diploma.self_finance_program_count)
+								td
+									input(type='number', name='academic_program_details.adv_diploma.career_oriented_program_count', value=form.academic_program_details.adv_diploma.career_oriented_program_count)
+							tr
+								th Diploma
+								td
+									input(type='number', name='academic_program_details.diploma.existing_program_count', value=form.academic_program_details.diploma.existing_program_count)
+								td
+									input(type='number', name='academic_program_details.diploma.added_program_count', value=form.academic_program_details.diploma.added_program_count)
+								td
+									input(type='number', name='academic_program_details.diploma.self_finance_program_count', value=form.academic_program_details.diploma.self_finance_program_count)
+								td
+									input(type='number', name='academic_program_details.diploma.career_oriented_program_count', value=form.academic_program_details.diploma.career_oriented_program_count)
+							tr
+								th Certificate
+								td
+									input(type='number', name='academic_program_details.certificate.existing_program_count', value=form.academic_program_details.certificate.existing_program_count)
+								td
+									input(type='number', name='academic_program_details.certificate.added_program_count', value=form.academic_program_details.certificate.added_program_count)
+								td
+									input(type='number', name='academic_program_details.certificate.self_finance_program_count', value=form.academic_program_details.certificate.self_finance_program_count)
+								td
+									input(type='number', name='academic_program_details.certificate.career_oriented_program_count', value=form.academic_program_details.certificate.career_oriented_program_count)
+							tr
+								th Others
+								td
+									input(type='number', name='academic_program_details.others.existing_program_count', value=form.academic_program_details.others.existing_program_count)
+								td
+									input(type='number', name='academic_program_details.others.added_program_count', value=form.academic_program_details.others.added_program_count)
+								td
+									input(type='number', name='academic_program_details.others.self_finance_program_count', value=form.academic_program_details.others.self_finance_program_count)
+								td
+									input(type='number', name='academic_program_details.others.career_oriented_program_count', value=form.academic_program_details.others.career_oriented_program_count)
+							//tr
+								th Total
+								td
+									input(type='number', name='academic_program_details.total.existing_program_count', value=form.academic_program_details.total.existing_program_count)
+								td
+									input(type='number', name='academic_program_details.total.added_program_count', value=form.academic_program_details.total.added_program_count)
+								td
+									input(type='number', name='academic_program_details.total.self_finance_program_count', value=form.academic_program_details.total.self_finance_program_count)
+								td
+									input(type='number', name='academic_program_details.total.career_oriented_program_count', value=form.academic_program_details.total.career_oriented_program_count)
+							tr
+								th Interdisciplinary
+								td
+									input(type='number', name='academic_program_details.interdisciplinary.existing_program_count', value=form.academic_program_details.interdisciplinary.existing_program_count)
+								td
+									input(type='number', name='academic_program_details.interdisciplinary.added_program_count', value=form.academic_program_details.interdisciplinary.added_program_count)
+								td
+									input(type='number', name='academic_program_details.interdisciplinary.self_finance_program_count', value=form.academic_program_details.interdisciplinary.self_finance_program_count)
+								td
+									input(type='number', name='academic_program_details.interdisciplinary.career_oriented_program_count', value=form.academic_program_details.interdisciplinary.career_oriented_program_count)
+							tr
+								th Innovative
+								td
+									input(type='number', name='academic_program_details.innovative.existing_program_count', value=form.academic_program_details.innovative.existing_program_count)
+								td
+									input(type='number', name='academic_program_details.innovative.added_program_count', value=form.academic_program_details.innovative.added_program_count)
+								td
+									input(type='number', name='academic_program_details.innovative.self_finance_program_count', value=form.academic_program_details.innovative.self_finance_program_count)
+								td
+									input(type='number', name='academic_program_details.innovative.career_oriented_program_count', value=form.academic_program_details.innovative.career_oriented_program_count)
+						label 1.2
+						label (i) Flexibility of the Curriculum:
+							span.badge.badge-primary HOQ
+						input(type='radio', name='curriculum_flexibility', value='cbcs', checked=(form.curriculum_flexibility == 'cbcs'))
+						| CBCS
+						input(type='radio', name='curriculum_flexibility', value='core', checked=(form.curriculum_flexibility == 'core'))
+						| Core
+						input(type='radio', name='curriculum_flexibility', value='elec', checked=(form.curriculum_flexibility == 'elec'))
+						| Elective option
+						input(type='radio', name='curriculum_flexibility', value='open', checked=(form.curriculum_flexibility == 'open'))
+						| Open Options
+						label (ii) Pattern of programmes:
+							span.badge.badge-primary HOQ
+						table(width='100%')
+							tr
+								th Pattern
+								th Number of programmes
+							tr
+								th Semester
+								td
+									input(type='number', name='pattern_of_programmes.semester.no_of_programmes', value=form.pattern_of_programmes.semester.no_of_programmes)
+							tr
+								th Trimester
+								td
+									input(type='number', name='pattern_of_programmes.trimester.no_of_programmes', value=form.pattern_of_programmes.trimester.no_of_programmes)
+							tr
+								th Annual
+								td
+									input(type='number', name='pattern_of_programmes.annual.no_of_programmes', value=form.pattern_of_programmes.annual.no_of_programmes)
+						label 1.3
+						label Feedback from stakeholders (On all aspects):
+							span.badge.badge-primary HOQ
+						input(type='checkbox', name='stakeholder_feedback.alumni', checked=(form.stakeholder_feedback.alumni=='on'))
+						| Alumini
+						input(type='checkbox', name='stakeholder_feedback.parents', checked=(form.stakeholder_feedback.parents=='on'))
+						| Parents
+						input(type='checkbox', name='stakeholder_feedback.employers', checked=(form.stakeholder_feedback.employers=='on'))
+						| Employers
+						input(type='checkbox', name='stakeholder_feedback.student', checked=(form.stakeholder_feedback.student=='on'))
+						| Students
+						label Mode of feedback:
+							span.badge.badge-primary HOQ
+						input(type='radio', name='mode_of_feedback', value='online', checked=(form.mode_of_feedback == 'online'))
+						| Online
+						input(type='radio', name='mode_of_feedback', value='manual', checked=(form.mode_of_feedback == 'manual'))
+						| Manual
+						input(type='radio', name='mode_of_feedback', value='coop', checked=(form.mode_of_feedback == 'coop'))
+						| Co-operating schools (for PEI)
+						label 1.4 Whether there is any revision/update of regulation or syllabi, if yes, mention their salient aspects:
+							span.badge.badge-primary HOQ
+						.input-group
+							textarea.form-control(type='string', name='syllabus_revision_feedback', rows=4) #{form.syllabus_revision_feedback}
+						label 1.5 Any new Department/Centre introduced during the year. If yes, give details:
+							span.badge.badge-primary HOQ
+						.input-group
+							textarea.form-control(type='string', name='new_dept_introduced', rows=4) #{form.new_dept_introduced}
+						button.fixed-but(type='submit') SAVE

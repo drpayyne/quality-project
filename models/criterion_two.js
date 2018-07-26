@@ -1,108 +1,109 @@
 let mongoose = require('mongoose');
 
-let deptPassPercentSchema = ({
-	programme_title: String,
-	students_appeared: Number,
-	division: {
-		distinction_percent: Number,
-		percent_one: Number,
-		percent_two: Number,
-		percent_three: Number/* ,
-		percent_pass: Number */
-	}
-});
-
 //Criterion 2 schema
 var criterionTwoSchema = mongoose.Schema({
-	department: String,
+	department: { type: String, default: null },
 	permanent_faculty: {
-		asst_prof: Number,
-		asso_prof: Number,
-		prof: Number,
-		others: Number/* ,
-		total: Number */
+		asst_prof: { type: Number, default: null },
+		asso_prof: { type: Number, default: null },
+		prof: { type: Number, default: null },
+		others: { type: Number, default: null }/* ,
+		total: { type: Number, default: null } */
 	},
-	permanent_faculty_phd: Number,
+	permanent_faculty_phd: { type: Number, default: null },
 	faculty_pos_recruited_vacant: {
 		asst_prof: {
-			recruited: Number,
-			vacant: Number
+			recruited: { type: Number, default: null },
+			vacant: { type: Number, default: null }
 		},
 		asso_prof: {
-			recruited: Number,
-			vacant: Number
+			recruited: { type: Number, default: null },
+			vacant: { type: Number, default: null }
 		},
 		prof: {
-			recruited: Number,
-			vacant: Number
+			recruited: { type: Number, default: null },
+			vacant: { type: Number, default: null }
 		},
 		others: {
-			recruited: Number,
-			vacant: Number
+			recruited: { type: Number, default: null },
+			vacant: { type: Number, default: null }
 		}/* ,
 		total: {
-			recruited: Number,
-			vacant: Number
+			recruited: { type: Number, default: null },
+			vacant: { type: Number, default: null }
 		} */
 	},
 	guest_visit_temp_faculty: {
-		guest: Number,
-		visiting: Number,
-		temporary: Number
+		guest: { type: Number, default: null },
+		visiting: { type: Number, default: null },
+		temporary: { type: Number, default: null }
 	},
 	faculty_participation: {
 		international: {
-			seminar_workshop: Number,
-			paper_presented: Number,
-			resource_persons: Number
+			seminar_workshop: { type: Number, default: null },
+			paper_presented: { type: Number, default: null },
+			resource_persons: { type: Number, default: null }
 		},
 		national: {
-			seminar_workshop: Number,
-			paper_presented: Number,
-			resource_persons: Number
+			seminar_workshop: { type: Number, default: null },
+			paper_presented: { type: Number, default: null },
+			resource_persons: { type: Number, default: null }
 		},
 		state: {
-			seminar_workshop: Number,
-			paper_presented: Number,
-			resource_persons: Number
+			seminar_workshop: { type: Number, default: null },
+			paper_presented: { type: Number, default: null },
+			resource_persons: { type: Number, default: null }
 		}
 	},
-	actual_teaching_days: Number,
-	exam_reforms_initiated: Number,
+	//TO BE FILLED BY HOQ
+	innovative_process_adopted: { type: String, default: null },
+	actual_teaching_days: { type: Number, default: null },
+	exam_reforms_initiated: { type: Number, default: null },
 	curriculum_incharge_faculty_members: {
-		curriculum_revision: Number,
-		member_board: Number,
-		faculty_dev_workshop: Number
+		curriculum_revision: { type: Number, default: null },
+		member_board: { type: Number, default: null },
+		faculty_dev_workshop: { type: Number, default: null }
 	},
-	avg_student_attendance: Number,
-	pass_percent_dist: [deptPassPercentSchema],
+	avg_student_attendance: { type: Number, default: null },
+	pass_percent_dist: {
+		department: { type: String, default: null },
+		programme_title: { type: String, default: null },
+		students_appeared: { type: Number, default: null },
+		division: {
+			distinction_percent: { type: Number, default: null },
+			percent_one: { type: Number, default: null },
+			percent_two: { type: Number, default: null },
+			percent_three: { type: Number, default: null }
+		}
+	},
+	iqac_contribution: { type: String, default: null },
 	faculty_dev_initiative: {
-		refresher_courses: Number,
-		ugc_fac_improvement_prog: Number,
-		hrd_programme:Number,
-		orientation_programme: Number,
-		fac_exchange_programme: Number,
-		staff_training_univ: Number,
-		staff_training_other: Number,
-		summer_winter_workshops: Number,
-		others: Number
+		refresher_courses: { type: Number, default: null },
+		ugc_fac_improvement_prog: { type: Number, default: null },
+		hrd_programme:{ type: Number, default: null },
+		orientation_programme: { type: Number, default: null },
+		fac_exchange_programme: { type: Number, default: null },
+		staff_training_univ: { type: Number, default: null },
+		staff_training_other: { type: Number, default: null },
+		summer_winter_workshops: { type: Number, default: null },
+		others: { type: Number, default: null }
 	},
 	admin_tech_staff: {
 		permanent_employees: {
-			admin: Number,
-			technical: Number
+			admin: { type: Number, default: null },
+			technical: { type: Number, default: null }
 		},
 		vacant_positions: {
-			admin: Number,
-			technical: Number
+			admin: { type: Number, default: null },
+			technical: { type: Number, default: null }
 		},
 		permanent_positions_filled: {
-			admin: Number,
-			technical: Number
+			admin: { type: Number, default: null },
+			technical: { type: Number, default: null }
 		},
 		temporary_positions_filled: {
-			admin: Number,
-			technical: Number
+			admin: { type: Number, default: null },
+			technical: { type: Number, default: null }
 		}
 	}  
 }, { retainKeyOrder: true });

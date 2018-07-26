@@ -3,62 +3,53 @@
 let mongoose = require('mongoose');
 
 //Criterion 6 schema
-var criterionSixschema = mongoose.schema({
-  vision_mission_institute : String,
-  info_management_system : String,
+var criterionSixschema = mongoose.Schema({
+  department: { type: String, default: null },
+  vision_mission_institute : { type: String, default: null },
+  info_management_system : { type: String, default: null },
   improvement_strategies : {
-    curriculum_development : String,
-    teaching_and_learning : String,
-    exam_and_evaluation : String,
-    research_and_development : String,
-    physical_infrastructure : String,
-    human_resource_management : String,
-    faculty_staff_recruitment : String,
-    industry_interaction_collab : String,
-    student_admission : String
+    curriculum_development : { type: String, default: null },
+    teaching_and_learning : { type: String, default: null },
+    exam_and_evaluation : { type: String, default: null },
+    research_and_development : { type: String, default: null },
+    physical_infrastructure : { type: String, default: null },
+    human_resource_management : { type: String, default: null },
+    faculty_staff_recruitment : { type: String, default: null },
+    industry_interaction_collab : { type: String, default: null },
+    student_admission : { type: String, default: null }
   },
   welfare_scheme : {
-    teaching : String,
-    non_teaching : String,
-    students : String
+    teaching : { type: String, default: null },
+    non_teaching : { type: String, default: null },
+    students : { type: String, default: null }
   },
-  corpus_fund : String,
-  financial_audit : {
-    yes : Number,
-    no : Number
-  },
+  corpus_fund : { type: String, default: null },
+  financial_audit : { type: String, default: '' },
   academic_admin_audit : {
     academic : {
-      external_yes_no : String,
-      external_agency : String,
-      internal_yes_no : String,
-      internal_agency : String
+      external : { type: String, default: '' },
+      external_agency : { type: String, default: null },
+      internal : { type: String, default: '' },
+      internal_authority : { type: String, default: null }
     },
     administrative : {
-      external_yes_no : String,
-      external_agency : String,
-      internal_yes_no : String,
-      internal_agency : String
+      external : { type: String, default: '' },
+      external_agency : { type: String, default: null },
+      internal : { type: String, default: '' },
+      internal_authority : { type: String, default: null }
     }
   },
   result_declaration : {
-    ug_programmes : {
-      yes : Number,
-      no : Number
-    },
-    pg_programmes : {
-      yes : Number,
-      no : Number
-    }
+    ug_programmes : { type: String, default: '' },
+    pg_programmes :{ type: String, default: '' }
   },
-  examination_reforms : String,
-  autonomy_promotion : String,
-  alumni_activity_support : String,
-  parent_teacher_activity_support : String,
-  support_staff_development : String,
-  eco_friendly_initiatives : String
+  examination_reforms : { type: String, default: null },
+  autonomy_promotion : { type: String, default: null },
+  alumni_activity_support : { type: String, default: null },
+  parent_teacher_activity_support : { type: String, default: null },
+  support_staff_development : { type: String, default: null },
+  eco_friendly_initiatives : { type: String, default: null }
 
-  retainKeyOrder : true
-});
+}, { retainKeyOrder: true });
 
 let CriterionSix = module.exports = mongoose.model('CriterionSix', criterionSixschema, 'criterion_six');
