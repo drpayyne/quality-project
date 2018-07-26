@@ -27,7 +27,6 @@ html(lang='en')
               span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.institution_name', value=form.institution_details.institution_name)
-            br
             label 1.2
             label Address Line 1:
               span.badge.badge-primary HOQ
@@ -41,52 +40,42 @@ html(lang='en')
               span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.city_or_town', value=form.institution_details.city_or_town)
-            br
             label State:
               span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.state', value=form.institution_details.state)
-            br
             label Pin code:
               span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.pincode', value=form.institution_details.pincode)
-            br
             label Institution e-mail address:
               span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.institute_email', value=form.institution_details.institute_email)
-            br
             label Contact Number:
               span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.contact_numbers', value=form.institution_details.contact_numbers)
-            br
             label Name of the Head of the Institution:
               span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.institution_head', value=form.institution_details.institution_head)
-            br
             label Telephone Number with STD Code:
               span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.telephone_no_with_std_code', value=form.institution_details.telephone_no_with_std_code)
-            br
             label Mobile:
               span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.mobile_number', value=form.institution_details.mobile_number)
-            br
             label Name of the IQAC Co-ordinator:
               span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.iqac_coordinator', value=form.institution_details.iqac_coordinator)
-            br
             label Mobile:
               span.badge.badge-primary HOQ
             .input-group
               input.form-control(type='string', name='institution_details.iqac_coordinator_mobile', value=form.institution_details.iqac_coordinator_mobile)
-            br
             label IQACe-mail address:
               span.badge.badge-primary HOQ
             .input-group
@@ -276,33 +265,32 @@ html(lang='en')
               span.badge.badge-primary HOQ
             .custom-control.custom-checkbox.custom-control-inline
               input#Arts.custom-control-input(type='checkbox', name='faculty_and_programme_type.arts', checked=(form.faculty_and_programme_type.arts == 'on'))
-              label.custom-control-label(for='Arts') Arts
+              label2.custom-control-label(for='Arts') Arts
             .custom-control.custom-checkbox.custom-control-inline
               input#Science.custom-control-input(type='checkbox', name='faculty_and_programme_type.science', checked=(form.faculty_and_programme_type.science == 'on'))
-              label.custom-control-label(for='Science') Science
+              label2.custom-control-label(for='Science') Science
             .custom-control.custom-checkbox.custom-control-inline
               input#Commerce.custom-control-input(type='checkbox', name='faculty_and_programme_type.commerce', checked=(form.faculty_and_programme_type.commerce == 'on'))
-              label.custom-control-label(for='Commerce') Commerce
+              label2.custom-control-label(for='Commerce') Commerce
             .custom-control.custom-checkbox.custom-control-inline
               input#Law.custom-control-input(type='checkbox', name='faculty_and_programme_type.law', checked=(form.faculty_and_programme_type.law == 'on'))
-              label.custom-control-label(for='Law') Law
+              label2.custom-control-label(for='Law') Law
             .custom-control.custom-checkbox.custom-control-inline
                 input#Peipe.custom-control-input(type='checkbox', name='faculty_and_programme_type.pei', checked=(form.faculty_and_programme_type.pei == 'on'))
-                label.custom-control-label(for='Peipe') PEI (Phys Edu)
+                label2.custom-control-label(for='Peipe') PEI (Phys Edu)
             .custom-control.custom-checkbox.custom-control-inline
               input#TeiE.custom-control-input(type='checkbox', name='faculty_and_programme_type.tei', checked=(form.faculty_and_programme_type.tei == 'on'))
-              label.custom-control-label(for='TeiE') TEI (Edu)
+              label2.custom-control-label(for='TeiE') TEI (Edu)
             .custom-control.custom-checkbox.custom-control-inline
               input#Engineering.custom-control-input(type='checkbox', name='faculty_and_programme_type.engineering', checked=(form.faculty_and_programme_type.engineering == 'on'))
-              label.custom-control-label(for='Engineering') Engineering
+              label2.custom-control-label(for='Engineering') Engineering
             .custom-control.custom-checkbox.custom-control-inline
               input#HelSci.custom-control-input(type='checkbox', name='faculty_and_programme_type.health_science', checked=(form.faculty_and_programme_type.health_science == 'on'))
-              label.custom-control-label(for='HelSci') Health Science
+              label2.custom-control-label(for='HelSci') Health Science
             .custom-control.custom-checkbox.custom-control-inline
               input#Management.custom-control-input(type='checkbox', name='faculty_and_programme_type.management', checked=(form.faculty_and_programme_type.management == 'on'))
-              label.custom-control-label(for='Management') Management
-            br
-            | Other(Specify):
+              label2.custom-control-label(for='Management') Management
+            label Other(Specify):
             .input-group
               input.form-control(type='string', name='faculty_and_programme_type.others', value=form.faculty_and_programme_type.others)
             label 1.12 Name of the Affiliating University (for the Colleges):
@@ -311,53 +299,34 @@ html(lang='en')
               input.form-control(type='string', name='affliating_uni_name', value=form.affliating_uni_name)
             label 1.13 Special status conferred by Central/ State Government(UGC/CSIR/DST/DBT/ICMR etc):
               span.badge.badge-primary HOQ
-            |         Autonomy by State/Central Govt. / University:
-            br
+            label Autonomy by State/Central Govt. / University:
             .input-group
               input.form-control(type='string', name='special_status.state_cental_govt_uni_autonomy', value=form.special_status.state_cental_govt_uni_autonomy)
-            br
-            | University with Potential for Excellence:
-            br
+            label University with Potential for Excellence:
             .input-group
               input.form-control(type='string', name='special_status.uni_with_potential_for_exellence', value=form.special_status.uni_with_potential_for_exellence)
-            br
-            | DST Star Scheme:
-            br
+            label DST Star Scheme:
             .input-group
               input.form-control(type='string', name='special_status.ugc_cpe', value=form.special_status.ugc_cpe)
-            br
-            | UGC-CPE:
-            br
+            label UGC-CPE:
             .input-group
               input.form-control(type='string', name='special_status.ugc_ce', value=form.special_status.ugc_ce)
-            br
-            | UGC-CE:
-            br
+            label UGC-CE:
             .input-group
               input.form-control(type='string', name='special_status.dst_star_scheme', value=form.special_status.dst_star_scheme)
-            br
-            | UGC-Special Assistance Programme:
-            br
+            label UGC-Special Assistance Programme:
             .input-group
               input.form-control(type='string', name='special_status.dst_fist', value=form.special_status.dst_fist)
-            br
-            | UGC-Innovative PG programmes:
-            br
+            label UGC-Innovative PG programmes:
             .input-group
               input.form-control(type='string', name='special_status.ugc_special_assistance_program', value=form.special_status.ugc_special_assistance_program)
-            br
-            | UGC-COP Programmes:
-            br
+            label UGC-COP Programmes:
             .input-group
               input.form-control(type='string', name='special_status.ugc_innovative_pg_program', value=form.special_status.ugc_innovative_pg_program)
-            br
-            | DST-FIST:
-            br
+            label DST-FIST:
             .input-group
               input.form-control(type='string', name='special_status.ugc_cop', value=form.special_status.ugc_cop)
-            br
-            | Any other (Specify):
-            br
+            label Any other (Specify):
             .input-group
               input.form-control(type='string', name='special_status.any_other', value=form.special_status.any_other)
             button.fixed-but(type='submit') SAVE

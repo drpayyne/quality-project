@@ -91,13 +91,16 @@ html(lang='en')
 										textarea.form-control(type='string', name='welfare_scheme.students', rows=4) #{form.welfare_scheme.students}
 						label 6.5 Total corpus fund generated:
 							span.badge.badge-primary HOQ
-						input(type='number', name='corpus_fund', value=form.corpus_fund)
+						.input-group
+							input.form-control(type='number', name='corpus_fund', value=form.corpus_fund)
 						label 6.6 Whether annual financial audit has been done:
 							span.badge.badge-primary HOQ
-						input(type='radio', name='financial_audit', value='yes', checked=(form.financial_audit == 'yes'))
-						| Yes
-						input(type='radio', name='financial_audit', value='no', checked=(form.financial_audit == 'no'))
-						| No
+						.custom-control.custom-radio
+							input#AnuFinAudYes.custom-control-input(type='radio', name='financial_audit', value='yes', checked=(form.financial_audit == 'yes'))
+							label.custom-control-label(for='AnuFinAudYes') Yes
+						.custom-control.custom-radio
+							input#AnuFinAudNo.custom-control-input(type='radio', name='financial_audit', value='no', checked=(form.financial_audit == 'no'))
+							label.custom-control-label(for='AnuFinAudNo') No
 						label 6.7 Whether Academic and Administrative Audit (AAA) has been done?
 							span.badge.badge-primary HOQ
 						table(width='100%')
@@ -114,51 +117,68 @@ html(lang='en')
 							tr
 								th Academic
 								td
-									input(type='radio', name='academic_admin_audit.academic.external', value='yes' checked=(form.academic_admin_audit.academic.external == 'yes'))
-									| Yes
-									input(type='radio', name='academic_admin_audit.academic.external', value='no' checked=(form.academic_admin_audit.academic.external == 'no'))
-									| No
+									.custom-control.custom-radio
+										input#AudExtAcaYes.custom-control-input(type='radio', name='academic_admin_audit.academic.external', value='yes' checked=(form.academic_admin_audit.academic.external == 'yes'))
+										label.custom-control-label(for='AudExtAcaYes') Yes
+									.custom-control.custom-radio
+										input#AudExtAcaNo.custom-control-input(type='radio', name='academic_admin_audit.academic.external', value='no' checked=(form.academic_admin_audit.academic.external == 'no'))
+										label.custom-control-label(for='AudExtAcaNo') No
 								td
-									input(type='string', id='acad_ext', name='academic_admin_audit.academic.external_agency', value=form.academic_admin_audit.academic.external_agency)
+									.input-group
+										input.form-control(type='string', id='acad_ext', name='academic_admin_audit.academic.external_agency', value=form.academic_admin_audit.academic.external_agency)
 								td
-									input(type='radio', name='academic_admin_audit.academic.internal', value='yes' checked=(form.academic_admin_audit.academic.internal == 'yes'))
-									| Yes
-									input(type='radio', name='academic_admin_audit.academic.internal', value='no' checked=(form.academic_admin_audit.academic.internal == 'no'))
-									| No
+									.custom-control.custom-radio
+										input#AudIntAcaYes.custom-control-input(type='radio', name='academic_admin_audit.academic.internal', value='yes' checked=(form.academic_admin_audit.academic.internal == 'yes'))
+										label.custom-control-label(for='AudIntAcaYes') Yes
+									.custom-control.custom-radio
+										input#AudIntAcaNo.custom-control-input(type='radio', name='academic_admin_audit.academic.internal', value='no' checked=(form.academic_admin_audit.academic.internal == 'no'))
+										label.custom-control-label(for='AudIntAcaNo') No
 								td
-									input(type='string', id='acad_int',name='academic_admin_audit.academic.internal_authority', value=form.academic_admin_audit.academic.internal_authority)
+									.input-group
+										input.form-control(type='string', id='acad_int',name='academic_admin_audit.academic.internal_authority', value=form.academic_admin_audit.academic.internal_authority)
 							tr
 								th Administrative
 								td
-									input(type='radio', name='academic_admin_audit.administrative.external', value='yes' checked=(form.academic_admin_audit.administrative.external == 'yes'))
-									| Yes
-									input(type='radio', name='academic_admin_audit.administrative.external', value='no' checked=(form.academic_admin_audit.administrative.external == 'no'))
-									| No
+									.custom-control.custom-radio
+										input#AudExtAdmiYes.custom-control-input(type='radio', name='academic_admin_audit.administrative.external', value='yes' checked=(form.academic_admin_audit.administrative.external == 'yes'))
+										label.custom-control-label(for='AudExtAdmiYes') Yes
+									.custom-control.custom-radio
+										input#AudExtAdmiNo.custom-control-input(type='radio', name='academic_admin_audit.administrative.external', value='no' checked=(form.academic_admin_audit.administrative.external == 'no'))
+										label.custom-control-label(for='AudExtAdmiNo') No
 								td
-									input(type='string', id='adm_ext',name='academic_admin_audit.administrative.external_agency', value=form.academic_admin_audit.administrative.external_agency)
+									.input-group
+										input.form-control(type='string', id='adm_ext',name='academic_admin_audit.administrative.external_agency', value=form.academic_admin_audit.administrative.external_agency)
 								td
-									input(type='radio', name='academic_admin_audit.administrative.internal', value='yes' checked=(form.academic_admin_audit.administrative.internal == 'yes'))
-									| Yes
-									input(type='radio', name='academic_admin_audit.administrative.internal', value='no' checked=(form.academic_admin_audit.administrative.internal == 'no'))
-									| No
+									.custom-control.custom-radio
+										input#AudIntAdmiYes.custom-control-input(type='radio', name='academic_admin_audit.administrative.internal', value='yes' checked=(form.academic_admin_audit.administrative.internal == 'yes'))
+										label.custom-control-label(for='AudIntAdmiYes') Yes
+									.custom-control.custom-radio
+										input#AudIntAdmiNo.custom-control-input(type='radio', name='academic_admin_audit.administrative.internal', value='no' checked=(form.academic_admin_audit.administrative.internal == 'no'))
+										label.custom-control-label(for='AudIntAdmiNo') No
 								td
-									input(type='string', id='adm_int', name='academic_admin_audit.administrative.internal_authority', value=form.academic_admin_audit.administrative.internal_authority)
+									.input-group
+										input.form-control(type='string', id='adm_int', name='academic_admin_audit.administrative.internal_authority', value=form.academic_admin_audit.administrative.internal_authority)
 						label 6.8 Does the University/ Autonomous College declares results within 30 days?
 							span.badge.badge-primary HOQ
 						label For UG Programmes:
-						input(type='radio', name='result_declaration.ug_programmes', value='yes', checked=(form.result_declaration.ug_programmes == 'yes'))
-						| Yes
-						input(type='radio', name='result_declaration.ug_programmes', value='no', checked=(form.result_declaration.ug_programmes == 'no'))
-						| No
+						.custom-control.custom-radio
+							input#UgProYes.custom-control-input(type='radio', name='result_declaration.ug_programmes', value='yes', checked=(form.result_declaration.ug_programmes == 'yes'))
+							label.custom-control-label(for='UgProYes') Yes
+						.custom-control.custom-radio
+							input#UgProNo.custom-control-input(type='radio', name='result_declaration.ug_programmes', value='no', checked=(form.result_declaration.ug_programmes == 'no'))
+							label.custom-control-label(for='UgProNo') No
 						label For PG Programmes:
-						input(type='radio', name='result_declaration.pg_programmes', value='yes', checked=(form.result_declaration.pg_programmes == 'yes'))
-						| Yes
-						input(type='radio', name='result_declaration.pg_programmes', value='no', checked=(form.result_declaration.pg_programmes == 'no'))
-						| No
+						.custom-control.custom-radio
+							input#PgProYes.custom-control-input(type='radio', name='result_declaration.pg_programmes', value='yes', checked=(form.result_declaration.pg_programmes == 'yes'))
+							label.custom-control-label(for='PgProYes') Yes
+						.custom-control.custom-radio
+							input#PgProNo.custom-control-input(type='radio', name='result_declaration.pg_programmes', value='no', checked=(form.result_declaration.pg_programmes == 'no'))
+							label.custom-control-label(for='PgProNo') No
 						label
 							| 6.9 What efforts are made by the University/ Autonomous College for Examination Reforms?
 							span.badge.badge-primary HOQ
-						input(type='string', name='examination_reforms', value=form.examination_reforms)
+						.input-group
+							input.form-control(type='string', name='examination_reforms', value=form.examination_reforms)
 						label
 							| 6.10 What efforts are made by the University to promote autonomy in the affiliated/constituent colleges?
 							span.badge.badge-primary HOQ

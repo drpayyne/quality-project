@@ -25,40 +25,50 @@ html(lang='en')
 						// TO BE FILLED BY HOQ
 						label 2.1 No. of Teachers:
 							span.badge.badge-primary HOQ
-						input(type='number', name='no_of_teachers', value=form.no_of_teachers)
+						.input-group
+							input.form-control(type='number', name='no_of_teachers', value=form.no_of_teachers)
 						label 2.2 No. of Administrative/Technical staff:
 							span.badge.badge-primary HOQ
-						input(type='number', name='no_of_tech_admin_staff', value=form.no_of_tech_admin_staff)
+						.input-group
+							input.form-control(type='number', name='no_of_tech_admin_staff', value=form.no_of_tech_admin_staff)
 						label 2.3 No. of students:
 							span.badge.badge-primary HOQ
-						input(type='number', name='no_of_students', value=form.no_of_students)
+						.input-group
+							input.form-control(type='number', name='no_of_students', value=form.no_of_students)
 						label 2.4 No. of Management representatives:
 							span.badge.badge-primary HOQ
-						input(type='number', name='no_of_management_reps', value=form.no_of_management_reps)
+						.input-group
+							input.form-control(type='number', name='no_of_management_reps', value=form.no_of_management_reps)
 						br
 						label 2.5 No. of Alumni:
 							span.badge.badge-primary HOQ
-						input(type='number', name='no_of_alumni', value=form.no_of_alumni)
+						.input-group
+							input.form-control(type='number', name='no_of_alumni', value=form.no_of_alumni)
 						br
 						label 2.6 No. of any other stakeholder and community representatives:
 							span.badge.badge-primary HOQ
-						input(type='number', name='no_of_other_stakeholders_community_reps', value=form.no_of_other_stakeholders_community_reps)
+						.input-group
+							input.form-control(type='number', name='no_of_other_stakeholders_community_reps', value=form.no_of_other_stakeholders_community_reps)
 						br
 						label 2.7 No. of Employers/ Industrialists:
 							span.badge.badge-primary HOQ
-						input(type='number', name='no_of_employers_industrialists', value=form.no_of_employers_industrialists)
+						.input-group
+							input.form-control(type='number', name='no_of_employers_industrialists', value=form.no_of_employers_industrialists)
 						br
 						label 2.8 No. of other External Experts:
 							span.badge.badge-primary HOQ
-						input(type='number', name='no_of_other_external_experts', value=form.no_of_other_external_experts)
+						.input-group
+							input.form-control(type='number', name='no_of_other_external_experts', value=form.no_of_other_external_experts)
 						br
 						label 2.9 Total No. of members:
 							span.badge.badge-primary HOQ
-						input(type='number', name='total_no_of_members', value=form.total_no_of_members)
+						.input-group
+							input.form-control(type='number', name='total_no_of_members', value=form.total_no_of_members)
 						br
 						label 2.10 No. of IQAC meetings held:
 							span.badge.badge-primary HOQ
-						input(type='number', name='no_of_iqac_meetings_held', value=form.no_of_iqac_meetings_held)
+						.input-group
+							input.form-control(type='number', name='no_of_iqac_meetings_held', value=form.no_of_iqac_meetings_held)
 						br
 						label 2.11 No. of meetings with various stakeholders:
 							span.badge.badge-primary HOQ
@@ -66,27 +76,34 @@ html(lang='en')
 							tr
 								th No. of faculty
 								td
-									input(type='number', name='no_of_meetings_with_various_stakeholders.num_faculty', value=form.no_of_meetings_with_various_stakeholders.num_faculty)
+									.input-group
+										input.form-control(type='number', name='no_of_meetings_with_various_stakeholders.num_faculty', value=form.no_of_meetings_with_various_stakeholders.num_faculty)
 							tr
 								th Non-Teaching Staff Students
 								td
-									input(type='number', name='no_of_meetings_with_various_stakeholders.non_teaching_staff_students', value=form.no_of_meetings_with_various_stakeholders.non_teaching_staff_students)
+									.input-group
+										input.form-control(type='number', name='no_of_meetings_with_various_stakeholders.non_teaching_staff_students', value=form.no_of_meetings_with_various_stakeholders.non_teaching_staff_students)
 							tr
 								th Alumni
 								td
-									input(type='number', name='no_of_meetings_with_various_stakeholders.alumni', value=form.no_of_meetings_with_various_stakeholders.alumni)
+									.input-group
+										input.form-control(type='number', name='no_of_meetings_with_various_stakeholders.alumni', value=form.no_of_meetings_with_various_stakeholders.alumni)
 							tr
 								th Others
 								td
-									input(type='number', name='no_of_meetings_with_various_stakeholders.others', value=form.no_of_meetings_with_various_stakeholders.others)
+									.input-group
+										input.form-control(type='number', name='no_of_meetings_with_various_stakeholders.others', value=form.no_of_meetings_with_various_stakeholders.others)
 						label 2.12 Has IQAC received any funding from UGC during the year?
 							span.badge.badge-primary HOQ
-						input(type='radio', name='ugc_funding_for_iqac', value='yes', checked=(form.ugc_funding_for_iqac == 'yes'))
-						| YES
-						input(type='radio', name='ugc_funding_for_iqac', value='no', checked=(form.ugc_funding_for_iqac == 'no'))
-						| NO
+						.custom-control.custom-radio
+							input#FundYes.custom-control-input(type='radio', name='ugc_funding_for_iqac', value='yes', checked=(form.ugc_funding_for_iqac == 'yes'))
+							label.custom-control-label(for='FundYes') YES
+						.custom-control.custom-radio
+							input#FundNo.custom-control-input(type='radio', name='ugc_funding_for_iqac', value='no', checked=(form.ugc_funding_for_iqac == 'no'))
+							label.custom-control-label(for='FundNo') NO
 						label If yes, mention the amount:
-						input(type='number', name='ugc_funding_for_iqac_amount', value=form.ugc_funding_for_iqac_amount)
+						.input-group
+							input.form-control(type='number', name='ugc_funding_for_iqac_amount', value=form.ugc_funding_for_iqac_amount)
 						br
 						label 2.13 Seminars and Conferences (only quality related)
 						label i) No. of Seminars/Conferences/ Workshops/Symposia organized by the IQAC:
@@ -95,23 +112,28 @@ html(lang='en')
 							tr
 								th International
 								td
-									input(type='number', name='seminars_conferences.events_organized_by_iqac.international', value=form.seminars_conferences.events_organized_by_iqac.international)
+									.input-group
+										input.form-control(type='number', name='seminars_conferences.events_organized_by_iqac.international', value=form.seminars_conferences.events_organized_by_iqac.international)
 							tr
 								th National
 								td
-									input(type='number', name='seminars_conferences.events_organized_by_iqac.national', value=form.seminars_conferences.events_organized_by_iqac.national)
+									.input-group
+										input.form-control(type='number', name='seminars_conferences.events_organized_by_iqac.national', value=form.seminars_conferences.events_organized_by_iqac.national)
 							tr
 								th State
 								td
-									input(type='number', name='seminars_conferences.events_organized_by_iqac.state', value=form.seminars_conferences.events_organized_by_iqac.state)
+									.input-group
+										input.form-control(type='number', name='seminars_conferences.events_organized_by_iqac.state', value=form.seminars_conferences.events_organized_by_iqac.state)
 							tr
 								th Institution
 								td
-									input(type='number', name='seminars_conferences.events_organized_by_iqac.institution_level', value=form.seminars_conferences.events_organized_by_iqac.institution_level)
+									.input-group
+										input.form-control(type='number', name='seminars_conferences.events_organized_by_iqac.institution_level', value=form.seminars_conferences.events_organized_by_iqac.institution_level)
 							tr
 								th Total No.
 								td
-									input(type='number', name='seminars_conferences.events_organized_by_iqac.total_no', value=form.seminars_conferences.events_organized_by_iqac.total_no)
+									.input-group
+										input.form-control(type='number', name='seminars_conferences.events_organized_by_iqac.total_no', value=form.seminars_conferences.events_organized_by_iqac.total_no)
 						label ii) Themes:
 							span.badge.badge-primary HOQ
 						.input-group
@@ -138,17 +160,23 @@ html(lang='en')
 										textarea.form-control(type='string', name='iqac_plan_of_action.achievements') #{form.iqac_plan_of_action.achievements}
 						label 2.16 Whether the AQAR was placed in statutory body:
 							span.badge.badge-primary HOQ
-						input(type='radio', name='placement_of_aqar_in_statutory_body.option', value='yes', checked=(form.placement_of_aqar_in_statutory_body.option == 'yes'))
-						| Yes
-						input(type='radio', name='placement_of_aqar_in_statutory_body.option', value='no', checked=(form.placement_of_aqar_in_statutory_body.option == 'no'))
-						| No
+						.custom-control.custom-radio.custom-control-inline
+							input#SatBodYes.custom-control-input(type='radio', name='placement_of_aqar_in_statutory_body.option', value='yes', checked=(form.placement_of_aqar_in_statutory_body.option == 'yes'))
+							label2.custom-control-label(for='SatBodYes') Yes
+						.custom-control.custom-radio.custom-control-inline
+							input#SatBodNo.custom-control-input(type='radio', name='placement_of_aqar_in_statutory_body.option', value='no', checked=(form.placement_of_aqar_in_statutory_body.option == 'no'))
+							label2.custom-control-label(for='SatBodNo') No
 						br
-						input(type='radio', name='placement_of_aqar_in_statutory_body.type_of_statutory_body', value='management', checked=(form.placement_of_aqar_in_statutory_body.type_of_statutory_body == 'management'))
-						| Management
-						input(type='radio', name='placement_of_aqar_in_statutory_body.type_of_statutory_body', value='syndicate', checked=(form.placement_of_aqar_in_statutory_body.type_of_statutory_body == 'syndicate'))
-						| Syndicate
-						input(type='radio', name='placement_of_aqar_in_statutory_body.type_of_statutory_body', value='any_other_body', checked=(form.placement_of_aqar_in_statutory_body.type_of_statutory_body == 'any_other_body'))
-						| Any other body
+						br
+						.custom-control.custom-radio.custom-control-inline
+							input#SatBodMan.custom-control-input(type='radio', name='placement_of_aqar_in_statutory_body.type_of_statutory_body', value='management', checked=(form.placement_of_aqar_in_statutory_body.type_of_statutory_body == 'management'))
+							label2.custom-control-label(for='SatBodMan') Management
+						.custom-control.custom-radio.custom-control-inline
+							input#SatBodSyn.custom-control-input(type='radio', name='placement_of_aqar_in_statutory_body.type_of_statutory_body', value='syndicate', checked=(form.placement_of_aqar_in_statutory_body.type_of_statutory_body == 'syndicate'))
+							label2.custom-control-label(for='SatBodSyn') Syndicate
+						.custom-control.custom-radio.custom-control-inline
+							input#SatBodOther.custom-control-input(type='radio', name='placement_of_aqar_in_statutory_body.type_of_statutory_body', value='any_other_body', checked=(form.placement_of_aqar_in_statutory_body.type_of_statutory_body == 'any_other_body'))
+							label2.custom-control-label(for='SatBodOther') Any other body
 						label Provide the details of the action taken:
 						.input-group
 							textarea.form-control(type='string', name='placement_of_aqar_in_statutory_body.details_of_action_taken', rows=3) #{form.placement_of_aqar_in_statutory_body.details_of_action_taken}
