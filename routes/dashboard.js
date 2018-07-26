@@ -38,4 +38,10 @@ router.get('/:type', function(req, res) {
 	}
 });
 
+router.get('/submit/:department', function(req, res) {
+	console.log('SUBMISSION FROM DEPARTMENT')
+	console.log(req.params.department)
+	res.redirect('/home')
+})
+
 module.exports = router;

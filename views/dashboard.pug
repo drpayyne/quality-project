@@ -24,7 +24,10 @@ html(lang="en")
 						.card.w-50.my-3.mx-auto
 							.card-body
 								h5.card-title Part A
-								h6.card-subtitle.mb-2.text-muted To be filled by HOQ
+								h6.card-subtitle.mb-2.text-muted 
+								| To be filled by 
+								span.badge.badge-primary HOQ
+
 								.row
 									.col.m-1.d-flex.justify-content-center
 										button.btn.btn-primary.custom-button(type='button', onclick='getSite("/form/details")') A1
@@ -34,9 +37,13 @@ html(lang="en")
 						.card-body
 							h5.card-title Part B
 							if cookies.user.username == 'HOQ'
-								h6.card-subtitle.mb-2.text-muted To be filled by Department / HOQ
+								h6.card-subtitle.mb-2.text-muted 
+								| To be filled by 
+								span.badge.badge-primary HOQ
+								|  / 
+								span.badge.badge-success DEPARTMENT
 								form.form-inline
-									.input-group
+									.input-group.my-1
 										.input-group-prepend
 											span.input-group-text Department
 										select#department_select.form-control
@@ -44,7 +51,8 @@ html(lang="en")
 												option= val
 								br
 							else
-								h6.card-subtitle.mb-2.text-muted To be filled by Department
+								h6.card-subtitle.mb-2.text-muted To be filled by 
+									span.badge.badge-success DEPARTMENT
 							.row
 								.col.m-1.d-flex.justify-content-center.hoq-only
 									button.btn.btn-primary.custom-button.hoq-only(type='button', onclick='getSite("/form/criterion1")') Criterion 1
@@ -62,6 +70,20 @@ html(lang="en")
 									button.btn.btn-primary.custom-button.hoq-only(type='button', onclick='getSite("/form/criterion7")') Criterion 7
 								.col.m-1.d-flex.justify-content-center.hoq-only
 									button.btn.btn-primary.custom-button.hoq-only(type='button', onclick='getSite("/form/criterion8")') Conclusion
+					if cookies.user.username != 'HOQ'
+						.card.w-50.mx-auto.my-3
+							.card-body
+								h5.card-title Submit Documents
+								h6.card-subtitle.mb-2.text-muted 
+									| Submit to handover documents to the 
+									span.badge.badge-primary HOQ
+									| . Once documents have been submitted, the 
+									span.badge.badge-success DEPARTMENT
+									|  cannot edit the documents anymore.
+								.row
+									.col.m-1.d-flex.justify-content-center
+										a.btn.btn-success.btn-block.mx-5.my-3(href='/dashboard/submit/' + cookies.user.username) SUBMIT DOCUMENTS
+
 			form(action='#')
 				each val in ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC', 'HOQ']
 					if cookies.user.username == val
