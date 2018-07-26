@@ -16,7 +16,7 @@ html(lang='en')
 		.container-fluid.h-100
 			nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
 				a.navbar-brand(href='/dashboard') Back
-				span.navbar-brand.mb-0.h1 IQAC Criterion 6 - #{cookies.user.username} 
+				span.navbar-brand.mb-0.h1 IQAC Criterion 6 - #{cookies.user.username}
 				//	if cookies.user.username == 'HOQ'
 				//		span.navbar-brand.mb-0.h1 - #{cookies.department}
 				a.navbar-brand(href='/home') Logout
@@ -26,42 +26,53 @@ html(lang='en')
 						legend
 							span.number 6
 							| Governance, Leadership and Management
-						label 6.1 State the Vision and Mission of the institution: 
+						label 6.1 State the Vision and Mission of the institution:
 							span.badge.badge-primary HOQ
-						input(type='text', name='vision_mission_institute', value=form.vision_mission_institute)
-						label 6.2 Does the Institution has a management Information System: 
+						.input-group
+							textarea.form-control(type='string', name='vision_mission_institute', rows=4) #{form.vision_mission_institute}
+						label 6.2 Does the Institution has a management Information System:
 							span.badge.badge-primary HOQ
-						input(type='text', name='info_management_system', value=form.info_management_system)
+						.input-group
+							textarea.form-control(type='string', name='info_management_system', rows=4) #{form.info_management_system}
 						label
 							| 6.3 Quality improvement strategies adopted by the institution for each of the following:
-						label 6.3.1 Curriculum Development: 
+						label 6.3.1 Curriculum Development:
 							span.badge.badge-primary HOQ
-						input(type='text', name='improvement_strategies.curriculum_development', value=form.improvement_strategies.curriculum_development)
-						label 6.3.2 Teaching and Learning: 
+						.input-group
+							textarea.form-control(type='string', name='improvement_strategies.curriculum_development', rows=4) #{form.improvement_strategies.curriculum_development}
+						label 6.3.2 Teaching and Learning:
 							span.badge.badge-primary HOQ
-						input(type='text', name='improvement_strategies.teaching_and_learning', value=form.improvement_strategies.teaching_and_learning)
-						label 6.3.3 Examination and Evaluation: 
+						.input-group
+							textarea.form-control(type='string', name='improvement_strategies.teaching_and_learning', rows=4) #{form.improvement_strategies.teaching_and_learning}
+						label 6.3.3 Examination and Evaluation:
 							span.badge.badge-primary HOQ
-						input(type='text', name='improvement_strategies.exam_and_evaluation', value=form.improvement_strategies.exam_and_evaluation)
-						label 6.3.4 Research and Development: 
+						.input-group
+							textarea.form-control(type='string', name='improvement_strategies.exam_and_evaluation', rows=4) #{form.improvement_strategies.exam_and_evaluation}
+						label 6.3.4 Research and Development:
 							span.badge.badge-primary HOQ
-						input(type='text', name='improvement_strategies.research_and_development', value=form.improvement_strategies.research_and_development)
-						label 6.3.5 Library, ICT and physical infrastructure/instrumentation: 
+						.input-group
+							textarea.form-control(type='string', name='improvement_strategies.research_and_development', rows=4) #{form.improvement_strategies.research_and_development}
+						label 6.3.5 Library, ICT and physical infrastructure/instrumentation:
 							span.badge.badge-primary HOQ
-						input(type='text', name='improvement_strategies.physical_infrastructure', value=form.improvement_strategies.physical_infrastructure)
-						label 6.3.6 Human Resource Management: 	
+						.input-group
+							textarea.form-control(type='string', name='improvement_strategies.physical_infrastructure', rows=4) #{form.improvement_strategies.physical_infrastructure}
+						label 6.3.6 Human Resource Management:
 							span.badge.badge-primary HOQ
-						input(type='text', name='improvement_strategies.human_resource_management', value=form.improvement_strategies.human_resource_management)
-						label 6.3.7 Faculty and Staff recruitment: 
+						.input-group
+							textarea.form-control(type='string', name='improvement_strategies.human_resource_management', rows=4) #{form.improvement_strategies.human_resource_management}
+						label 6.3.7 Faculty and Staff recruitment:
 							span.badge.badge-primary HOQ
-						input(type='text', name='improvement_strategies.faculty_staff_recruitment', value=form.improvement_strategies.faculty_staff_recruitment)
-						label 6.3.8 Industry Interaction / Collaboration: 
+						.input-group
+							textarea.form-control(type='string', name='improvement_strategies.faculty_staff_recruitment', rows=4) #{form.improvement_strategies.faculty_staff_recruitment}
+						label 6.3.8 Industry Interaction / Collaboration:
 							span.badge.badge-primary HOQ
-						input(type='text', name='improvement_strategies.industry_interaction_collab', value=form.improvement_strategies.industry_interaction_collab)
-						label 6.3.9 Admission of Students: 
+						.input-group
+							textarea.form-control(type='string', name='improvement_strategies.industry_interaction_collab', rows=4) #{form.improvement_strategies.industry_interaction_collab}
+						label 6.3.9 Admission of Students:
 							span.badge.badge-primary HOQ
-						input(type='text', name='improvement_strategies.student_admission', value=form.improvement_strategies.student_admission)
-						label 6.4 Welfare schemes for: 
+						.input-group
+							textarea.form-control(type='string', name='improvement_strategies.student_admission', rows=4) #{form.improvement_strategies.student_admission}
+						label 6.4 Welfare schemes for:
 							span.badge.badge-primary HOQ
 						table(width='100%')
 							tr
@@ -70,21 +81,27 @@ html(lang='en')
 								th Students
 							tr
 								td
-									input(type='text', name='welfare_scheme.teaching', value=form.welfare_scheme.teaching)
+									.input-group
+										textarea.form-control(type='string', name='welfare_scheme.teaching', rows=4) #{form.welfare_scheme.teaching}
 								td
-									input(type='text', name='welfare_scheme.non_teaching', value=form.welfare_scheme.non_teaching)
+									.input-group
+										textarea.form-control(type='string', name='welfare_scheme.non_teaching', rows=4) #{form.welfare_scheme.non_teaching}
 								td
-									input(type='text', name='welfare_scheme.students', value=form.welfare_scheme.students)
-						label 6.5 Total corpus fund generated: 
+									.input-group
+										textarea.form-control(type='string', name='welfare_scheme.students', rows=4) #{form.welfare_scheme.students}
+						label 6.5 Total corpus fund generated:
 							span.badge.badge-primary HOQ
-						input(type='number', name='corpus_fund', value=form.corpus_fund)
-						label 6.6 Whether annual financial audit has been done: 
+						.input-group
+							input.form-control(type='number', name='corpus_fund', value=form.corpus_fund)
+						label 6.6 Whether annual financial audit has been done:
 							span.badge.badge-primary HOQ
-						input(type='radio', name='financial_audit', value='yes', checked=(form.financial_audit == 'yes'))
-						| Yes
-						input(type='radio', name='financial_audit', value='no', checked=(form.financial_audit == 'no'))
-						| No
-						label 6.7 Whether Academic and Administrative Audit (AAA) has been done? 
+						.custom-control.custom-radio
+							input#AnuFinAudYes.custom-control-input(type='radio', name='financial_audit', value='yes', checked=(form.financial_audit == 'yes'))
+							label.custom-control-label(for='AnuFinAudYes') Yes
+						.custom-control.custom-radio
+							input#AnuFinAudNo.custom-control-input(type='radio', name='financial_audit', value='no', checked=(form.financial_audit == 'no'))
+							label.custom-control-label(for='AnuFinAudNo') No
+						label 6.7 Whether Academic and Administrative Audit (AAA) has been done?
 							span.badge.badge-primary HOQ
 						table(width='100%')
 							tr
@@ -93,72 +110,94 @@ html(lang='en')
 								th(colspan='2') Internal
 							tr
 								th
-								th 
+								th
 								th Agency
-								th 
+								th
 								th Authority
 							tr
 								th Academic
 								td
-									input(type='radio', name='academic_admin_audit.academic.external', value='yes' checked=(form.academic_admin_audit.academic.external == 'yes'))
-									| Yes
-									input(type='radio', name='academic_admin_audit.academic.external', value='no' checked=(form.academic_admin_audit.academic.external == 'no'))
-									| No
+									.custom-control.custom-radio
+										input#AudExtAcaYes.custom-control-input(type='radio', name='academic_admin_audit.academic.external', value='yes' checked=(form.academic_admin_audit.academic.external == 'yes'))
+										label.custom-control-label(for='AudExtAcaYes') Yes
+									.custom-control.custom-radio
+										input#AudExtAcaNo.custom-control-input(type='radio', name='academic_admin_audit.academic.external', value='no' checked=(form.academic_admin_audit.academic.external == 'no'))
+										label.custom-control-label(for='AudExtAcaNo') No
 								td
-									input(type='string', id='acad_ext', name='academic_admin_audit.academic.external_agency', value=form.academic_admin_audit.academic.external_agency)
+									.input-group
+										input.form-control(type='string', id='acad_ext', name='academic_admin_audit.academic.external_agency', value=form.academic_admin_audit.academic.external_agency)
 								td
-									input(type='radio', name='academic_admin_audit.academic.internal', value='yes' checked=(form.academic_admin_audit.academic.internal == 'yes'))
-									| Yes
-									input(type='radio', name='academic_admin_audit.academic.internal', value='no' checked=(form.academic_admin_audit.academic.internal == 'no'))
-									| No
+									.custom-control.custom-radio
+										input#AudIntAcaYes.custom-control-input(type='radio', name='academic_admin_audit.academic.internal', value='yes' checked=(form.academic_admin_audit.academic.internal == 'yes'))
+										label.custom-control-label(for='AudIntAcaYes') Yes
+									.custom-control.custom-radio
+										input#AudIntAcaNo.custom-control-input(type='radio', name='academic_admin_audit.academic.internal', value='no' checked=(form.academic_admin_audit.academic.internal == 'no'))
+										label.custom-control-label(for='AudIntAcaNo') No
 								td
-									input(type='string', id='acad_int',name='academic_admin_audit.academic.internal_authority', value=form.academic_admin_audit.academic.internal_authority)
+									.input-group
+										input.form-control(type='string', id='acad_int',name='academic_admin_audit.academic.internal_authority', value=form.academic_admin_audit.academic.internal_authority)
 							tr
 								th Administrative
 								td
-									input(type='radio', name='academic_admin_audit.administrative.external', value='yes' checked=(form.academic_admin_audit.administrative.external == 'yes'))
-									| Yes
-									input(type='radio', name='academic_admin_audit.administrative.external', value='no' checked=(form.academic_admin_audit.administrative.external == 'no'))
-									| No
+									.custom-control.custom-radio
+										input#AudExtAdmiYes.custom-control-input(type='radio', name='academic_admin_audit.administrative.external', value='yes' checked=(form.academic_admin_audit.administrative.external == 'yes'))
+										label.custom-control-label(for='AudExtAdmiYes') Yes
+									.custom-control.custom-radio
+										input#AudExtAdmiNo.custom-control-input(type='radio', name='academic_admin_audit.administrative.external', value='no' checked=(form.academic_admin_audit.administrative.external == 'no'))
+										label.custom-control-label(for='AudExtAdmiNo') No
 								td
-									input(type='string', id='adm_ext',name='academic_admin_audit.administrative.external_agency', value=form.academic_admin_audit.administrative.external_agency)
+									.input-group
+										input.form-control(type='string', id='adm_ext',name='academic_admin_audit.administrative.external_agency', value=form.academic_admin_audit.administrative.external_agency)
 								td
-									input(type='radio', name='academic_admin_audit.administrative.internal', value='yes' checked=(form.academic_admin_audit.administrative.internal == 'yes'))
-									| Yes
-									input(type='radio', name='academic_admin_audit.administrative.internal', value='no' checked=(form.academic_admin_audit.administrative.internal == 'no'))
-									| No
+									.custom-control.custom-radio
+										input#AudIntAdmiYes.custom-control-input(type='radio', name='academic_admin_audit.administrative.internal', value='yes' checked=(form.academic_admin_audit.administrative.internal == 'yes'))
+										label.custom-control-label(for='AudIntAdmiYes') Yes
+									.custom-control.custom-radio
+										input#AudIntAdmiNo.custom-control-input(type='radio', name='academic_admin_audit.administrative.internal', value='no' checked=(form.academic_admin_audit.administrative.internal == 'no'))
+										label.custom-control-label(for='AudIntAdmiNo') No
 								td
-									input(type='string', id='adm_int', name='academic_admin_audit.administrative.internal_authority', value=form.academic_admin_audit.administrative.internal_authority)
-						label 6.8 Does the University/ Autonomous College declares results within 30 days? 
+									.input-group
+										input.form-control(type='string', id='adm_int', name='academic_admin_audit.administrative.internal_authority', value=form.academic_admin_audit.administrative.internal_authority)
+						label 6.8 Does the University/ Autonomous College declares results within 30 days?
 							span.badge.badge-primary HOQ
 						label For UG Programmes:
-						input(type='radio', name='result_declaration.ug_programmes', value='yes', checked=(form.result_declaration.ug_programmes == 'yes'))
-						| Yes
-						input(type='radio', name='result_declaration.ug_programmes', value='no', checked=(form.result_declaration.ug_programmes == 'no'))
-						| No
+						.custom-control.custom-radio
+							input#UgProYes.custom-control-input(type='radio', name='result_declaration.ug_programmes', value='yes', checked=(form.result_declaration.ug_programmes == 'yes'))
+							label.custom-control-label(for='UgProYes') Yes
+						.custom-control.custom-radio
+							input#UgProNo.custom-control-input(type='radio', name='result_declaration.ug_programmes', value='no', checked=(form.result_declaration.ug_programmes == 'no'))
+							label.custom-control-label(for='UgProNo') No
 						label For PG Programmes:
-						input(type='radio', name='result_declaration.pg_programmes', value='yes', checked=(form.result_declaration.pg_programmes == 'yes'))
-						| Yes
-						input(type='radio', name='result_declaration.pg_programmes', value='no', checked=(form.result_declaration.pg_programmes == 'no'))
-						| No
+						.custom-control.custom-radio
+							input#PgProYes.custom-control-input(type='radio', name='result_declaration.pg_programmes', value='yes', checked=(form.result_declaration.pg_programmes == 'yes'))
+							label.custom-control-label(for='PgProYes') Yes
+						.custom-control.custom-radio
+							input#PgProNo.custom-control-input(type='radio', name='result_declaration.pg_programmes', value='no', checked=(form.result_declaration.pg_programmes == 'no'))
+							label.custom-control-label(for='PgProNo') No
 						label
-							| 6.9 What efforts are made by the University/ Autonomous College for Examination Reforms? 
+							| 6.9 What efforts are made by the University/ Autonomous College for Examination Reforms?
 							span.badge.badge-primary HOQ
-						input(type='string', name='examination_reforms', value=form.examination_reforms)
+						.input-group
+							input.form-control(type='string', name='examination_reforms', value=form.examination_reforms)
 						label
-							| 6.10 What efforts are made by the University to promote autonomy in the affiliated/constituent colleges? 
+							| 6.10 What efforts are made by the University to promote autonomy in the affiliated/constituent colleges?
 							span.badge.badge-primary HOQ
-						input(type='text', name='autonomy_promotion', value=form.autonomy_promotion)
-						label 6.11 Activities and support from the Alumni Association 
+						.input-group
+							textarea.form-control(type='string', name='autonomy_promotion', rows=4) #{form.autonomy_promotion}
+						label 6.11 Activities and support from the Alumni Association
 							span.badge.badge-primary HOQ
-						input(type='text', name='alumni_activity_support', value=form.alumni_activity_support)
-						label 6.12 Activities and support from the Parent – Teacher Association: 
+						.input-group
+							textarea.form-control(type='string', name='alumni_activity_support', rows=4) #{form.alumni_activity_support}
+						label 6.12 Activities and support from the Parent – Teacher Association:
 							span.badge.badge-primary HOQ
-						input(type='text', name='parent_teacher_activity_support', value=form.parent_teacher_activity_support)
-						label 6.13 Development programmes for support staff: 
+						.input-group
+							textarea.form-control(type='string', name='parent_teacher_activity_support', rows=4) #{form.parent_teacher_activity_support}
+						label 6.13 Development programmes for support staff:
 							span.badge.badge-primary HOQ
-						input(type='text', name='support_staff_development', value=form.support_staff_development)
-						label 6.14 Initiatives taken by the institution to make the campus eco-friendly: 
+						.input-group
+							textarea.form-control(type='string', name='support_staff_development', rows=4) #{form.support_staff_development}
+						label 6.14 Initiatives taken by the institution to make the campus eco-friendly:
 							span.badge.badge-primary HOQ
-						input(type='text', name='eco_friendly_initiatives', value=form.eco_friendly_initiatives)
+						.input-group
+							textarea.form-control(type='string', name='eco_friendly_initiatives', rows=4) #{form.eco_friendly_initiatives}
 						button.fixed-but(type='submit') SAVE

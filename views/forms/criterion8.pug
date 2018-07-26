@@ -14,7 +14,7 @@ html(lang='en')
 		.container-fluid.h-100
 			nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
 				a.navbar-brand(href='/dashboard') Back
-				span.navbar-brand.mb-0.h1 IQAC Criterion 8 - #{cookies.user.username} 
+				span.navbar-brand.mb-0.h1 IQAC Criterion 8 - #{cookies.user.username}
 				//	if cookies.user.username == 'HOQ'
 						span.navbar-brand.mb-0.h1 - #{cookies.department}
 				a.navbar-brand(href='/home') Logout
@@ -24,8 +24,9 @@ html(lang='en')
 						legend
 							span.number 8
 							| Plans of institution for next year
-						label Plan Details: 
+						label Plan Details:
 							span.badge.badge-primary HOQ
-						input(type='text', name='plans_of_institution_next_year', value=form.plans_of_institution_next_year)
+						.input-group
+							textarea.form-control(type='string', name='plans_of_institution_next_year', rows=5) #{form.plans_of_institution_next_year}
 						button.fixed-but(type='submit') SAVE
 				//-script(src='/js/form.js')

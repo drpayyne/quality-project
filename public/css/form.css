@@ -145,11 +145,15 @@ label {
 
 label2 {
   display: block;
-  margin-bottom: 8px;
-  margin-top: 8px;
+  font-weight: bold;
 }
 
 label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+label2.light {
   font-weight: 300;
   display: inline;
 }
