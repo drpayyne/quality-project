@@ -197,10 +197,11 @@ html(lang='en')
 								td
 									.input-group
 										input.form-control(type='number', name='curriculum_incharge_faculty_members.curriculum_revision', value=form.curriculum_incharge_faculty_members.curriculum_revision)
-						label 2.10 Average percentage of attendance of students:
-							span.badge.badge-success DEPARTMENT
-						.input-group
-							input.form-control(type='number', name='avg_student_attendance', value=form.avg_student_attendance)
+						if cookies.department == 'HOQ'
+							label 2.10 Average percentage of attendance of students:
+								span.badge.badge-primary HOQ
+							.input-group
+								input.form-control(type='number', name='avg_student_attendance', value=form.avg_student_attendance)
 						label 2.11 Course/Programme wise distribution of pass percentage:
 							span.badge.badge-success DEPARTMENT
 						table#table11(style='width:100%')

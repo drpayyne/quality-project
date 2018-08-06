@@ -19,8 +19,7 @@ html(lang="en")
 								h5.card-title HOQ Administrative Control
 								ul.list-group.list-group-flush
 									li.list-group-item.text-center
-										button.btn.btn-primary(type='button', data-toggle='modal', data-target='#preparePdfModal')
-											| Prepare PDF
+										a.btn.btn-primary.mr-3(href='/dashboard/prepare') Prepare PDF
 										#preparePdfModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='preparePdfCenterTitle', aria-hidden='true')
 											.modal-dialog.modal-dialog-centered(role='document')
 												.modal-content

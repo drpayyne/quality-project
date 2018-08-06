@@ -59,9 +59,7 @@ var criterionTwoSchema = mongoose.Schema({
 		member_board: { type: Number, default: 0 },
 		faculty_dev_workshop: { type: Number, default: 0 }
 	},
-	avg_student_attendance: { type: Number, default: 0 },
 	pass_percent_dist: {
-		department: { type: String, default: '' },
 		programme_title: { type: String, default: '' },
 		students_appeared: { type: Number, default: 0 },
 		division: {

@@ -8,12 +8,13 @@ let DCriterionFive = require('../models/department/criterion_five');
 
 let HCriterionFive = require('../models/hoq/criterion_five');
 let HCriterionFour = require('../models/hoq/criterion_four');
+let HCriterionTwo = require('../models/hoq/criterion_two');
 
 var departments = ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC'];
+var CTwos = [], CThrees = [], CFours = [], CFives = [], flag;
 
 function sum() {
 	console.log('SUMMING UP')
-	var CTwos = [], CThrees = [], CFours = [], CFives = [], flag;
 	async.eachSeries(departments, function(department, callback) {
 		flag = 0
 		if(department) {
@@ -97,6 +98,37 @@ function sum() {
 			if(err) console.log(err);
 		});*/
 
+		console.log('SUMMING UP CTWOS')
+		var array = []
+		for(var i = 0; i < 10; i++) {
+			console.log(CTwos[i].department)
+			let division = {
+				distinction_percent : CTwos[i].pass_percent_dist.division.distinction_percent,
+				percent_one : CTwos[i].pass_percent_dist.division.percent_one,
+				percent_two : CTwos[i].pass_percent_dist.division.percent_two,
+				percent_three : CTwos[i].pass_percent_dist.division.percent_three 
+			}
+			let programme_title = departments[i]
+			let students_appeared = CTwos[i].pass_percent_dist.students_appeared
+			array[i] = {
+				division,
+				programme_title,
+				students_appeared
+			}
+		}
+		document = jsonAdd.addJSONs(CTwos);
+		console.log(document)
+		document._doc.department = 'HOQ';
+		document._doc.pass_percent_dist = array;
+		delete document._doc["_id"];
+		delete document._doc["__v"];
+		console.log('HOQ C2 DOC')
+		console.log(document._doc);
+		HCriterionTwo.update({department: 'HOQ'}, document._doc, { upsert: true }, function(err) {
+			if(err) console.log(err);
+		});
+
+		console.log('SUMMING UP CFOURS')
 		document = jsonAdd.addJSONs(CFours);
 		document._doc.department = 'HOQ';
 		delete document._doc["_id"];
@@ -105,6 +137,7 @@ function sum() {
 			if(err) console.log(err);
 		});
 
+		console.log('SUMMING UP CFIVES')
 		document = jsonAdd.addJSONs(CFives);
 		document._doc.department = 'HOQ';
 		delete document._doc["_id"];
