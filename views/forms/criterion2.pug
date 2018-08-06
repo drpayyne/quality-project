@@ -35,23 +35,23 @@ html(lang='en')
 							tr
 								td
 									.input-group
-										input.form-control(type='number', name='permanent_faculty.asst_prof', value=form.permanent_faculty.asst_prof)
+										input.form-control(type='number', name='permanent_faculty.asst_prof', value=form.permanent_faculty.asst_prof, disabled=(cookies.department == 'HOQ'))
 								td
 									.input-group
-										input.form-control(type='number', name='permanent_faculty.asso_prof', value=form.permanent_faculty.asso_prof)
+										input.form-control(type='number', name='permanent_faculty.asso_prof', value=form.permanent_faculty.asso_prof, disabled=(cookies.department == 'HOQ'))
 								td
 									.input-group
-										input.form-control(type='number', name='permanent_faculty.prof', value=form.permanent_faculty.prof)
+										input.form-control(type='number', name='permanent_faculty.prof', value=form.permanent_faculty.prof, disabled=(cookies.department == 'HOQ'))
 								td
 									.input-group
-										input.form-control(type='number', name='permanent_faculty.others', value=form.permanent_faculty.others)
+										input.form-control(type='number', name='permanent_faculty.others', value=form.permanent_faculty.others, disabled=(cookies.department == 'HOQ'))
 								//td
 									.input-group
 										input.form-control(type='number', name='permanent_faculty.total', value=form.permanent_faculty.total)
 						label 2.2 No. of permanent faculty with Ph.D.:
 							span.badge.badge-success DEPARTMENT
 						.input-group
-							input.form-control(type='number', name='permanent_faculty_phd', value=form.permanent_faculty_phd)
+							input.form-control(type='number', name='permanent_faculty_phd', value=form.permanent_faculty_phd, disabled=(cookies.department == 'HOQ'))
 						label 2.3 No. of Faculty Positions Recruited (R) and Vacant (V) during the year:
 							span.badge.badge-success DEPARTMENT
 						table(style='width:100%')
@@ -75,28 +75,28 @@ html(lang='en')
 							tr
 								td
 									.input-group
-										input.form-control(type='number', name='faculty_pos_recruited_vacant.asst_prof.recruited', value=form.faculty_pos_recruited_vacant.asst_prof.recruited)
+										input.form-control(type='number', name='faculty_pos_recruited_vacant.asst_prof.recruited', value=form.faculty_pos_recruited_vacant.asst_prof.recruited, disabled=(cookies.department == 'HOQ'))
 								td
 									.input-group
-										input.form-control(type='number', name='faculty_pos_recruited_vacant.asst_prof.vacant', value=form.faculty_pos_recruited_vacant.asst_prof.vacant)
+										input.form-control(type='number', name='faculty_pos_recruited_vacant.asst_prof.vacant', value=form.faculty_pos_recruited_vacant.asst_prof.vacant, disabled=(cookies.department == 'HOQ'))
 								td
 									.input-group
-										input.form-control(type='number', name='faculty_pos_recruited_vacant.asso_prof.recruited', value=form.faculty_pos_recruited_vacant.asso_prof.recruited)
+										input.form-control(type='number', name='faculty_pos_recruited_vacant.asso_prof.recruited', value=form.faculty_pos_recruited_vacant.asso_prof.recruited, disabled=(cookies.department == 'HOQ'))
 								td
 									.input-group
-										input.form-control(type='number', name='faculty_pos_recruited_vacant.asso_prof.vacant', value=form.faculty_pos_recruited_vacant.asso_prof.vacant)
+										input.form-control(type='number', name='faculty_pos_recruited_vacant.asso_prof.vacant', value=form.faculty_pos_recruited_vacant.asso_prof.vacant, disabled=(cookies.department == 'HOQ'))
 								td
 									.input-group
-										input.form-control(type='number', name='faculty_pos_recruited_vacant.prof.recruited', value=form.faculty_pos_recruited_vacant.prof.recruited)
+										input.form-control(type='number', name='faculty_pos_recruited_vacant.prof.recruited', value=form.faculty_pos_recruited_vacant.prof.recruited, disabled=(cookies.department == 'HOQ'))
 								td
 									.input-group
-										input.form-control(type='number', name='faculty_pos_recruited_vacant.prof.vacant', value=form.faculty_pos_recruited_vacant.prof.vacant)
+										input.form-control(type='number', name='faculty_pos_recruited_vacant.prof.vacant', value=form.faculty_pos_recruited_vacant.prof.vacant, disabled=(cookies.department == 'HOQ'))
 								td
 									.input-group
-										input.form-control(type='number', name='faculty_pos_recruited_vacant.others.recruited', value=form.faculty_pos_recruited_vacant.others.recruited)
+										input.form-control(type='number', name='faculty_pos_recruited_vacant.others.recruited', value=form.faculty_pos_recruited_vacant.others.recruited, disabled=(cookies.department == 'HOQ'))
 								td
 									.input-group
-										input.form-control(type='number', name='faculty_pos_recruited_vacant.others.vacant', value=form.faculty_pos_recruited_vacant.others.vacant)
+										input.form-control(type='number', name='faculty_pos_recruited_vacant.others.vacant', value=form.faculty_pos_recruited_vacant.others.vacant, disabled=(cookies.department == 'HOQ'))
 								//td
 									.input-group
 										input.form-control(type='number', name='faculty_pos_recruited_vacant.total.recruited', value=form.faculty_pos_recruited_vacant.total.recruited)
