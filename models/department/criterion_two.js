@@ -59,16 +59,16 @@ var criterionTwoSchema = mongoose.Schema({
 		member_board: { type: Number, default: 0 },
 		faculty_dev_workshop: { type: Number, default: 0 }
 	},
-	pass_percent_dist: {
-		programme_title: { type: String, default: '' },
-		students_appeared: { type: Number, default: 0 },
-		division: {
-			distinction_percent: { type: Number, default: 0 },
-			percent_one: { type: Number, default: 0 },
-			percent_two: { type: Number, default: 0 },
-			percent_three: { type: Number, default: 0 }
-		}
-	},
+	// pass_percent_dist: {
+	// 	programme_title: { type: String, default: '' },
+	// 	students_appeared: { type: Number, default: 0 },
+	// 	division: {
+	// 		distinction_percent: { type: Number, default: 0 },
+	// 		percent_one: { type: Number, default: 0 },
+	// 		percent_two: { type: Number, default: 0 },
+	// 		percent_three: { type: Number, default: 0 }
+	// 	}
+	// },
 	faculty_dev_initiative: {
 		refresher_courses: { type: Number, default: 0 },
 		ugc_fac_improvement_prog: { type: Number, default: 0 },

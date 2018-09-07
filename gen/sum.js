@@ -99,23 +99,24 @@ function sum() {
 		});*/
 
 		console.log('SUMMING UP CTWOS')
-		var array = []
-		for(var i = 0; i < 10; i++) {
-			console.log(CTwos[i].department)
-			let division = {
-				distinction_percent : CTwos[i].pass_percent_dist.division.distinction_percent,
-				percent_one : CTwos[i].pass_percent_dist.division.percent_one,
-				percent_two : CTwos[i].pass_percent_dist.division.percent_two,
-				percent_three : CTwos[i].pass_percent_dist.division.percent_three 
-			}
-			let programme_title = departments[i]
-			let students_appeared = CTwos[i].pass_percent_dist.students_appeared
-			array[i] = {
-				division,
-				programme_title,
-				students_appeared
-			}
-		}
+		// var array = []
+		// for(var i = 0; i < 10; i++) {
+		// 	console.log(CTwos[i].department)
+		// 	let division = {
+		// 		distinction_percent : CTwos[i].pass_percent_dist.division.distinction_percent,
+		// 		percent_one : CTwos[i].pass_percent_dist.division.percent_one,
+		// 		percent_two : CTwos[i].pass_percent_dist.division.percent_two,
+		// 		percent_three : CTwos[i].pass_percent_dist.division.percent_three 
+		// 	}
+		// 	let programme_title = departments[i]
+		// 	let students_appeared = CTwos[i].pass_percent_dist.students_appeared
+		// 	array[i] = {
+		// 		division,
+		// 		programme_title,
+		// 		students_appeared
+		// 	}
+		// }
+		console.log(CTwos);
 		document = jsonAdd.addJSONs(CTwos);
 		console.log(document)
 		document._doc.department = 'HOQ';
