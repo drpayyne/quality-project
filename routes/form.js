@@ -127,7 +127,7 @@ router.get('/:page', function(req, res ) {
 					}
 				});
 			}
-			break;	
+			break;
 		case 'criterion3':
 			if(req.cookies.department == 'HOQ') {
 				HCriterionThree.findOne({department: 'HOQ'}, function(err, document) {
@@ -285,7 +285,7 @@ router.get('/:page', function(req, res ) {
 			});
 			break;
 	}
-}); 
+});
 
 router.post('/:page', function(req, res) {
 	console.log('COOKIES RECEIVED')
@@ -354,7 +354,7 @@ router.post('/:page', function(req, res) {
 				let c3rs = [req.body.c3r1, req.body.c3r2, req.body.c3r3, req.body.c3r4, req.body.c3r5, req.body.c3r6, req.body.c3r7, req.body.c3r8, req.body.c3r9, req.body.c3r10];
 				let c4rs = [req.body.c4r1, req.body.c4r2, req.body.c4r3, req.body.c4r4, req.body.c4r5, req.body.c4r6, req.body.c4r7, req.body.c4r8, req.body.c4r9, req.body.c4r10];
 				let c5rs = [req.body.c5r1, req.body.c5r2, req.body.c5r3, req.body.c5r4, req.body.c5r5, req.body.c5r6, req.body.c5r7, req.body.c5r8, req.body.c5r9, req.body.c5r10];
-			
+
 				form.pass_percent_dist = []
 				for(var i=0; i<10; i++) {
 					let doc = {}, div = {};
@@ -367,7 +367,7 @@ router.post('/:page', function(req, res) {
 					doc.programme_title = departments[i];
 					doc.students_appeared = c1rs[i];
 					doc.division = div;
-			
+
 					form.pass_percent_dist[i] = doc;
 				}
 				console.log('C2 FORM:')
@@ -428,7 +428,7 @@ router.post('/:page', function(req, res) {
 						res.redirect('/form/criterion4');
 					}
 				});
-			}	
+			}
 			break;
 		case 'criterion5':
 			form.department = req.cookies.department
@@ -452,7 +452,7 @@ router.post('/:page', function(req, res) {
 			break;
 		case 'criterion6':
 			form.department = 'HOQ';
-			CriterionSix.update(null, form, {upsert: true}, function(err) {
+			HCriterionSix.update(null, form, {upsert: true}, function(err) {
 				if(err) {
 					console.log(err);
 				} else {
@@ -462,7 +462,7 @@ router.post('/:page', function(req, res) {
 			break;
 		case 'criterion7':
 			form.department = 'HOQ';
-			CriterionSeven.update(null, form, {upsert: true}, function(err) {
+			HCriterionSeven.update(null, form, {upsert: true}, function(err) {
 				if(err) {
 					console.log(err);
 				} else {
@@ -472,7 +472,7 @@ router.post('/:page', function(req, res) {
 			break;
 		case 'criterion8':
 			form.department = 'HOQ';
-			CriterionEight.update(null, form, {upsert: true}, function(err) {
+			HCriterionEight.update(null, form, {upsert: true}, function(err) {
 				if(err) {
 					console.log(err);
 				} else {
@@ -481,6 +481,6 @@ router.post('/:page', function(req, res) {
 			});
 			break;
 	}
-}); 
+});
 
 module.exports = router;

@@ -62,13 +62,56 @@ var criterionThreeSchema = mongoose.Schema({
 		}
 	},
 
-	research_funds_sanctioned : [{
-		project_nature: { type: String, default: '' },
-		duration_year : { type: String, default: '' },
-		funding_agency_name : { type: String, default: '' },
-		total_grant_sanctioned : { type: Number, default: 0 },
-		received : { type: Number, default: 0 }
-	}],
+	research_funds_sanctioned : {                // 3.6
+		major_project : {
+			duration_year : { type: String, default: '' },
+			funding_agency_name : { type: String, default: '' },
+			total_grant_sanctioned : { type: Number, default: 0 },
+			received : { type: Number, default: 0 }
+		},
+		minor_project : {
+			duration_year : { type: String, default: '' },
+			funding_agency_name : { type: String, default: '' },
+			total_grant_sanctioned : { type: Number, default: 0 },
+			received : { type: Number, default: 0 }
+		},
+		interdisciplinary_project : {
+			duration_year : { type: String, default: '' },
+			funding_agency_name : { type: String, default: '' },
+			total_grant_sanctioned : { type: Number, default: 0 },
+			received : { type: Number, default: 0 }
+		},
+		industry_sponsored : {
+			duration_year : { type: String, default: '' },
+			funding_agency_name : { type: String, default: '' },
+			total_grant_sanctioned : { type: Number, default: 0 },
+			received : { type: Number, default: 0 }
+		},
+		uni_sponsored_project : {
+			duration_year : { type: String, default: '' },
+			funding_agency_name : { type: String, default: '' },
+			total_grant_sanctioned : { type: Number, default: 0 },
+			received : { type: Number, default: 0 }
+		},
+		other_student_research_project : {
+			duration_year : { type: String, default: '' },
+			funding_agency_name : { type: String, default: '' },
+			total_grant_sanctioned : { type: Number, default: 0 },
+			received : { type: Number, default: 0 }
+		},
+		any_other_specify : {
+			duration_year : { type: String, default: '' },
+			funding_agency_name : { type: String, default: '' },
+			total_grant_sanctioned : { type: Number, default: 0 },
+			received : { type: Number, default: 0 }
+		},
+		total : {
+			duration_year : { type: String, default: '' },
+			funding_agency_name : { type: String, default: '' },
+			total_grant_sanctioned : { type: Number, default: 0 },
+			received : { type: Number, default: 0 }
+		}
+	},
 
 	no_of_books_published : {                 // 3.7
 		with_isbn_no : { type: Number, default: 0 },
