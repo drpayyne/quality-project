@@ -1,0 +1,322 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title IQAC Form(Criterion – IV)
+    link(rel='stylesheet', href='../css/normalize.min.css')
+    link(rel='stylesheet', href='../css/form.css')
+  body
+    .top-cont
+      .top-line
+        div(style='float: right')
+          button#back(type='button') BACK
+        div(style='float: left')
+          button(type='submit') SAVE
+    .bot-cont
+      form(action='/form', method='post')
+        h1 Criterion – IV
+        h2 #{cookies.dept}
+        fieldset
+          legend
+            span.number 4
+            | Infrastructure and Learning Resources
+          // 4.1, 4.2, 4.3 TO BE FILLED BY HOQ
+          label 4.1 Details of increase in infrastructure facilities:
+          table(style='width:100%')
+            tr
+              th Facilities
+              th Existing
+              th Newly created
+              th Source of Fund
+              th Total
+            tr
+              th Campus area
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.campus_area.existing', value= form.increase_in_infrastructure_details.campus_area.existing)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.campus_area.newly_purchased', value= form.increase_in_infrastructure_details.campus_area.newly_purchased)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.campus_area.source_of_fund', value= form.increase_in_infrastructure_details.campus_area.source_of_fund)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.campus_area.total', value= form.increase_in_infrastructure_details.campus_area.total)
+            tr
+              th Class rooms
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.class_rooms.existing', value= form.increase_in_infrastructure_details.class_rooms.existing)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.class_rooms.newly_purchased', value= form.increase_in_infrastructure_details.class_rooms.newly_purchased)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.class_rooms.source_of_fund', value= form.increase_in_infrastructure_details.class_rooms.source_of_fund)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.class_rooms.total', value= form.increase_in_infrastructure_details.class_rooms.total)
+            tr
+              th Laboratories
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.laboratories.existing', value= form.increase_in_infrastructure_details.laboratories.existing)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.laboratories.newly_created', value= form.increase_in_infrastructure_details.laboratories.newly_created)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.laboratories.source_of_fund', value= form.increase_in_infrastructure_details.laboratories.source_of_fund)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.laboratories.total', value= form.increase_in_infrastructure_details.laboratories.total)
+            tr
+              th Seminar Halls
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.seminar_halls.existing', value= form.increase_in_infrastructure_details.seminar_halls.existing)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.seminar_halls.newly_created', value= form.increase_in_infrastructure_details.seminar_halls.newly_created)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.seminar_halls.source_of_fund', value= form.increase_in_infrastructure_details.seminar_halls.source_of_fund)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.seminar_halls.total', value= form.increase_in_infrastructure_details.seminar_halls.total)
+            tr
+              th No. of important equipments purchased(≥ 1-0 lakh) during the current year
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.important_equipment_purchased.existing', value= form.increase_in_infrastructure_details.important_equipment_purchased.existing)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.important_equipment_purchased.newly_created', value= form.increase_in_infrastructure_details.important_equipment_purchased.newly_created)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.important_equipment_purchased.source_of_fund', value= form.increase_in_infrastructure_details.important_equipment_purchased.source_of_fund)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.important_equipment_purchased.total', value= form.increase_in_infrastructure_details.important_equipment_purchased.total)
+            tr
+              th Value of the equipment purchased during the year(Rs. in Lakhs)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.value_of_equipment_purchased_in_lakhs.existing', value= form.increase_in_infrastructure_details.value_of_equipment_purchased_in_lakhs.existing)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.value_of_equipment_purchased_in_lakhs.newly_created', value= form.increase_in_infrastructure_details.value_of_equipment_purchased_in_lakhs.newly_created)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.value_of_equipment_purchased_in_lakhs.source_of_fund', value= form.increase_in_infrastructure_details.value_of_equipment_purchased_in_lakhs.source_of_fund)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.value_of_equipment_purchased_in_lakhs.total', value= form.increase_in_infrastructure_details.value_of_equipment_purchased_in_lakhs.total)
+            tr
+              th Others
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.others.existing', value= form.increase_in_infrastructure_details.others.existing)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.others.newly_created', value= form.increase_in_infrastructure_details.others.newly_created)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.others.source_of_fund', value= form.increase_in_infrastructure_details.others.source_of_fund)
+              td
+                input(type='number', name='form.increase_in_infrastructure_details.others.total', value= form.increase_in_infrastructure_details.others.total)
+          label 4.2 Computerization of administration and library:
+          input(type='text', name='form.computerization_of_administration_and_library', value= form.computerization_of_administration_and_library)
+          label 4.3  Library services:
+          table(style='width:100%')
+            tr
+              th
+              th(colspan='2') Existing
+              th(colspan='2') Newly added
+              th(colspan='2') Total
+            tr
+              th
+              th No.
+              th Value
+              th No.
+              th Value
+              th No.
+              th Value
+            tr
+              th Text Books
+              td
+                input(type='number', name='form.library_services.text_books.existing.num', value= form.library_services.text_books.existing.num)
+              td
+                input(type='number', name='form.library_services.text_books.existing.val', value= form.library_services.text_books.existing.val)
+              td
+                input(type='number', name='form.library_services.text_books.newly_added.num', value= form.library_services.text_books.newly_added.num)
+              td
+                input(type='number', name='form.library_services.text_books.newly_added.val', value= form.library_services.text_books.newly_added.val)
+              td
+                input(type='number', name='form.library_services.text_books.total.num', value= form.library_services.text_books.total.num)
+              td
+                input(type='number', name='form.library_services.text_books.total.val', value= form.library_services.text_books.total.val)
+            tr
+              th Reference Books
+              td
+                input(type='number', name='form.library_services.reference_books.existing.num', value= form.library_services.reference_books.existing.num)
+              td
+                input(type='number', name='form.library_services.reference_books.existing.val', value= form.library_services.reference_books.existing.val)
+              td
+                input(type='number', name='form.library_services.reference_books.newly_added.num', value= form.library_services.reference_books.newly_added.num)
+              td
+                input(type='number', name='form.library_services.reference_books.newly_added.val', value= form.library_services.reference_books.newly_added.val)
+              td
+                input(type='number', name='form.library_services.reference_books.total.num', value= form.library_services.reference_books.total.num)
+              td
+                input(type='number', name='form.library_services.reference_books.total.val', value= form.library_services.reference_books.total.val)
+            tr
+              th e-Books
+              td
+                input(type='number', name='form.library_services.e_books.existing.num', value= form.library_services.e_books.existing.num)
+              td
+                input(type='number', name='form.library_services.e_books.existing.val', value= form.library_services.e_books.existing.val)
+              td
+                input(type='number', name='form.library_services.e_books.newly_added.num', value= form.library_services.e_books.newly_added.num)
+              td
+                input(type='number', name='form.library_services.e_books.newly_added.val', value= form.library_services.e_books.newly_added.val)
+              td
+                input(type='number', name='form.library_services.e_books.total.num', value= form.library_services.e_books.total.num)
+              td
+                input(type='number', name='form.library_services.e_books.total.val', value= form.library_services.e_books.total.val)
+            tr
+              th Journals
+              td
+                input(type='number', name='form.library_services.journals.existing.num', value= form.library_services.journals.existing.num)
+              td
+                input(type='number', name='form.library_services.journals.existing.val', value= form.library_services.journals.existing.val)
+              td
+                input(type='number', name='form.library_services.journals.newly_added.num', value= form.library_services.journals.newly_added.num)
+              td
+                input(type='number', name='form.library_services.journals.newly_added.val', value= form.library_services.journals.newly_added.val)
+              td
+                input(type='number', name='form.library_services.journals.total.num', value= form.library_services.journals.total.num)
+              td
+                input(type='number', name='form.library_services.journals.total.val', value= form.library_services.journals.total.val)
+            tr
+              th e-Journals
+              td
+                input(type='number', name='form.library_services.ejournals.existing.num', value= form.library_services.ejournals.existing.num)
+              td
+                input(type='number', name='form.library_services.ejournals.existing.val', value= form.library_services.ejournals.existing.val)
+              td
+                input(type='number', name='form.library_services.ejournals.newly_added.num', value= form.library_services.ejournals.newly_added.num)
+              td
+                input(type='number', name='form.library_services.ejournals.newly_added.val', value= form.library_services.ejournals.newly_added.val)
+              td
+                input(type='number', name='form.library_services.ejournals.total.num', value= form.library_services.ejournals.total.num)
+              td
+                input(type='number', name='form.library_services.ejournals.total.val', value= form.library_services.ejournals.total.val)
+            tr
+              th Digital Database
+              td
+                input(type='number', name='form.library_services.digital_database.existing.num', value= form.library_services.digital_database.existing.num)
+              td
+                input(type='number', name='form.library_services.digital_database.existing.val', value= form.library_services.digital_database.existing.val)
+              td
+                input(type='number', name='form.library_services.digital_database.newly_added.num', value= form.library_services.digital_database.newly_added.num)
+              td
+                input(type='number', name='form.library_services.digital_database.newly_added.val', value= form.library_services.digital_database.newly_added.val)
+              td
+                input(type='number', name='form.library_services.digital_database.total.num', value= form.library_services.digital_database.total.num)
+              td
+                input(type='number', name='form.library_services.digital_database.total.val', value= form.library_services.digital_database.total.val)
+            tr
+              th CD & Video
+              td
+                input(type='number', name='form.library_services.cd_video.existing.num', value= form.library_services.cd_video.existing.num)
+              td
+                input(type='number', name='form.library_services.cd_video.existing.val', value= form.library_services.cd_video.existing.val)
+              td
+                input(type='number', name='form.library_services.cd_video.newly_added.num', value= form.library_services.cd_video.newly_added.num)
+              td
+                input(type='number', name='form.library_services.cd_video.newly_added.val', value= form.library_services.cd_video.newly_added.val)
+              td
+                input(type='number', name='form.library_services.cd_video.total.num', value= form.library_services.cd_video.total.num)
+              td
+                input(type='number', name='form.library_services.cd_video.total.val', value= form.library_services.cd_video.total.val)
+            tr
+              th Others (specify)
+              td
+                input(type='number', name='form.library_services.other.existing.num', value= form.library_services.other.existing.num)
+              td
+                input(type='number', name='form.library_services.other.existing.val', value= form.library_services.other.existing.val)
+              td
+                input(type='number', name='form.library_services.other.newly_added.num', value= form.library_services.other.newly_added.num)
+              td
+                input(type='number', name='form.library_services.other.newly_added.val', value= form.library_services.other.newly_added.val)
+              td
+                input(type='number', name='form.library_services.other.total.num', value= form.library_services.other.total.num)
+              td
+                input(type='number', name='form.library_services.other.total.val', value= form.library_services.other.total.val)
+          label 4.4 Technology up gradation (overall):
+          table(style='width:100%')
+            tr
+              th
+              th Total Computers
+              th Computer Labs
+              th Internet
+              th Browsing Centres
+              th Computer Centres
+              th Office
+              th Departments
+              th others
+            tr
+              th Existing
+              td
+                input(type='number', name='form.tech_upgrade.total_computers.existing', value= form.tech_upgrade.total_computers.existing)
+              td
+                input(type='number', name='form.tech_upgrade.computer_labs.existing', value= form.tech_upgrade.computer_labs.existing)
+              td
+                input(type='number', name='form.tech_upgrade.internet.existing', value= form.tech_upgrade.internet.existing)
+              td
+                input(type='number', name='form.tech_upgrade.browsing_centres.existing', value= form.tech_upgrade.browsing_centres.existing)
+              td
+                input(type='number', name='form.tech_upgrade.computer_centres.existing', value= form.tech_upgrade.computer_centres.existing)
+              td
+                input(type='number', name='form.tech_upgrade.office.existing', value= form.tech_upgrade.office.existing)
+              td
+                input(type='number', name='form.tech_upgrade.departments.existing', value= form.tech_upgrade.departments.existing)
+              td
+                input(type='number', name='form.tech_upgrade.others.existing', value= form.tech_upgrade.others.existing)
+            tr
+              th Added
+              td
+                input(type='number', name='form.tech_upgrade.total_computers.added', value= form.tech_upgrade.total_computers.added)
+              td
+                input(type='number', name='form.tech_upgrade.computer_labs.added', value= form.tech_upgrade.computer_labs.added)
+              td
+                input(type='number', name='form.tech_upgrade.internet.added', value= form.tech_upgrade.internet.added)
+              td
+                input(type='number', name='form.tech_upgrade.browsing_centres.added', value= form.tech_upgrade.browsing_centres.added)
+              td
+                input(type='number', name='form.tech_upgrade.computer_centres.added', value= form.tech_upgrade.computer_centres.added)
+              td
+                input(type='number', name='form.tech_upgrade.office.added', value= form.tech_upgrade.office.added)
+              td
+                input(type='number', name='form.tech_upgrade.departments.added', value= form.tech_upgrade.departments.added)
+              td
+                input(type='number', name='form.tech_upgrade.others.added', value= form.tech_upgrade.others.added)
+            tr
+              th Total
+              td
+                input(type='number', name='form.tech_upgrade.total_computers.total', value= form.tech_upgrade.total_computers.total)
+              td
+                input(type='number', name='form.tech_upgrade.computer_labs.total', value= form.tech_upgrade.computer_labs.total)
+              td
+                input(type='number', name='form.tech_upgrade.internet.total', value= form.tech_upgrade.internet.total)
+              td
+                input(type='number', name='form.tech_upgrade.browsing_centres.total', value= form.tech_upgrade.browsing_centres.total)
+              td
+                input(type='number', name='form.tech_upgrade.computer_centres.total', value= form.tech_upgrade.computer_centres.total)
+              td
+                input(type='number', name='form.tech_upgrade.office.total', value= form.tech_upgrade.office.total)
+              td
+                input(type='number', name='form.tech_upgrade.departments.total', value= form.tech_upgrade.departments.total)
+              td
+                input(type='number', name='form.tech_upgrade.others.total', value= form.tech_upgrade.others.total)
+          label
+            | 4.5 Computer, Internet access, training to teachers and students and any other programme for technology upgradation (Networking, e-Governance etc.):
+          input(type='text', name='4.5')
+          label 4.6  Amount spent on maintenance in lakhs:
+          table(style='width:100%')
+            tr
+              th ICT
+              td
+                input(type='number', name='form.maintenance_amount_in_lakhs.ict', value= form.maintenance_amount_in_lakhs.ict)
+            tr
+              th Campus Infrastructure and facilities
+              td
+                input(type='number', name='form.maintenance_amount_in_lakhs.maintenance_amount_in_lakhs', value= form.maintenance_amount_in_lakhs.maintenance_amount_in_lakhs)
+            tr
+              th Equipments
+              td
+                input(type='number', name='form.maintenance_amount_in_lakhs.equipment', value= form.maintenance_amount_in_lakhs.equipment)
+            tr
+              th Others
+              td
+                input(type='number', name='form.maintenance_amount_in_lakhs.other_maintenance', value= form.maintenance_amount_in_lakhs.other_maintenance)
+            tr
+              th Total
+              td
+                input(type='number', name='form.maintenance_amount_in_lakhs.total', value= form.maintenance_amount_in_lakhs.total)
+        button(type='submit') SAVE

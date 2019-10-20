@@ -8,7 +8,7 @@ const session = require('express-session');
 var cookieParser = require('cookie-parser')
 
 //Mongoose init
-mongoose.connect('mongodb://gopinath:password@127.0.0.1/form?authSource=admin', {
+mongoose.connect('mongodb://jd:abcd123@ds231941.mlab.com:31941/iqac_db', {
 	useMongoClient: true
 });
 let db = mongoose.connection;
@@ -44,20 +44,30 @@ app.use(session({
 app.use(cookieParser());
 
 app.use(function(req,res,next){
-    res.locals.cookies = req.cookies;
+	res.locals.cookies = req.cookies;
+	console.log('MIDDLEWARE')
+	console.log(res.locals.cookies)
     next();
 });
 
 //Home route GET
 app.get('/', function(req, res) {
-	res.redirect('/login');
+	res.redirect('/home');
 });
 
-//Import route files
-let forms = require('./routes/forms');
-let login = require('./routes/login');
-app.use('/form', forms);
-app.use('/login', login);
+//Import routing files
+let home = require('./routes/home');
+let dashboard = require('./routes/dashboard');
+let form = require('./routes/form');
+let settings = require('./routes/settings');
+let login = require('./routes/login')
+
+//Route files
+app.use('/home', home);
+app.use('/dashboard', dashboard);
+app.use('/form', form);
+app.use('/settings', settings);
+app.use('/login', login)
 
 //Start server
 app.listen(3000, function() {

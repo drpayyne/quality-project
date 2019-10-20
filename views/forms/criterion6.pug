@@ -1,0 +1,130 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title IQAC AQAR
+		link(rel='stylesheet', href='/css/dashboard.css')
+		link(rel='stylesheet', href='/css/bootstrap.css')
+		link(rel='stylesheet', href='/css/normalize.min.css')
+		link(rel='stylesheet', href='/css/form.css')
+		script.
+			var username='#{cookies.user.username}';
+	body
+		.container-fluid.h-100
+			nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
+				a.navbar-brand(href='/dashboard') Back
+				span.navbar-brand.mb-0.h1 IQAC Criterion 6 - #{cookies.user.username} 
+					if cookies.user.username == 'HOQ'
+						span.navbar-brand.mb-0.h1 - #{cookies.department}
+				a.navbar-brand(href='/home') Logout
+			.row.my-4
+				.col
+					form(action='/form/criterion6', method='POST')
+						legend
+							span.number 6
+							| Governance, Leadership and Management
+						// EXCEPT  6.3.8 the rest TO BE FILLED BY HOQ
+						label 6.1 State the Vision and Mission of the institution:
+						input(type='text', name='form.vision_mission_institute', value=form.vision_mission_institute)
+						label 6.2 Does the Institution has a management Information System:
+						input(type='text', name='form.info_management_system', value=form.info_management_system)
+						label
+							| 6.3 Quality improvement strategies adopted by the institution for each of the following:
+						label 6.3.1 Curriculum Development:
+						input(type='text', name='form.improvement_strategies.curriculum_development', value=form.improvement_strategies.curriculum_development)
+						label 6.3.2 Teaching and Learning:
+						input(type='text', name='form.improvement_strategies.teaching_and_learning', value=form.improvement_strategies.teaching_and_learning)
+						label 6.3.3 Examination and Evaluation:
+						input(type='text', name='form.improvement_strategies.exam_and_evaluation', value=form.improvement_strategies.exam_and_evaluation)
+						label 6.3.4 Research and Development:
+						input(type='text', name='form.improvement_strategies.research_and_development', value=form.improvement_strategies.research_and_development)
+						label 6.3.5 Library, ICT and physical infrastructure/instrumentation:
+						input(type='text', name='form.improvement_strategies.physical_infrastructure', value=form.improvement_strategies.physical_infrastructure)
+						label 6.3.6 Human Resource Management:
+						input(type='text', name='form.improvement_strategies.human_resource_management', value=form.improvement_strategies.human_resource_management)
+						label 6.3.7 Faculty and Staff recruitment:
+						input(type='text', name='form.improvement_strategies.faculty_staff_recruitment', value=form.improvement_strategies.faculty_staff_recruitment)
+						label 6.3.8   Industry Interaction / Collaboration:
+						input(type='text', name='form.improvement_strategies.industry_interaction_collab', value=form.improvement_strategies.industry_interaction_collab)
+						label 6.3.9 Admission of Students:
+						input(type='text', name='form.improvement_strategies.student_admission', value=form.improvement_strategies.student_admission)
+						label 6.4 Welfare schemes for:
+						table(width='100%')
+							tr
+								th Teaching
+								th Non-Teaching
+								th Students
+							tr
+								td
+									input(type='text', name='form.welfare_scheme.teaching', value=form.welfare_scheme.teaching)
+								td
+									input(type='text', name='form.welfare_scheme.non_teaching', value=form.welfare_scheme.non_teaching)
+								td
+									input(type='text', name='form.welfare_scheme.students', value=form.welfare_scheme.students)
+						label 6.5 Total corpus fund generated:
+						input(type='number', name='form.corpus_fund', value=form.corpus_fund)
+						label 6.6 Whether annual financial audit has been done:
+						input(type='radio', name='form.financial_audit.yes', value=form.financial_audit.yes)
+						| Yes
+						input(type='radio', name='form.financial_audit.no', value=form.financial_audit.no)
+						| No
+						label 6.7 Whether Academic and Administrative Audit (AAA) has been done?
+						table(width='100%')
+							tr
+								th State/ University level
+								th(colspan='2') National level
+								th(colspan='2') International level
+							tr
+								th
+								th Yes/No
+								th Agency
+								th Yes/No
+								th Agency
+							tr
+								th Academic
+								td
+									input(type='string', name='form.academic_admin_audit.academic.external_yes_no', value=form.academic_admin_audit.academic.external_yes_no)
+								td
+									input(type='string', name='form.academic_admin_audit.academic.external_agency', value=form.academic_admin_audit.academic.external_agency)
+								td
+									input(type='string', name='form.academic_admin_audit.academic.internal_yes_no', value=form.academic_admin_audit.academic.internal_yes_no)
+								td
+									input(type='string', name='form.academic_admin_audit.academic.internal_agency', value=form.academic_admin_audit.academic.internal_agency)
+							tr
+								th Administrative
+								td
+									input(type='string', name='form.academic_admin_audit.administrative.external_yes_no', value=form.academic_admin_audit.administrative.external_yes_no)
+								td
+									input(type='string', name='form.academic_admin_audit.administrative.external_agency', value=form.academic_admin_audit.administrative.external_agency)
+								td
+									input(type='string', name='form.academic_admin_audit.administrative.internal_yes_no', value=form.academic_admin_audit.administrative.internal_yes_no)
+								td
+									input(type='string', name='form.academic_admin_audit.administrative.internal_agency', value=form.academic_admin_audit.administrative.internal_agency)
+						label 6.8 Does the University/ Autonomous College declares results within 30 days?
+						label For UG Programmes:
+						input(type='radio', name='form.result_declaration.ug_programmes.yes', value=form.result_declaration.ug_programmes.yes)
+						| Yes
+						input(type='radio', name='form.result_declaration.ug_programmes.no', value=form.result_declaration.ug_programmes.no)
+						| No
+						label For PG Programmes:
+						input(type='radio', name='form.result_declaration.pg_programmes.yes', value=form.result_declaration.pg_programmes.yes)
+						| Yes
+						input(type='radio', name='form.result_declaration.pg_programmes.no', value=form.result_declaration.pg_programmes.no)
+						| No
+						label
+							| 6.9 What efforts are made by the University/ Autonomous College for Examination Reforms?
+						input(type='string', name='form.examination_reforms', value=form.examination_reforms)
+						label
+							| 6.10 What efforts are made by the University to promote autonomy in the affiliated/constituent colleges?
+						input(type='text', name='form.autonomy_promotion', value=form.autonomy_promotion)
+						label 6.11 Activities and support from the Alumni Association
+						input(type='text', name='form.alumni_activity_support', value=form.alumni_activity_support)
+						label 6.12 Activities and support from the Parent – Teacher Association:
+						input(type='text', name='form.parent_teacher_activity_support', value=form.parent_teacher_activity_support)
+						label 6.13 Development programmes for support staff:
+						input(type='text', name='form.support_staff_development', value=form.support_staff_development)
+						label 6.14 Initiatives taken by the institution to make the campus eco-friendly:
+						input(type='text', name='form.eco_friendly_initiatives', value=form.eco_friendly_initiatives)
+						button.fixed-but(type='submit') SAVE
+				//-script(src='/js/form.js')

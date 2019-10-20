@@ -1,0 +1,80 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title IQAC Form(Criterion &ndash; V)
+    link(rel='stylesheet', href='../css/normalize.min.css')
+    link(rel='stylesheet', href='../css/form.css')
+  body
+    form(action='/form', method='post')
+        h1 Criterion – V
+        h2 #{cookies.dept}
+      fieldset
+        legend
+          span.number 5
+          | Student Support and Progression
+        label 5.5 No. of students qualified in these examinations:
+        table(style='width:100%')
+          tr
+            th NET
+            td
+              input(type='number', name='form.no_of_students_qualified_for_examinations.net', value=form.no_of_students_qualified_for_examinations.net)
+          tr
+            th SET/SLET
+            td
+              input(type='number', name='form.no_of_students_qualified_for_examinations.set_slet', value=form.no_of_students_qualified_for_examinations.set_slet)
+          tr
+            th GATE
+            td
+              input(type='number', name='form.no_of_students_qualified_for_examinations.gate', value=form.no_of_students_qualified_for_examinations.gate)
+          tr
+            th CAT
+            td
+              input(type='number', name='form.no_of_students_qualified_for_examinations.cat', value=form.no_of_students_qualified_for_examinations.cat)
+          tr
+            th IAS/IPS etc.
+            td
+              input(type='number', name='form.no_of_students_qualified_for_examinations.ias_ips', value=form.no_of_students_qualified_for_examinations.ias_ips)
+          tr
+            th State PSC
+            td
+              input(type='number', name='form.no_of_students_qualified_for_examinations.state_psc', value=form.no_of_students_qualified_for_examinations.state_psc)
+          tr
+            th UPSC
+            td
+              input(type='number', name='form.no_of_students_qualified_for_examinations.upsc', value=form.no_of_students_qualified_for_examinations.upsc)
+          tr
+            th Others
+            td
+              input(type='number', name='form.no_of_students_qualified_for_examinations.others', value=form.no_of_students_qualified_for_examinations.others)
+        label 5.10 Scholarships and Financial Support:
+        table(style='width:100%')
+          tr
+            th  
+            th Number of students
+            th Amount
+          tr
+            th Financial support from institution
+            td
+              input(type='number', name='form.scholarship_financial_support.institute_finance_support.student_no', value=form.scholarship_financial_support.institute_finance_support.student_no)
+            td
+              input(type='number', name='form.scholarship_financial_support.institute_finance_support.amount_in_lakhs', value=form.scholarship_financial_support.institute_finance_support.amount_in_lakhs)
+          tr
+            th Financial support from government
+            td
+              input(type='number', name='form.scholarship_financial_support.govt_financial_support.student_no', value=form.scholarship_financial_support.govt_financial_support.student_no)
+            td
+              input(type='number', name='form.scholarship_financial_support.govt_financial_support.amount_in_lakhs', value=form.scholarship_financial_support.govt_financial_support.amount_in_lakhs)
+          tr
+            th Financial support from other sources
+            td
+              input(type='number', name='form.scholarship_financial_support.other_financial_support.student_no', value=form.scholarship_financial_support.other_financial_support.student_no)
+            td
+              input(type='number', name='form.scholarship_financial_support.other_financial_support.amount_in_lakhs', value=form.scholarship_financial_support.other_financial_support.amount_in_lakhs)
+          tr
+            th Number of students who received International/ National recognitions
+            td
+              input(type='number', name='form.scholarship_financial_support.international_national_recognition.student_no', value=form.scholarship_financial_support.international_national_recognition.student_no)
+            td
+              input(type='number', name='form.scholarship_financial_support.international_national_recognition.amount_in_lakhs', value=form.scholarship_financial_support.international_national_recognition.amount_in_lakhs)
+        button(type='submit') SAVE

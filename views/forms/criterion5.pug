@@ -1,0 +1,304 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title IQAC AQAR
+		link(rel='stylesheet', href='/css/dashboard.css')
+		link(rel='stylesheet', href='/css/bootstrap.css')
+		link(rel='stylesheet', href='/css/normalize.min.css')
+		link(rel='stylesheet', href='/css/form.css')
+		script.
+			var username='#{cookies.user.username}';
+	body
+		.container-fluid.h-100
+			nav.navbar.navbar-light.fixed-top(style='background-color: #e3f2fd;')
+				a.navbar-brand(href='/dashboard') Back
+				span.navbar-brand.mb-0.h1 IQAC Criterion 5 - #{cookies.user.username}
+					if cookies.user.username == 'HOQ'
+						span.navbar-brand.mb-0.h1 - #{cookies.department}
+				a.navbar-brand(href='/home') Logout
+			.row.my-4
+				.col
+					form(action='/form/criterion5', method='POST')
+						legend
+							span.number 5
+							| Student Support and Progression
+						label 5.1 Contribution of IQAC in enhancing awareness about Student Support Services:
+						input(type='text', name='iqac_contribution_student_support_services', value=form.iqac_contribution_student_support_services)
+						label 5.2 Efforts made by the institution for tracking the progression:
+						input(type='text', name='efforts_tracking_progression', value=form.efforts_tracking_progression)
+						label 5.3 (a) Total Number of students
+						table(width='100%')
+							tr
+								th UG
+								th PG
+								th Ph.D
+								th Others
+							tr
+								td
+									input(type='number', name='total_no_of_students.ug_students', value=form.total_no_of_students.ug_students)
+								td
+									input(type='number', name='total_no_of_students.pg_students', value=form.total_no_of_students.pg_students)
+								td
+									input(type='number', name='total_no_of_students.phd_students', value=form.total_no_of_students.phd_students)
+								td
+									input(type='number', name='total_no_of_students.other_students', value=form.total_no_of_students.other_students)
+						label 5.3 (b) No. of students outside the state
+						input(type='number', name='no_of_students_outside_the_state', value=form.no_of_students_outside_the_state)
+						label 5.3 (c) No. of international students
+						table(width='100%')
+							tr
+								th(colspan='2') Men
+								th(colspan='2') Women
+							tr
+								th No.
+								th %
+								th No.
+								th %
+							tr
+								td
+									input(type='number', name='men.students_number', value=form.men.students_number)
+								td
+									input(type='number', name='men.percentage', value=form.men.percentage)
+								td
+									input(type='number', name='women.students_number', value=form.women.students_number)
+								td
+									input(type='number', name='women.percentage', value=form.women.percentage)
+						br
+						table(width='100%')
+							tr
+								th(colspan='5') Last Year
+								th(colspan='5') This Year
+							tr
+								th General
+								th SC
+								th ST
+								th OBC
+								th Physically Challenged
+								//th Total
+								th General
+								th SC
+								th ST
+								th OBC
+								th Physically Challenged
+								//th Total
+							tr
+								td
+									input(type='number', name='last_year.general', value=form.last_year.general)
+								td
+									input(type='number', name='last_year.sc', value=form.last_year.sc)
+								td
+									input(type='number', name='last_year.st', value=form.last_year.st)
+								td
+									input(type='number', name='last_year.obc', value=form.last_year.obc)
+								td
+									input(type='number', name='last_year.physically_challenged', value=form.last_year.physically_challenged)
+								//td
+									input(type='number', name='last_year.students_total', value=form.last_year.students_total)
+								td
+									input(type='number', name='this_year.general', value=form.this_year.general)
+								td
+									input(type='number', name='this_year.sc', value=form.this_year.sc)
+								td
+									input(type='number', name='this_year.st', value=form.this_year.st)
+								td
+									input(type='number', name='this_year.obc', value=form.this_year.obc)
+								td
+									input(type='number', name='this_year.physically_challenged', value=form.this_year.physically_challenged)
+								//td
+									input(type='number', name='this_year.students_total', value=form.this_year.students_total)
+						br
+						table(width='100%')
+							tr
+								th Demand Ratio
+								th Dropout %
+							tr
+								td
+									input(type='number', name='demand_ratio', value=form.demand_ratio)
+								td
+									input(type='number', name='dropout_percentage', value=form.dropout_percentage)
+						label
+							| 5.4 Details of student support mechanism for coaching for competitive examinations(If any):
+						input(type='text', name='student_support_mechanism', value=form.student_support_mechanism)
+						label No. of students beneficiaries:
+						input(type='number', name='no_of_student_beneficiaries', value=form.no_of_student_beneficiaries)
+						label 5.5 No. of students qualified in these examinations:
+						table(style='width:100%')
+							tr
+								th NET
+								td
+									input(type='number', name='no_of_students_qualified_for_examinations.net', value=form.no_of_students_qualified_for_examinations.net)
+							tr
+								th SET/SLET
+								td
+									input(type='number', name='no_of_students_qualified_for_examinations.set_slet', value=form.no_of_students_qualified_for_examinations.set_slet)
+							tr
+								th GATE
+								td
+									input(type='number', name='no_of_students_qualified_for_examinations.gate', value=form.no_of_students_qualified_for_examinations.gate)
+							tr
+								th CAT
+								td
+									input(type='number', name='no_of_students_qualified_for_examinations.cat', value=form.no_of_students_qualified_for_examinations.cat)
+							tr
+								th IAS/IPS etc.
+								td
+									input(type='number', name='no_of_students_qualified_for_examinations.ias_ips', value=form.no_of_students_qualified_for_examinations.ias_ips)
+							tr
+								th State PSC
+								td
+									input(type='number', name='no_of_students_qualified_for_examinations.state_psc', value=form.no_of_students_qualified_for_examinations.state_psc)
+							tr
+								th UPSC
+								td
+									input(type='number', name='no_of_students_qualified_for_examinations.upsc', value=form.no_of_students_qualified_for_examinations.upsc)
+							tr
+								th Others
+								td
+									input(type='number', name='no_of_students_qualified_for_examinations.others', value=form.no_of_students_qualified_for_examinations.others)
+						label 5.6 Details of student counselling and career guidance:
+						input(type='text', name='student_counselling_career_guidance', value=form.student_counselling_career_guidance)
+						label No. of students benefitted:
+						input(type='number', name='no_of_students_benefitted', value=form.no_of_students_benefitted)
+						label 5.7 Details of campus placement:
+						table(width='100%')
+							tr
+								th(colspan='3') On Campus
+								th Off Campus
+							tr
+								th Number of Organizations Visited
+								th Number of Students Participated
+								th Number of Students Placed
+								th Number of Students Placed
+							tr
+								td
+									input(type='number', name='campus_placement_details.on_campus.organizations_visited', value=form.campus_placement_details.on_campus.organizations_visited)
+								td
+									input(type='number', name='campus_placement_details.on_campus.students_participated', value=form.campus_placement_details.on_campus.students_participated)
+								td
+									input(type='number', name='campus_placement_details.on_campus.placed_students', value=form.campus_placement_details.on_campus.placed_students)
+								td
+									input(type='number', name='campus_placement_details.off_campus.placed_students', value=form.campus_placement_details.off_campus.placed_students)
+						label 5.8 Details of gender sensitization programmes:
+						input(type='text', name='gender_sensitization_programmes', value=form.gender_sensitization_programmes)
+						label 5.9 Students Activities:
+						label
+							| 5.9.1
+							br
+							| No. of students participated in Sports, Games and other events:
+						table(width='100%')
+							tr
+								th State/ University level
+								th National level
+								th International level
+							tr
+								td
+									input(type='number', name='students_activities.participation_sports_games_other_events.state_uni_level', value=form.students_activities.participation_sports_games_other_events.state_uni_level)
+								td
+									input(type='number', name='students_activities.participation_sports_games_other_events.national_level', value=form.students_activities.participation_sports_games_other_events.national_level)
+								td
+									input(type='number', name='students_activities.participation_sports_games_other_events.international_level', value=form.students_activities.participation_sports_games_other_events.international_level)
+						label No. of students participated in cultural events
+						table(width='100%')
+							tr
+								th State/ University level
+								th National level
+								th International level
+							tr
+								td
+									input(type='number', name='students_activities.participation_cultural_events.state_uni_level', value=form.students_activities.participation_cultural_events.state_uni_level)
+								td
+									input(type='number', name='students_activities.participation_cultural_events.national_level', value=form.students_activities.participation_cultural_events.national_level)
+								td
+									input(type='number', name='students_activities.participation_cultural_events.international_level', value=form.students_activities.participation_cultural_events.international_level)
+						label 5.9.2 No. of medals /awards won by students in Sports, Games and other events
+						label Sports:
+						table(width='100%')
+							tr
+								th State/ University level
+								th National level
+								th International level
+							tr
+								td
+									input(type='number', name='students_activities.no_of_medals_awards.sports_games.state_uni_level', value=form.students_activities.no_of_medals_awards.sports_games.state_uni_level)
+								td
+									input(type='number', name='students_activities.no_of_medals_awards.sports_games.national_level', value=form.students_activities.no_of_medals_awards.sports_games.national_level)
+								td
+									input(type='number', name='students_activities.no_of_medals_awards.sports_games.international_level', value=form.students_activities.no_of_medals_awards.sports_games.international_level)
+						label Cultural:
+						table(width='100%')
+							tr
+								th State/ University level
+								th National level
+								th International level
+							tr
+								td
+									input(type='number', name='students_activities.no_of_medals_awards.culturals.state_uni_level', value=form.students_activities.no_of_medals_awards.culturals.state_uni_level)
+								td
+									input(type='number', name='students_activities.no_of_medals_awards.culturals.national_level', value=form.students_activities.no_of_medals_awards.culturals.national_level)
+								td
+									input(type='number', name='students_activities.no_of_medals_awards.culturals.international_level', value=form.students_activities.no_of_medals_awards.culturals.international_level)
+						label 5.10 Scholarships and Financial Support:
+						table(style='width:100%')
+							tr
+								th
+								th Number of students
+								th Amount
+							tr
+								th Financial support from institution
+								td
+									input(type='number', name='scholarship_financial_support.institute_finance_support.student_no', value=form.scholarship_financial_support.institute_finance_support.student_no)
+								td
+									input(type='number', name='scholarship_financial_support.institute_finance_support.amount_in_lakhs', value=form.scholarship_financial_support.institute_finance_support.amount_in_lakhs)
+							tr
+								th Financial support from government
+								td
+									input(type='number', name='scholarship_financial_support.govt_financial_support.student_no', value=form.scholarship_financial_support.govt_financial_support.student_no)
+								td
+									input(type='number', name='scholarship_financial_support.govt_financial_support.amount_in_lakhs', value=form.scholarship_financial_support.govt_financial_support.amount_in_lakhs)
+							tr
+								th Financial support from other sources
+								td
+									input(type='number', name='scholarship_financial_support.other_financial_support.student_no', value=form.scholarship_financial_support.other_financial_support.student_no)
+								td
+									input(type='number', name='scholarship_financial_support.other_financial_support.amount_in_lakhs', value=form.scholarship_financial_support.other_financial_support.amount_in_lakhs)
+							tr
+								th Number of students who received International/ National recognitions
+								td
+									input(type='number', name='scholarship_financial_support.international_national_recognition.student_no', value=form.scholarship_financial_support.international_national_recognition.student_no)
+								td
+									input(type='number', name='scholarship_financial_support.international_national_recognition.amount_in_lakhs', value=form.scholarship_financial_support.international_national_recognition.amount_in_lakhs)
+						label 5.11 Student organised / initiatives
+						label Fairs:
+						table(width='100%')
+							tr
+								th State/ University level
+								th National level
+								th International level
+							tr
+								td
+									input(type='number', name='student_organized_initiatives.fairs.state_uni_level', value=form.student_organized_initiatives.fairs.state_uni_level)
+								td
+									input(type='number', name='student_organized_initiatives.fairs.national_level', value=form.student_organized_initiatives.fairs.national_level)
+								td
+									input(type='number', name='student_organized_initiatives.fairs.international_level', value=form.student_organized_initiatives.fairs.international_level)
+						label Exhibition:
+						table(width='100%')
+							tr
+								th State/ University level
+								th National level
+								th International level
+							tr
+								td
+									input(type='number', name='student_organized_initiatives.exhibition.state_uni_level', value=form.student_organized_initiatives.exhibition.state_uni_level)
+								td
+									input(type='number', name='student_organized_initiatives.exhibition.national_level', value=form.student_organized_initiatives.exhibition.national_level)
+								td
+									input(type='number', name='student_organized_initiatives.exhibition.international_level', value=form.student_organized_initiatives.exhibition.international_level)
+						label 5.12 No. of social initiatives undertaken by the students:
+						input(type='number', name='social_initiatives_undertaken_by_students', value=form.social_initiatives_undertaken_by_students)
+						label 5.13 Major grievances of students (if any) redressed:
+						input(type='string', name='major_grievances_of_students', value=form.major_grievances_of_students)
+						button.fixed-but(type='submit') SAVE
+				//-script(src='/js/form.js')
