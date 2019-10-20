@@ -8,3 +8,9 @@ form {
 	max-height: 100%;
     	height: 100%;
 }
+.botnav {
+	min-width: 98%;
+	min-height: 6%;
+	position: absolute;
+    bottom: 0px;
+}

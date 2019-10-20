@@ -67,4 +67,5 @@ html(lang="en")
 				each val in ['ATM', 'BTC', 'CHE', 'CSE', 'CVE', 'ECE', 'EEE', 'IT', 'MAR', 'MEC', 'HOQ']
 					if cookies.user.username == val
 						input#dept_cookie(type='hidden', name='dept', value=val)
+			div.botnav(style='background-color: #e3f2fd;')
 		script(src='/js/dashboard.js')
