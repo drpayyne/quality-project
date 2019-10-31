@@ -60,14 +60,16 @@ let home = require('./routes/home');
 let dashboard = require('./routes/dashboard');
 let form = require('./routes/form');
 let settings = require('./routes/settings');
-let login = require('./routes/login')
+let login = require('./routes/login');
+let report = require('./routes/reports')
 
 //Route files
 app.use('/home', home);
 app.use('/dashboard', dashboard);
 app.use('/form', form);
 app.use('/settings', settings);
-app.use('/login', login)
+app.use('/login', login);
+app.use('/report', report)
 
 //Start server
 app.listen(3000, function() {

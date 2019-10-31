@@ -1,0 +1,288 @@
+html
+  head
+  body.sidebar-mini
+    #root
+      div
+        .jss1
+          .jss12
+            header.MuiPaper-root.MuiPaper-elevation4.MuiAppBar-root.jss13.MuiAppBar-positionStatic.MuiAppBar-colorPrimary
+              .MuiToolbar-root.jss27.MuiToolbar-dense.MuiToolbar-gutters
+                .jss35
+                  span.jss17
+                    img.jss16(src='/public/res/theme.jpg')
+                  button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorInherit(tabindex='0', type='button', aria-label='Menu')
+                    span.MuiIconButton-label
+                      .jss19
+                        .jss20
+                        .jss20
+                        .jss20
+                .jss46
+                .jss14.jss35.jss24
+                  button#userProfile.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorInherit(tabindex='0', type='button', aria-label='Popover')
+                    span.MuiIconButton-label
+                      i.jss18.jdicon.jdicon-user-circle
+          .jss6
+            .MuiDrawer-root.MuiDrawer-docked.jss142.jss147
+              .MuiPaper-root.MuiPaper-elevation0.MuiDrawer-paper.jss143.jss147.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft
+                ul.MuiList-root.jss150.MuiList-padding
+                  span
+                    a.jss155(href='/Dashboard')
+                      .MuiButtonBase-root.MuiListItem-root.jss144.MuiListItem-gutters.MuiListItem-button(tabindex='0', role='button', aria-disabled='false')
+                        .MuiListItemIcon-root.jss152
+                          img.jss151(src='public/res/arc.jpg', alt='Profile')
+                        .MuiListItemText-root.jss145
+                          span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1 Dashboard
+                  hr.MuiDivider-root
+            main.jss4.jss11
+              .jss3
+                .reportTop
+                  h2.headingStyles Detailed Creative Performance
+                  .MuiPaper-root.MuiPaper-elevation1.MuiCard-root.jss559.MuiPaper-rounded
+                    .MuiCardContent-root.jss565
+                      li
+                        #reportsDateRange(type='text')
+                          img(src='', alt='', style='height: 12px; position: relative; bottom: 5px;')
+                          span.date.positionAdjust 30/Sep/2019 to 31/Oct/2019
+                          i.material-icons(style='color: rgb(102, 102, 102);') arrow_drop_down
+                        span
+                      div
+                        #website.jss598
+                          span.jdicon.jdicon-filter
+                          label.jss594 Website
+                          i.jdicon.jdicon-carret
+                      div
+                        #device.jss630
+                          span.jdicon.jdicon-filter
+                          label.jss626 Device
+                          i.jdicon.jdicon-carret
+                      div
+                        #browser.jss662
+                          span.jdicon.jdicon-filter
+                          label.jss658 Browser
+                          i.jdicon.jdicon-carret
+                      button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.jss584.MuiButton-containedPrimary(tabindex='0', type='button')
+                        span.MuiButton-label Submit
+                .reportTab
+                  div
+                    header.MuiPaper-root.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-positionStatic.MuiAppBar-colorPrimary
+                      .MuiTabs-root(aria-label='simple tabs example')
+                        .MuiTabs-scroller.MuiTabs-fixed(style='overflow: hidden;')
+                          .MuiTabs-flexContainer(role='tablist')
+                            button.MuiButtonBase-root.MuiTab-root.jss732.MuiTab-textColorInherit.Mui-selected.jss734(tabindex='0', type='button', role='tab', aria-selected='true', styles='[object Object]')
+                              span.MuiTab-wrapper Impressions & CTR
+                            button.MuiButtonBase-root.MuiTab-root.jss732.MuiTab-textColorInherit(tabindex='0', type='button', role='tab', aria-selected='false', styles='[object Object]')
+                              span.MuiTab-wrapper Impressions & Viewable Impressions
+                            button.MuiButtonBase-root.MuiTab-root.jss732.MuiTab-textColorInherit(tabindex='0', type='button', role='tab', aria-selected='false', styles='[object Object]')
+                              span.MuiTab-wrapper Impressions & Interacted Impressions
+                          span.jss728.jss730.MuiTabs-indicator(style='left: 0px; width: 184.781px;')
+                      div
+                        div(styles='[object Object]')
+                          .chartjs-size-monitor
+                            .chartjs-size-monitor-expand
+                              div
+                            .chartjs-size-monitor-shrink
+                              div
+                          canvas.chartjs-render-monitor(height='250', width='1759', style='display: block; width: 1759px; height: 250px;')
+                .reportTable
+                  .MuiPaper-root.MuiPaper-elevation1.jss713.MuiPaper-rounded
+                    header.MuiPaper-root.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-positionStatic.jss714.MuiAppBar-colorDefault
+                      .MuiToolbar-root.MuiToolbar-regular.MuiToolbar-gutters
+                        h6.MuiTypography-root.MuiTypography-h6.MuiTypography-colorInherit(style='font-size: 22px;') Metrics
+                    .MuiPaper-root.MuiPaper-elevation1.MuiCard-root.jss715.MuiPaper-rounded
+                      .MuiCardContent-root.jss719
+                        .react-bootstrap-table.jss716
+                          table.table.table-bordered
+                            thead
+                              tr.jss718
+                                th.sortable(tabindex='0')
+                                  | Ad Server
+                                  span.order
+                                    span.dropdown
+                                      span.caret
+                                    span.dropup
+                                      span.caret
+                                th.sortable(tabindex='0')
+                                  | Line Item ID
+                                  span.order
+                                    span.dropdown
+                                      span.caret
+                                    span.dropup
+                                      span.caret
+                                th.sortable(tabindex='0')
+                                  | Creative ID
+                                  span.order
+                                    span.dropdown
+                                      span.caret
+                                    span.dropup
+                                      span.caret
+                                th.sortable(tabindex='0')
+                                  | Website
+                                  span.order
+                                    span.dropdown
+                                      span.caret
+                                    span.dropup
+                                      span.caret
+                                th.sortable(tabindex='0')
+                                  | Video Played (25%)
+                                  span.order
+                                    span.dropdown
+                                      span.caret
+                                    span.dropup
+                                      span.caret
+                                th.sortable(tabindex='0')
+                                  | Video Played (50%)
+                                  span.order
+                                    span.dropdown
+                                      span.caret
+                                    span.dropup
+                                      span.caret
+                                th.sortable(tabindex='0')
+                                  | Video Played (75%)
+                                  span.order
+                                    span.dropdown
+                                      span.caret
+                                    span.dropup
+                                      span.caret
+                                th.sortable(tabindex='0')
+                                  | Video Played (100%)
+                                  span.order
+                                    span.dropdown
+                                      span.caret
+                                    span.dropup
+                                      span.caret
+                                th.sortable(tabindex='0')
+                                  | Impressions
+                                  span.order
+                                    span.dropdown
+                                      span.caret
+                                    span.dropup
+                                      span.caret
+                                th.sortable(tabindex='0')
+                                  | Clicks
+                                  span.order
+                                    span.dropdown
+                                      span.caret
+                                    span.dropup
+                                      span.caret
+                            tbody
+                              tr.jss720
+                                td GAM
+                                td 5182453155
+                                td 138288949477
+                                td(title='')
+                                  span.jss722
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                              tr.jss720
+                                td GAM
+                                td 5182453155
+                                td 138288949477
+                                td(title='http://www.poconorecord.com/')
+                                  span.jss722 http://www.poconorecord.com/
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 2
+                                td 0
+                              tr.jss720
+                                td GAM
+                                td 5182453155
+                                td 138288949477
+                                td(title='https://d1lgd1orxbzyin.cloudfront.net/')
+                                  span.jss722 https://d1lgd1orxbzyin.cloudfront.net/
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                              tr.jss720
+                                td GAM
+                                td 5182453155
+                                td 138288949477
+                                td(title='https://t.poconorecord.com')
+                                  span.jss722 https://t.poconorecord.com
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                              tr.jss720
+                                td GAM
+                                td 5182453155
+                                td 138288949477
+                                td(title='https://t.poconorecord.com/')
+                                  span.jss722 https://t.poconorecord.com/
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 2
+                                td 0
+                              tr.jss720
+                                td GAM
+                                td 5182453155
+                                td 138288949477
+                                td(title='https://www.poconorecord.com')
+                                  span.jss722 https://www.poconorecord.com
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                              tr.jss720
+                                td GAM
+                                td 5182453155
+                                td 138288949477
+                                td(title='https://www.poconorecord.com/')
+                                  span.jss722 https://www.poconorecord.com/
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 6432
+                                td 221
+                              tr.jss720
+                                td GAM
+                                td 5182453155
+                                td 138288949477
+                                td(title='https://www.poconorecord.com/&nocache=1')
+                                  span.jss722 https://www.poconorecord.com/&nocache=1
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                              tr.jss720
+                                td GAM
+                                td 5182453155
+                                td 138288949477
+                                td(title='https://www.poconorecord.com/?_ga')
+                                  span.jss722 https://www.poconorecord.com/?_ga
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 4
+                                td 0
+                              tr.jss720
+                                td GAM
+                                td 5182453155
+                                td 138288949477
+                                td(title='https://www.poconorecord.com/?_ga=2.50680366.669510952.1570630490-649864457.1549548818')
+                                  span.jss722
+                                    | https://www.poconorecord.com/?_ga=2.50680366.669510952.1570630490-649864457.1549548818
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 0
